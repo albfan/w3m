@@ -1970,6 +1970,7 @@ FQDN(char *host)
 	char *namebuf;
 
 	memset(&hints, 0, sizeof(hints));
+	hints.ai_flags = AI_CANONNAME;
 	hints.ai_family = *af;
 	hints.ai_socktype = SOCK_STREAM;
 	error = getaddrinfo(host, NULL, &hints, &res0);
