@@ -1058,6 +1058,8 @@ _prev(void)
 	    return;
 	strCurrentBuf = strBuf;
     }
+    if (DecodeURL)
+	p = url_unquote_conv(p, 0);
     strBuf = Strnew_charp(p);
     CLen = CPos = setStrType(strBuf, strProp);
     offset = 0;
@@ -1075,6 +1077,8 @@ _next(void)
 	return;
     p = nextHist(hist);
     if (p) {
+	if (DecodeURL)
+	    p = url_unquote_conv(p, 0);
 	strBuf = Strnew_charp(p);
     }
     else {

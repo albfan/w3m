@@ -600,6 +600,10 @@ extern void mySystem(char *command, int background);
 extern Str myExtCommand(char *cmd, char *arg, int redirect);
 extern Str myEditor(char *cmd, char *file, int line);
 extern char *file_to_url(char *file);
+#ifndef JP_CHARSET
+#define url_unquote_conv(x,y) _url_unquote_conv(x)
+#endif
+extern char *url_unquote_conv(char *url, char code);
 extern char *expandName(char *name);
 extern Str tmpfname(int type, char *ext);
 extern time_t mymktime(char *timestr);

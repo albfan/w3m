@@ -1636,6 +1636,19 @@ file_to_url(char *file)
     return tmp->ptr;
 }
 
+char *
+url_unquote_conv(char *url, char code)
+{
+    Str tmp;
+    tmp = Str_url_unquote(Strnew_charp(url), FALSE, TRUE);
+#ifdef JP_CHARSET
+    if (code == CODE_INNER_EUC)
+	code = CODE_EUC;
+    tmp = convertLine(NULL, tmp, &code, RAW_MODE);
+#endif
+    return tmp->ptr;
+}
+
 static char *tmpf_base[MAX_TMPF_TYPE] = {
     "tmp", "src", "frame", "cache", "cookie",
 };

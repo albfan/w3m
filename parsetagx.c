@@ -182,7 +182,7 @@ parse_tag(char **s, int internal)
 		while (*q && *q != '"') {
 		    if (*q != '\n')
 			Strcat_char(value, *q);
-		    if (!tag->need_reconstruct && html_quote_char(*q))
+		    if (!tag->need_reconstruct && is_html_quote(*q))
 			tag->need_reconstruct = TRUE;
 		    q++;
 		}
@@ -194,7 +194,7 @@ parse_tag(char **s, int internal)
 		while (*q && *q != '\'') {
 		    if (*q != '\n')
 			Strcat_char(value, *q);
-		    if (!tag->need_reconstruct && html_quote_char(*q))
+		    if (!tag->need_reconstruct && is_html_quote(*q))
 			tag->need_reconstruct = TRUE;
 		    q++;
 		}
@@ -204,7 +204,7 @@ parse_tag(char **s, int internal)
 	    else if (*q) {
 		while (*q && !IS_SPACE(*q) && *q != '>') {
 		    Strcat_char(value, *q);
-		    if (!tag->need_reconstruct && html_quote_char(*q))
+		    if (!tag->need_reconstruct && is_html_quote(*q))
 			tag->need_reconstruct = TRUE;
 		    q++;
 		}

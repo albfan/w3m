@@ -1776,7 +1776,7 @@ openURL(char *url, ParsedURL *pu, ParsedURL *current,
 	    uf.encoding = ENC_BASE64;
 	}
 	else
-	    tmp = Str_url_unquote(tmp, FALSE);
+	    tmp = Str_url_unquote(tmp, FALSE, FALSE);
 	uf.stream = newStrStream(tmp);
 	uf.guess_type = (*p != '\0') ? p : "text/plain";
 	return uf;

@@ -915,6 +915,7 @@ global int nextpage_topline init(FALSE);
 global char *displayTitleTerm init(NULL);
 global int displayLink init(FALSE);
 global int displayLineInfo init(FALSE);
+global int DecodeURL init(FALSE);
 global int retryAsHttp init(TRUE);
 global int showLineNum init(FALSE);
 global int show_srch_str init(TRUE);
