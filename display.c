@@ -281,7 +281,7 @@ displayBuffer(Buffer *buf, int mode)
 	    }
 	    else if (n < 0 && n > -buf->LINES) {
 #if defined(__CYGWIN__) && LANG == JA
-		move(buf->LINES + n + 1, 0);
+		move(LASTLINE + n + 1, 0);
 		clrtoeolx();
 		refresh();
 #endif				/* defined(__CYGWIN__) && LANG == JA */
