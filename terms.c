@@ -596,11 +596,11 @@ reset_tty(void)
 MySignalHandler
 reset_exit(SIGNAL_ARG)
 {
-    reset_tty();
 #ifdef USE_MOUSE
     if (mouseActive)
 	mouse_end();
 #endif				/* USE_MOUSE */
+    reset_tty();
     w3m_exit(0);
     SIGNAL_RETURN;
 }
