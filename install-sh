@@ -18,6 +18,12 @@ do
     fi
     shift;
     ;;
+  -o) owner=$2
+      shift; shift
+      ;;
+  -g) group=$2
+      shift; shift
+      ;;
   -*)
     shift
     ;;
@@ -44,6 +50,12 @@ fi
 cp $file $dest
 if [ -n "$strip" ]; then
   $strip $dest
+fi
+if [ -n "$owner" ]; then
+  chown $owner $dest
+fi
+if [ -n '$group" ]; then
+  chgrp $group $dest
 fi
 if [ -n "$mode" ]; then
   chmod $mode $dest

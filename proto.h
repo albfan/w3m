@@ -381,6 +381,7 @@ extern union frameset_element *search_frame(struct frameset *fset, char *name);
 extern int set_tty(void);
 extern void set_cc(int spec, int val);
 extern void close_tty(void);
+extern char *ttyname_tty(void);
 extern void reset_tty(void);
 extern MySignalHandler reset_exit(SIGNAL_ARG);
 extern MySignalHandler error_dump(SIGNAL_ARG);

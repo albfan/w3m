@@ -610,6 +610,12 @@ close_tty(void)
     close(tty);
 }
 
+char *
+ttyname_tty(void)
+{
+    return ttyname(tty);
+}
+
 void
 reset_tty(void)
 {
