@@ -1,3 +1,8 @@
+2003-04-08  ABE Yuji <cbo46560@pop12.odn.ne.jp>
+
+	* [w3m-dev 03849] fix no INET6
+	* ftp.c: no need ifdef INET6
+
 2003-04-08  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03846] fix use_history

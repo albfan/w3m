@@ -15,11 +15,9 @@
 #endif				/* DEBUG */
 
 #include <sys/socket.h>
-#if defined(INET6)
 #include <netinet/in.h>
 #include <netdb.h>
 #include <arpa/inet.h>
-#endif
 
 typedef struct _FTP {
     char *host;
