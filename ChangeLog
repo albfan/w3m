@@ -1,5 +1,6 @@
 2002-11-26  Fumitoshi UKAI  <ukai@debian.or.jp>
 
+	* map.c (follow_map_menu): MapArea *a is used ifdef MENU_MAP
 	* func.c (initMouseAction): remove unsed variables: x, width, map
 
 2002-11-26  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>

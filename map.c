@@ -210,9 +210,9 @@ follow_map_menu(Buffer *buf, char *name, Anchor *a_img, int x, int y)
 {
     MapList *ml;
     ListItem *al;
-    MapArea *a;
     int i, selected = -1, initial = 0;
 #ifdef MENU_MAP
+    MapArea *a;
     char **label;
 #endif
 
