@@ -1,4 +1,9 @@
-2003-03-11  Fumitoshi UKAI  <ukai@ukai.org>
+2003-03-11  Fumitoshi UKAI  <ukai@debian.or.jp>	
+	
+	* which: deleted
+	* makeallmomdel: deleted
+
+2003-03-11  Fumitoshi UKAI  <ukai@debian.or.jp>	
 
 	* [w3m-dev 03804] fix autoconf
 	* acinclude.m4 (AC_W3M_MENU): default enabled
@@ -9,6 +14,8 @@
 			(AC_W3M_DIGEST_AUTH): default enabled
 			(AC_W3M_SSL): default enabled
 	* configure.in (AC_W3M_DIGEST_AUTH): added
+
+2003-03-11  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* [w3m-dev 03804] fix autoconf
 	* config.h.in (EAMCS_LIKE_LINEEDIT): define
