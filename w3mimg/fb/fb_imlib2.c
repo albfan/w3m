@@ -11,6 +11,12 @@
 static void draw(FB_IMAGE * img, Imlib_Image image);
 static Imlib_Image resize_image(Imlib_Image image, int width, int height);
 
+void
+fb_image_init()
+{
+    return;
+}
+
 int
 get_image_size(char *filename, int *w, int *h)
 {
