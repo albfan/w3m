@@ -810,6 +810,7 @@ next_dcompl(int next)
 	move(y, 0);
 	clrtoeolx();
 	bold();
+	/* FIXME: gettextize? */
 	addstr("----- Completion list -----");
 	boldend();
 	y++;
@@ -834,8 +835,10 @@ next_dcompl(int next)
 	clrtoeolx();
 	bold();
 	if (emacs_like_lineedit)
+	    /* FIXME: gettextize? */
 	    addstr("----- Press TAB to continue -----");
 	else
+	    /* FIXME: gettextize? */
 	    addstr("----- Press CTRL-D to continue -----");
 	boldend();
     }

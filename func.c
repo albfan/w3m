@@ -29,8 +29,10 @@ setKeymap(char *p, int lineno, int verbose)
     c = getKey(s);
     if (c < 0) {		/* error */
 	if (lineno > 0)
+	    /* FIXME: gettextize? */
 	    emsg = Sprintf("line %d: unknown key '%s'", lineno, s)->ptr;
 	else
+	    /* FIXME: gettextize? */
 	    emsg = Sprintf("defkey: unknown key '%s'", s)->ptr;
 	record_err_message(emsg);
 	if (verbose)
@@ -41,8 +43,10 @@ setKeymap(char *p, int lineno, int verbose)
     f = getFuncList(s);
     if (f < 0) {
 	if (lineno > 0)
+	    /* FIXME: gettextize? */
 	    emsg = Sprintf("line %d: invalid command '%s'", lineno, s)->ptr;
 	else
+	    /* FIXME: gettextize? */
 	    emsg = Sprintf("defkey: invalid command '%s'", s)->ptr;
 	record_err_message(emsg);
 	if (verbose)

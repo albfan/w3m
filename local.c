@@ -84,6 +84,7 @@ loadLocalDir(char *dname)
     if (Strlastchar(dirname) != '/')
 	Strcat_char(dirname, '/');
     qdir = html_quote(Str_conv_from_system(dirname)->ptr);
+    /* FIXME: gettextize? */
     tmp = Strnew_m_charp("<HTML>\n<HEAD>\n<BASE HREF=\"file://", qdir,
 			 "\">\n<TITLE>Directory list of ", qdir,
 			 "</TITLE>\n</HEAD>\n<BODY>\n<H1>Directory list of ",

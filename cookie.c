@@ -537,6 +537,7 @@ initCookie(void)
 Buffer *
 cookie_list_panel(void)
 {
+    /* FIXME: gettextize? */
     Str src = Strnew_charp("<html><head><title>Cookies</title></head>"
 			   "<body><center><b>Cookies</b></center>"
 			   "<p><form method=internal action=cookie>");

@@ -378,6 +378,7 @@ openSSLHandle(int sock, char *hostname, char **p_cert)
     close(sock);
     if (handle)
 	SSL_free(handle);
+    /* FIXME: gettextize? */
     disp_err_message(Sprintf
 		     ("SSL error: %s",
 		      ERR_error_string(ERR_get_error(), NULL))->ptr, FALSE);
@@ -454,6 +455,7 @@ openSocket(char *const hostname,
     MySignalHandler(*volatile prevtrap) (SIGNAL_ARG) = NULL;
 
     if (fmInitialized) {
+	/* FIXME: gettextize? */
 	message(Sprintf("Opening socket...")->ptr, 0, 0);
 	refresh();
     }

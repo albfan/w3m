@@ -736,6 +736,7 @@ link_list_panel(Buffer *buf)
     int i;
     char *t, *u, *p;
     ParsedURL pu;
+    /* FIXME: gettextize? */
     Str tmp = Strnew_charp("<title>Link List</title>\
 <h1 align=center>Link List</h1>\n");
 

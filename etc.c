@@ -1101,6 +1101,7 @@ parsePasswd(FILE * fp, int netrc)
     add_auth_pass_entry(&ent, netrc);
 }
 
+/* FIXME: gettextize? */
 #define FILE_IS_READABLE_MSG "SECURITY NOTE: file %s must not be accessible by others"
 
 FILE *
