@@ -14,7 +14,7 @@ typedef GeneralList HistList;
 typedef struct {
     HistList *list;
     HistItem *current;
-    Hash_hist *hash;
+    Hash_sv *hash;
 } Hist;
 
 extern Hist *newHist();

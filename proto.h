@@ -520,11 +520,9 @@ extern void msToggle(void);
 extern char *searchKeyData(void);
 
 extern void initKeymap(void);
-extern int countFuncList(FuncList *list);
-extern int getFuncList(char *id, FuncList *list, int nlist);
+extern int getFuncList(char *id);
 extern int getKey(char *s);
-extern void addKeyList(KeyList *list, int key, char *data);
-extern KeyListItem *searchKeyList(KeyList *list, int key);
+extern char *getKeyData(int key);
 extern char *getWord(char **str);
 extern char *getQWord(char **str);
 

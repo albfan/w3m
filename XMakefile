@@ -54,7 +54,7 @@ tagtable.c: html.h tagtable.tab mktable$(EXT)
 # entity.h: html.h entity.tab mktable$(EXT)
 #	./mktable 100 entity.tab > entity.h
 
-func.o: funcname.c
+func.o: funcname.c functable.c funcname1.h
 keybind.o: funcname2.h
 keybind_lynx.o: funcname2.h
 parsetagx.o: html.c
@@ -67,6 +67,11 @@ funcname1.h: funcname.tab
 
 funcname2.h: funcname.tab
 	sort funcname.tab | awk -f funcname2.awk > funcname2.h
+
+functable.c: funcname.tab mktable$(EXT)
+	sort funcname.tab | awk -f functable.awk > functable.tab
+	./mktable$(EXT) 100 functable.tab > functable.c
+	-rm -f functable.tab
 
 mktable$(EXT): mktable.o hash.o $(ALIB) $(GCTARGET)
 	$(CC) $(CFLAGS) -o mktable$(EXT) mktable.o hash.o  $(LIBS2)

@@ -25,5 +25,6 @@ hashfunc(char *s)
 /* *INDENT-OFF* */
 defhashfunc(char *, int, si)
 defhashfunc(char *, char *, ss)
-defhashfunc(char *, void *, hist)
+defhashfunc(char *, void *, sv)
+defhashfunc_i(int, void *, iv)
 /* *INDENT-ON* */

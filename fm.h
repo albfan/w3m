@@ -640,7 +640,6 @@ extern char EscDKeymap[];
 extern char PcKeymap[];
 #endif
 extern FuncList w3mFuncList[];
-extern KeyList w3mKeyList;
 
 global char *HTTP_proxy init(NULL);
 #ifdef USE_GOPHER
