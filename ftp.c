@@ -199,7 +199,7 @@ ftp_pasv(FTP ftp)
     switch (family) {
 #ifdef INET6
     case AF_INET6:
-	ftp_command(ftp, "EPSV", NULL, &status);
+	tmp = ftp_command(ftp, "EPSV", NULL, &status);
 	if (status != 229)
 	    return -1;
 	for (p = tmp->ptr + 4; *p && *p != '('; p++) ;
@@ -435,7 +435,7 @@ readFTPDir(ParsedURL *pu)
 	pu->file = "/";
     }
     else {
-	char *realpathname = file_unquote(pu->file);
+	realpathname = file_unquote(pu->file);
 	if (sv_type == UNIXLIKE_SERVER) {
 	    ftp_command(&current_ftp, "CWD", realpathname, &status);
 	    if (status == 250)

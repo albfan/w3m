@@ -1,3 +1,8 @@
+2003-01-12  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* ftp.c (ftp_pasv): ftp_command response
+		(readFTPDir): masked declaration of realpathname
+
 2003-01-12  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03633] Re: cleanup (don't close connection of news server)
