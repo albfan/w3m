@@ -511,7 +511,7 @@ main(int argc, char **argv, char **envp)
 #endif				/* JP_CHARSET */
 #ifndef KANJI_SYMBOLS
 	    else if (!strcmp("-no-graph", argv[i]))
-		no_graphic_char = TRUE;
+		UseGraphicChar = FALSE;
 #endif				/* not KANJI_SYMBOLS */
 	    else if (!strcmp("-T", argv[i])) {
 		if (++i >= argc)
@@ -610,7 +610,7 @@ main(int argc, char **argv, char **envp)
 	    else if (!strcmp("-num", argv[i]))
 		showLineNum = TRUE;
 	    else if (!strcmp("-no-proxy", argv[i]))
-		Do_not_use_proxy = TRUE;
+		use_proxy = FALSE;
 	    else if (!strcmp("-post", argv[i])) {
 		if (++i >= argc)
 		    usage();

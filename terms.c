@@ -1204,7 +1204,7 @@ int
 graph_ok(void)
 {
 #ifndef KANJI_SYMBOLS
-    if (no_graphic_char)
+    if (!UseGraphicChar)
 	return 0;
 #endif				/* not KANJI_SYMBOLS */
     return T_as[0] != 0 && T_ae[0] != 0 && T_ac[0] != 0;
