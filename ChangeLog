@@ -1,3 +1,14 @@
+2002-10-29  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03352] w3mimgsize is not necessary.
+	* XMakefile (IMGSIZE): removed
+	* config.h.dist (IMGSIZE): removed
+	* configure (imgtarget): remove IMGSIZE
+		(config.h): remove IMGSIZE
+	* rc.c (CMT_IMGSIZE): removed
+	* doc/README.img: remove imgsize
+	* w3mimgsize.c: removed
+
 2002-10-28  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03351] w3m core dump
