@@ -1,3 +1,10 @@
+2002-11-06  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03380] fix configure
+	* configure: s/INSTALL_W3MIMGDISPLAY/install_w3mimgdisplay/
+			already define
+	* config.h.dist (INSTALL_W3MIMGDISPLAY): added
+
 2002-11-06  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* [w3m-dev 03379] setuid w3mimgdisplay and check console tty
