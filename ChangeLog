@@ -1,3 +1,7 @@
+2003-09-29  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* Makefile.in (functable.c): fix cannot open file `b' for reading
+
 2003-09-27  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* funcname.tab: generated from DEFUN
