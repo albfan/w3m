@@ -1,3 +1,8 @@
+2001-12-28  Kiyokazu SUTO <suto@ks-and-ks.ne.jp>
+
+	* [w3m-dev 02761]
+	* file.c (loadcmdout): remove unnecessary buf check
+
 2001-12-28  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 02760]
