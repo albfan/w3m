@@ -1606,7 +1606,7 @@ fi
 
 # check alarm()
 if [ "$use_alarm" = y ]; then
-  cat > _zdmachdep.c <<EOF
+  cat > _zmachdep.c <<EOF
 #include <unistd.h>
 #include <signal.h>
 main()

@@ -380,7 +380,7 @@ void clear(), wrap(), touch_line(), touch_column(int);
 void switch_wchar(FILE *);
 void switch_ascii(FILE *);
 #endif
-void need_clrtoeol(void), clrtoeol(void);
+void need_clrtoeol(void), clrtoeol(void);	/* conflicts with curs_clear(3)? */
 
 int write1(char);
 
@@ -1492,6 +1492,7 @@ need_clrtoeol(void)
 }
 #endif				/* 0 */
 
+/* XXX: conflicts with curses's clrtoeol(3) ? */
 void
 clrtoeol(void)
 {				/* Clear to the end of line */
