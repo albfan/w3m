@@ -54,7 +54,7 @@ getCharSize()
     tmp = Strnew();
     if (!strchr(Imgdisplay, '/'))
 	Strcat_m_charp(tmp, w3m_auxbin_dir(), "/", NULL);
-    Strcat_m_charp(tmp, Imgdisplay, " -test", NULL);
+    Strcat_m_charp(tmp, Imgdisplay, " -test 2>/dev/null", NULL);
     f = popen(tmp->ptr, "r");
     if (!f)
 	return FALSE;
