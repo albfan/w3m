@@ -4609,7 +4609,7 @@ chkWORD(void)
 {
     char *p;
     int spos, epos;
-    p = getCurWord(Currentbuf, &spos, &epos, ":\"\'`<>");
+    p = getCurWord(Currentbuf, &spos, &epos, ":\"\'`<>()[]{}&|;*?$");
     if (p == NULL)
 	return;
     reAnchorWord(Currentbuf, Currentbuf->currentLine, spos, epos);

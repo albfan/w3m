@@ -1,5 +1,10 @@
 2002-12-19  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03581] MARK_URL, MARK_WORD
+	* main.c (chkWORD): accept ()[]{}&|;*?$ as anchor
+
+2002-12-19  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03580] Re: clean up displayBuffer()
 	* main.c (main): force redraw
 
