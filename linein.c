@@ -56,7 +56,7 @@ void (*InputKeymap[32]) () = {
 /*  C-h     C-i     C-j     C-k     C-l     C-m     C-n     C-o     */
     _bs,    iself,  _enter, killn,  iself,  _enter, _next,  iself,
 /*  C-p     C-q     C-r     C-s     C-t     C-u     C-v     C-w     */
-    _prev,  _quo,   _bsw,   iself,  _mvLw,  killb,  _quo,   iself,
+    _prev,  _quo,   _bsw,   iself,  _mvLw,  killb,  _quo,   _bsw,
 /*  C-x     C-y     C-z     C-[     C-\     C-]     C-^     C-_     */
     _tcompl,_mvRw,  iself,  _esc,   iself,  iself,  iself,  iself,
 };
