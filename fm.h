@@ -829,6 +829,7 @@ global char *cgi_bin init(NULL);
 global char *index_file init(NULL);
 
 global char *CurrentDir;
+global int CurrentPid;
 /*
 global Buffer *Currentbuf;
 global Buffer *Firstbuf;

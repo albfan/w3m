@@ -7,11 +7,6 @@
 #include "hash.h"
 #include "terms.h"
 
-#ifdef HAVE_GETCWD		/* ??? ukai */
-#include <unistd.h>
-#include <sys/param.h>
-#endif				/* HAVE_GETCWD */
-
 #include <sys/types.h>
 #include <time.h>
 #if defined(HAVE_WAITPID) || defined(HAVE_WAIT3)
@@ -1517,7 +1512,8 @@ tmpfname(int type, char *ext)
     tmpf = Sprintf("%s/w3m%s%d-%d%s",
 		   rc_dir,
 		   tmpf_base[type],
-		   (int)getpid(), tmpf_seq[type]++, (ext) ? ext : "");
+		   CurrentPid, tmpf_seq[type]++, (ext) ? ext : "");
+    pushText(fileToDelete, tmpf->ptr);
     return tmpf;
 }
 

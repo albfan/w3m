@@ -518,8 +518,6 @@ getImage(Image * image, ParsedURL *current, int flag)
 	cache->width = image->width;
 	cache->height = image->height;
 	putHash_sv(image_hash, key->ptr, (void *)cache);
-	pushText(fileToDelete, cache->file);
-	pushText(fileToDelete, cache->touch);
     }
     if (flag != IMG_FLAG_SKIP) {
 	if (cache->loaded == IMG_FLAG_UNLOADED) {
