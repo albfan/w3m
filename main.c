@@ -989,7 +989,7 @@ main(int argc, char **argv, char **envp)
 	if (CurrentAlarm.status & AL_IMPLICIT) {
 	    CurrentAlarm.buffer = Currentbuf;
 	    CurrentAlarm.status = AL_IMPLICIT_DONE
-				  | (CurrentAlarm.status & AL_ONCE);
+		| (CurrentAlarm.status & AL_ONCE);
 	}
 	else if (CurrentAlarm.status & AL_IMPLICIT_DONE &&
 		 CurrentAlarm.buffer != Currentbuf) {
@@ -5266,7 +5266,7 @@ SigAlarm(SIGNAL_ARG)
 	if (CurrentAlarm.status & AL_IMPLICIT) {
 	    CurrentAlarm.buffer = Currentbuf;
 	    CurrentAlarm.status = AL_IMPLICIT_DONE
-				 | (CurrentAlarm.status & AL_ONCE);
+		| (CurrentAlarm.status & AL_ONCE);
 	}
 	else if (CurrentAlarm.status & AL_IMPLICIT_DONE
 		 && (CurrentAlarm.buffer != Currentbuf ||
@@ -5282,7 +5282,7 @@ SigAlarm(SIGNAL_ARG)
 }
 
 static void
-copyAlarmEvent(AlarmEvent *src, AlarmEvent *dst)
+copyAlarmEvent(AlarmEvent * src, AlarmEvent * dst)
 {
     if (!src || !dst)
 	return;
