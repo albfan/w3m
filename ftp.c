@@ -420,7 +420,7 @@ openFTP(ParsedURL *pu)
     if (pu->pass)
 	pass = pu->pass;
     else if (pu->user) {
-	pwd = find_auth_cookie(pu->host, pu->user);
+	pwd = find_auth_cookie(pu->host, pu->port, pu->user);
 	if (pwd == NULL) {
 	    if (fmInitialized) {
 		term_raw();
@@ -450,7 +450,7 @@ openFTP(ParsedURL *pu)
     if (FtpError(s))
 	return NULL;
     if (add_auth_cookie_flag)
-	add_auth_cookie(pu->host, pu->user, pwd);
+	add_auth_cookie(pu->host, pu->port, pu->user, pwd);
     if (pu->file == NULL || *pu->file == '\0')
 	goto ftp_dir;
     else
