@@ -5103,7 +5103,7 @@ reinit()
 #ifdef USE_COOKIE
 	initCookie();
 #endif
-	initKeymap();
+	initKeymap(TRUE);
 #ifdef USE_MENU
 	initMenu();
 #endif
@@ -5123,7 +5123,7 @@ reinit()
 #endif
 
     if (!strcasecmp(resource, "KEYMAP")) {
-	initKeymap();
+	initKeymap(TRUE);
 	return;
     }
 
