@@ -994,9 +994,9 @@ parseURL2(char *url, ParsedURL *pu, ParsedURL *current)
 	    }
 	}
 	return;
-    }
+    }n
     if (pu->scheme == SCM_LOCAL)
-	pu->file = expandName(pu->file);
+	pu->file = file_quote(expandName(file_unquote(pu->file)));
 
     if (current && (pu->scheme == current->scheme ||
 		    (pu->scheme == SCM_FTP && current->scheme == SCM_FTPDIR) ||

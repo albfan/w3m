@@ -1552,8 +1552,7 @@ expandName(char *name)
 	return NULL;
     p = name;
     if (*p == '/') {
-	if (((*(p + 1) == '~' && IS_ALPHA(*(p + 2)))
-	     || (strncasecmp(p + 1, "%7e", 3) == 0))
+	if ((*(p + 1) == '~' && IS_ALPHA(*(p + 2)))
 	    && personal_document_root) {
 	    char *q;
 	    p += 2;
