@@ -2893,7 +2893,7 @@ followA(void)
 	    delBuffer(buf);
 	else
 	    deleteTab(CurrentTab);
-	displayBuffer(Currentbuf, B_NORMAL);
+	displayBuffer(Currentbuf, B_FORCE_REDRAW);
 	return;
     }
     loadLink(url, a->target, a->referer, NULL);
@@ -4074,7 +4074,7 @@ follow_map(struct parsed_tagarg *arg)
 	    delBuffer(buf);
 	else
 	    deleteTab(CurrentTab);
-	displayBuffer(Currentbuf, B_NORMAL);
+	displayBuffer(Currentbuf, B_FORCE_REDRAW);
 	return;
     }
     cmd_loadURL(a->url, baseURL(Currentbuf),
