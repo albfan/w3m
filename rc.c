@@ -4,6 +4,7 @@
  */
 #include "fm.h"
 #include "myctype.h"
+#include "proto.h"
 #include <stdio.h>
 #include <errno.h>
 #include "parsetag.h"
@@ -1507,7 +1508,7 @@ to_str(struct param_ptr *p)
 Buffer *
 load_option_panel(void)
 {
-    Str str;
+    Str src;
     struct param_ptr *p;
     struct sel_c *s;
 #ifdef USE_M17N
@@ -1519,8 +1520,8 @@ load_option_panel(void)
 
     if (optionpanel_str == NULL)
 	optionpanel_str = Sprintf(optionpanel_src1, w3m_version,
-				  html_quote(Local_cookie->ptr), CMT_HELPER);
-#ifdef LANG == JA
+				  html_quote(localCookie()->ptr), CMT_HELPER);
+#if LANG == JA
     if (!OptionEncode) {
 	optionpanel_str =
 	    wc_Str_conv(optionpanel_str, OptionCharset, InnerCharset);

@@ -62,5 +62,5 @@ conv_entity(unsigned int c)
     }
 #endif
 #endif
-    return p ? p : "?";
+    return "?";
 }
