@@ -1,5 +1,13 @@
 2003-02-06  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03729] buf fix of reAnchorNewsheader()
+	* anchor.c (reAnchorAny): check l->bpos
+		 (reAnchorNewsheader): check l->bpos
+					strlen(*q)
+					lineBuf[l->size]
+
+2003-02-06  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03728] IPv6 hostname
 	* url.c (parseURL): rewrite IPv6 address parser
 
