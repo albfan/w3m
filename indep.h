@@ -1,7 +1,7 @@
 /* $Id$ */
 #ifndef INDEP_H
 #define INDEP_H
-#include "gc.h"
+#include <gc.h>
 #include "Str.h"
 #include "config.h"
 

@@ -34,7 +34,7 @@
 
 #include "config.h"
 #include "matrix.h"
-#include "gc.h"
+#include <gc.h>
 
 /* 
  * Macros from "fm.h".

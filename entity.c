@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include "indep.h"
 #include "Str.h"
-#include "gc.h"
+#include <gc.h>
 
 typedef struct {
     short ucs;

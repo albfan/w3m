@@ -1,7 +1,7 @@
 /* $Id$ */
 #include <string.h>
 #include "hash.h"
-#include "gc.h"
+#include <gc.h>
 
 static unsigned int
 hashfunc(char *s)
