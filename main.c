@@ -3763,13 +3763,15 @@ _peekURL(int only_img)
     }
     a = (only_img ? NULL : retrieveCurrentAnchor(Currentbuf));
     if (a == NULL) {
-	a = retrieveCurrentImg(Currentbuf);
+	a = (only_img ? NULL :retrieveCurrentForm(Currentbuf));
 	if (a == NULL) {
-	    a = retrieveCurrentForm(Currentbuf);
+	    a = retrieveCurrentImg(Currentbuf);
 	    if (a == NULL) {
 		s = NULL;
 		return;
 	    }
+	}
+	else {
 	    s = Strnew_charp(form2str((FormItemList *)a->url));
 	    goto disp;
 	}
