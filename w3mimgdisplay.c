@@ -103,7 +103,13 @@ main(int argc, char **argv)
 		if (w_op->get_image_size(w_op, &img, &buf[2], &w, &h)) {
 		    fprintf(stdout, "%d %d\n", w, h);
 		    fflush(stdout);
+		} else {
+		    fprintf(stdout, "\n");
+		    fflush(stdout);
 		}
+	    } else {
+		fprintf(stdout, "\n");
+		fflush(stdout);
 	    }
 	    break;
 	}

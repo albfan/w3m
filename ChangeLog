@@ -1,3 +1,9 @@
+2002-09-30  qhwt@myrealbox.com
+
+	* [w3m-dev 03325] Re: hang up when seeing web page that contains xbm file
+	* w3mimgdisplay.c (main): alreays return response 
+				even if size is unknown
+
 2002-09-29  Hiroaki Shimotsu <shim@d5.bs1.fc.nec.co.jp>
 
 	* [w3m-dev 03323] EDITOR
