@@ -1,6 +1,11 @@
 2003-03-12  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
-	* [w3m-dev 03810] autoconf
+	* [w3m-dev 03812] fix autoconf
+	* acinclude.m4 (AC_W3M_IMAGE): default is autodetect x11,fb
+
+2003-03-12  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03810] fix autoconf
 	* acinclude.m4 (AC_W3M_EXTLIBS): use $dir
 			(AC_W3M_GC): PREFIX is optional
 			(AC_W3M_SSL): PREFIX is optional
