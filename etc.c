@@ -1518,7 +1518,6 @@ tmpfname(int type, char *ext)
     return tmpf;
 }
 
-#ifdef USE_COOKIE
 static char *monthtbl[] = {
     "Jan", "Feb", "Mar", "Apr", "May", "Jun",
     "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
@@ -1728,6 +1727,7 @@ mymktime(char *timestr)
 		     (hour * 60 * 60) + (min * 60) + sec);
 }
 
+#ifdef USE_COOKIE
 #ifdef INET6
 #include <sys/socket.h>
 #endif				/* INET6 */
