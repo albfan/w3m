@@ -1,5 +1,10 @@
 2002-06-10  Kiyokazu SUTO <suto@ks-and-ks.ne.jp>
 
+	* [w3m-dev-en 00752] Re: tab completion weirdness in w3m 0.3
+	* file.c (doFileCopy): same fix as [w3m-dev-en 00751]
+
+2002-06-10  Kiyokazu SUTO <suto@ks-and-ks.ne.jp>
+
 	* [w3m-dev-en 00751] Re: tab completion weirdness in w3m 0.3
 	* main.c (svBuf): unescape spaces when input is filename
 	* proto.h (unescape_spaces): added
