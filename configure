@@ -567,6 +567,7 @@ fi
 if [ "$lang" = "JA" ]; then
   ask_param "Use 2-byte character for table border, item, etc." kanji_symbols y
 else
+  kanji_symbols=n
   def_param kanji_symbols n
 fi
 ask_param "ANSI color escape sequences support" use_ansi_color n

@@ -3839,7 +3839,7 @@ HTMLlineproc2body(Buffer *buf, Str (*feed) (), int llimit)
     Str line;
     char *endp;
 #ifndef KANJI_SYMBOLS
-    char rule;
+    char rule = 0;
 #endif
 
     if (w3m_debug)
