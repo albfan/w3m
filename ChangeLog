@@ -1,3 +1,11 @@
+2002-12-21  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03590] segmentation fault when <title> exist after <img>
+	* file.c (save_line): deleted
+		(save_prevchar): deleted
+		(save_obuf): added
+		(HTMLtagproc1): bcopy save_obuf
+
 2002-12-20  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03588] include time.h in ftp.c
