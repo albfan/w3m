@@ -1,3 +1,11 @@
+2004-07-16  WATANABE Katsuyuki <knabe@sannet.ne.jp>
+
+	* [w3m-dev 04091] option panel: gettextize select list
+	* rc.c: gettextize option select list.
+	* rc.c: add gettextize message.
+	* po/w3m.pot: ditto.
+	* po/ja.po: ditto.
+
 2004-07-14  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* Debian Bug#259053
