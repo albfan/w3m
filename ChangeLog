@@ -1,3 +1,8 @@
+2003-02-28  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03783] pipe to "command1 | command2"
+	* Bonus/utf8.cgi: added
+
 2003-02-27  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03784] ftp directory support
