@@ -1,3 +1,7 @@
+2002-11-27  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* frame.c (createFrameFile): html_quote()
+
 2002-11-27  Hiroyuki Ito <hito@crl.go.jp>
 
 	* [w3m-dev 03488] meta refresh in frame

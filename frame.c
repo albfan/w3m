@@ -614,7 +614,7 @@ createFrameFile(struct frameset *f, FILE * f1, Buffer *current, int level,
 			    }
 			    Strshrinkfirst(tok, 1);
 			    Strshrink(tok, 1);
-			    fprintf(f1, "<!-- %s -->", tok->ptr);
+			    fprintf(f1, "<!-- %s -->", html_quote(tok->ptr));
 			    goto token_end;
 			case HTML_META:
 			    parsedtag_get_value(tag, ATTR_HTTP_EQUIV, &q);
@@ -626,7 +626,8 @@ createFrameFile(struct frameset *f, FILE * f1, Buffer *current, int level,
 				    if (s_tmp) {
 				        q = html_quote(s_tmp->ptr);
 				        fprintf(f1, "Refresh (%d sec) <a href=\"%s\">%s</a>\n",
-						refresh_interval, q, q);
+						refresh_interval, 
+						html_quote(q), html_quote(q));
 				    }
 				}
 			    }
