@@ -1,3 +1,7 @@
+2003-02-13  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* XMakefile (install-core): fix for broken non-POSIX /bin/sh
+
 2003-02-11  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev-en 00868] fix mark_all_pages
