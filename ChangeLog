@@ -1,3 +1,8 @@
+2002-09-29  Hiroaki Shimotsu <shim@d5.bs1.fc.nec.co.jp>
+
+	* [w3m-dev 03323] EDITOR
+	* main.c (MAIN): use not_null()
+
 2002-09-29  AIDA Shinra <aida-s@jcom.home.ne.jp>
 
 	* Re: [w3m-dev 03320] Re: Passwords

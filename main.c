@@ -444,9 +444,9 @@ MAIN(int argc, char **argv, char **envp)
 	set_no_proxy(p);
     }
 
-    if (Editor == NULL && (p = getenv("EDITOR")) != NULL)
+    if (!non_null(Editor) && (p = getenv("EDITOR")) != NULL)
 	Editor = p;
-    if (Mailer == NULL && (p = getenv("MAILER")) != NULL)
+    if (!non_null(Mailer) && (p = getenv("MAILER")) != NULL)
 	Mailer = p;
 
     /* argument search 2 */
