@@ -48,7 +48,10 @@ main(int argc, char *argv[], char **envp)
 	fprintf(stderr, "Can't open %s\n", argv[2]);
 	exit(1);
     }
-    fbase = Strnew_charp(argv[2]);
+    p = argv[2];
+    if (strrchr(p, '/') != NULL)
+	p = strrchr(p, '/')+1;
+    fbase = Strnew_charp(p);
     if (strchr(fbase->ptr, '.'))
 	while (Strlastchar(fbase) != '.')
 	    Strshrink(fbase, 1);
