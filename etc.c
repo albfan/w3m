@@ -236,11 +236,7 @@ parse_ansi_color(char **str, Lineprop *effect, Linecolor *color)
  */
 
 Str
-checkType(Str s, Lineprop **oprop
-#ifdef USE_ANSI_COLOR
-	  , Linecolor **ocolor
-#endif
-    )
+checkType(Str s, Lineprop **oprop, Linecolor **ocolor)
 {
     Lineprop mode;
     Lineprop effect = PE_NORMAL;
