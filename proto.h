@@ -293,6 +293,7 @@ extern void escdmap(char c);
 extern char *inputLineHistSearch(char *prompt, char *def_str, int flag,
 				 Hist *hist, int (*incfunc) (int ch, Str buf,
 							     Lineprop *prop));
+extern Str unescape_spaces(Str s);
 #ifdef USE_HISTORY
 extern Buffer *historyBuffer(Hist *hist);
 extern void loadHistory(Hist *hist);
