@@ -1945,8 +1945,8 @@ loadGeneralFile(char *path, ParsedURL *volatile current, char *referer,
 	    if (pu.scheme == SCM_LOCAL) {
 		UFclose(&f);
 		_doFileCopy(pu.real_file,
-			   conv_from_system(guess_save_name
-					    (NULL, pu.real_file)), TRUE);
+			    conv_from_system(guess_save_name
+					     (NULL, pu.real_file)), TRUE);
 	    }
 	    else {
 		if (DecodeCTE && IStype(f.stream) != IST_ENCODED)
@@ -7314,12 +7314,12 @@ doFileSave(URLFile uf, char *defstr)
 	    disp_err_message(msg->ptr, FALSE);
 	    return;
 	}
-/*
-	if (save2tmp(uf, p) < 0) {
-	    msg = Sprintf("Can't save to %s", p);
-	    disp_err_message(msg->ptr, FALSE);
-	}
-*/
+	/*
+	 * if (save2tmp(uf, p) < 0) {
+	 * msg = Sprintf("Can't save to %s", p);
+	 * disp_err_message(msg->ptr, FALSE);
+	 * }
+	 */
 	lock = tmpfname(TMPF_DFL, ".lock")->ptr;
 #if defined(HAVE_SYMLINK) && defined(HAVE_LSTAT)
 	symlink(p, lock);
