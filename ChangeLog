@@ -1,3 +1,11 @@
+2003-02-24  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* w3m 0.4
+	* version.c.in: update
+	* doc/README: version 0.4, release date
+	* doc-jp/README: ditto
+	* NEWS: update
+
 2003-02-24  patakuti@t3.rim.or.jp
 
 	* [w3m-dev 03772] Compilation error on Cygwin B20.1
