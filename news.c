@@ -311,7 +311,8 @@ readNewsgroup(ParsedURL *pu)
     Str tmp;
     URLFile f;
     Buffer *buf;
-    char *scheme, *group, *qgroup, *list, *p, *q, *s, *t, *n;
+    char *qgroup, *p, *q, *s, *t, *n;
+    char * volatile scheme, * volatile group, * volatile list;
     int status, i, first, last;
     volatile int flag = 0, start = 0, end = 0;
     char code = '\0';

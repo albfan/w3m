@@ -1,3 +1,9 @@
+2003-01-07  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* fix build warnings
+	* url.c (parseURL2): fix comparison between pointer and integer
+	* news.c (readNewsgroup): variable `scheme',`group',`list' might be clobbered by `longjmp' or `vfork'
+
 2003-01-07  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03610] Re: news:<newsgroup>

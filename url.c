@@ -989,7 +989,7 @@ parseURL2(char *url, ParsedURL *pu, ParsedURL *current)
 			current->scheme == SCM_NNTP_GROUP)) {
 	    if (pu->host == NULL)
 		pu->host = current->host;
-	    if (pu->port == NULL)
+	    if (pu->port == 0)
 		pu->port = current->port;
 	}
 	return;
