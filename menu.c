@@ -1327,8 +1327,13 @@ smChBuf(void)
 	return;
     for (i = 0, buf = Firstbuf; i < SelectV; i++, buf = buf->nextBuffer) ;
     Currentbuf = buf;
-    if (clear_buffer) {
-	for (buf = Firstbuf; buf != NULL; buf = buf->nextBuffer)
+    for (buf = Firstbuf; buf != NULL; buf = buf->nextBuffer) {
+	if (buf == Currentbuf)
+	    continue;
+#ifdef USE_IMAGE
+	deleteImage(buf);
+#endif
+	if (clear_buffer)
 	    tmpClearBuffer(buf);
     }
 }

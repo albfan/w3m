@@ -14,6 +14,7 @@ COOKIE		cooLst
 DELETE_PREVBUF	deletePrevBuf
 DICT_WORD	dictword
 DICT_WORD_AT	dictwordat
+DISPLAY_IMAGE	dispI
 DOWN		ldown1
 DOWNLOAD	svSrc
 EDIT		editBf
@@ -107,6 +108,7 @@ SHELL		execsh
 SHIFT_LEFT	shiftl
 SHIFT_RIGHT	shiftr
 SOURCE		vwSrc
+STOP_IMAGE	stopI
 SUBMIT        submitForm
 SUSPEND		susp
 UP		lup1

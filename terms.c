@@ -1865,7 +1865,14 @@ wgetch(void)
 {
     char c;
 
-    read(tty, &c, 1);
+    /* read(tty, &c, 1); */
+    while (read(tty, &c, 1) < (ssize_t) 1) {
+	if (errno == EINTR || errno == EAGAIN)
+	    continue;
+	/* error happend on read(2) */
+	quitfm();
+	break;			/* unreachable */
+    }
     return c;
 }
 
@@ -2159,3 +2166,20 @@ flush_tty()
 {
     fflush(ttyf);
 }
+
+#ifdef USE_IMAGE
+void
+touch_cursor()
+{
+    touch_line();
+    touch_column(CurColumn);
+#ifdef JP_CHARSET
+    if (CurColumn > 0 &&
+	CHMODE(ScreenImage[CurLine]->lineprop[CurColumn]) == C_WCHAR2)
+	touch_column(CurColumn - 1);
+    else if (CurColumn < COLS - 1 &&
+	     CHMODE(ScreenImage[CurLine]->lineprop[CurColumn]) == C_WCHAR1)
+	touch_column(CurColumn + 1);
+#endif
+}
+#endif

@@ -2786,7 +2786,22 @@ feed_table_tag(struct table *tbl, char *line, struct table_mode *mode,
 	mode->pre_mode &= ~TBLM_PRE_INT;
 	break;
     case HTML_IMG:
-	tok = process_img(tag);
+	w = tbl->fixed_width[tbl->col];
+	if (w < 0) {
+	    if (tbl->total_width > 0)
+		w = -tbl->total_width * w / 100;
+	    else if (width > 0)
+		w = -width * w / 100;
+	    else
+		w = 0;
+	}
+	else if (w == 0) {
+	    if (tbl->total_width > 0)
+		w = tbl->total_width;
+	    else if (width > 0)
+		w = width;
+	}
+	tok = process_img(tag, w);
 	feed_table1(tbl, tok, mode, width);
 	break;
     case HTML_FORM:

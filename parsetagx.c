@@ -73,6 +73,12 @@ toAlign(char *oval, int *align)
 	*align = ALIGN_RIGHT;
     else if (strcasecmp(oval, "center") == 0)
 	*align = ALIGN_CENTER;
+    else if (strcasecmp(oval, "top") == 0)
+	*align = ALIGN_TOP;
+    else if (strcasecmp(oval, "bottom") == 0)
+	*align = ALIGN_BOTTOM;
+    else if (strcasecmp(oval, "middle") == 0)
+	*align = ALIGN_MIDDLE;
     else
 	return 0;
     return 1;

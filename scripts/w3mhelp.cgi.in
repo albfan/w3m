@@ -132,7 +132,7 @@ for $otherlang (@docdirs) {
 
 &show_keymap("Buffer operation",
 	     split(" ", "backBf selMn selBuf vwSrc svSrc svBuf
-		editBf editScr reload rdrwSc"));
+		editBf editScr reload rdrwSc dispI stopI"));
 
 &show_keymap("Bookmark operation",
 	     split(" ", "ldBmark adBmark"));

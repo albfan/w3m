@@ -1054,6 +1054,7 @@ reset_signals(void)
 #ifdef SIGPIPE
     signal(SIGPIPE, SIG_IGN);
 #endif
+    signal(SIGUSR1, SIG_IGN);
 }
 
 void
