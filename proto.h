@@ -100,6 +100,7 @@ extern void linkbrz(void);
 extern void curlno(void);
 #ifdef USE_ALARM
 extern void setAlarm(void);
+extern void setAlarmEvent(int sec, short status, int cmd, void *data);
 #else
 #define setAlarm nulcmd
 #endif

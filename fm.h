@@ -849,14 +849,11 @@ int backend( void );
 extern void deleteFiles(void);
 void w3m_exit( int i );
 
-typedef struct {
-    int cmd;
-    void *user_data;
-} Event;
 #ifdef USE_ALARM
-global int alarm_sec init(0);
-global short alarm_once init(0);
-global Event alarm_event;
+#define AL_UNSET         0
+#define AL_EXPLICIT      1
+#define AL_IMPLICIT      2
+#define AL_IMPLICIT_DONE 3
 #endif
 
 /* 
