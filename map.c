@@ -69,7 +69,9 @@ follow_map_menu(Buffer *buf, struct parsed_tagarg *arg, Anchor *a_img, int x,
     char *name;
     int i, n, selected = -1, initial;
     char **label;
+#ifdef USE_IMAGE
     int px, py, map = 0;
+#endif
 
     name = tag_get_value(arg, "link");
     if (name == NULL)
@@ -195,8 +197,10 @@ newMapArea(char *url, char *alt, char *shape, char *coords)
 {
     MapArea *a = New(MapArea);
 #ifdef MENU_MAP
+#ifdef USE_IMAGE
     char *p;
     int i, max;
+#endif
 #endif
 
     a->url = url;

@@ -470,7 +470,6 @@ addMultirowsImg(Buffer *buf, AnchorList *al)
 		    l->propBuf[k] |= PE_ANCHOR;
 	    }
 	    if (a_form.url) {
-		FormItemList *fi = (FormItemList *)a_form.url;
 		buf->formitem = putAnchor(buf->formitem, a_form.url,
 					  a_form.target, &a, NULL,
 					  l->linenumber, pos);

@@ -620,7 +620,7 @@ redrawLine(Buffer *buf, Line *l, int i)
 Line *
 redrawLineImage(Buffer *buf, Line *l, int i)
 {
-    int j, pos, rcol, ncol;
+    int j, pos, rcol;
     int column = buf->currentColumn;
     Anchor *a;
     int x, y, sx, sy, w, h;

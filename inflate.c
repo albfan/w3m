@@ -52,7 +52,7 @@ main(int argc, char **argv)
 		fwrite(outbuf, 1, sizeof(outbuf) - s.avail_out, stdout);
 	    break;
 	}
-	if (status == Z_DATA_ERROR && ! retry++) {
+	if (status == Z_DATA_ERROR && !retry++) {
 	    status = inflateReset(&s);
 	    if (status != Z_OK) {
 		fprintf(stderr, "%s: inflateReset() %s\n", argv[0],

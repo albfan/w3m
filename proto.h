@@ -485,6 +485,9 @@ extern char *reAnchorNews(Buffer *buf, char *re);
 extern void addMultirowsForm(Buffer *buf, AnchorList *al);
 extern Anchor *closest_next_anchor(AnchorList *a, Anchor *an, int x, int y);
 extern Anchor *closest_prev_anchor(AnchorList *a, Anchor *an, int x, int y);
+#ifdef USE_IMAGE
+void addMultirowsImg(Buffer *buf, AnchorList *al);
+#endif
 extern HmarkerList *putHmarker(HmarkerList *ml, int line, int pos, int seq);
 extern Str decodeB(char **ww);
 extern Str decodeQ(char **ww);
