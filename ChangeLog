@@ -1,5 +1,10 @@
 2002-12-15  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03570] meta tag in frame
+	* frame.c (createFrameFile): fix meta equiv parse in frame
+
+2002-12-15  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03569] Re: preserve timestamp
 	* file.c (loadGeneralFile): PresetveTimestamp
 		(_doFileCopy): is_pipe, PreserveTimestamp
