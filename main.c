@@ -5815,9 +5815,10 @@ DownloadListBuffer(void)
     if (!FirstDL)
 	return NULL;
     cur_time = time(0);
-    src = Strnew_charp("<html><head><title>" DOWNLOAD_LIST_TITLE \
-"</title></head>\n<body><h1 align=center>" DOWNLOAD_LIST_TITLE "</h1>\n" \
-"<form method=internal action=download><hr>\n");
+    src = Strnew_charp("<html><head><title>" DOWNLOAD_LIST_TITLE
+		       "</title></head>\n<body><h1 align=center>"
+		       DOWNLOAD_LIST_TITLE "</h1>\n"
+		       "<form method=internal action=download><hr>\n");
     for (d = LastDL; d != NULL; d = d->prev) {
 #ifdef HAVE_LSTAT
 	if (lstat(d->lock, &st))
