@@ -1860,7 +1860,7 @@ $def_use_bufinfo
 /*
  * Support EGD (Entropy Gathering Daemon)
  */
-$def_egd
+$def_use_egd
 
 /*
  * Remove line trailing spaces in html buffer.
