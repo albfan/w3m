@@ -15,6 +15,7 @@
 #ifdef HAVE_SYS_SELECT_H
 #include <sys/select.h>
 #endif
+#include <sys/ioctl.h>
 #ifdef USE_MOUSE
 #ifdef USE_GPM
 #include <gpm.h>
@@ -234,8 +235,7 @@ void flush_tty();
 #endif				/* not SIGIOT */
 
 #ifdef HAVE_TERMIO_H
-#include        <sys/ioctl.h>
-#include        <termio.h>
+#include <termio.h>
 typedef struct termio TerminalMode;
 #define TerminalSet(fd,x)       ioctl(fd,TCSETA,x)
 #define TerminalGet(fd,x)       ioctl(fd,TCGETA,x)
@@ -254,8 +254,7 @@ typedef struct termios TerminalMode;
 #endif				/* HAVE_TERMIOS_H */
 
 #ifdef HAVE_SGTTY_H
-#include        <sys/ioctl.h>
-#include        <sgtty.h>
+#include <sgtty.h>
 typedef struct sgttyb TerminalMode;
 #define TerminalSet(fd,x)       ioctl(fd,TIOCSETP,x)
 #define TerminalGet(fd,x)       ioctl(fd,TIOCGETP,x)
@@ -654,10 +653,6 @@ getTCstr(void)
     setlinescols();
     setgraphchar();
 }
-
-#ifndef TIOCGWINSZ
-#include <sys/ioctl.h>
-#endif				/* not TIOCGWINSZ */
 
 void
 setlinescols(void)
