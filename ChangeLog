@@ -1,5 +1,10 @@
 2002-12-05  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03525] Re: sync option
+	* func.c (initKeymap): delete check force, keymap_initialized
+
+2002-12-05  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03524] fix doc*/README.func, w3mhelp.cgi.in
 	* doc/README.func (REINIT): added
 	* doc-jp/README.func (REINIT): added
