@@ -1026,7 +1026,9 @@ parseURL2(char *url, ParsedURL *pu, ParsedURL *current)
 	pu->file = expandName(pu->file);
 
     if (current && (pu->scheme == current->scheme ||
-		    (pu->scheme == SCM_FTP && current->scheme == SCM_FTPDIR))
+		    (pu->scheme == SCM_FTP && current->scheme == SCM_FTPDIR) ||
+		    (pu->scheme == SCM_LOCAL &&
+		     current->scheme == SCM_LOCAL_CGI))
 	&& pu->host == NULL) {
 	/* Copy omitted element from the current URL */
 	pu->user = current->user;
