@@ -5811,7 +5811,7 @@ convert_size2(clen_t size1, clen_t size2, int usefloat)
 }
 
 void
-showProgress(clen_t *linelen, clen_t *trbyte)
+showProgress(clen_t * linelen, clen_t * trbyte)
 {
     int i, j, rate, duration, eta, pos;
     static time_t last_time, start_time;
