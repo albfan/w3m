@@ -1748,6 +1748,8 @@ openURL(char *url, ParsedURL *pu, ParsedURL *current,
     case SCM_NNTP:
 	/* nntp://<host>:<port>/<newsgroup-name>/<article-number> */
     case SCM_NEWS:
+        /* news:<newsgroup-name> XXX: not yet */
+        /* news:<unique>@<full_domain_name> */
 	if (pu->scheme == SCM_NNTP) {
 	    p = pu->host;
 	}
@@ -1802,6 +1804,7 @@ openURL(char *url, ParsedURL *pu, ParsedURL *current,
 	    fprintf(fw, "ARTICLE %s\r\n", p);
 	}
 	else {
+	    /* pu-file contains '@' => news:<message-id> */
 	    fprintf(fw, "ARTICLE <%s>\r\n", url_unquote(pu->file));
 	}
 	fflush(fw);
