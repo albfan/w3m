@@ -177,6 +177,7 @@ void bzero(void *, int);
 #define BP_NO_URL	0x10
 #define BP_REDIRECTED   0x20
 #define BP_CLOSE        0x40
+#define BP_RELOAD       0x80
 
 /* Link Buffer */
 #define LB_NOLINK	-1
@@ -466,6 +467,7 @@ typedef struct _DownloadList {
     struct _DownloadList *next;
     struct _DownloadList *prev;
 } DownloadList;
+#define DOWNLOAD_LIST_TITLE "Download List Panel"
 
 #define COPY_BUFPOSITION(dstbuf, srcbuf) {\
  (dstbuf)->topLine = (srcbuf)->topLine; \
