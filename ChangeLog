@@ -1,3 +1,7 @@
+2002-12-28  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* rc: nntpserver, nntpmode, max_news
+
 2002-12-28  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03608] news:<newsgroup>
