@@ -1217,7 +1217,7 @@ escmap(void)
     char c;
     c = getch();
     if (IS_ASCII(c))
-        escKeyProc((int)c, K_ESC, EscKeymap);
+	escKeyProc((int)c, K_ESC, EscKeymap);
 }
 
 void
@@ -1230,7 +1230,7 @@ escbmap(void)
 	return;
     }
     if (IS_ASCII(c))
-        escKeyProc((int)c, K_ESCB, EscBKeymap);
+	escKeyProc((int)c, K_ESCB, EscBKeymap);
 }
 
 void
@@ -1244,7 +1244,7 @@ escdmap(char c)
 	c = getch();
     }
     if (c == '~')
-        escKeyProc((int)d, K_ESCD, EscDKeymap);
+	escKeyProc((int)d, K_ESCD, EscDKeymap);
 }
 
 void

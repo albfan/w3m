@@ -53,7 +53,7 @@ setKeymap(char *p, int lineno, int verbose)
 	int i, j, m = MULTI_KEY(c);
 
 	if (m & K_ESCD)
- 	    map = EscDKeymap;
+	    map = EscDKeymap;
 	else if (m & K_ESCB)
 	    map = EscBKeymap;
 	else if (m & K_ESC)
@@ -89,7 +89,7 @@ setKeymap(char *p, int lineno, int verbose)
     }
     else {
 	if (c & K_ESCD)
- 	    map = EscDKeymap;
+	    map = EscDKeymap;
 	else if (c & K_ESCB)
 	    map = EscBKeymap;
 	else if (c & K_ESC)
