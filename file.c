@@ -7254,7 +7254,7 @@ getNextPage(Buffer *buf, int plen)
 		   lineBuf2->length, FOLD_BUFFER_WIDTH, nlines);
 	if (!top) {
 	    top = buf->firstLine;
-	    cur = buf->currentLine;
+	    cur = top;
 	}
 	if (buf->lastLine->real_linenumber - buf->firstLine->real_linenumber
 	    >= PagerMax) {
