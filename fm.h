@@ -604,8 +604,7 @@ typedef struct http_request {
 
 extern int LINES, COLS;
 #if defined(__CYGWIN__) && LANG == JA
-extern int isWinConsole;
-#define LASTLINE (LINES-(isWinConsole ? 2 : 1))
+extern int LASTLINE;
 #else				/* not defined(__CYGWIN__) || LANG != JA */
 #define LASTLINE (LINES-1)
 #endif				/* not defined(__CYGWIN__) || LANG != JA */
