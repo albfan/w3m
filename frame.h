@@ -54,8 +54,8 @@ struct frameset_queue {
     struct frameset *frameset;
     long linenumber;
     long top_linenumber;
-    short pos;
-    short currentColumn;
+    int pos;
+    int currentColumn;
     struct _anchorList *formitem;
 };
 
