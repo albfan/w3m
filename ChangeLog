@@ -1,3 +1,10 @@
+2003-10-18  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* [w3m-dev 03996] HELP_DIR and funcname.tab
+	  reported by SAKAI Kiyotaka <ksakai@kso.netwk.ntt-at.co.jp>
+	* configure.in: don't use posix shell syntax $(..)
+	* funcname.tab: deleted
+
 2003-10-11  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* scripts/Makefile.in (w3mhelp-funcname.pl): depends ../funcname.tab
