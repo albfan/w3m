@@ -1,3 +1,8 @@
+2002-11-06  Fumitoshi UKAI  <ukai@debian.or.jp>
+	
+	* doc-jp/README.tab: added [w3m-dev 03372]
+	* doc/README.tab: brief translation
+
 2002-11-06  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03372] tab browser
