@@ -292,6 +292,8 @@ typedef struct _MapArea {
     char shape;
     short *coords;
     int ncoords;
+    short center_x;
+    short center_y;
 #endif
 #endif
 } MapArea;
