@@ -3012,13 +3012,13 @@ feed_table(struct table *tbl, char *line, struct table_mode *mode,
 		    q = p;
             switch (ec = getescapechar(&p)) {
             case '<':
-               Strcat_charp(tmp, "<");
+               Strcat_charp(tmp, "&lt;");
                break;
             case '>':
-               Strcat_charp(tmp, ">");
+               Strcat_charp(tmp, "&gt;");
                break;
             case '&':
-               Strcat_charp(tmp, "&");
+               Strcat_charp(tmp, "&amp;");
                break;
             case '\r':
                Strcat_char(tmp, '\n');
