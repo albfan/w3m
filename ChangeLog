@@ -1,3 +1,18 @@
+2002-11-22  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03456] tiling of tab
+	* display.c (displayBuffer): use LastTab->y
+		(redrawNLine): fix column calculation
+	* fm.h (TabBuffer): add x1, x2, y
+	* main.c (calcTabPos): added
+		(main): calcTabPos()
+		(mouse_scroll_line): rewrite
+		(process_mouse): use LastTab->y
+		(_newT): calcTabPos()
+		(calcTabPos): added
+		(deleteTab): calcTabPos()
+		(moveTab): calcTabPos()
+
 2002-11-22  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* doc/README.mouse_menu: added

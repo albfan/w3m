@@ -452,6 +452,9 @@ typedef struct _TabBuffer {
     struct _TabBuffer *prevTab;
     Buffer *currentBuffer;
     Buffer *firstBuffer;
+    short x1;
+    short x2;
+    short y;
 } TabBuffer;
 
 typedef struct _DownloadList {
