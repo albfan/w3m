@@ -1670,6 +1670,14 @@ skip_escseq(void)
     c = getch();
     if (c == '[' || c == 'O') {
 	c = getch();
+#ifdef MOUSE
+	if (is_xterm && c == 'M') {
+	  getch();
+	  getch();
+	  getch();
+	}
+	else
+#endif	
 	while (IS_DIGIT(c))
 	    c = getch();
     }
