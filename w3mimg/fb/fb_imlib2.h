@@ -1,3 +1,4 @@
+/* $Id$ */
 #ifndef fb_imlib2_header
 #define fb_imlib2_header
 

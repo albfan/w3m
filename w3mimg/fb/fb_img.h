@@ -1,3 +1,4 @@
+/* $Id$ */
 #ifndef fb_img_header
 #define fb_img_header
 #include "config.h"

@@ -1,3 +1,4 @@
+/* $Id$ */
 #ifndef fb_header
 #define fb_header
 #include <linux/fb.h>

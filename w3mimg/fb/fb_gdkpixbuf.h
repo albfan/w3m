@@ -1,3 +1,4 @@
+/* $Id$ */
 #ifndef fb_gdkpixbuf_header
 #define fb_gdkpixbuf_header
 
