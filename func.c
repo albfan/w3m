@@ -110,7 +110,7 @@ setKeymap(char *p, int lineno, int verbose)
 }
 
 static void
-interpret_keymap(FILE *kf, struct stat *current, int force)
+interpret_keymap(FILE * kf, struct stat *current, int force)
 {
     int fd;
     struct stat kstat;
@@ -124,8 +124,7 @@ interpret_keymap(FILE *kf, struct stat *current, int force)
 	(!force &&
 	 kstat.st_mtime == current->st_mtime &&
 	 kstat.st_dev == current->st_dev &&
-	 kstat.st_ino == current->st_ino &&
-	 kstat.st_size == current->st_size))
+	 kstat.st_ino == current->st_ino && kstat.st_size == current->st_size))
 	return;
     *current = kstat;
 
@@ -522,7 +521,7 @@ setMouseAction2(MouseActionMap * map, char *p)
 }
 
 static void
-interpret_mouse_action(FILE *mf)
+interpret_mouse_action(FILE * mf)
 {
     Str line;
     char *p, *s;

@@ -1670,7 +1670,7 @@ optionMenu(int x, int y, char **label, int *variable, int initial,
 /* --- InitMenu --- */
 
 static void
-interpret_menu(FILE *mf)
+interpret_menu(FILE * mf)
 {
     Str line;
     char *p, *s;
