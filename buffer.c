@@ -517,6 +517,13 @@ reshapeBuffer(Buffer *buf)
     buf->name = NULL;
     buf->img = NULL;
     buf->formitem = NULL;
+    buf->formlist = NULL;
+    buf->linklist = NULL;
+    buf->maplist = NULL;
+    if (buf->hmarklist)
+	buf->hmarklist->nmark = 0;
+    if (buf->imarklist)
+	buf->imarklist->nmark = 0;
     buf->width = INIT_BUFFER_WIDTH;
 
 #ifdef JP_CHARSET
