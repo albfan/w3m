@@ -1251,7 +1251,7 @@ findAuthentication(struct http_auth *hauth, Buffer *buf, char *auth_field)
 		SKIP_BLANKS(p);
 		p0 = p;
 		for (ha = &www_auth[0]; ha->scheme != NULL; ha++) {
-		    if (strncmp(p, ha->scheme, strlen(ha->scheme)) == 0) {
+		    if (strncasecmp(p, ha->scheme, strlen(ha->scheme)) == 0) {
 			if (hauth->pri < ha->pri) {
 			    *hauth = *ha;
 			    p += strlen(ha->scheme);
