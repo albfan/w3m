@@ -1,5 +1,12 @@
 2002-12-10  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03542] news support
+	* file.c (loadGeneralFile): NNTP as well as NEWS
+	* indep.c (url_unquote_char): check % hex hex
+		(url_unquote): unquote except \0, \n, \r
+
+2002-12-10  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03541] Re: W3M_LINE_NO / W3M_CURRENT_COLUMN
 	* main.c (goLine): check searchKeyData()
 		(set_buffer_environ): W3M_CURRENT_*

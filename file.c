@@ -1749,7 +1749,7 @@ loadGeneralFile(char *path, ParsedURL *volatile current, char *referer,
 	}
     }
 #ifdef USE_NNTP
-    else if (pu.scheme == SCM_NEWS) {
+    else if (pu.scheme == SCM_NEWS || pu.scheme == SCM_NNTP) {
 	t_buf = newBuffer(INIT_BUFFER_WIDTH);
 	readHeader(&f, t_buf, TRUE, &pu);
 	t = checkContentType(t_buf);
