@@ -295,7 +295,9 @@ reAnchorAny(Buffer *buf, char *re,
     if ((re = regexCompile(re, 1)) != NULL) {
 	return re;
     }
-    for (l = buf->firstLine; l != NULL; l = l->next) {
+    for (l = MarkAllPages ? buf->firstLine : buf->topLine; l != NULL &&
+	 (MarkAllPages || l->linenumber < buf->topLine->linenumber + LASTLINE);
+	 l = l->next) {
 	p = l->lineBuf;
 	for (;;) {
 	    if (regexMatch(p, &l->lineBuf[l->len] - p, p == l->lineBuf) == 1) {

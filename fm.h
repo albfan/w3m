@@ -866,6 +866,7 @@ global int FoldTextarea init(FALSE);
 #define DEFAULT_URL_CURRENT	1
 #define DEFAULT_URL_LINK	2
 global int DefaultURLString init(DEFAULT_URL_EMPTY);
+global int MarkAllPages init(FALSE);
 
 #ifdef USE_MIGEMO
 global int use_migemo init(FALSE);
