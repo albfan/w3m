@@ -5673,7 +5673,7 @@ searchKeyNum(void)
 static char *
 getCodePage(void)
 {
-    ULONG CpList[8], CpSize;
+    unsigned long CpList[8], CpSize;
 
     if (!getenv("WINDOWID") && !DosQueryCp(sizeof(CpList), CpList, &CpSize))
 	return Sprintf("CP%d", *CpList)->ptr;
