@@ -177,7 +177,6 @@ void bzero(void *, int);
 #define BP_NO_URL	0x10
 #define BP_REDIRECTED   0x20
 #define BP_CLOSE        0x40
-#define BP_RELOAD       0x80
 
 /* Link Buffer */
 #define LB_NOLINK	-1
@@ -462,6 +461,9 @@ typedef struct _Buffer {
     char need_reshape;
     Anchor *submit;
     struct _BufferPos *undo;
+#ifdef USE_ALARM
+    struct _AlarmEvent *event;
+#endif
 } Buffer;
 
 typedef struct _BufferPos {
@@ -1116,10 +1118,14 @@ void w3m_exit(int i);
 #define AL_UNSET         0
 #define AL_EXPLICIT      1
 #define AL_IMPLICIT      2
-#define AL_IMPLICIT_DONE 4
-#define AL_ONCE          8
-#define AL_IMPLICIT_ONCE (AL_IMPLICIT|AL_ONCE)
-#define AL_RESTORE       16
+#define AL_IMPLICIT_ONCE 3
+
+typedef struct _AlarmEvent {
+    int sec;
+    short status;
+    int cmd;
+    void *data;
+} AlarmEvent;
 #endif
 
 /* 

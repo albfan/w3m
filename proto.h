@@ -115,7 +115,8 @@ extern void stopI(void);
 #endif
 #ifdef USE_ALARM
 extern void setAlarm(void);
-extern void setAlarmEvent(int sec, short status, int cmd, void *data);
+extern AlarmEvent *setAlarmEvent(AlarmEvent *event, int sec, short status,
+				 int cmd, void *data);
 #else
 #define setAlarm nulcmd
 #endif
