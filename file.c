@@ -7118,6 +7118,7 @@ doExternal(URLFile uf, char *path, char *type, Buffer **bufp,
 	    fmInitialized = FALSE;
 	    if (save2tmp(uf, tmpf->ptr) < 0)
 		exit(1);
+	    UFclose(&uf);
 	    myExec(command->ptr);
 	}
 	*bufp = NO_BUFFER;
@@ -7128,6 +7129,7 @@ doExternal(URLFile uf, char *path, char *type, Buffer **bufp,
     {
 	if (save2tmp(uf, tmpf->ptr) < 0)
 	    return 0;		/* ??? */
+	UFclose(&uf);
     }
     if (mcap->flags & (MAILCAP_HTMLOUTPUT | MAILCAP_COPIOUSOUTPUT)) {
 	if (defaultbuf == NULL)

@@ -1,5 +1,10 @@
 2002-11-23  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03466] Re: background download when external viewer
+	* file.c (doExternal): UFclose(&uf);
+
+2002-11-23  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03464] Re: case insensitive regexp search
 	  (rewrite [w3m-dev 03462] by Hiroyuki Ito <hito@crl.go.jp>)
 	* regex.c (matchWhich): add int
