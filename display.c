@@ -322,7 +322,7 @@ displayBuffer(Buffer *buf, int mode)
 	int cl = buf->currentLine->real_linenumber;
 	int ll = buf->lastLine->real_linenumber;
 	int r = (int)((double)cl * 100.0 / (double)ll + 0.5);
-	Strcat(msg, Sprintf("%d/%d (%3d%%)", cl, ll, r));
+	Strcat(msg, Sprintf("%d/%d (%d%%)", cl, ll, r));
     }
     else
 	Strcat_charp(msg, "Viewing");

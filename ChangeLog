@@ -1,3 +1,8 @@
+2002-10-30  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03354] display current line number
+	* display.c (displayBuffer): %3d -> %d
+
 2002-10-29  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* 0.3.2 release candidate 3
