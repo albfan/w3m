@@ -1,3 +1,11 @@
+2003-06-19  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* [w3m-dev 03916] Re: charset attribute of anchor tag
+	 requested by TSUCHIYA Masatoshi <tsuchiya@pine.kuee.kyoto-u.ac.jp>
+	 for emacs-w3m
+	* html.c (ALST_A): add ATTR_CHARSET
+		(MAXA_A): +1
+
 2003-06-18  ABE Yuji <cbo46560@pop12.odn.ne.jp>
 
 	* [w3m-dev 03914] a fragment in the Referer URI
