@@ -122,13 +122,6 @@ cleanupName(char *name)
 	}
 	else if (strncmp(p, "//", 2) == 0) {	/* foo//bar */
 	    /* -> foo/bar           */
-#if 0 /* ifdef SUPPORT_NETBIOS_SHARE */
-           if (p == buf) {       /* //DRIVE/foo or //host/path */
-		p += 2;
-		q += 2;
-		continue;
-	    }
-#endif                /* SUPPORT_NETBIOS_SHARE */
 	    *p = '\0';
 	    q++;
 	    strcat(buf, q);

@@ -931,18 +931,10 @@ parseURL2(char *url, ParsedURL * pu, ParsedURL * current)
 #ifdef __EMX__
 	if (pu->scheme == SCM_LOCAL) {
 	    if (strncmp(pu->file, "/$LIB/", 6)) {
-		char *arg, abs[_MAX_PATH], tmp[_MAX_PATH];
+		char abs[_MAX_PATH];
 
-		if (!(arg = strchr(strcpy(tmp, pu->file), '?'))) {
-		    _abspath(abs, tmp, _MAX_PATH);
-		    pu->file = cleanupName(abs);
-		}
-		else {
-		    *arg = 0;
-		    _abspath(abs, tmp, _MAX_PATH);
-		    *arg = '?';
-		    pu->file = cleanupName(strcat(abs, arg));
-		}
+                _abspath(abs, pu->file, _MAX_PATH);
+                pu->file = cleanupName(abs);
 	    }
 	}
 #else
