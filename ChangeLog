@@ -1,5 +1,10 @@
 2002-11-27  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* w3m 0.3.2.1 security fix
+	* frame.c (createFrameFile): html_quote()
+
+2002-11-27  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03486] fix of displayLineInfo
 	* display.c (displayBuffer): don't divide by 0
 
