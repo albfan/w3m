@@ -366,8 +366,7 @@ getFtpModtime(FTP ftp, char *path)
     tmp = read_response(ftp);
     if (atoi(tmp->ptr) != 213)
 	return -1;
-    for (p = tmp->ptr + 4; *p && *p == ' '; p++)
-	;
+    for (p = tmp->ptr + 4; *p && *p == ' '; p++) ;
     if (sscanf(p, "%04d%02d%02d%02d%02d%02d",
 	       &tm.tm_year, &tm.tm_mon, &tm.tm_mday,
 	       &tm.tm_hour, &tm.tm_min, &tm.tm_sec) < 6)
