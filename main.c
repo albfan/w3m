@@ -4779,6 +4779,9 @@ deleteFiles()
 void
 w3m_exit(int i)
 {
+#ifdef USE_MIGEMO
+    init_migemo();	/* close pipe to migemo */
+#endif
     deleteFiles();
 #ifdef USE_SSL
     free_ssl_ctx();
