@@ -775,6 +775,10 @@ global int UseExternalDirBuffer init(TRUE);
 global char *DirBufferCommand init("file:///$LIB/dirlist" CGI_EXTENSION);
 global int ignore_null_img_alt init(TRUE);
 global int FoldTextarea init(FALSE);
+#define DEFAULT_URL_EMPTY	0
+#define DEFAULT_URL_CURRENT	1
+#define DEFAULT_URL_LINK	2
+global int DefaultURLString init(DEFAULT_URL_EMPTY);
 
 #ifdef USE_MIGEMO
 global int use_migemo init(FALSE);
