@@ -361,7 +361,7 @@ reAnchorAny(Buffer *buf, char *re,
 	    else
 		break;
 	}
-  next_line:
+      next_line:
 	if (MarkAllPages && l->next == NULL && buf->pagerSource &&
 	    !(buf->bufferprop & BP_CLOSE))
 	    getNextPage(buf, PagerMax);
