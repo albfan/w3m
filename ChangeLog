@@ -1,5 +1,10 @@
 2002-10-31  Fumitoshi UKAI  <ukai@debian.or.jp>
 
+	* 0.3.2 release candidate 4
+	* version.c.in: update
+
+2002-10-31  Fumitoshi UKAI  <ukai@debian.or.jp>
+
 	* [w3m-dev 03365] ~/.netrc support
 	* etc.c (add_auth_pass_entry): add netrc arg
 			add new entry to tail
