@@ -228,7 +228,7 @@ clearImage()
     for (j = 0; j < n_terminal_image; j++) {
 	i = &terminal_image[j];
 	if (!(i->cache->loaded & IMG_FLAG_LOADED &&
-	    i->width > 0 && i->height > 0))
+	      i->width > 0 && i->height > 0))
 	    continue;
 	sprintf(buf, "6;%d;%d;%d;%d\n", i->x, i->y, i->width, i->height);
 	fputs(buf, Imgdisplay_wf);

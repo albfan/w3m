@@ -380,8 +380,8 @@ fb_clear(int x, int y, int w, int h, int r, int g, int b)
 
     offset_fb = fscinfo.line_length * y + pixel_size * x;
     bg = ((r >> (CHAR_BIT - vscinfo.red.length)) << vscinfo.red.offset) +
-	 ((g >> (CHAR_BIT - vscinfo.green.length)) << vscinfo.green.offset) +
-	 ((b >> (CHAR_BIT - vscinfo.blue.length)) << vscinfo.blue.offset);
+	((g >> (CHAR_BIT - vscinfo.green.length)) << vscinfo.green.offset) +
+	((b >> (CHAR_BIT - vscinfo.blue.length)) << vscinfo.blue.offset);
     for (i = 0; i < h; i++) {
 	memcpy(buf + offset_fb, bg, pixel_size * w);
 	offset_fb += fscinfo.line_length;
