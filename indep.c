@@ -177,6 +177,8 @@ strcasestr(const char *s1, const char *s2)
     int len1, len2;
     if (s2 == NULL)
 	return (char *)s1;
+    if (*s2 == '\0')
+	return (char *)s1;
     len1 = strlen(s1);
     len2 = strlen(s2);
     while (*s1 && len1 >= len2) {
