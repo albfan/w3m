@@ -271,7 +271,7 @@ readNewsgroup(ParsedURL *pu)
     URLFile f;
     Buffer *buf;
     char *group, *p, *q, *s, *t, *n;
-    char * volatile qgroup;
+    char *volatile qgroup;
     int status, i, first, last;
     volatile int flag = 0, start = 0, end = 0;
 #ifdef JP_CHARSET
