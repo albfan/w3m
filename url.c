@@ -1114,6 +1114,10 @@ _parsedURL2Str(ParsedURL *pu, int pass)
 #ifndef USE_W3MMAILER
     if (pu->scheme == SCM_MAILTO) {
 	Strcat_charp(tmp, pu->file);
+	if (pu->query) {
+	    Strcat_char(tmp, '?');
+	    Strcat_charp(tmp, pu->query);
+	}
 	return tmp;
     }
 #endif
