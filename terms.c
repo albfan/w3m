@@ -1861,7 +1861,7 @@ getch(void)
 #ifdef USE_MOUSE
 #ifdef USE_GPM
 char
-wgetch(void)
+wgetch(void *p)
 {
     char c;
 
