@@ -1,3 +1,9 @@
+2002-11-29  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03498] Re: parse <!-- ... --> in <script>
+	* file.c (HTMLlineproc0): tag in textarea
+	* frame.c (createFrameFile): fix comment processing in frame
+
 2002-11-28  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03497] incorrect image size

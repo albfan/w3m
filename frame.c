@@ -573,8 +573,10 @@ createFrameFile(struct frameset *f, FILE * f1, Buffer *current, int level,
 			    cleanup_line(tmp, HTML_MODE);
 			    p = tmp->ptr;
 			}
-			if (status == R_ST_NORMAL || ST_IS_COMMENT(status))
+			if (status == R_ST_NORMAL)
 			    read_token(tok, &p, &status, 1, 0);
+			else if (ST_IS_COMMENT(status))
+			    read_token(tok, &p, &status, 0, 0);
 			else
 			    read_token(tok, &p, &status, 1, 1);
 		    } while (status != R_ST_NORMAL);

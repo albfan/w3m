@@ -5537,8 +5537,6 @@ HTMLlineproc0(char *str, struct html_feed_environ *h_env, int internal)
 	    if (obuf->flag & RB_INTXTA) {
 		if (cmd == HTML_N_TEXTAREA)
 		    goto proc_normal;
-		if (is_tag)
-		    continue;
 		feed_textarea(q);
 	    }
 	    else if (obuf->flag & RB_INSELECT) {
