@@ -1996,8 +1996,8 @@ goLine(void)
 {
     if (prec_num)
 	_goLine("^");
-    _goLine(inputStr("Goto line: ", ""));
-    prec_num = 0;
+    else
+	_goLine(inputStr("Goto line: ", ""));
 }
 
 void
