@@ -343,6 +343,10 @@ ISfileno(InputStream stream)
 	return *(int *)stream->base.handle;
     case IST_FILE:
 	return fileno(stream->file.handle->f);
+#ifdef USE_SSL
+    case IST_SSL:
+	return stream->ssl.handle->sock;
+#endif
     case IST_ENCODED:
 	return ISfileno(stream->ens.handle->is);
     default:

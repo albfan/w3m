@@ -1,5 +1,10 @@
 2003-01-21  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03659] Can't download from SSL.
+	* istream.c (ISfileno): case IST_SSL
+
+2003-01-21  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03658] Re: Other user can see local cookie.
 	* fm.h (rc_dir): init(NULL)
 	* rc.c (config_file): deleted
