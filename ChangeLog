@@ -1,3 +1,8 @@
+2004-04-22  Masao Uebayashi <uebayasi@pultek.co.jp>
+
+	* fix build error for --enable-m17n --disable-unicode
+	* libwc/detect.c (wc_create_detect_map): #ifdef USE_UNICODE
+
 2004-04-17  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* [w3m-dev 04064] authentication
