@@ -102,6 +102,7 @@ extern void rFrame(void);
 extern void extbrz(void);
 extern void linkbrz(void);
 extern void curlno(void);
+extern void execCmd(void);
 #ifdef USE_IMAGE
 extern void dispI(void);
 extern void stopI(void);

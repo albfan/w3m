@@ -765,9 +765,7 @@ global Buffer *Currentbuf;
 global Buffer *Firstbuf;
 global int CurrentKey;
 global char *CurrentKeyData;
-#ifdef USE_MENU
-global char *CurrentMenuData;
-#endif
+global char *CurrentCmdData;
 extern char *ullevel[];
 
 extern char *w3m_version;

@@ -641,9 +641,9 @@ action_menu(Menu *menu)
 	if (item.type & MENU_FUNC) {
 	    CurrentKey = -1;
 	    CurrentKeyData = NULL;
-	    CurrentMenuData = item.data;
+	    CurrentCmdData = item.data;
 	    (*item.func) ();
-	    CurrentMenuData = NULL;
+	    CurrentCmdData = NULL;
 	}
     }
     else if (mselect == MENU_CLOSE) {

@@ -10,6 +10,7 @@ BEGIN		goLineF
 BOOKMARK	ldBmark
 CENTER_H	ctrCsrH
 CENTER_V	ctrCsrV
+COMMAND		execCmd
 COOKIE		cooLst
 DELETE_PREVBUF	deletePrevBuf
 DICT_WORD	dictword
