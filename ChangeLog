@@ -1,3 +1,10 @@
+2002-03-20  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03135] commit of [w3m-dev 03006] is incomplete.
+	* file.c (HTMLlineproc2body): check form_int fid attr
+			update forms[]
+			fix buf->formlist
+
 2002-03-16  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* part of [w3m-dev-en 00713] contrib: unofficial "current page info" patch, updated for w3m-0.3
