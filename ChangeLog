@@ -1,3 +1,13 @@
+2002-12-06  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* version.c.in: w3m/0.3.2.2+cvs
+	* NEWS: 0.3.2.2
+
+2002-12-06  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* security fix
+	* file.c (process_img): html_quote()
+
 2002-12-06  Takahashi Youichirou <nikuq@hk.airnet.ne.jp>
 
 	* [w3m-dev 03530] save history

@@ -3139,11 +3139,11 @@ process_img(struct parsed_tag *tag, int width)
 		Strcat_charp(tmp, html_quote(Strnew_charp_n(q, nw)->ptr));
 	    }
 	    else
-		Strcat_charp(tmp, q);
+		Strcat_charp(tmp, html_quote(q));
 	}
 	else
 #endif
-	    Strcat_charp(tmp, q);
+	    Strcat_charp(tmp, html_quote(q));
 	goto img_end;
     }
     if (w > 0 && i > 0) {
