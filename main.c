@@ -5646,7 +5646,7 @@ moveTab(TabBuffer * t, TabBuffer * t2, int right)
 	    FirstTab = t;
 	t2->prevTab = t;
     }
-    displayBuffer(Currentbuf, B_NORMAL);
+    displayBuffer(Currentbuf, B_FORCE_REDRAW);
 }
 
 void

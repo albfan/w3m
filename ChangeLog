@@ -1,3 +1,8 @@
+2002-11-12  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03405] Re: tab browser
+	* main.c (moveTab): B_FORCE_REDRAW
+
 2002-11-10  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03401] w3mhelp.cgi
