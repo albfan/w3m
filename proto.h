@@ -416,6 +416,7 @@ extern void set_int(void);
 extern void getTCstr(void);
 extern void setlinescols(void);
 extern void setupscreen(void);
+extern pid_t open_pipe_rw(FILE **fr, FILE **fw);
 extern int initscr(void);
 extern int write1(char c);
 extern void endline(void);
