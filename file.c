@@ -7765,7 +7765,7 @@ uncompress_stream(URLFile *uf, char **src)
 	/* child */
 	pid_t pid2;
 	FILE *f2;
-	dup2(1, 2);	/* stderr>&stdout */
+	dup2(1, 2);		/* stderr>&stdout */
 	setup_child(TRUE, -1, UFfileno(uf));
 	pid2 = open_pipe_rw(NULL, &f2);
 	if (pid2 < 0) {
