@@ -42,8 +42,17 @@ noConv(char *oval, char **str)
 static int
 toNumber(char *oval, int *num)
 {
-    *num = atoi(oval);
-    return 1;
+    char *ep;
+    int x;
+
+    x = strtol(oval, &ep, 0);
+
+    if (ep > oval) {
+	*num = x;
+	return 1;
+    }
+    else
+	return 0;
 }
 
 static int
