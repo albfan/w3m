@@ -979,7 +979,7 @@ menuBackwardSearch(Menu *menu, char *str, int from)
 	from = menu->nitem - 1;
     for (i = from; i >= 0; i--)
 	if (menu->item[i].type != MENU_NOP &&
-	    regexMatch(menu->item[i].label, 0, 1) == 1)
+	    regexMatch(menu->item[i].label, -1, 1) == 1)
 	    return i;
     return -1;
 }
