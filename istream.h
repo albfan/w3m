@@ -125,9 +125,8 @@ extern int ISread(InputStream stream, Str buf, int count);
 extern int ISfileno(InputStream stream);
 extern int ISeos(InputStream stream);
 #ifdef USE_SSL
-extern void ssl_set_certificate_validity(Str msg);
-extern Str ssl_get_certificate(InputStream stream);
-extern Str ssl_check_cert_ident(SSL * handle, char *hostname);
+extern void ssl_accept_this_site(char *hostname);
+extern Str ssl_get_certificate(InputStream stream, char *hostname);
 #endif
 
 #define IST_BASIC	0
