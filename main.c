@@ -5230,12 +5230,7 @@ SigAlarm(SIGNAL_ARG)
 #endif
 	CurrentCmdData = NULL;
 	onA();
-	if (alarm_status == AL_EXPLICIT) {
-	    disp_message_nsec(Sprintf("%s %s", w3mFuncList[alarm_event.cmd].id,
-				      data ? data : "")->ptr,
-			      FALSE, alarm_sec - 1, FALSE, TRUE);
-	}
-	else if (alarm_status & AL_IMPLICIT) {
+	if (alarm_status & AL_IMPLICIT) {
 	    alarm_buffer = Currentbuf;
 	    alarm_status = AL_IMPLICIT_DONE | (alarm_status & AL_ONCE);
 	}
@@ -5274,8 +5269,8 @@ setAlarm(void)
     if (cmd >= 0) {
 	data = getQWord(&data);
 	setAlarmEvent(sec, AL_EXPLICIT, cmd, data);
-	disp_message_nsec(Sprintf("%s %s", w3mFuncList[cmd].id, data)->ptr,
-			  FALSE, sec - 1, FALSE, TRUE);
+	disp_message_nsec(Sprintf("%dsec %s %s", sec, w3mFuncList[cmd].id,
+				  data)->ptr, FALSE, 1, FALSE, TRUE);
     }
     else {
 	setAlarmEvent(0, AL_UNSET, FUNCNAME_nulcmd, NULL);

@@ -1,3 +1,9 @@
+2002-11-15  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03430] disable display of alarm command
+	* main.c (SigAlarm): remove display_message_nsec()
+		(setAlarm): show sec
+
 2002-11-15  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* NEWS: env,rc: https_proxy
