@@ -29,6 +29,7 @@ FRAME		rFrame
 GOTO		goURL
 GOTO_LINE	goLine
 GOTO_LINK	followA
+GOTO_RELATIVE	gorURL
 HELP		ldhelp
 HISTORY		ldHist
 INFO		pginfo

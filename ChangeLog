@@ -1,3 +1,16 @@
+2002-01-23  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* [w3m-dev 02885] Re: goURL
+	* funcname.tab (GOTO_RELATIVE): added
+	* main.c (goURL0): renamed from goURL
+		don't add http:// here, if base URL is NULL, cmd_loadURL()
+		will add http:// when necessary
+	* main.c (goURL): go to URL with current URL
+	* main.c (gorURL): go to relative URL
+	* proto.h (gorURL): added
+	* doc/README.func (GOTO_RELATIVE): added
+	* doc-jp/README.func (GOTO_RELATIVE): ditto
+
 2002-01-22  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* [w3m-dev-en 00670] GOTO behavior change
