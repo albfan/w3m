@@ -217,7 +217,7 @@ decodeWord(char **ow)
 	goto convert_fail;
     w++;
     p = w;
-    switch (method) {
+    switch (toupper(method)) {
     case 'B':
 	a = decodeB(&w);
 	break;
