@@ -1,3 +1,12 @@
+2002-12-11  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03551] Re: External URI loader
+	* file.c (loadGeneralFile): fix SCM_UNKNONWN
+
+2002-12-10  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* NEWS: func: LIST, LIST_MENU, MOVE_LIST_MENU
+
 2002-12-10  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03549] link list

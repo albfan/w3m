@@ -1570,10 +1570,10 @@ loadGeneralFile(char *path, ParsedURL *volatile current, char *referer,
 	case SCM_UNKNOWN:
 #ifdef USE_EXTERNAL_URI_LOADER
 	    tmp = searchURIMethods(&pu);
-	    if (tmp != NULL)
+	    if (tmp != NULL) {
 		b = loadGeneralFile(tmp->ptr, current, referer, flag, request);
-	    if (b != NULL && b != NO_BUFFER) {
-		copyParsedURL(&b->currentURL, &pu);
+		if (b != NULL && b != NO_BUFFER)
+		    copyParsedURL(&b->currentURL, &pu);
 		return b;
 	    }
 #endif
