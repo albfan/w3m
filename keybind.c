@@ -70,7 +70,7 @@ char EscKeymap[128] = {
     /*  h       i       j       k       l       m       n       o        */
     nulcmd, nulcmd, nulcmd, nulcmd, nulcmd, nulcmd, nextMk, nulcmd,
     /*  p       q       r       s       t       u       v       w        */
-    prevMk, nulcmd, nulcmd, svSrc, nulcmd, nulcmd, pgBack, dictword,
+    prevMk, nulcmd, nulcmd, svSrc, nulcmd, gorURL, pgBack, dictword,
     /*  x       y       z       {       |       }       ~       DEL      */
     nulcmd, nulcmd, nulcmd, nulcmd, nulcmd, nulcmd, nulcmd, nulcmd,
 };

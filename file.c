@@ -3769,14 +3769,14 @@ HTMLtagproc1(struct parsed_tag *tag, struct html_feed_environ *h_env)
 			  h_env->limit);
 		if (!is_redisplay && refresh_interval == 0 && MetaRefresh &&
 		    !((obuf->flag & RB_NOFRAMES) && RenderFrame)) {
-		    pushEvent(FUNCNAME_goURL, s_tmp->ptr);
+		    pushEvent(FUNCNAME_gorURL, s_tmp->ptr);
 		    /* pushEvent(deletePrevBuf,NULL); */
 		}
 #ifdef USE_ALARM
 		else if (!is_redisplay && refresh_interval > 0 && MetaRefresh
 			 && !((obuf->flag & RB_NOFRAMES) && RenderFrame)) {
 		    setAlarmEvent(refresh_interval, AL_IMPLICIT,
-				  FUNCNAME_goURL, s_tmp->ptr);
+				  FUNCNAME_gorURL, s_tmp->ptr);
 		}
 #endif
 	    }
