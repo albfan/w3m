@@ -364,10 +364,10 @@ static struct sel_c colorstr[] = {
 };
 #endif				/* USE_COLOR */
 
-#if 1 /* ANSI-C ? */
+#if 1				/* ANSI-C ? */
 #define N_STR(x)	#x
 #define N_S(x)	(x), N_STR(x)
-#else  /* for traditional cpp? */
+#else				/* for traditional cpp? */
 static char n_s[][2] = {
     {'0', 0},
     {'1', 0},
