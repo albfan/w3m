@@ -1,3 +1,7 @@
+2002-12-11  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* NEWS: func: REDO, UNDO
+
 2002-12-11  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03553] Undo/Redo
