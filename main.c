@@ -971,8 +971,7 @@ MAIN(int argc, char **argv, char **envp)
 	    alarm_buffer = Currentbuf;
 	    alarm_status = AL_IMPLICIT_DONE | (AL_IMPLICIT & AL_ONCE);
 	}
-	else if (alarm_status & AL_IMPLICIT_DONE
-		 && alarm_buffer != Currentbuf) {
+	else if (alarm_status & AL_IMPLICIT_DONE && alarm_buffer != Currentbuf) {
 	    setAlarmEvent(0, AL_UNSET, FUNCNAME_nulcmd, NULL);
 	}
 	if (alarm_sec > 0) {
