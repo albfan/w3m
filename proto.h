@@ -184,7 +184,7 @@ extern void restore_fonteffect(struct html_feed_environ *h_env,
 #ifdef USE_IMAGE
 extern void deleteImage(Buffer *buf);
 extern void getAllImage(Buffer *buf);
-extern void loadImage(int flag);
+extern void loadImage(Buffer *buf, int flag);
 extern ImageCache *getImage(Image * image, ParsedURL *current, int flag);
 extern int getImageSize(ImageCache * cache);
 #endif

@@ -9,13 +9,6 @@
 #include "local.h"
 #include "regex.h"
 
-#ifndef HAVE_LSTAT
-/* lstat is identical to stat, only the link itself is statted, not the file
- * that is obtained by tracing the links. But on OS/2 systems, there is no
- * differences. */
-#define lstat stat
-#endif				/* not HAVE_LSTAT */
-
 extern Str *textarea_str;
 #ifdef MENU_SELECT
 extern FormSelectOption *select_option;

@@ -1367,6 +1367,7 @@ setup_child(int child, int i, int f)
     close_all_fds_except(i, f);
     QuietMessage = TRUE;
     fmInitialized = FALSE;
+    TrapSignal = FALSE;
 }
 
 pid_t
