@@ -1265,6 +1265,7 @@ tmpClearBuffer(Buffer *buf)
 
 static Str currentURL(void);
 
+#ifdef USE_BUFINFO
 void
 saveBufferInfo()
 {
@@ -1278,6 +1279,7 @@ saveBufferInfo()
     fprintf(fp, "%s\n", currentURL()->ptr);
     fclose(fp);
 }
+#endif
 
 static void
 pushBuffer(Buffer *buf)

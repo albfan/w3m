@@ -714,13 +714,15 @@ extern void dictwordat(void);
 #define dictword nulcmd
 #define dictwordat nulcmd
 #endif				/* not USE_DICT */
-
+#if 0
 extern void reloadBuffer(Buffer *buf);
-
+#endif
 extern char *guess_save_name(Buffer *buf, char *file);
 
 extern void wrapToggle(void);
+#ifdef USE_BUFINFO
 extern void saveBufferInfo(void);
+#endif
 
 extern void dispVer(void);
 

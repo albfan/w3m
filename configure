@@ -875,7 +875,7 @@ def_param use_history y
 def_param use_bg_color y
 def_param format_nice n
 def_param id_ext y
-def_param use_bufinfo y
+def_param use_bufinfo n
 def_param use_egd y
 def_param enable_remove_trailingspaces n
 def_param menu_thin_frame n
