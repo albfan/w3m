@@ -120,7 +120,7 @@ initKeymap(int force)
     struct stat kstat;
     extern int str_to_bool(char *value, int old);
 
-    if (!force && !keymap_initialized)
+    if (!force && keymap_initialized)
 	return;
 
     if ((kf = fopen(rcFile(keymap_file), "rt")) == NULL ||

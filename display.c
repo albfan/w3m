@@ -453,6 +453,7 @@ redrawNLine(Buffer *buf, int n)
 	TabBuffer *t;
 	int l;
 
+	calcTabPos();
 	move(0, 0);
 #ifdef USE_MOUSE
 	if (mouse_action.menu_str)
