@@ -1,5 +1,10 @@
 2002-09-09  Hironori SAKAMOTO <h-saka@lsi.nec.co.jp>
 
+	* [w3m-dev 03298] [ -f instead of [ -e (configure)
+	* configure: use test -f instead of test -e
+
+2002-09-09  Hironori SAKAMOTO <h-saka@lsi.nec.co.jp>
+
 	* [w3m-dev 03297] TERM=mlterm
 	* terms.c (w3m_term_info_list): add mlterm
 
