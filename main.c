@@ -1966,6 +1966,7 @@ DEFUN(pipeBuf, PIPE_BUF, "Send rendered document to pipe")
 	buf->bufferprop |= (BP_INTERNAL | BP_NO_URL);
 	if (buf->type == NULL)
 	    buf->type = "text/plain";
+	buf->currentURL.file = "-";
 	pushBuffer(buf);
     }
     displayBuffer(Currentbuf, B_FORCE_REDRAW);
