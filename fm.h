@@ -936,7 +936,7 @@ global char *migemo_command init(DEF_MIGEMO_COMMAND);
 #endif				/* USE_MIGEMO */
 
 global struct auth_cookie *Auth_cookie init(NULL);
-global char *Local_cookie init(NULL);
+global Str Local_cookie init(NULL);
 #ifdef USE_COOKIE
 global struct cookie *First_cookie init(NULL);
 #endif				/* USE_COOKIE */

@@ -1961,7 +1961,8 @@ ldhelp(void)
     lang = AcceptLang;
     n = strcspn(lang, ";, \t");
     cmd_loadURL(Sprintf("file:///$LIB/" HELP_CGI CGI_EXTENSION
-			"?version=%s&lang=%s",
+			"?cookie=%s&version=%s&lang=%s",
+			Str_form_quote(Local_cookie)->ptr,
 			Str_form_quote(Strnew_charp(w3m_version))->ptr,
 			Str_form_quote(Strnew_charp_n(lang, n))->ptr)->ptr,
 		NULL, NO_REFERER);
@@ -4004,8 +4005,8 @@ adBmark(void)
     Str tmp;
 
     tmp = Sprintf("file://%s/" W3MBOOKMARK_CMDNAME
-		  "?mode=panel&bmark=%s&url=%s&title=%s",
-		  w3m_lib_dir(),
+		  "?mode=panel&cookie=%s&bmark=%s&url=%s&title=%s",
+		  w3m_lib_dir(), (Str_form_quote(Local_cookie))->ptr,
 		  (Str_form_quote(Strnew_charp(BookmarkFile)))->ptr,
 		  (Str_form_quote(parsedURL2Str(&Currentbuf->currentURL)))->
 		  ptr,
