@@ -4831,7 +4831,8 @@ execdict(char *word)
 	displayBuffer(Currentbuf, B_NORMAL);
 	return;
     }
-    dictcmd = Sprintf("%s?%s", DictCommand, w)->ptr;
+    dictcmd = Sprintf("%s?%s", DictCommand,
+		      Str_form_quote(Strnew_charp(w))->ptr)->ptr;
     buf = loadGeneralFile(dictcmd, NULL, NO_REFERER, 0, NULL);
     if (buf == NULL) {
 	disp_message("Execution failed", FALSE);
