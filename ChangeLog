@@ -1,3 +1,10 @@
+2004-11-09  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* w3mimg/fb/fb_gdkpixbuf.c (fb_image_load):
+	  fix unused variable `i'
+	* w3mimg/x11/x11_w3mimg.c (x11_load_image):
+	  ditto
+
 2004-11-09  Hiroyuki Ito <ZXB01226@nifty.com>
 
 	* [w3m-dev 04128] Re: w3mimgdisplay

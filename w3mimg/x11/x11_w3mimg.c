@@ -330,7 +330,7 @@ x11_load_image(w3mimg_op * self, W3MImage * img, char *fname, int w, int h)
     Imlib_Image im;
 #elif defined(USE_GDKPIXBUF)
     GdkPixbufAnimation *animation;
-    int i, j, iw, ih, n, frame_num, delay = -1, max_anim;
+    int j, iw, ih, n, frame_num, delay = -1, max_anim;
     double ratio_w, ratio_h;
     struct x11_image *ximg;
     Pixmap tmp_pixmap;
@@ -338,6 +338,7 @@ x11_load_image(w3mimg_op * self, W3MImage * img, char *fname, int w, int h)
     GdkPixbufAnimationIter *iter;
     GTimeVal time;
 #else
+    int i;
     GList *frames;
 #endif
 #endif

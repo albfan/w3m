@@ -118,10 +118,11 @@ fb_image_load(char *filename, int w, int h, int max_anim)
     GdkPixbufAnimationIter *iter;
     GTimeVal time;
 #else
+    int i;
     GList *frames;
 #endif
     double ratio_w, ratio_h;
-    int n, i, j, fw, fh, frame_num, delay;
+    int n, j, fw, fh, frame_num, delay;
     FB_IMAGE **fb_frame = NULL, *tmp_image = NULL;
 
     if (filename == NULL)
