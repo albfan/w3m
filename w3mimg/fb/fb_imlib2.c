@@ -89,7 +89,8 @@ draw(FB_IMAGE * img, Imlib_Image image)
 
 	    if (a == 0) {
 		fb_image_pset(img, i, j, bg_r, bg_g, bg_b);
-	    } else {
+	    }
+	    else {
 		fb_image_pset(img, i, j, r, g, b);
 	    }
 	}

@@ -195,7 +195,8 @@ x11_free_image(w3mimg_op * self, W3MImage * img)
 }
 
 static int
-x11_get_image_size(w3mimg_op * self, W3MImage * img, char *fname, int *w, int *h)
+x11_get_image_size(w3mimg_op * self, W3MImage * img, char *fname, int *w,
+		   int *h)
 {
     struct x11_info *xi;
     ImlibImage *im;
