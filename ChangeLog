@@ -1,3 +1,8 @@
+2003-03-11  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* Makefile.in (MODEL): delete @W3M_TARGET@
+	* configure.in: AC_SUBST(W3M_TARGET)
+
 2003-03-11  Fumitoshi UKAI  <ukai@debian.or.jp>	
 	
 	* which: deleted
