@@ -1612,7 +1612,7 @@ if [ "$use_alarm" = y ]; then
 main()
 {
     int sa = SIGALRM;
-    void (*)() = alarm;
+    void (*a)() = alarm;
 }
 EOF
   if $cc $cflags -o _zmachdep _zmachdep.c > /dev/null 2>&1
