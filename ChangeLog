@@ -1,5 +1,10 @@
 2002-01-24  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 02896] fid attr value should be in sequence
+	* table.c (feed_table_tag): s/line/""/ for HTML_FORM,HTML_N_FORM
+
+2002-01-24  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 02894] Re: goURL
 	* file.c (HTMLtagproc1): s/goURL/gorURL/
 	* keybind.c (EscKeymap): M-u = GOTO_RELATIVE
