@@ -1,8 +1,8 @@
 /* $Id$ */
-#include "config.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include "config.h"
 #include "hash.h"
 #include "Str.h"
 #include <gc.h>
