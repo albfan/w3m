@@ -1,5 +1,12 @@
 2003-09-24  Fumitoshi UKAI  <ukai@debian.or.jp>
 
+	* based on [w3m-dev 03970]
+	  SAKAI Kiyotaka <ksakai@kso.netwk.ntt-at.co.jp>
+	* acinclude.m4 (AC_W3M_IMAGE): add IMGTARGETS
+	* w3mimg/Makefile.in (all): use @IMGTARGETS@
+
+2003-09-24  Fumitoshi UKAI  <ukai@debian.or.jp>
+
 	* gettextize initial modifications
 	* configure.in Makefile.in aclocal.m4 config.h.in: 
 		update to support NLS
