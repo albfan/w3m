@@ -39,12 +39,11 @@
 #include "html.h"
 #include <gc.h>
 #include "Str.h"
-#if LANG == JA
-#define USE_M17N
-#endif				/* LANG == JA */
 #ifdef USE_M17N
 #include "wc.h"
 #include "wtf.h"
+#else
+typedef int wc_ces;	/* XXX: not used */
 #endif
 
 #ifdef HAVE_LOCALE_H
@@ -1036,8 +1035,8 @@ global char SearchConv init(TRUE);
 #define conv_from_system(x) (x)
 #define conv_to_system(x) (x)
 #define url_quote_conv(x,c) url_quote(x)
-#define wc_Str_conv(x) (x)
-#define wc_Str_conv_strict(x) (x)
+#define wc_Str_conv(x,charset0,charset1) (x)
+#define wc_Str_conv_strict(x,charset0,charset1) (x)
 #endif
 global char UseAltEntity init(TRUE);
 global char UseGraphicChar init(FALSE);

@@ -416,8 +416,13 @@ openFTPStream(ParsedURL *pu, URLFile *uf)
     return NULL;
 }
 
+#ifdef USE_M17N
 Str
 loadFTPDir(ParsedURL *pu, wc_ces * charset)
+#else
+Str
+loadFTPDir0(ParsedURL *pu)
+#endif
 {
     Str FTPDIRtmp;
     Str tmp;

@@ -305,7 +305,7 @@ typedef struct sgttyb TerminalMode;
 #define SETCH(var,ch,len)	((var) = New_Reuse(char, (var), (len) + 1), \
 				strncpy((var), (ch), (len)), (var)[len] = '\0')
 #else
-#define SETCH(var,ch)	((var) = (ch))
+#define SETCH(var,ch,len)	((var) = (ch))
 #endif
 
 /* Charactor Color */

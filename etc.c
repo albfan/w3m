@@ -1649,8 +1649,13 @@ file_to_url(char *file)
     return tmp->ptr;
 }
 
+#ifdef USE_M17N
 char *
 url_unquote_conv(char *url, wc_ces charset)
+#else
+char *
+url_unquote_conv0(char *url)
+#endif
 {
 #ifdef USE_M17N
     wc_uint8 old_auto_detect = WcOption.auto_detect;
