@@ -1,3 +1,7 @@
+2002-11-22  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* NEWS: options: -N
+
 2002-11-22  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03457] open URL of command line on each new tabs
