@@ -4005,6 +4005,7 @@ chkURL(void)
 	"news:[^<> 	][^<> 	]*",
 	"nntp://[a-zA-Z0-9][a-zA-Z0-9:%\\-\\./_]*",
 #endif				/* USE_NNTP */
+       "mailto:[^<> 	][^<> 	]*@[a-zA-Z0-9][a-zA-Z0-9\\-\\._]*[a-zA-Z0-9]",
 	NULL,
     };
     int i;
