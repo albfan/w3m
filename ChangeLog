@@ -1,3 +1,11 @@
+2001-12-26  Kazuhiro NISHIYAMA <zn@mbf.nifty.com>
+
+	* [w3m-dev 02725] bcopy, bzero
+	* etc.c (bcopy): deleted
+	* etc.c (bzero): deleted
+	* indep.c (bcopy): added
+	* indep.c (bzero): added
+
 2001-12-25  Kazuhiko <kazuhiko@archi.kyoto-u.ac.jp>
 	
 	* [w3m-dev 02727]
