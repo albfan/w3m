@@ -248,7 +248,8 @@ w3mimg_x11open()
     w3mimg_op *wop = NULL;
     struct x11_info *xi = NULL;
     char *id;
-    int revert, i, nchildren;
+    int revert, i;
+    unsigned int nchildren;
     XWindowAttributes attr;
     Window root, *children;
 
