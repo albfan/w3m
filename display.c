@@ -326,8 +326,8 @@ make_lastline_message(Buffer *buf)
 
     if (s) {
 	int l = COLS - 3 - s->length;
-#ifdef JP_CHARSET
 	if (msg->length > l) {
+#ifdef JP_CHARSET
 	    char *p;
 	    int i;
 	    for (p = msg->ptr; *p; p += i) {

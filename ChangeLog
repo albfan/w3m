@@ -1,5 +1,9 @@
 2002-12-28  Fumitoshi UKAI  <ukai@debian.or.jp>
 
+	* fix build errors
+	* display.c (make_lastline_message): fix error for undef JP_CHARSET
+	* news.c (readNewsgroup: `code' always required
+
 	* gcc -Wall -Werror clean
 	* file.c (loadHTMLstream): unused variable `p'
 	* news.c (news_command): unused variable `c'

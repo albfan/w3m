@@ -274,9 +274,7 @@ readNewsgroup(ParsedURL *pu)
     char *volatile qgroup;
     int status, i, first, last;
     volatile int flag = 0, start = 0, end = 0;
-#ifdef JP_CHARSET
     char code = '\0';
-#endif
     MySignalHandler(*volatile trap) (SIGNAL_ARG) = NULL;
 
     if (current_news.host == NULL || !pu->file || *pu->file == '\0')
