@@ -1,5 +1,11 @@
 2002-10-26  Fumitoshi UKAI  <ukai@debian.or.jp>
 
+	* [w3m-dev-en 00780] "Carlo E. Prelz" <fluido@fluido.as>
+	  always print on screen the relative position
+	* display.c (displayBuffer): relative position
+
+2002-10-26  Fumitoshi UKAI  <ukai@debian.or.jp>
+
 	* 0.3.2 release candidate 1
 	* version.c.in: update
 
