@@ -38,8 +38,10 @@ newFrameSet(struct parsed_tag *tag)
     if (cols) {
 	length[i] = p = cols;
 	while (*p != '\0')
-	    if (*p++ == ',')
+	    if (*p++ == ',') {
 		length[++i] = p;
+		if (i >= sizeof(length) / sizeof(length[0]) - 2) break;
+	    }
 	length[++i] = p + 1;
     }
     if (i > 1) {
@@ -74,8 +76,10 @@ newFrameSet(struct parsed_tag *tag)
     if (rows) {
 	length[i] = p = rows;
 	while (*p != '\0')
-	    if (*p++ == ',')
+	    if (*p++ == ',') {
 		length[++i] = p;
+		if (i >= sizeof(length) / sizeof(length[0]) - 2) break;
+	    }
 	length[++i] = p + 1;
     }
     if (i > 1) {
