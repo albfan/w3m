@@ -16,6 +16,7 @@
 #define HTML_MODE	1
 #define HEADER_MODE	2
 
+extern clen_t strtoclen(const char *s);
 extern char *conv_entity(int ch);
 extern int getescapechar(char **s);
 extern char *getescapecmd(char **s);

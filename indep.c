@@ -11,6 +11,22 @@
 #include "myctype.h"
 #include "entity.h"
 
+clen_t
+strtoclen(const char *s)
+{
+#ifdef HAVE_STRTOLL
+    return strtoll(s, NULL, 10);
+#elif HAVE_STRTOQ
+    return strtoq(s, NULL, 10);
+#elif HAVE_ATOLL
+    return atoll(s);
+#elif HAVE_ATOQ
+    return atoq(s);
+#else
+    return atoi(s);
+#endif
+}
+
 #ifndef HAVE_BCOPY
 void
 bcopy(const void *src, void *dest, int len)

@@ -711,7 +711,7 @@ ftp_system(FTP ftp)
   }\
 }
 
-static Str size_int2str(unsigned long);
+static Str size_int2str(clen_t);
 
 static int
 ex_ftpdir_name_size_date(char *line, char **name, char **date, char **sizep)
@@ -719,7 +719,7 @@ ex_ftpdir_name_size_date(char *line, char **name, char **date, char **sizep)
     int ftype = FTPDIR_NONE;
     char *cp, *endp;
     Str date_str, name_str, size_str;
-    unsigned long size;
+    clen_t size;
 
     if (strlen(line) < 11) {
 	goto done;
@@ -805,7 +805,7 @@ ex_ftpdir_name_size_date(char *line, char **name, char **date, char **sizep)
 }
 
 static Str
-size_int2str(unsigned long size)
+size_int2str(clen_t size)
 {
     Str size_str;
     int unit;

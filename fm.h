@@ -419,8 +419,8 @@ typedef struct _Buffer {
     struct frameset *frameset;
     struct frameset_queue *frameQ;
     int *clone;
-    int linelen;
-    int trbyte;
+    size_t linelen;
+    size_t trbyte;
     char check_url;
 #ifdef JP_CHARSET
     char document_code;

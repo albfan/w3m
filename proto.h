@@ -176,7 +176,7 @@ extern void HTMLlineproc0(char *istr, struct html_feed_environ *h_env,
 			  int internal);
 #define HTMLlineproc1(x,y) HTMLlineproc0(x,y,TRUE)
 extern Buffer *loadHTMLBuffer(URLFile *f, Buffer *newBuf);
-extern void showProgress(int *linelen, int *trbyte);
+extern void showProgress(clen_t *linelen, clen_t *trbyte);
 extern void init_henv(struct html_feed_environ *, struct readbuffer *,
 		      struct environment *, int, TextLineList *, int, int);
 extern void completeHTMLstream(struct html_feed_environ *,
