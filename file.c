@@ -4594,6 +4594,7 @@ loadHTMLBuffer(URLFile * f, Buffer * newBuf)
     if (newBuf->sourcefile == NULL &&
 	(f->scheme != SCM_LOCAL || newBuf->mailcap)) {
 	tmp = tmpfname(TMPF_SRC, ".html");
+	pushText(fileToDelete, tmp->ptr);
 	src = fopen(tmp->ptr, "w");
 	if (src)
 	    newBuf->sourcefile = tmp->ptr;
