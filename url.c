@@ -2081,7 +2081,7 @@ searchURIMethods(ParsedURL *pu)
  * escaped       = "%" hex hex
  */
 
-#define URI_PATTERN	"[-;/?:@&=+$,a-zA-Z0-9_.!~*'()%]*"
+#define URI_PATTERN	"([-;/?:@&=+$,a-zA-Z0-9_.!~*'()]|%[0-9A-Fa-f][0-9A-Fa-f])*"
 void
 chkExternalURIBuffer(Buffer *buf)
 {
@@ -2090,11 +2090,11 @@ chkExternalURIBuffer(Buffer *buf)
 
     for (i = 0; (ump = urimethods[i]) != NULL; i++) {
 	for (; ump->item1 != NULL; ump++) {
-	    reAnchor(buf, Sprintf("%s:" URI_PATTERN, ump->item1)->ptr);
+	    reAnchor(buf, Sprintf("%s:%s", ump->item1, URI_PATTERN)->ptr);
 	}
     }
     for (ump = default_urimethods; ump->item1 != NULL; ump++) {
-	reAnchor(buf, Sprintf("%s:" URI_PATTERN, ump->item1)->ptr);
+	reAnchor(buf, Sprintf("%s:%s", ump->item1, URI_PATTERN)->ptr);
     }
 }
 #endif
