@@ -1,3 +1,8 @@
+2002-12-20  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03588] include time.h in ftp.c
+	* ftp.c: include <time.h>
+
 2002-12-19  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03583] w3mman
