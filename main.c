@@ -979,6 +979,10 @@ main(int argc, char **argv, char **envp)
 	_goLine(line_str);
     }
     for (;;) {
+	if (add_download_list) {
+	    add_download_list = FALSE;
+	    ldDL();
+	}
 	if (Currentbuf->submit) {
 	    Anchor *a = Currentbuf->submit;
 	    Currentbuf->submit = NULL;
@@ -1068,10 +1072,6 @@ main(int argc, char **argv, char **envp)
 		save_buffer_position(Currentbuf);
 		keyPressEventProc((int)c);
 		prec_num = 0;
-		if (add_download_list) {
-		    add_download_list = FALSE;
-		    ldDL();
-		}
 	    }
 	}
 	prev_key = CurrentKey;
