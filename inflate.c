@@ -16,8 +16,10 @@ main(int argc, char **argv)
 
     if (argc > 1) {
 	f = fopen(argv[1], "rb");
-	if (!f)
+	if (!f) {
+	    fprintf(stderr, "%s: cannot open %s\n", argv[0], argv[1]);
 	    exit(1);
+	}
     }
     else
 	f = stdin;
@@ -26,8 +28,10 @@ main(int argc, char **argv)
     s.zfree = Z_NULL;
     s.opaque = Z_NULL;
     status = inflateInit(&s);
-    if (status != Z_OK)
+    if (status != Z_OK) {
+	fprintf(stderr, "%s: inflateInit() %s\n", argv[0], zError(status));
 	exit(1);
+    }
     s.avail_in = 0;
     s.next_out = (Bytef *) outbuf;
     s.avail_out = sizeof(outbuf);
@@ -43,8 +47,10 @@ main(int argc, char **argv)
 		fwrite(outbuf, 1, sizeof(outbuf) - s.avail_out, stdout);
 	    break;
 	}
-	if (status != Z_OK)
+	if (status != Z_OK) {
+	    fprintf(stderr, "%s: inflate() %s\n", argv[0], zError(status));
 	    exit(1);
+	}
 	if (s.avail_out == 0) {
 	    fwrite(outbuf, 1, sizeof(outbuf), stdout);
 	    s.next_out = (Bytef *) outbuf;

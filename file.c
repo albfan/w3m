@@ -6618,6 +6618,7 @@ uncompress_stream(URLFile *uf)
 	    dup2(fd2[0], 0);
 	}
 	dup2(fd1[1], 1);
+	dup2(fd1[1], 2);
 	execlp(expand_cmd, expand_name, NULL);
 	exit(0);
     }
