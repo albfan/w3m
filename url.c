@@ -280,9 +280,9 @@ openSSLHandle(int sock, char *hostname)
     Str amsg = NULL;
     char *ans;
     static char *old_ssl_forbid_method = NULL;
+    static Str accept_this_site = NULL;
 #ifdef USE_SSL_VERIFY
     static int old_ssl_verify_server = -1;
-    static Str accept_this_site = NULL;
 #endif
 
     if (!old_ssl_forbid_method || !ssl_forbid_method ||
