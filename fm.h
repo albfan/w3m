@@ -881,7 +881,7 @@ global int use_lessopen init(FALSE);
 global int FollowRedirection init(10);
 
 global int w3m_backend init(FALSE);
-global Str backend_halfdump_str;
+global TextLineList *backend_halfdump_buf;
 global TextList *backend_batch_commands init(NULL);
 int backend(void);
 extern void deleteFiles(void);

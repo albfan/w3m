@@ -1,3 +1,12 @@
+2001-12-28  Hironori Sakamoto <h-saka@lsi.nec.co.jp>
+
+	* [w3m-dev 02765] backend
+	* backend.c (internal_get): cleanups
+	* file.c (flushline): remove w3m_backend checks
+	* file.c (loadHTMLstream): add w3m_backend check
+	* fm.h (backend_halfdump_str): deleted
+	* fm.h (backend_halfdump_buf): added
+
 2001-12-28  Kiyokazu SUTO <suto@ks-and-ks.ne.jp>
 
 	* [w3m-dev 02761]
