@@ -5623,7 +5623,8 @@ HTMLlineproc0(char *str, struct html_feed_environ *h_env, int internal)
 	    else if (ch == '\t') {
 		do {
 		    PUSH(' ');
-		} while (obuf->pos % Tabstop != 0);
+		} while ((h_env->envs[h_env->envc].indent + obuf->pos)
+			 % Tabstop != 0);
 		str++;
 	    }
 	    else if (obuf->flag & RB_PLAINMODE) {
