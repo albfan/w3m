@@ -1,3 +1,8 @@
+2002-12-10  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* file.c (loadGeneralFile): missing `{', fix indent for SCM_UNKNOWN
+	* main.c (set_buffer_environ): unused variables `prev_col'
+
 2002-12-10  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03543] External URI loader (Debian closes: Bug#169962)
