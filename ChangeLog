@@ -1,3 +1,9 @@
+2003-04-15  Masanori Kobayasi <zap03216@nifty.ne.jp>
+
+	* [w3m-dev 03878] I-search problem
+	* linein.c (inputLineHistSearch): don't call incrfunc twice
+	* main.c (dispincsrch): fix search loop problem
+
 2003-04-14  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* [w3m-dev 03875] Re: SSL & compressed stream
