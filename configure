@@ -226,7 +226,7 @@ def_param() {
  if [ -z "$fvar" ]; then
    eval "fvar=$dflt"
  fi
- def=`echo $flag | tr 'a-z' 'A-Z'`
+ def=`echo $flag | tr '[a-z]' '[A-Z]'`
  if [ "$fvar" = "y" ]; then
    eval "def_$flag='#define $def'"
  else
@@ -246,7 +246,7 @@ def_param() {
 ask_choice() {
   prompt=$1
   var=$2
-  def=`echo $var | tr 'a-z' 'A-Z'`
+  def=`echo $var | tr '[a-z]' '[A-Z]'`
   shift; shift
   list="$@"
 
