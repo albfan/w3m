@@ -1,3 +1,8 @@
+2004-08-31  SAKAI Kiyotaka <ksakai@kso.netwk.ntt-at.co.jp>
+
+	* [w3m-dev 04104] w3mmail.cgi
+	* scripts/w3mmail.cgi.in: strip ^M
+
 2004-08-17  Hiroyuki Ito <ZXB01226@nifty.com>
 
 	* [w3m-dev 04099] Re: w3m-img gtk2

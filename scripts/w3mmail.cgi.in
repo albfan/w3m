@@ -180,6 +180,7 @@ if ($query =~ s/^\w+://) {
 	    }
 	}
 	($cs,$cte,$body) = &lang_body($body, 1);
+	$body =~ s/\r//g;
 	print MAIL "Mime-Version: 1.0\n";
 	if ($boundary) {
 	    print MAIL "Content-Type: multipart/form-data;\n";
