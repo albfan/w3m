@@ -1,3 +1,8 @@
+2003-02-11  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev-en 00867] Re: w3m 0.4 release candidate 1
+	* XMakefile (install-core): test AUXBIN_TARGETS
+
 2003-02-11  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* version.c.in: cvs version

@@ -132,6 +132,7 @@ install-core: $(TARGETS)
 	$(INSTALL_DATA) $(HELP_FILE) $(DESTDIR)$(HELP_DIR)/$(HELP_TARGET)
 	$(INSTALL_DATA) $(MAN1) $(DESTDIR)$(MAN1_DIR)/$(MAN1_TARGET)
 	$(INSTALL_DATA) $(MAN1_JA) $(DESTDIR)$(MAN1_JA_DIR)/$(MAN1_TARGET)
+	test "x$(AUXBIN_TARGETS)" != "x" &&	\
 	for file in $(AUXBIN_TARGETS); \
 	do \
 		case $$file in \
