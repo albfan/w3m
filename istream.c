@@ -4,7 +4,7 @@
 #include "istream.h"
 #include <signal.h>
 #ifdef USE_SSL
-#include <x509v3.h>
+#include <openssl/x509v3.h>
 #endif
 
 #define	uchar		unsigned char

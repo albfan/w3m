@@ -22,9 +22,9 @@
 
 #ifdef USE_SSL
 #ifndef SSLEAY_VERSION_NUMBER
-#include <crypto.h>		/* SSLEAY_VERSION_NUMBER may be here */
+#include <openssl/crypto.h>		/* SSLEAY_VERSION_NUMBER may be here */
 #endif
-#include <err.h>
+#include <openssl/err.h>
 #endif
 
 #ifdef	__WATT32__
@@ -248,7 +248,7 @@ free_ssl_ctx()
 }
 
 #if SSLEAY_VERSION_NUMBER >= 0x00905100
-#include <rand.h>
+#include <openssl/rand.h>
 static void
 init_PRNG()
 {

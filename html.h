@@ -2,9 +2,9 @@
 #ifndef _HTML_H
 #define _HTML_H
 #ifdef USE_SSL
-#include <bio.h>
-#include <x509.h>
-#include <ssl.h>
+#include <openssl/bio.h>
+#include <openssl/x509.h>
+#include <openssl/ssl.h>
 #endif				/* USE_SSL */
 
 #include "istream.h"
