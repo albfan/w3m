@@ -115,7 +115,7 @@ static struct link_stack *link_stack = NULL;
 #define INITIAL_FORM_SIZE 10
 static FormList **forms;
 static int *form_stack;
-static int form_max = 0;
+static int form_max = -1;
 static int forms_size = 0;
 #define cur_form_id ((form_sp >= 0)? form_stack[form_sp] : -1)
 static int form_sp = 0;
@@ -6287,6 +6287,7 @@ loadGopherDir(URLFile *uf, Buffer *newBuf)
 	Strcat_charp(lbuf, "\">");
 	Strcat_charp(lbuf, p);
 	Strcat_charp(lbuf, name->ptr + 1);
+	Strcat_charp(lbuf, "</A>");
 	pushTextLine(tl, newTextLine(lbuf, visible_length(lbuf->ptr)));
     }
 #ifdef JP_CHARSET
