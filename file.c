@@ -1634,6 +1634,8 @@ loadGeneralFile(char *path, ParsedURL *volatile current, char *referer,
 #endif
 	readHeader(&f, t_buf, FALSE, &pu);
 	t = checkContentType(t_buf);
+	if (t == NULL && pu.file != NULL)
+	    t = guessContentType(pu.file);
 	if (t == NULL)
 	    t = "text/plain";
 	if (http_response_code >= 301 && http_response_code <= 303
