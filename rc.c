@@ -1320,9 +1320,11 @@ load_option_panel(void)
 		    wc_conv(gettext(p->comment), OptionCharset,
 			    InnerCharset)->ptr;
 	}
+#ifdef USE_COLOR
 	for (s = colorstr; s->text; s++)
 	    s->text = wc_conv(gettext(s->text), OptionCharset,
 			      InnerCharset)->ptr;
+#endif
 	OptionEncode = TRUE;
     }
 #endif

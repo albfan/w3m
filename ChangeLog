@@ -1,3 +1,8 @@
+2004-04-23  SAKAI Kiyotaka <ksakai@kso.netwk.ntt-at.co.jp>
+
+	* [w3m-dev 04066] --disable-color
+	* rc.c (load_option_panel): #ifdef USE_COLOR
+
 2004-04-22  Masao Uebayashi <uebayasi@pultek.co.jp>
 
 	* fix build error for --enable-m17n --disable-unicode
