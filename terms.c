@@ -1827,9 +1827,12 @@ term_title(char *s)
     if (title_str != NULL) {
 #ifdef __CYGWIN__
 	if (isLocalConsole && title_str == CYGWIN_TITLE) {
-	    char buff[1024];
-	    snprintf(buff, sizeof(buff), title_str, s);
-	    SetConsoleTitle(buff);
+	    Str buff;
+	    buff = Sprintf(title_str, s);
+	    if (buff->length > 1024) {
+		Strtruncate(buff, 1024);
+	    }
+	    SetConsoleTitle(buff->ptr);
 	}
 	else if (isLocalConsole || !isWinConsole)
 #endif
