@@ -113,6 +113,7 @@ extern char *filename_extension(char *patch, int is_url);
 #ifdef USE_EXTERNAL_URI_LOADER
 extern void initURIMethods();
 extern Str searchURIMethods(ParsedURL *pu);
+extern void chkExternalURIBuffer(Buffer *buf);
 #endif
 extern void examineFile(char *path, URLFile *uf);
 extern char *acceptableEncoding();

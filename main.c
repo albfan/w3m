@@ -4201,6 +4201,9 @@ chkURLBuffer(Buffer *buf)
 	NULL
     };
     int i;
+#ifdef USE_EXTERNAL_URI_LOADER
+    chkExternalURIBuffer(buf);
+#endif
     for (i = 0; url_like_pat[i]; i++) {
 	reAnchor(buf, url_like_pat[i]);
     }
