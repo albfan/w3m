@@ -39,6 +39,7 @@ typedef struct _Event {
     struct _Event *next;
 } Event;
 static Event *CurrentEvent = NULL;
+static Event *LastEvent = NULL;
 
 #ifdef USE_ALARM
 static AlarmEvent DefaultAlarm = {
@@ -1097,9 +1098,10 @@ pushEvent(int cmd, void *data)
     event->data = data;
     event->next = NULL;
     if (CurrentEvent)
-	CurrentEvent->next = event;
+	LastEvent->next = event;
     else
 	CurrentEvent = event;
+    LastEvent = event;
 }
 
 static void

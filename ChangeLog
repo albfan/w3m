@@ -1,5 +1,11 @@
 2002-12-26  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03601] Re: meta refresh
+	* main.c (LastEvent): added
+		(pushEvent): add to LastEvent
+
+2002-12-26  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03600] Re: meta refresh
 	* main.c (main): move add_download_list
 
