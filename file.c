@@ -1069,14 +1069,27 @@ loadGeneralFile(char *path, ParsedURL *volatile current, char *referer,
 		    else {
 			b = dirBuffer(pu.real_file);
 			if (b == NULL)
-			    return NULL;
+			    return NO_BUFFER;
 			t = "text/html";
 			b->real_scheme = pu.scheme;
 			goto loaded;
 		    }
 		}
 	    }
+	    break;
+#ifdef USE_EXTERNAL_URI_LOADER
+	case SCM_UNKNOWN:
+	    tmp = searchURIMethods(&pu);
+	    if (tmp != NULL) {
+		b = loadGeneralFile(tmp->ptr, NULL, NO_REFERER, 0, NULL);
+		if (b != NO_BUFFER)
+		    return b;
+	    }
+	    break;
+#endif
 	}
+	disp_err_message(Sprintf("Unknown URI: %s",
+				 parsedURL2Str(&pu)->ptr)->ptr, FALSE);
 	return NO_BUFFER;
     }
 

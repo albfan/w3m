@@ -110,6 +110,10 @@ extern void setAlarmEvent(int sec, short status, int cmd, void *data);
 extern int currentLn(Buffer *buf);
 extern void tmpClearBuffer(Buffer *buf);
 extern char *filename_extension(char *patch, int is_url);
+#ifdef USE_EXTERNAL_URI_LOADER
+extern void initURIMethods();
+extern Str searchURIMethods(ParsedURL *pu);
+#endif
 extern void examineFile(char *path, URLFile *uf);
 extern char *acceptableEncoding();
 extern int dir_exist(char *path);
