@@ -740,7 +740,7 @@ loadPreForm(void)
     struct pre_form *pf = NULL;
     struct pre_form_item *pi = NULL;
     int type = -1;
-    char *name;
+    char *name = NULL;
 
     PreForm = NULL;
     fp = openSecretFile(pre_form_file);
@@ -795,9 +795,10 @@ loadPreForm(void)
 	    textarea = Strnew();
 	    continue;
 	}
-	else if (!strcmp(s, "/textarea")) {
+	else if (textarea && name && !strcmp(s, "/textarea")) {
 	    pi = add_pre_form_item(pf, pi, type, name, textarea->ptr, NULL);
 	    textarea = NULL;
+	    name = NULL;
 	    continue;
 	}
 	else
