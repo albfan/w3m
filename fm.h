@@ -430,6 +430,7 @@ typedef struct _Buffer {
     char *edit;
     struct mailcap *mailcap;
     char *mailcap_source;
+    char *header_source;
     char search_header;
 #ifdef USE_SSL
     char *ssl_certificate;

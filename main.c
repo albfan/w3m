@@ -4547,8 +4547,10 @@ dispI(void)
     if (!activeImage)
 	return;
     displayImage = TRUE;
+/*
     if (!(Currentbuf->type && !strcmp(Currentbuf->type, "text/html")))
 	return;
+*/
     Currentbuf->image_flag = IMG_FLAG_AUTO;
     Currentbuf->need_reshape = TRUE;
     displayBuffer(Currentbuf, B_REDRAW_IMAGE);
@@ -4559,8 +4561,10 @@ stopI(void)
 {
     if (!activeImage)
 	return;
+/*
     if (!(Currentbuf->type && !strcmp(Currentbuf->type, "text/html")))
 	return;
+*/
     Currentbuf->image_flag = IMG_FLAG_SKIP;
     displayBuffer(Currentbuf, B_REDRAW_IMAGE);
 }
