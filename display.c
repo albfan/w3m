@@ -481,6 +481,8 @@ redrawNLine(Buffer *buf, int n)
 	l = l0;
     }
     if (n > 0) {
+	if (i == 0 && buf->topLine != NULL)
+	    i++;
 	move(i + buf->rootY, 0);
 	clrtobotx();
     }
