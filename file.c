@@ -4953,8 +4953,10 @@ HTMLlineproc2body(Buffer *buf, Str (*feed) (), int llimit)
 			    image->url = parsedURL2Str(&u)->ptr;
 			    image->ext = filename_extension(u.file, TRUE);
 			    image->cache = NULL;
-			    image->width = (w > MAX_IMAGE_SIZE) ? MAX_IMAGE_SIZE: w;
-			    image->height = (h > MAX_IMAGE_SIZE) ? MAX_IMAGE_SIZE: h;
+			    image->width =
+				(w > MAX_IMAGE_SIZE) ? MAX_IMAGE_SIZE : w;
+			    image->height =
+				(h > MAX_IMAGE_SIZE) ? MAX_IMAGE_SIZE : h;
 			    image->xoffset = xoffset;
 			    image->yoffset = yoffset;
 			    image->y = currentLn(buf) - top;
