@@ -1,5 +1,11 @@
 2003-10-06  Fumitoshi UKAI  <ukai@debian.or.jp>
 
+	* --with-imagelib request on [w3m-dev 03981]
+	 from Mamoru KOMACHI <usata@sodan.ecc.u-tokyo.ac.jp>
+	* acinclude.m4 (AC_W3M_IMAGE): add --with-imagelib
+
+2003-10-06  Fumitoshi UKAI  <ukai@debian.or.jp>
+
 	* fix problem reported on [w3m-dev 03981]
 	  from Mamoru KOMACHI <usata@sodan.ecc.u-tokyo.ac.jp>
 	* configure.in: add AC_SUBST(HELP_DIR)
