@@ -107,7 +107,7 @@ w3mimgsize.o: w3mimgsize.c
 	$(CC) $(CFLAGS) `imlib-config --cflags` -c w3mimgsize.c
 
 gc/gc.a:
-	cd gc; $(MAKE) CC='$(CC)' CFLAGS='$(GCCFLAGS) $(GC_CFLAGS)' SPECIALCFLAGS='-I./\$(srcdir)/include $(GC_CFLAGS)'
+	cd gc; $(MAKE) base_lib gc.a CC='$(CC)' CFLAGS='$(GCCFLAGS) $(GC_CFLAGS)' SPECIALCFLAGS='-I./\$(srcdir)/include $(GC_CFLAGS)'
 
 
 install: install-core install-scripts
