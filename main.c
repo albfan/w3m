@@ -2241,11 +2241,11 @@ reMark(void)
 	displayBuffer(Currentbuf, B_NORMAL);
 	return;
     }
-    MarkString = str;
-    if ((MarkString = regexCompile(MarkString, 1)) != NULL) {
-	disp_message(MarkString, TRUE);
+    if ((p = regexCompile(str, 1)) != NULL) {
+	disp_message(p, TRUE);
 	return;
     }
+    MarkString = str;
     for (l = Currentbuf->firstLine; l != NULL; l = l->next) {
 	p = l->lineBuf;
 	for (;;) {
