@@ -1,3 +1,7 @@
+2002-11-19  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* ftp.c (ftp_fclose): void return 
+
 2002-11-19  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 	
 	* [w3m-dev 03444] download from ftp.

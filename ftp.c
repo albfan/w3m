@@ -249,7 +249,7 @@ ftp_pasv(FTP ftp)
     return 0;
 }
 
-static int
+static void
 ftp_fclose(FTP ftp)
 {
     int control_closed = 0;
@@ -268,6 +268,7 @@ ftp_fclose(FTP ftp)
 	fclose(ftp->data);
 	ftp->data = NULL;
     }
+    return;
 }
 
 int
