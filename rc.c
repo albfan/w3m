@@ -1124,6 +1124,9 @@ sync_with_option(void)
 #ifdef USE_EXTERNAL_URI_LOADER
     initURIMethods();
 #endif
+#ifdef USE_MIGEMO
+    init_migemo();
+#endif
 
     if (AcceptLang == NULL || *AcceptLang == '\0') {
 #if LANG == JA

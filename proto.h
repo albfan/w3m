@@ -255,6 +255,9 @@ extern char *mydirname(char *s);
 extern int next_status(char c, int *status);
 extern int read_token(Str buf, char **instr, int *status, int pre, int append);
 extern Str correct_irrtag(int status);
+#ifdef USE_MIGEMO
+extern void init_migemo(void);
+#endif
 extern int forwardSearch(Buffer *buf, char *str);
 extern int backwardSearch(Buffer *buf, char *str);
 extern void pcmap(void);

@@ -777,7 +777,7 @@ global int FoldTextarea init(FALSE);
 
 #ifdef USE_MIGEMO
 global int use_migemo init(FALSE);
-global char *migemo_command init("migemoc");
+global char *migemo_command init(DEF_MIGEMO_COMMAND);
 #endif				/* USE_MIGEMO */
 
 global struct auth_cookie *Auth_cookie init(NULL);

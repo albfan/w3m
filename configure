@@ -2066,6 +2066,9 @@ $def_use_help_cgi
 #define DEF_IMAGE_VIEWER	"$def_image_viewer"
 #define DEF_AUDIO_PLAYER	"$def_audio_player"
 
+/* for USE_MIGEMO */
+#define DEF_MIGEMO_COMMAND	"migemo -t egrep /usr/share/migemo/migemo-dict"
+
 #define LIB_DIR      "$libdir"
 #define HELP_DIR     "$helpdir"
 #define ETC_DIR	     "$sysconfdir"
