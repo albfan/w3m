@@ -92,7 +92,7 @@ do
     dmodel=6
     ;;
   -code=*|--code=*)
-    dcode=`expr "$1" : "-*code=\(.*\)"`
+    display_code=`expr "$1" : "-*code=\(.*\)"`
     ;;
   -cflags=*|--cflags=*)
     dcflags=`echo $1 | sed -e 's/-*cflags=//'`

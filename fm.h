@@ -736,6 +736,8 @@ global int do_download init(FALSE);
 global char *UserAgent init(NULL);
 global int NoSendReferer init(FALSE);
 global char *AcceptLang init(NULL);
+global char *AcceptEncoding init(NULL);
+global char *AcceptMedia init(NULL);
 global int WrapDefault init(FALSE);
 global int IgnoreCase init(TRUE);
 global int WrapSearch init(FALSE);
