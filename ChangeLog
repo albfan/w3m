@@ -1,3 +1,8 @@
+2003-02-19  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* 0.4 release candidate 3
+	* version.c.in: update
+
 2003-02-19  Atsushi YOKOYAMA <yoko-a@cmh.fuchu.toshiba.co.jp>
 
 	* [w3m-dev 03758] Re: SVR4 signal behavior
