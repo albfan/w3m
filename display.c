@@ -319,8 +319,10 @@ displayBuffer(Buffer *buf, int mode)
 #endif				/* not USE_MOUSE */
 	msg = Strnew();
     Strcat_charp(msg, "Viewing");
+#ifdef USE_SSL
     if (buf->ssl_certificate)
 	Strcat_charp(msg, "[SSL]");
+#endif
     Strcat_charp(msg, " <");
     Strcat_charp(msg, buf->buffername);
     if (displayLink)
