@@ -3091,7 +3091,8 @@ _followForm(int submit)
 	    disp_message_nsec("Read only field!", FALSE, 1, TRUE, FALSE);
 	    return;
 	}
-	p = inputLine("TEXT:", fi->value ? fi->value->ptr : NULL, IN_PASSWORD);
+	p = inputLine("Password:", fi->value ? fi->value->ptr : NULL,
+		      IN_PASSWORD);
 	if (p == NULL)
 	    return;
 	fi->value = Strnew_charp(p);

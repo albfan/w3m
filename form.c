@@ -484,11 +484,11 @@ input_textarea(FormItemList *fi)
     fmInit();
 
     if (fi->readonly)
-	return;
+	goto input_end;
     f = fopen(tmpf, "r");
     if (f == NULL) {
 	disp_err_message("Can't open temporary file", FALSE);
-	return;
+	goto input_end;
     }
     fi->value = Strnew();
     while (tmp = Strfgets(f), tmp->length > 0) {
@@ -508,6 +508,7 @@ input_textarea(FormItemList *fi)
 	Strcat(fi->value, tmp);
     }
     fclose(f);
+  input_end:
     unlink(tmpf);
 }
 

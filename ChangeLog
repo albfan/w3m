@@ -1,5 +1,12 @@
 2002-11-09  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03390] some fixes related with form
+	* form.c (input_textarea): goto input_end
+			unlink(tmpf);
+	* main.c (_followForm): s/TEXT/Password/
+
+2002-11-09  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03388] meta refresh problem
 	* fm.h (AL_IMPLICIT_DONE): 3->4
 		(AL_ONCE): 8
