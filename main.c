@@ -4354,7 +4354,7 @@ chkURLBuffer(Buffer *buf)
 	"news:[^<> 	][^<> 	]*",
 	"nntp://[a-zA-Z0-9][a-zA-Z0-9:%\\-\\./_]*",
 #endif				/* USE_NNTP */
-#ifndef USE_W3MMAILER /* see also chkExternalURIBuffer() */
+#ifndef USE_W3MMAILER		/* see also chkExternalURIBuffer() */
 	"mailto:[^<> 	][^<> 	]*@[a-zA-Z0-9][a-zA-Z0-9\\-\\._]*[a-zA-Z0-9]",
 #endif
 #ifdef INET6
