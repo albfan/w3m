@@ -315,7 +315,7 @@ getAllImage(Buffer *buf)
 	    a->image->cache = getImage(a->image, current, buf->image_flag);
 	    if (a->image->cache &&
 		a->image->cache->loaded == IMG_FLAG_UNLOADED)
-	   	buf->image_loaded = FALSE;
+		buf->image_loaded = FALSE;
 	}
     }
 }
