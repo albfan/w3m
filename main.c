@@ -45,6 +45,10 @@ static Event alarm_event;
 static MySignalHandler SigAlarm(SIGNAL_ARG);
 #endif
 
+#ifdef SIGWINCH
+static int resized = 0;
+#endif
+
 #ifdef USE_MARK
 static char *MarkString = NULL;
 #endif
@@ -896,9 +900,7 @@ MAIN(int argc, char **argv, char **envp)
     setlinescols();
     setupscreen();
 #endif				/* not SIGWINCH */
-#ifdef SIGCHLD
-    signal(SIGCHLD, sig_chld);
-#endif
+
     Currentbuf = Firstbuf;
     displayBuffer(Currentbuf, B_NORMAL);
     if (line_str) {
@@ -936,6 +938,15 @@ MAIN(int argc, char **argv, char **envp)
 	if (alarm_sec > 0) {
 	    signal(SIGALRM, SigAlarm);
 	    alarm(alarm_sec);
+	}
+#endif
+#ifdef SIGWINCH
+	if (resized) {
+	    resized = 0;
+	    setlinescols();
+	    setupscreen();
+	    if (Currentbuf)
+		displayBuffer(Currentbuf, B_FORCE_REDRAW);
 	}
 #endif
 	c = getch();
@@ -1166,10 +1177,7 @@ intTrap(SIGNAL_ARG)
 MySignalHandler
 resize_hook(SIGNAL_ARG)
 {
-    setlinescols();
-    setupscreen();
-    if (Currentbuf)
-	displayBuffer(Currentbuf, B_FORCE_REDRAW);
+    resized = 1;
     signal(SIGWINCH, resize_hook);
     SIGNAL_RETURN;
 }
