@@ -596,9 +596,9 @@ readHeader(URLFile *uf, Buffer *newBuf, int thru, ParsedURL *pu)
 
     if (thru && !newBuf->header_source
 #ifdef USE_IMAGE
-		    && !image_source
+	&& !image_source
 #endif
-		    ) {
+	) {
 	Str tmpf = tmpfname(TMPF_DFL, NULL);
 	src = fopen(tmpf->ptr, "w");
 	if (src)
@@ -7744,9 +7744,9 @@ uncompress_stream(URLFile *uf, char **src)
 
     if (uf->scheme != SCM_LOCAL
 #ifdef USE_IMAGE
-		    && !image_source
+	&& !image_source
 #endif
-		    ) {
+	) {
 	tmpf = tmpfname(TMPF_DFL, ext)->ptr;
 	if (save2tmp(*uf, tmpf) < 0) {
 	    UFclose(uf);

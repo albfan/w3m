@@ -1178,7 +1178,8 @@ message(char *s, int return_x, int return_y)
     move(return_y, return_x);
 }
 
-void disp_err_message(char *s, int redraw_current)
+void
+disp_err_message(char *s, int redraw_current)
 {
     record_err_message(s);
     disp_message(s, redraw_current);
