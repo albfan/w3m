@@ -1,3 +1,13 @@
+2004-04-29  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* w3m 0.5.1
+	* version.c.in: update
+	* doc/README: version 0.5, release date, maintainer
+	* doc-jp/README: ditto
+	* NEWS: update
+	* configure.in: version 0.5.1
+	* po/w3m.pot, ja.po: update-po
+
 2004-04-27  SAKAI Kiyotaka <ksakai@kso.netwk.ntt-at.co.jp>
 
 	* [w3m-dev 04068] install-sh problem
