@@ -37,7 +37,7 @@ main(int argc, char **argv)
 #endif
     GetOption(argc, argv);
     if (!defined_debug)
-	freopen("/dev/null", "w", stderr);
+	freopen(DEV_NULL_PATH, "w", stderr);
 
 #ifdef W3MIMGDISPLAY_SETUID
     /* 
