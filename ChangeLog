@@ -1,3 +1,8 @@
+2003-04-20  qhwt@myrealbox.com
+
+	* [w3m-dev 03883] User-Agent for Bonus/2ch.cgi
+	* Bonus/2ch.cgi: User-Agent
+
 2003-04-19  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* [w3m-dev 03882] Re: Bug#189460: w3m: <q> tag is not recognized
