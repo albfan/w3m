@@ -1,3 +1,9 @@
+2001-12-07  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 02640]
+	* linein.c (escape_spaces): rewrite
+	* linein.c (unescape_spaces): rewrite
+
 2001-12-07  Tsutomu Okada <okada@furuno.co.jp>
 
 	* [w3m-dev 02638] completion for ! and/or @
