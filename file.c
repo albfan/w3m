@@ -1566,7 +1566,7 @@ loadGeneralFile(char *path, ParsedURL *volatile current, char *referer,
 	}
 	if (t_buf == NULL)
 	    t_buf = newBuffer(INIT_BUFFER_WIDTH);
-#ifdef USE_SSL
+#if 0 /* USE_SSL */
 	if (IStype(f.stream) == IST_SSL) {
 	    Str s = ssl_get_certificate(f.stream, pu.host);
 	    if (s == NULL)
