@@ -185,6 +185,13 @@ typedef struct {
 
 
    /* pseudo tag */
+#define HTML_INTERNAL       106
+#define HTML_N_INTERNAL     107
+#define HTML_SELECT_INT     108
+#define HTML_N_SELECT_INT   109
+#define HTML_OPTION_INT     110
+#define HTML_TEXTAREA_INT   111
+#define HTML_N_TEXTAREA_INT 112
 #define HTML_TABLE_ALT      113
 #define HTML_RULE           114
 #define HTML_N_RULE         115
