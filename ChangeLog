@@ -1,5 +1,10 @@
 2002-12-06  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03528] area without alt
+	* map.c (getCurrentMapLabel): when a->alt is empty 
+
+2002-12-06  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03527] fix frame.c
 	* frame.c (createFrameFile): move need_reconstruct
 
