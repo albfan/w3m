@@ -735,12 +735,12 @@ global char MetaRefresh init(FALSE);
 global char fmInitialized init(FALSE);
 global char QuietMessage init(FALSE);
 
-extern char GlobalKeymap[];
-extern char EscKeymap[];
-extern char EscBKeymap[];
-extern char EscDKeymap[];
+extern unsigned char GlobalKeymap[];
+extern unsigned char EscKeymap[];
+extern unsigned char EscBKeymap[];
+extern unsigned char EscDKeymap[];
 #ifdef __EMX__
-extern char PcKeymap[];
+extern unsigned char PcKeymap[];
 #endif
 extern FuncList w3mFuncList[];
 
