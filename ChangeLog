@@ -1,5 +1,12 @@
 2001-12-28  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 02760]
+	* file.c (getshell): check buf == NULL
+	* main.c (execdict): check buf == NULL
+		buf->type == NULL, then buf->type is set as "text/plain"
+
+2001-12-28  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 02759] fold textarea
 	* fm.h (FoldTextarea): added
 	* form.c (formUpdateBuffer): check FoldTextarea
