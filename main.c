@@ -2509,8 +2509,7 @@ cur_real_linenumber(Buffer *buf)
     if (!cur)
 	return 1;
     n = cur->real_linenumber ? cur->real_linenumber : 1;
-    for (l = buf->firstLine; l && l != cur && l->real_linenumber == 0;
-	 l = l->next) {		/* header */
+    for (l = buf->firstLine; l && l != cur && l->real_linenumber == 0; l = l->next) {	/* header */
 	if (l->bpos == 0)
 	    n++;
     }
