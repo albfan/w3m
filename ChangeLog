@@ -1,5 +1,10 @@
 2004-03-22  Fumitoshi UKAI  <ukai@debian.or.jp>
 
+	* main.c (main): DisplayCharset and DocumentCharset also follow 
+	    locale configuration
+
+2004-03-22  Fumitoshi UKAI  <ukai@debian.or.jp>
+
 	* libwc/Makefile.in: add distclean
 	* scripts/multipart/Makefile.in: add distclean
 	* scripts/w3mman/Makefile.in: add distclean
