@@ -1,3 +1,9 @@
+2001-12-27  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 02753]
+	* url (ssl_verify_error_string): deleted
+	* url.c (openSSLHandle): use X509_verify_cert_error_string()
+
 2001-12-27  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* [w3m-dev 02750] RFC2818 server identity check
