@@ -51,6 +51,9 @@ open_migemo(char *migemo_command)
     if (migemo_pid == 0) {
 	/* child */
 	signal(SIGINT, SIG_IGN);
+#ifdef SIGCHLD
+	signal(SIGCHLD, SIG_IGN);
+#endif
 #ifdef HAVE_SETPGRP
 	setpgrp();
 #endif

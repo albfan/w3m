@@ -1,3 +1,8 @@
+2002-01-18  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 02871] ignore SIGCHLD (for at least EWS4800)
+	* search.c (open_migemo): signal(SIGCHLD, SIG_IGN);
+
 2002-01-18  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* [w3m-dev 02870] don't kill migemo by SIGINT 
