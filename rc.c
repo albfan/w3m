@@ -494,7 +494,6 @@ struct param_ptr params1[] = {
      NULL},
     {"imgdisplay", P_STRING, PI_TEXT, (void *)&Imgdisplay, CMT_IMGDISPLAY,
      NULL},
-    {"imgsize", P_STRING, PI_TEXT, (void *)&Imgsize, CMT_IMGSIZE, NULL},
 #endif
     {"show_lnum", P_INT, PI_ONOFF, (void *)&showLineNum, CMT_SHOW_NUM, NULL},
     {"show_srch_str", P_INT, PI_ONOFF, (void *)&show_srch_str,

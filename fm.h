@@ -822,7 +822,6 @@ global int showLineNum init(FALSE);
 global int show_srch_str init(TRUE);
 #ifdef USE_IMAGE
 global char *Imgdisplay init(IMGDISPLAY);
-global char *Imgsize init(IMGSIZE);
 global int activeImage init(FALSE);
 global int displayImage init(TRUE);
 global int autoImage init(TRUE);
