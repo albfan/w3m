@@ -6202,7 +6202,7 @@ DownloadListBuffer(void)
 	if (d->size) {
 	    int i, l = COLS - 6;
 	    if (size < d->size)
-		i = l * size / d->size;
+		i = 1.0 * l * size / d->size;
 	    else
 		i = l;
 	    l -= i;
