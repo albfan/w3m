@@ -51,6 +51,7 @@ getCharSize()
     Str tmp;
     int w = 0, h = 0;
 
+    set_environ("W3M_TTY", ttyname_tty());
     tmp = Strnew();
     if (!strchr(Imgdisplay, '/'))
 	Strcat_m_charp(tmp, w3m_auxbin_dir(), "/", NULL);
@@ -96,7 +97,6 @@ openImgdisplay()
 	/* child */
 	char *cmd;
 	setup_child(FALSE, 2, -1);
-	set_environ("W3M_TTY", ttyname_tty());
 	if (!strchr(Imgdisplay, '/'))
 	    cmd = Strnew_m_charp(w3m_auxbin_dir(), "/", Imgdisplay, NULL)->ptr;
 	else

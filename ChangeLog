@@ -1,3 +1,9 @@
+2003-02-25  Hironori SAKAMOTO <h-saka@lsi.nec.co.jp>
+
+	* [w3m-dev-en 00891] Re: w3m 0.4 has been released!
+	* image.c (getCharSize): set W3M_TTY here, before Imgdisplay invoke
+		(openImgdisplay): no need setting W3M_TTY here
+
 2003-02-25  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* version.c.in: cvs version
