@@ -1677,7 +1677,7 @@ openURL(char *url, ParsedURL *pu, ParsedURL *current,
 		return uf;
 	    if (pu->file == NULL)
 		pu->file = "1";
-	    tmp = Strnew_charp(pu->file);
+	    tmp = Strnew_charp(url_unquote(pu->file));
 	    Strcat_char(tmp, '\n');
 	}
 	write(sock, tmp->ptr, tmp->length);
