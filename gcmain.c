@@ -1,3 +1,4 @@
+/* $Id$ */
 #ifndef GC_MAIN
 #define GC_MAIN
 

@@ -1,3 +1,4 @@
+/* $Id$ */
 #ifndef TEXTLIST_H
 #define TEXTLIST_H
 #include "Str.h"

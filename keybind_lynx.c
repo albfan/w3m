@@ -1,4 +1,4 @@
-
+/* $Id$ */
 /* 
  * Lynx-like key binding.
  *

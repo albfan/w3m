@@ -1,3 +1,4 @@
+/* $Id$ */
 #include "hash.h"
 static HashItem_si MyHashItem[] = {
   /* 0 */ {"otimes",0x2297,&MyHashItem[1]},

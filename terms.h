@@ -1,3 +1,4 @@
+/* $Id$ */
 #ifndef TERMS_H
 #define TERMS_H
 

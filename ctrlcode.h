@@ -1,4 +1,4 @@
-
+/* $Id$ */
 /* control characters */
 
 #define CTRL_A          1

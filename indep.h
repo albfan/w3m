@@ -1,3 +1,4 @@
+/* $Id$ */
 #ifndef INDEP_H
 #define INDEP_H
 #include "gc.h"

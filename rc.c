@@ -1,4 +1,4 @@
-
+/* $Id$ */
 /* 
  * Initialization file etc.
  */

@@ -1,3 +1,4 @@
+/* $Id$ */
 #define REGEX_MAX	64
 #define STORAGE_MAX	256
 

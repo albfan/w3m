@@ -1,3 +1,4 @@
+/* $Id$ */
 #include "myctype.h"
 #include "indep.h"
 #include "Str.h"

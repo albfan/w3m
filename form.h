@@ -1,5 +1,6 @@
-/* 
- * HTML forms
+/* $Id$ */
+/*
+ * HTML forms 
  */
 #ifndef FORM_H
 #define FORM_H

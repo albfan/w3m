@@ -1,4 +1,4 @@
-
+/* $Id$ */
 /* 
  * MIME header support by Akinori ITO
  */

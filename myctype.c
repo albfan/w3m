@@ -1,4 +1,4 @@
-
+/* $Id$ */
 unsigned char MYCTYPE_MAP[ 0x100 ] = {
 /* NUL SOH STX ETX EOT ENQ ACK BEL   BS  HT  LF  VT  FF  CR  SO  SI */
      1,  1,  1,  1,  1,  1,  1,  1,   1,  3,  3,  3,  3,  3,  1,  1, 

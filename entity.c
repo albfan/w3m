@@ -1,4 +1,4 @@
-
+/* $Id$ */
 #include "fm.h"
 #include <stdio.h>
 #include "indep.h"

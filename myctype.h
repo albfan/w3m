@@ -1,3 +1,4 @@
+/* $Id$ */
 #ifndef _MYCTYPE_H
 #define _MYCTYPE_H
 

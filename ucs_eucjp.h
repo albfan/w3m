@@ -1,3 +1,4 @@
+/* $Id$ */
 static entity_map ucs_eucjp_map[] =
 {
     { 0x0152, "OE" },

@@ -1,4 +1,5 @@
-/* 
+/* $Id$ */
+/*
  * client-side image maps
  */
 #include "fm.h"

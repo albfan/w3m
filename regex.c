@@ -1,3 +1,4 @@
+/* $Id$ */
 /* 
  * regex: Regular expression pattern match library
  * 

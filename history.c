@@ -1,4 +1,4 @@
-
+/* $Id$ */
 #include "fm.h"
 
 #ifdef USE_HISTORY
