@@ -3,7 +3,7 @@
 #include "local.h"
 #include "myctype.h"
 
-#ifdef MOUSE
+#ifdef USE_MOUSE
 #ifdef USE_GPM
 #include <gpm.h>
 #endif
@@ -11,7 +11,7 @@
 extern int do_getch();
 #define getch()	do_getch()
 #endif				/* USE_GPM */
-#endif				/* MOUSE */
+#endif				/* USE_MOUSE */
 
 #ifdef __EMX__
 #include <sys/kbdscan.h>
