@@ -272,12 +272,7 @@ openNewsStream(ParsedURL *pu)
     }
     if (pu->scheme == SCM_NNTP || pu->scheme == SCM_NEWS) {
 	/* News article */
-	group = allocStr(pu->file, -1);
-	if (pu->scheme == SCM_NNTP && *group == '/') {
-	    /* first char of pu->file is '/' */
-	    group++;
-	}
-	group = file_unquote(group);
+	group = file_unquote(allocStr(pu->file, -1));
 	p = strchr(group, '/');
 	if (p == NULL) {	/* <message-id> */
 	    if (!strchr(group, '@'))
@@ -321,11 +316,8 @@ readNewsgroup(ParsedURL *pu)
     if (current_news.host == NULL || !pu->file || *pu->file == '\0')
 	return NULL;
     group = allocStr(pu->file, -1);
-    if (pu->scheme == SCM_NNTP_GROUP) {
-	if (*group == '/')
-	    group++;
-	scheme = "nntp:/";
-    }
+    if (pu->scheme == SCM_NNTP_GROUP)
+	scheme = "/";
     else
 	scheme = "news:";
     if ((list = strchr(group, '/'))) {

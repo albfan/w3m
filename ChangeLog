@@ -1,3 +1,11 @@
+2003-01-08  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03611] relative URL
+	* news.c (openNewsStream): don't skip '/' for nntp:
+		(readNewsgroup): cleanup
+	* url.c (parseURL): don't copy user & password
+		(parseURL2): fix for group, don't copy user & password
+
 2003-01-07  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* fix build warnings
