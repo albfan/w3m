@@ -1,5 +1,15 @@
 2002-11-09  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03388] meta refresh problem
+	* fm.h (AL_IMPLICIT_DONE): 3->4
+		(AL_ONCE): 8
+		(AL_IMPLICIT_ONCE): (AL_IMPLICIT|AL_ONCE)
+	* main.c (MAIN): & AL_IMPLICIT, & AL_IMPLICIT_DONE
+		(SigAlarm): & AL_IMPLICIT, & AL_IMPLICIT_DONE, & AL_ONCE
+		(setAlaramEvent): & AL_IMPLICIT
+
+2002-11-09  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03387] Re: tab browser
 	* buffer.c (newBuffer): buf->LINES initialize
 		(gotoLine): use buf->LINES
