@@ -1,3 +1,26 @@
+2002-11-23  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03458] Re: mouse menu
+	* display.c (displayBuffer): nTab2 -> nTab, mouse_menu
+	* fm.h (nTab2): deleted
+		(MouseMenuMap): added
+		(MouseMenu): added
+		(LIMIT_MOUSE_MENU): added
+	* func.c (initMouseMenu): delete mouse_menu_map initialization
+			conv_from_system
+			mouse_menu->width
+	* main.c (main): mouse_menu->in_action = FALSE
+		(posTab): check mouse_menu
+		(mouse_menu_action): add y arg
+			mouse_menu_width check
+		(process_mouse): nTab2 -> nTab, mouse_menu
+		(nTabLine): deleted
+		(calcTabPos): check mouse_menu
+	* menu.c (mainMn): x, y
+		(selMn): mouse_menu check
+		(tabMn): mosue_menu check
+	* proto.h (nTabLine): deleted
+
 2002-11-22  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* NEWS: options: -N
