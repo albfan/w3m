@@ -2,9 +2,7 @@
 
 	* main.c (main): DisplayCharset and DocumentCharset also follow 
 	    locale configuration
-
-2004-03-22  Fumitoshi UKAI  <ukai@debian.or.jp>
-
+	* Makefile.in (distclean): distclean libwc
 	* libwc/Makefile.in: add distclean
 	* scripts/multipart/Makefile.in: add distclean
 	* scripts/w3mman/Makefile.in: add distclean
