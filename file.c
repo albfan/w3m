@@ -6145,6 +6145,15 @@ addnewline(Buffer *buf, char *line, Lineprop *prop,
 		i--;
 #endif
 	}
+	if (i == 0) {
+	    i++;
+#ifdef JP_CHARSET
+	    if (CharType(p[i]) == PC_KANJI2)
+		i++;
+#endif
+	}
+	if (i == l->len)
+	    return;
 	l->len = i;
 	l->width = COLPOS(l, l->len);
 	bpos += l->len;
