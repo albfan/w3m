@@ -854,6 +854,8 @@ static int
 dir_under(const char *x, const char *y)
 {
     size_t len = strlen(x);
+    if (strcmp(x, y) == 0)
+	return 1;
     return x[len - 1] == '/'
 	&& strlen(y) >= len
 	&& y[len - 1] == '/' && strncasecmp(x, y, len) == 0;

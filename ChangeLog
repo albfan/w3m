@@ -1,3 +1,16 @@
+2002-09-29  AIDA Shinra <aida-s@jcom.home.ne.jp>
+
+	* Re: [w3m-dev 03320] Re: Passwords
+	* etc.c (dir_under): same path is ok
+	* file.c (loadGeneralFile): if missing, return NULL
+		ssl cert already checked
+	* html.h (URLFILE): add ssl_certificate
+	* istream.c (ssl_get_certificate): change args
+	* istream.h (ssl_get_certificate): ditto
+	* url.c (openSSLHandle): add p_cert
+		ssl certificate check here
+		(HTTPrequest): auth_cookie fix
+
 2002-09-25  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* [w3m-dev 03321] Bug#162104: file descriptors 1 and 2 are closed rather than reopened to /dev/null

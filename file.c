@@ -1582,6 +1582,11 @@ loadGeneralFile(char *path, ParsedURL *volatile current, char *referer,
 	return NULL;
     }
 
+    if (status == HTST_MISSING) {
+	UFclose(&f);
+	return NULL;
+    }
+
     /* openURL() succeeded */
     if (SETJMP(AbortLoading) != 0) {
 	/* transfer interrupted */
@@ -1955,13 +1960,8 @@ loadGeneralFile(char *path, ParsedURL *volatile current, char *referer,
 	t_buf->bufferprop |= BP_FRAME;
     }
 #ifdef USE_SSL
-    if (IStype(f.stream) == IST_SSL) {
-	Str s = ssl_get_certificate(f.stream, pu.host);
-	if (s == NULL)
-	    return NULL;
-	else
-	    t_buf->ssl_certificate = s->ptr;
-    }
+    if (IStype(f.stream) == IST_SSL)
+	t_buf->ssl_certificate = f.ssl_certificate;
 #endif
     frame_source = flag & RG_FRAME_SRC;
     b = loadSomething(&f, pu.real_file ? pu.real_file : pu.file, proc, t_buf);
