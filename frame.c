@@ -600,7 +600,16 @@ createFrameFile(struct frameset *f, FILE * f1, Buffer *current, int level,
 			continue;
 
 		    if (tok->ptr[0] == '<') {
-			is_tag = TRUE;
+			if (tok->ptr[1] &&
+			    REALLY_THE_BEGINNING_OF_A_TAG(tok->ptr))
+			    is_tag = TRUE;
+			else if (!(pre_mode & (RB_PLAIN | RB_INTXTA |
+					       RB_SCRIPT | RB_STYLE))) {
+			    p = Strnew_m_charp(tok->ptr + 1, p, NULL)->ptr;
+			    tok = Strnew_charp("&lt;");
+			}
+		    }
+		    if (is_tag) {
 			if (pre_mode & (RB_PLAIN | RB_INTXTA | RB_SCRIPT |
 					RB_STYLE)) {
 			    q = tok->ptr;
