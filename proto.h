@@ -526,13 +526,13 @@ extern void initMenu(void);
 #define selMn selBuf
 #endif				/* not USE_MENU */
 
-#ifdef DICT
+#ifdef USE_DICT
 extern void dictword(void);
 extern void dictwordat(void);
-#else				/* not DICT */
+#else				/* not USE_DICT */
 #define dictword nulcmd
 #define dictwordat nulcmd
-#endif				/* not DICT */
+#endif				/* not USE_DICT */
 
 extern void reloadBuffer(Buffer * buf);
 

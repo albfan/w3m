@@ -90,10 +90,10 @@ void bzero(void *, int);
 #define SHELLBUFFERNAME	"*Shellout*"
 #define PIPEBUFFERNAME	"*stream*"
 #define CPIPEBUFFERNAME	"*stream(closed)*"
-#ifdef DICT
+#ifdef USE_DICT
 #define DICTCMD "w3mdict"
 #define DICTBUFFERNAME "*dictionary*"
-#endif				/* DICT */
+#endif				/* USE_DICT */
 
 /* 
  * Line Property

@@ -182,7 +182,7 @@ static int graph_mode = 0;
 static Linecolor color_mode = 0;
 #endif
 
-#ifdef BUFINFO
+#ifdef USE_BUFINFO
 static Buffer *save_current_buf = NULL;
 #endif
 
@@ -313,7 +313,7 @@ displayBuffer(Buffer * buf, int mode)
     message(msg->ptr, buf->cursorX + buf->rootX, buf->cursorY);
     standend();
     refresh();
-#ifdef BUFINFO
+#ifdef USE_BUFINFO
     if (Currentbuf != save_current_buf) {
 	saveBufferInfo();
 	save_current_buf = Currentbuf;

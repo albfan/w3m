@@ -759,7 +759,7 @@ MAIN(int argc, char **argv, char **envp)
 	    if (Currentbuf->frameset != NULL && RenderFrame)
 		rFrame();
 	    Currentbuf = newbuf;
-#ifdef BUFINFO
+#ifdef USE_BUFINFO
 	    saveBufferInfo();
 #endif
 	}
@@ -1037,7 +1037,7 @@ pushBuffer(Buffer * buf)
 	buf->nextBuffer = Currentbuf;
 	Currentbuf = buf;
     }
-#ifdef BUFINFO
+#ifdef USE_BUFINFO
     saveBufferInfo();
 #endif
 
@@ -4419,7 +4419,7 @@ GetWord(Buffer * buf)
     return Strnew_charp_n(&lb[b], e - b)->ptr;
 }
 
-#ifdef DICT
+#ifdef USE_DICT
 static void
 execdict(char *word)
 {
@@ -4473,7 +4473,7 @@ dictwordat(void)
 {
     execdict(GetWord(Currentbuf));
 }
-#endif				/* DICT */
+#endif				/* USE_DICT */
 
 void
 set_buffer_environ(Buffer *buf)
