@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <string.h>
 
 #include "w3mimg/fb/fb.h"
 #include "w3mimg/fb/fb_img.h"
