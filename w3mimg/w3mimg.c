@@ -1,5 +1,6 @@
 /* $Id$ */
 
+#include <stdlib.h>
 #include "w3mimg/w3mimg.h"
 
 w3mimg_op *

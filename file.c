@@ -981,7 +981,7 @@ extract_auth_val(char **q)
 	if (*qq == ',')
 	    qq++;
     }
-    *q = qq;
+    *q = (char *)qq;
     return val;
 }
 
