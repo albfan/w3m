@@ -330,7 +330,7 @@ displayBuffer(Buffer *buf, int mode)
     if (displayLineInfo && buf->currentLine != NULL && buf->lastLine != NULL) {
 	int cl = buf->currentLine->real_linenumber;
 	int ll = buf->lastLine->real_linenumber;
-	int r = (int)((double)cl * 100.0 / (double)ll + 0.5);
+	int r = (int)((double)cl * 100.0 / (double)(ll ? ll : 1) + 0.5);
 	Strcat(msg, Sprintf("%d/%d (%d%%)", cl, ll, r));
     }
     else
