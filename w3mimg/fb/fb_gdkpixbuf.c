@@ -159,7 +159,7 @@ fb_image_load(char *filename, int w, int h, int max_anim)
     }
   END:
     if (tmp_image)
-      fb_image_free(tmp_image);
+	fb_image_free(tmp_image);
     gdk_pixbuf_animation_unref(animation);
     return fb_frame;
 }
