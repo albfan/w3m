@@ -235,7 +235,6 @@ extern int columnPos(Line *line, int column);
 extern Line *lineSkip(Buffer *buf, Line *line, int offset, int last);
 extern Line *currentLineSkip(Buffer *buf, Line *line, int offset, int last);
 extern int gethtmlcmd(char **s);
-extern char *getAnchor(char *arg, char **arg_return);
 extern Str checkType(Str s, Lineprop *oprop,
 #ifdef USE_ANSI_COLOR
 		     Linecolor *ocolor, int *check_color,
