@@ -7,8 +7,8 @@
 #include "local.h"
 
 static struct mailcap DefaultMailcap[] = {
-    {"image/*", "xv %s", 0, NULL, NULL, NULL},	/* */
-    {"audio/basic", "showaudio %s", 0, NULL, NULL, NULL},
+    {"image/*", DEF_IMAGE_VIEWER " %s", 0, NULL, NULL, NULL},	/* */
+    {"audio/basic", DEF_AUDIO_PLAYER " %s", 0, NULL, NULL, NULL},
     {NULL, NULL, 0, NULL, NULL, NULL}
 };
 
