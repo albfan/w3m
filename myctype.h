@@ -12,6 +12,7 @@
 #define MYCTYPE_XDIGIT (MYCTYPE_HEX|MYCTYPE_DIGIT)
 
 #define GET_MYCTYPE(x) (MYCTYPE_MAP[(int)(unsigned char)(x)])
+#define GET_MYCDIGIT(x) (MYCTYPE_DIGITMAP[(int)(unsigned char)(x)])
 
 #define IS_CNTRL(x) (GET_MYCTYPE(x) & MYCTYPE_CNTRL)
 #define IS_SPACE(x) (GET_MYCTYPE(x) & MYCTYPE_SPACE)
@@ -22,6 +23,7 @@
 #define IS_XDIGIT(x) (GET_MYCTYPE(x) & MYCTYPE_XDIGIT)
 
 extern unsigned char MYCTYPE_MAP[];
+extern unsigned char MYCTYPE_DIGITMAP[];
 
 
 #define INTCTYPE_ASCII   1
