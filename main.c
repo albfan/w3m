@@ -3699,6 +3699,44 @@ nextU(void)
     nextY(-1);
 }
 
+/* go to the next bufferr */
+void
+nextBf(void)
+{
+    Buffer *buf;
+    int i;
+
+    for (i = 0; i < PREC_NUM; i++) {
+	buf = prevBuffer(Firstbuf, Currentbuf);
+	if (!buf) {
+	    if (i == 0)
+		return;
+	    break;
+	}
+	Currentbuf = buf;
+    }
+    displayBuffer(Currentbuf, B_FORCE_REDRAW);
+}
+
+/* go to the previous bufferr */
+void
+prevBf(void)
+{
+    Buffer *buf;
+    int i;
+
+    for (i = 0; i < PREC_NUM; i++) {
+	buf = Currentbuf->nextBuffer;
+	if (!buf) {
+	    if (i == 0)
+		return;
+	    break;
+	}
+	Currentbuf = buf;
+    }
+    displayBuffer(Currentbuf, B_FORCE_REDRAW);
+}
+
 static int
 checkBackBuffer(Buffer *buf)
 {

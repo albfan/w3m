@@ -131,7 +131,7 @@ for $otherlang (@docdirs) {
 	     split(" ", "goURL gorURL tabURL tabrURL ldfile readsh pipesh"));
 
 &show_keymap("Buffer operation",
-	     split(" ", "backBf selMn selBuf vwSrc svSrc svBuf
+	     split(" ", "backBf nextBf prevBf selMn selBuf vwSrc svSrc svBuf
 		editBf editScr reload rdrwSc dispI stopI"));
 
 &show_keymap("Tab operation",

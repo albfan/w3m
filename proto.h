@@ -71,6 +71,8 @@ extern void nextR(void);
 extern void nextRD(void);
 extern void nextD(void);
 extern void nextU(void);
+extern void nextBf(void);
+extern void prevBf(void);
 extern void backBf(void);
 extern void deletePrevBuf(void);
 extern void goURL(void);
