@@ -781,6 +781,7 @@ createFrameFile(struct frameset *f, FILE * f1, Buffer *current, int level,
 				tag->value[j] =
 				    url_quote_conv(remove_space(tag->value[j]),
 						   code);
+				tag->need_reconstruct = TRUE;
 				parseURL2(tag->value[j], &url, &base);
 				if (url.scheme == SCM_UNKNOWN ||
 #ifndef USE_W3MMAILER
@@ -790,7 +791,6 @@ createFrameFile(struct frameset *f, FILE * f1, Buffer *current, int level,
 				    break;
 				a_target |= 1;
 				tag->value[j] = parsedURL2Str(&url)->ptr;
-				tag->need_reconstruct = TRUE;
 				parsedtag_set_value(tag,
 						    ATTR_REFERER,
 						    parsedURL2Str(&base)->ptr);
