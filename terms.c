@@ -2121,9 +2121,11 @@ mouse_init()
     if (is_xterm & NEED_XTERM_ON) {
 	XTERM_ON;
     }
+#ifdef __CYGWIN__
     else if (is_xterm & NEED_CYGWIN_ON) {
 	CYGWIN_ON;
     }
+#endif
     mouseActive = 1;
 }
 
@@ -2135,9 +2137,11 @@ mouse_end()
     if (is_xterm & NEED_XTERM_OFF) {
 	XTERM_OFF;
     }
+#ifdef __CYGWIN__
     else if (is_xterm & NEED_CYGWIN_OFF) {
 	CYGWIN_OFF;
     }
+#endif
     mouseActive = 0;
 }
 
