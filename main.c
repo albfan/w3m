@@ -1078,6 +1078,23 @@ dump_extra(Buffer *buf)
 #ifdef JP_CHARSET
     printf("W3m-document-charset: %s\n", code_to_str(buf->document_code));
 #endif
+#ifdef USE_SSL
+    if (buf->ssl_certificate) {
+	Str tmp = Strnew();
+	char *p;
+	for (p = buf->ssl_certificate; *p; p++) {
+	    Strcat_char(tmp, *p);
+	    if (*p == '\n') {
+		for (; *(p + 1) == '\n'; p++) ;
+		if (*(p + 1))
+		    Strcat_char(tmp, '\t');
+	    }
+	}
+	if (Strlastchar(tmp) != '\n')
+	    Strcat_char(tmp, '\n');
+	printf("W3m-ssl-certificate: %s", tmp->ptr);
+    }
+#endif
 }
 
 void
