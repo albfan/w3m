@@ -98,8 +98,6 @@ static int check_target = TRUE;
 #define PREC_LIMIT 10000
 static int searchKeyNum(void);
 
-#include "gcmain.c"
-
 #define help() fusage(stdout, 0)
 #define usage() fusage(stderr, 1)
 
@@ -346,7 +344,7 @@ make_optional_header_string(char *s)
 }
 
 int
-MAIN(int argc, char **argv, char **envp)
+main(int argc, char **argv, char **envp)
 {
     Buffer *newbuf = NULL;
     char *p, c;

@@ -9,8 +9,6 @@
 #include "textlist.h"
 #include "parsetag.h"
 
-#include "gcmain.c"
-
 #if LANG == JA
 static char *bkmark_src1 = "<html><head><title>Bookmark Registration</title>\n\
 <body><h1>ブックマークの登録</h1>\n\n" "<form method=get action=\"file://%s/" W3MBOOKMARK_CMDNAME "\">\n\n" "<input type=hidden name=mode value=register>\n\
@@ -174,7 +172,7 @@ insert_bookmark(char *bmark, struct parsed_tagarg *data)
 }
 
 int
-MAIN(int argc, char *argv[], char **envp)
+main(int argc, char *argv[], char **envp)
 {
     extern char *getenv();
     char *qs;

@@ -9,8 +9,6 @@
 #include "parsetag.h"
 #include "myctype.h"
 
-#include "gcmain.c"
-
 #if LANG == JA
 #define MSG_TITLE		"外部ビューアの編集"
 #define MSG_NEW_ENTRY		"新規登録"
@@ -157,7 +155,7 @@ editMailcap(char *mailcap, struct parsed_tagarg *args)
 }
 
 int
-MAIN(int argc, char *argv[], char **envp)
+main(int argc, char *argv[], char **envp)
 {
     Str mailcapfile;
     extern char *getenv();

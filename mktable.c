@@ -7,8 +7,6 @@
 #include "Str.h"
 #include <gc.h>
 
-#include "gcmain.c"
-
 /* *INDENT-OFF* */
 defhash(HashItem_ss *, int, hss_i)
 /* *INDENT-ON* */
@@ -27,7 +25,7 @@ defhashfunc(HashItem_ss *, int, hss_i)
 /* *INDENT-ON* */
 
 int
-MAIN(int argc, char *argv[], char **envp)
+main(int argc, char *argv[], char **envp)
 {
     FILE *f;
     Hash_ss *hash;
