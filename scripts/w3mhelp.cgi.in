@@ -150,7 +150,7 @@ for $otherlang (@docdirs) {
 	     split(" ", "_mark nextMk prevMk reMark"));
 
 &show_keymap("Miscellany",
-	     split(" ", "mainMn ldhelp ldOpt cooLst ldHist msgs msToggle
+	     split(" ", "mainMn ldhelp ldOpt cooLst ldHist ldDL msgs msToggle
 		wrapToggle setAlarm setOpt setEnv execsh susp qquitfm quitfm defKey"));
 
 &show_keymap("Buffer selection mode",
