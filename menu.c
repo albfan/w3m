@@ -1281,7 +1281,7 @@ initSelectMenu(void)
 				 conv_from_system(buf->currentURL.real_file));
 		}
 		break;
-		// case SCM_UNKNOWN:
+		/* case SCM_UNKNOWN: */
 	    case SCM_MISSING:
 		break;
 	    default:
