@@ -110,7 +110,7 @@ do
     gc_libdir=`expr "$1" : "--gc-libdir=\(.*\)"`
     ;;
   --mimetypes=*)
-    mime_types=`expr "$1" : "--mimetypes=\(.*\)"`
+    mimetypes=`expr "$1" : "--mimetypes=\(.*\)"`
     ;;
 
   -help|--help)
