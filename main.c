@@ -2500,6 +2500,23 @@ linend(void)
     displayBuffer(Currentbuf, B_NORMAL);
 }
 
+static int
+cur_real_linenumber(Buffer *buf)
+{
+    Line *l, *cur = buf->currentLine;
+    int n;
+
+    if (!cur)
+	return 1;
+    n = cur->real_linenumber ? cur->real_linenumber : 1;
+    for (l = buf->firstLine; l && l != cur && l->real_linenumber == 0;
+	 l = l->next) {		/* header */
+	if (l->bpos == 0)
+	    n++;
+    }
+    return n;
+}
+
 /* Run editor on the current buffer */
 void
 editBf(void)
@@ -2518,7 +2535,8 @@ editBf(void)
 	cmd = unquote_mailcap(Currentbuf->edit, Currentbuf->real_type, fn,
 			      checkHeader(Currentbuf, "Content-Type:"), NULL);
     else
-	cmd = myEditor(Editor, shell_quote(fn), CUR_LINENUMBER(Currentbuf));
+	cmd = myEditor(Editor, shell_quote(fn),
+		       cur_real_linenumber(Currentbuf));
     fmTerm();
     system(cmd->ptr);
     fmInit();
@@ -2543,7 +2561,8 @@ editScr(void)
     saveBuffer(Currentbuf, f, TRUE);
     fclose(f);
     fmTerm();
-    system(myEditor(Editor, tmpf, CUR_LINENUMBER(Currentbuf))->ptr);
+    system(myEditor(Editor, shell_quote(tmpf),
+		    cur_real_linenumber(Currentbuf))->ptr);
     fmInit();
     unlink(tmpf);
     displayBuffer(Currentbuf, B_FORCE_REDRAW);
