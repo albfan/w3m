@@ -37,7 +37,6 @@ extern int LINES, COLS;
 #define MOUSE_BTN5_DOWN_XTERM 65
 #define MOUSE_BTN_UP 3
 #define MOUSE_BTN_RESET -1
-#define MOUSE_SCROLL_LINE 5
 
 #ifdef __CYGWIN__
 extern int is_xterm;
