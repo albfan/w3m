@@ -145,9 +145,9 @@ extern Str ssl_get_certificate(InputStream stream);
 #define ssl_of(stream) ((stream)->ssl.handle->ssl)
 #endif
 
-#ifdef __CYGWIN__
+#ifdef USE_BINMODE_STREAM
 #define openIS(path) newInputStream(open((path),O_RDONLY|O_BINARY))
 #else
 #define openIS(path) newInputStream(open((path),O_RDONLY))
-#endif				/* __CYGWIN__ */
+#endif				/* USE_BINMODE_STREAM */
 #endif
