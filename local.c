@@ -296,19 +296,22 @@ set_cgi_environ(char *name, char *fn, char *req_uri)
 static Str
 checkPath(char *fn, char *path)
 {
+    char *p;
     Str tmp;
     struct stat st;
     while (*path) {
-	tmp = Strnew();
-	while (*path && *path != ':')
-	    Strcat_char(tmp, *path++);
-	if (*path == ':')
-	    path++;
+    	p = strchr(path, ':');
+	tmp = Strnew_charp(expandPath(p ? allocStr(path, p - path) : path));
 	if (Strlastchar(tmp) != '/')
 	    Strcat_char(tmp, '/');
 	Strcat_charp(tmp, fn);
 	if (stat(tmp->ptr, &st) == 0)
 	    return tmp;
+	if (!p)
+	    break;
+	path = p + 1;
+	while (*path == ':')
+	    path++;
     }
     return NULL;
 }

@@ -187,7 +187,7 @@ loadMailcap(char *filename)
     Str tmp;
     struct mailcap *mcap;
 
-    f = fopen(expandName(filename), "r");
+    f = fopen(expandPath(filename), "r");
     if (f == NULL)
 	return NULL;
     i = 0;

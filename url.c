@@ -154,7 +154,7 @@ loadMimeTypes(char *filename)
     Str tmp;
     struct table2 *mtypes;
 
-    f = fopen(expandName(filename), "r");
+    f = fopen(expandPath(filename), "r");
     if (f == NULL)
 	return NULL;
     n = 0;
@@ -2103,7 +2103,7 @@ loadURIMethods(char *filename)
     struct table2 *um;
     char *up, *p;
 
-    f = fopen(expandName(filename), "r");
+    f = fopen(expandPath(filename), "r");
     if (f == NULL)
 	return NULL;
     i = 0;
