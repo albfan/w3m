@@ -1369,11 +1369,17 @@ open_pipe_rw(FILE ** fr, FILE ** fw)
     else {
 	if (fr) {
 	    close(fdr[1]);
-	    *fr = fdopen(fdr[0], "r");
+	    if (*fr == stdin)
+		dup2(fdr[0], 0);
+	    else
+	        *fr = fdopen(fdr[0], "r");
 	}
 	if (fw) {
 	    close(fdw[0]);
-	    *fw = fdopen(fdw[1], "w");
+	    if (*fw == stdout)
+		dup2(fdw[1], 1);
+	    else
+		*fw = fdopen(fdw[1], "w");
 	}
     }
     return pid;
