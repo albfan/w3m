@@ -1,6 +1,4 @@
 /* $Id$ */
-#include <stdio.h>
-#include "config.h"
 #include "fm.h"
 #include <sys/types.h>
 #include <sys/socket.h>

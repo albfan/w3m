@@ -1075,7 +1075,7 @@ mySystem(char *command, int background)
 	flush_tty();
 	if ((pid = fork()) == 0) {
 	    reset_signals();
-	    setpgrp();
+	    SETPGRP();
 	    close_tty();
 	    fclose(stdout);
 	    fclose(stderr);

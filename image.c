@@ -106,7 +106,7 @@ openImgdisplay()
 	reset_signals();
 	signal(SIGINT, SIG_IGN);
 #ifdef HAVE_SETPGRP
-	setpgrp();
+	SETPGRP();
 #endif
 	close_tty();
 	close(fdr[0]);

@@ -52,7 +52,7 @@ open_migemo(char *migemo_command)
 	/* child */
 	reset_signals();
 #ifdef HAVE_SETPGRP
-	setpgrp();
+	SETPGRP();
 #endif
 	close_tty();
 	close(fdr[0]);
