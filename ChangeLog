@@ -1,3 +1,8 @@
+2001-12-09  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* [w3m-dev 02645]
+	* configure: fix to prevent rcsid expansion
+
 2001-12-08  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* [w3m-dev 02641]
