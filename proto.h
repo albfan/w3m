@@ -610,6 +610,7 @@ extern char *url_unquote_conv(char *url, char code);
 extern char *expandName(char *name);
 extern Str tmpfname(int type, char *ext);
 extern time_t mymktime(char *timestr);
+extern void (*mySignal(int signal_number, void (*action)(int)))(int);
 #ifdef USE_COOKIE
 extern char *FQDN(char *host);
 extern Str find_cookie(ParsedURL *pu);

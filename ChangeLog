@@ -1,3 +1,26 @@
+2003-02-19  Atsushi YOKOYAMA <yoko-a@cmh.fuchu.toshiba.co.jp>
+
+	* [w3m-dev 03758] Re: SVR4 signal behavior
+	* etc.c (reset_signals): use mySignal()
+		(setup_child): ditto
+		(myExec): ditto
+		(mySignal): added, use sigaction if available
+	* fm.h (TRAP_ON): use mySignal
+		(TRAP_OFF): ditto
+	* istream.c (ISclose): ditto
+	* main.c (sig_chld): ditto
+		(main): ditto
+		(do_dump): ditto
+		(resize_hook): ditto
+		(resize_handler): ditto
+		(srchcore): ditto
+		(readsh): ditto
+		(SigAlarm): ditto
+	* proto.h (mySignal): added
+	* terms.c (error_dump): use mySignal()
+		(set_int): ditto
+		(mouse_init): ditto
+
 2003-02-19  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03753] Fixed multipart.cgi

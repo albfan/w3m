@@ -781,7 +781,7 @@ global char fmInitialized init(FALSE);
 global char QuietMessage init(FALSE);
 global char TrapSignal init(TRUE);
 #define TRAP_ON if (TrapSignal) { \
-    prevtrap = signal(SIGINT, KeyAbort); \
+    prevtrap = mySignal(SIGINT, KeyAbort); \
     if (fmInitialized) \
 	term_cbreak(); \
 }
@@ -789,7 +789,7 @@ global char TrapSignal init(TRUE);
     if (fmInitialized) \
 	term_raw(); \
     if (prevtrap) \
-	signal(SIGINT, prevtrap); \
+	mySignal(SIGINT, prevtrap); \
 }
 
 extern unsigned char GlobalKeymap[];

@@ -183,9 +183,9 @@ ISclose(InputStream stream)
     if (stream == NULL || stream->base.close == NULL ||
 	stream->base.type & IST_UNCLOSE)
 	return -1;
-    prevtrap = signal(SIGINT, SIG_IGN);
+    prevtrap = mySignal(SIGINT, SIG_IGN);
     stream->base.close(stream->base.handle);
-    signal(SIGINT, prevtrap);
+    mySignal(SIGINT, prevtrap);
     return 0;
 }
 
