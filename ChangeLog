@@ -1,6 +1,7 @@
 2002-01-15  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* [w3m-dev 02832] external URI loader support
+	* NEWS: support external URI loader
 	* config.h.dist (USE_EXTERNAL_URI_LOADER): added
 	* config.h.dist (USER_URIMETHODMAP): added
 	* config.h.dist (SYS_URIMETHODMAP): added
