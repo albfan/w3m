@@ -194,13 +194,17 @@ x11_load_image(w3mimg_op * self, W3MImage * img, char *fname, int w, int h)
     if (w != iw || h != ih) {
 	GdkPixbuf *newpixbuf;
 	newpixbuf = gdk_pixbuf_scale_simple(pixbuf, w, h, GDK_INTERP_BILINEAR);
-	gdk_pixbuf_xlib_render_to_drawable(newpixbuf, (Drawable) img->pixmap,
-					   xi->imageGC, 0, 0, 0, 0, w, h,
+	gdk_pixbuf_xlib_render_to_drawable_alpha(newpixbuf,
+					   (Drawable) img->pixmap,
+					   0, 0, 0, 0, w, h,
+					   GDK_PIXBUF_ALPHA_BILEVEL, 1,
 					   XLIB_RGB_DITHER_NORMAL, 0, 0);
 	gdk_pixbuf_finalize(newpixbuf);
     } else {
-	gdk_pixbuf_xlib_render_to_drawable(pixbuf, (Drawable) img->pixmap,
-					   xi->imageGC, 0, 0, 0, 0, w, h,
+	gdk_pixbuf_xlib_render_to_drawable_alpha(pixbuf,
+					   (Drawable) img->pixmap,
+					   0, 0, 0, 0, w, h,
+					   GDK_PIXBUF_ALPHA_BILEVEL, 1,
 					   XLIB_RGB_DITHER_NORMAL, 0, 0);
     }
     gdk_pixbuf_unref(pixbuf);
