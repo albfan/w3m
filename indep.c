@@ -16,11 +16,11 @@ strtoclen(const char *s)
 {
 #ifdef HAVE_STRTOLL
     return strtoll(s, NULL, 10);
-#elif HAVE_STRTOQ
+#elif defined(HAVE_STRTOQ)
     return strtoq(s, NULL, 10);
-#elif HAVE_ATOLL
+#elif defined(HAVE_ATOLL)
     return atoll(s);
-#elif HAVE_ATOQ
+#elif defined(HAVE_ATOQ)
     return atoq(s);
 #else
     return atoi(s);
