@@ -225,6 +225,7 @@ extern char *inputAnswer(char *prompt);
 extern int matchattr(char *p, char *attr, int len, Str *value);
 extern void readHeader(URLFile *uf, Buffer *newBuf, int thru, ParsedURL *pu);
 extern char *checkHeader(Buffer *buf, char *field);
+extern int nTabLine(void);
 extern TabBuffer *newTab(void);
 extern TabBuffer *deleteTab(TabBuffer *tab);
 extern void addDownloadList(pid_t pid, char *url, char *save, char *lock,
@@ -626,6 +627,9 @@ extern int getKey(char *s);
 extern char *getKeyData(int key);
 extern char *getWord(char **str);
 extern char *getQWord(char **str);
+#ifdef USE_MOUSE
+extern void initMouseMenu(void);
+#endif
 
 #ifdef USE_MENU
 extern void new_menu(Menu *menu, MenuItem *item);

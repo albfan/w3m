@@ -1322,6 +1322,9 @@ sync_with_option(void)
 	AcceptMedia = acceptableMimeTypes();
     if (fmInitialized) {
 	initKeymap(FALSE);
+#ifdef USE_MOUSE
+	initMouseMenu();
+#endif				/* MOUSE */
 #ifdef USE_MENU
 	initMenu();
 #endif				/* MENU */
