@@ -92,6 +92,10 @@ w3mfb_show_image(w3mimg_op * self, W3MImage * img, int sx, int sy,
 
     frame = (FB_IMAGE **) img->pixmap;
     i = frame[0]->id;
+    while (i < frame[0]->num - 1 && frame[i]->delay <= 0) {
+	frame[0]->id += 1;
+	i = frame[0]->id;
+    }
     fb_image_draw(frame[i],
 		  x + self->offset_x, y + self->offset_y,
 		  sx, sy, (sw ? sw : img->width), (sh ? sh : img->height));
