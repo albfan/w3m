@@ -1604,7 +1604,20 @@ ldfile(void)
 void
 ldhelp(void)
 {
+#ifdef USE_HELP_CGI
+    char *lang;
+    int n;
+
+    lang = AcceptLang;
+    n = strcspn(lang, ";, \t");
+    cmd_loadURL(Sprintf("file:///$LIB/" HELP_CGI CGI_EXTENSION
+			"?version=%s&lang=%s",
+			Str_form_quote(Strnew_charp(w3m_version))->ptr,
+			Str_form_quote(Strnew_charp_n(lang, n))->ptr)->ptr,
+		NULL);
+#else
     cmd_loadURL(helpFile(HELP_FILE), NULL);
+#endif
 }
 
 static void
