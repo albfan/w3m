@@ -1,3 +1,8 @@
+2003-06-18  ABE Yuji <cbo46560@pop12.odn.ne.jp>
+
+	* [w3m-dev 03914] a fragment in the Referer URI
+	* url.c (otherinfo): strip URI fragment
+
 2003-06-13  Hiroyuki Ito <hito@crl.go.jp>
 
 	* [w3m-dev 03913] fix gif animation support

@@ -1279,13 +1279,20 @@ otherinfo(ParsedURL *target, ParsedURL *current, char *referer)
 	if (referer == NULL && current && current->scheme != SCM_LOCAL &&
 	    (current->scheme != SCM_FTP ||
 	     (current->user == NULL && current->pass == NULL))) {
+	    char *p = current->label;
 	    Strcat_charp(s, "Referer: ");
+	    current->label = NULL;
 	    Strcat(s, parsedURL2Str(current));
+	    current->label = p;
 	    Strcat_charp(s, "\r\n");
 	}
 	else if (referer != NULL && referer != NO_REFERER) {
+	    char *p = strchr(referer, '#');
 	    Strcat_charp(s, "Referer: ");
-	    Strcat_charp(s, referer);
+	    if (p)
+		Strcat_charp_n(s, referer, p - referer);
+	    else
+		Strcat_charp(s, referer);
 	    Strcat_charp(s, "\r\n");
 	}
     }
