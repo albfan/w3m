@@ -2602,6 +2602,7 @@ followA(void)
 	    return;
 	}
     }
+#ifndef USE_W3MMAILER
     if (!strncasecmp(a->url, "mailto:", 7)) {
 	/* invoke external mailer */
 	fmTerm();
@@ -2611,6 +2612,7 @@ followA(void)
 	displayBuffer(Currentbuf, B_FORCE_REDRAW);
 	return;
     }
+#endif
 #ifdef USE_NNTP
     else if (!strncasecmp(a->url, "news:", 5) && strchr(a->url, '@') == NULL) {
 	/* news:newsgroup is not supported */
@@ -3539,6 +3541,7 @@ cmd_loadURL(char *url, ParsedURL *current)
 {
     Buffer *buf;
 
+#ifndef USE_W3MMAILER
     if (!strncasecmp(url, "mailto:", 7)) {
 	/* invoke external mailer */
 	fmTerm();
@@ -3548,8 +3551,9 @@ cmd_loadURL(char *url, ParsedURL *current)
 	displayBuffer(Currentbuf, B_FORCE_REDRAW);
 	return;
     }
+#endif
 #ifdef USE_NNTP
-    else if (!strncasecmp(url, "news:", 5) && strchr(url, '@') == NULL) {
+    if (!strncasecmp(url, "news:", 5) && strchr(url, '@') == NULL) {
 	/* news:newsgroup is not supported */
 	disp_err_message("news:newsgroup_name is not supported", TRUE);
 	return;

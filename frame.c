@@ -677,8 +677,10 @@ createFrameFile(struct frameset *f, FILE * f1, Buffer *current, int level,
 				tag->value[j] =
 				    url_quote_conv(tag->value[j], code);
 				parseURL2(tag->value[j], &url, &base);
-				if (url.scheme == SCM_MAILTO ||
-				    url.scheme == SCM_UNKNOWN ||
+				if (url.scheme == SCM_UNKNOWN ||
+#ifndef USE_W3MMAILER
+				    url.scheme == SCM_MAILTO ||
+#endif
 				    url.scheme == SCM_MISSING)
 				    break;
 				a_target |= 1;
