@@ -2033,9 +2033,6 @@ mouse_init()
     if (is_xterm) {
 	XTERM_ON;
     }
-#ifdef SIGWINCH
-    signal(SIGWINCH, resize_hook);
-#endif
     mouseActive = 1;
 }
 

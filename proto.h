@@ -9,7 +9,6 @@ extern int main(int argc, char **argv, char **envp);
 extern void nulcmd(void);
 extern void pushEvent(int event, void *user_data);
 extern MySignalHandler intTrap(SIGNAL_ARG);
-extern MySignalHandler resize_hook(SIGNAL_ARG);
 extern void pgFore(void);
 extern void pgBack(void);
 extern void lup1(void);
