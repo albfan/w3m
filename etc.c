@@ -1552,7 +1552,9 @@ expandName(char *name)
 	return NULL;
     p = name;
     if (*p == '/') {
-	if (*(p + 1) == '~' && IS_ALPHA(*(p + 2)) && personal_document_root) {
+	if ( (*(p + 1) == '~' && IS_ALPHA(*(p + 2)) )
+	  || ( strncmp( p+1, "%7", 2 ) == 0 && tolower( *(p+3) ) == 'e' )
+	  && personal_document_root) {
 	    char *q;
 	    p += 2;
 	    q = strchr(p, '/');
