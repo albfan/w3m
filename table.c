@@ -2786,9 +2786,11 @@ feed_table_tag(struct table *tbl, char *line, struct table_mode *mode,
 	feed_table1(tbl, tok, mode, width);
 	break;
     case HTML_FORM:
+	feed_table_block_tag(tbl, line, mode, 0, cmd);
 	process_form(tag);
 	break;
     case HTML_N_FORM:
+	feed_table_block_tag(tbl, line, mode, 0, cmd);
 	process_n_form();
 	break;
     case HTML_INPUT:
