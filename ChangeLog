@@ -1,3 +1,7 @@
+2003-04-11  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* configure.in (AUXBIN_TARGETS): don't reset, move to head
+
 2003-04-10  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* [w3m-dev 03870] Re: configure --help
