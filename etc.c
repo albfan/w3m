@@ -1047,8 +1047,16 @@ openSecretFile(char *fname)
 
     /* check permissions, if group or others readable or writable,
      * refuse it, because it's insecure.
+     *
+     * XXX: disable_secret_security_check will introduce some
+     *    security issues, but on some platform such as Windows
+     *	  it's not possible (or feasible) to disable group|other
+     *    readable and writable.
+     *	 [w3m-dev 03368][w3m-dev 03369][w3m-dev 03370]
      */
-    if ((st.st_mode & (S_IRWXG | S_IRWXO)) != 0) {
+    if (disable_secret_security_check)
+	/* do nothing */ ;
+    else if ((st.st_mode & (S_IRWXG | S_IRWXO)) != 0) {
 	if (fmInitialized) {
 	    message(Sprintf(FILE_IS_READABLE_MSG, fname)->ptr, 0, 0);
 	    refresh();

@@ -863,6 +863,7 @@ global char *ExtBrowser init(DEF_EXT_BROWSER);
 global char *ExtBrowser2 init(NULL);
 global char *ExtBrowser3 init(NULL);
 global int BackgroundExtViewer init(TRUE);
+global int disable_secret_security_check init(FALSE);
 global char *passwd_file init(PASSWD_FILE);
 global char *pre_form_file init(PRE_FORM_FILE);
 global char *ftppasswd init(NULL);
