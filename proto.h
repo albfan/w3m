@@ -509,6 +509,11 @@ extern FILE *openFTP(ParsedURL *pu, URLFile *uf);
 extern Str readFTPDir(ParsedURL *pu);
 extern void closeFTP(FILE * f);
 extern int Ftpfclose(FILE * f);
+#ifdef USE_NNTP
+extern InputStream openNewsStream(ParsedURL *pu);
+extern Str readNewsgroup(ParsedURL *pu);
+extern void disconnectNews(void);
+#endif
 extern AnchorList *putAnchor(AnchorList *al, char *url, char *target,
 			     Anchor **anchor_return, char *referer,
 			     char *title, unsigned char key, int line,

@@ -6,9 +6,9 @@ OBJS=main.o file.o buffer.o display.o etc.o search.o linein.o table.o local.o\
 	form.o map.o frame.o rc.o menu.o mailcap.o image.o\
 	func.o cookie.o history.o backend.o $(KEYBIND_OBJ)
 LSRCS=terms.c conv.c url.c ftp.c anchor.c mimehead.c parsetagx.c\
-	tagtable.c istream.c
+	tagtable.c istream.c news.c
 LOBJS=terms.o conv.o url.o ftp.o anchor.o mimehead.o parsetagx.o\
-	tagtable.o istream.o
+	tagtable.o istream.o news.o
 LLOBJS=version.o
 ALIBOBJS=Str.o indep.o regex.o textlist.o parsetag.o myctype.o entity.o hash.o
 ALIB=libindep.a

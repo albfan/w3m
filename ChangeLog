@@ -1,5 +1,41 @@
 2002-12-28  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03608] news:<newsgroup>
+	* XMakefile (LSRCS): add news.c
+		(LOBJS): add news.o
+	* file.c (loadSOmething): don't UFclose() for nntp/news
+		(readHeader): remove . at beginning of line for news
+			img link to file:
+		(loadGeneralFile): add SCM_NEWS_GROUP
+			don't UFclose() for nntp/news
+		(loadHTMLstream): . line check for news
+		(loadBuffer): . line check for news
+	* fm.h (NNTP_server): added
+		(NNTP_mode): added
+		(MaxNewsMessage): added
+	* html.h (SCM_NEWS_GROUP): added
+	* main.c (main): NNTP_server or NNTPSERVER
+			NNTP_mode or NNTPMODE
+			add SCM_NEWS_GROUP
+		(followA): remove news:..@.. check
+		(cmd_loadURL): remove news:...@.. check
+		(w3m_exit): disconnectNews
+	* proto.h (openNewsStream): added
+		(readNewsgroup): added
+		(disconnectNews): added
+	* rc.c (CMT_NNTP_SERVER): added
+		(CMT_NNTP_MODE): added
+		(CMT_MAX_NEWS): added
+		(params9): add nntpserver, nntpmode, max_news
+	* url.c (DefaultPort): add 119 for news group
+		(parseURL2): news:..@... is SCM_NEWS_GROUP
+		(_parsedURL2Str): add news for SCM_NEWS_GROUP
+		(openURL): cleanup SCM_NEWS
+			add SCM_NEWS_GROUP
+	* news.c: added
+	
+2002-12-28  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03607] mymktime: time zone support
 	* etc.c (get_zone): added
 		(mymktime): parse timezone
