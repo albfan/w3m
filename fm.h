@@ -816,6 +816,7 @@ global int label_topline init(FALSE);
 #ifdef NEXTPAGE_TOPLINE
 global int nextpage_topline init(FALSE);
 #endif
+global char *displayTitleTerm init(NULL);
 global int displayLink init(FALSE);
 global int retryAsHttp init(TRUE);
 global int showLineNum init(FALSE);
