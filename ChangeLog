@@ -1,3 +1,9 @@
+2003-03-12  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* [w3m-dev 03816] --enable-lynx => --enable-keymap=lynx 
+	* acinclude.m4 (AC_W3M_KEYMAP): --enable-lynx => --enable-keymap=lynx
+	* Bonus/oldconfigure.sh: ditto
+
 2003-03-12  Yuji Abe <cbo46560@pop12.odn.ne.jp>
 
 	* [w3m-dev 03814] fix autoconf
