@@ -1043,7 +1043,7 @@ loadGeneralFile(char *path, ParsedURL *volatile current, char *referer,
 		    if (UseExternalDirBuffer) {
 			Str cmd = Strnew_charp(DirBufferCommand);
 			Strcat_m_charp(cmd, "?dir=",
-				       pu.real_file, "#current", NULL);
+				       pu.file, "#current", NULL);
 			b = loadGeneralFile(cmd->ptr, NULL, NO_REFERER, 0,
 					    NULL);
 			if (b != NULL && b != NO_BUFFER) {
