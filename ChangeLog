@@ -1,5 +1,16 @@
 2002-10-31  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03363] refresh download
+	* file.c (HTMLtagproc1): alarm is implicit once
+	* fm.h (AL_IMPLICIT_ONCE): added
+	* main.c (searchKeyData): reset CurrentKeyData, CurrentCmdData
+		(SigAlarm): CurrentCmdData is saved to data
+			message displayed on AL_EXPLICIT
+			clear alarm when AL_IMPLICIT_ONCE
+		(setAlarmEvent): AL_IMPLICIT_ONCE
+
+2002-10-31  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03362] Re: support for http://user:pass@www.url.com
 	* etc.c (loadPasswd): accept host, passwd
 

@@ -4602,7 +4602,7 @@ HTMLtagproc1(struct parsed_tag *tag, struct html_feed_environ *h_env)
 #ifdef USE_ALARM
 		else if (!is_redisplay && refresh_interval > 0 && MetaRefresh
 			 && !((obuf->flag & RB_NOFRAMES) && RenderFrame)) {
-		    setAlarmEvent(refresh_interval, AL_IMPLICIT,
+		    setAlarmEvent(refresh_interval, AL_IMPLICIT_ONCE,
 				  FUNCNAME_gorURL, s_tmp->ptr);
 		}
 #endif

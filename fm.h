@@ -1016,6 +1016,7 @@ void w3m_exit(int i);
 #define AL_EXPLICIT      1
 #define AL_IMPLICIT      2
 #define AL_IMPLICIT_DONE 3
+#define AL_IMPLICIT_ONCE 4
 #endif
 
 /* 
