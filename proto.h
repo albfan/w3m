@@ -189,7 +189,6 @@ extern Buffer *loadBuffer(URLFile *uf, Buffer *newBuf);
 extern Buffer *loadImageBuffer(URLFile *uf, Buffer *newBuf);
 #endif
 extern void saveBuffer(Buffer *buf, FILE * f);
-extern void saveBufferDelNum(Buffer *buf, FILE * f, int del);
 extern Buffer *getshell(char *cmd);
 extern Buffer *getpipe(char *cmd);
 extern Buffer *openPagerBuffer(InputStream stream, Buffer *buf);

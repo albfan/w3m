@@ -4150,10 +4150,11 @@ vwSrc(void)
 	    !strcasecmp(Currentbuf->type, "text/plain")) {
 	    FILE *f;
 	    Str tmpf = tmpfname(TMPF_SRC, NULL);
+	    pushText(fileToDelete, tmpf->ptr);
 	    f = fopen(tmpf->ptr, "w");
 	    if (f == NULL)
 		return;
-	    saveBufferDelNum(Currentbuf, f, showLineNum);
+	    saveBuffer(Currentbuf, f);
 	    fclose(f);
 	    fn = tmpf->ptr;
 	}

@@ -6470,16 +6470,6 @@ loadImageBuffer(URLFile *uf, Buffer *newBuf)
 }
 #endif
 
-/* 
- * saveBuffer: write buffer to file
- */
-
-void
-saveBuffer(Buffer *buf, FILE * f)
-{
-    saveBufferDelNum(buf, f, FALSE);
-}
-
 #ifndef KANJI_SYMBOLS
 static Str
 conv_rule(Line *l)
@@ -6506,8 +6496,11 @@ conv_rule(Line *l)
 }
 #endif
 
+/* 
+ * saveBuffer: write buffer to file
+ */
 void
-saveBufferDelNum(Buffer *buf, FILE * f, int del)
+saveBuffer(Buffer *buf, FILE * f)
 {
     Line *l = buf->firstLine;
     Str tmp;
