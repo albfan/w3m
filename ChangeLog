@@ -1,3 +1,9 @@
+2003-01-12  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03634] smb.cgi
+	* Bonus/smb.cgi: added
+	* Bonus/README: update
+
 2003-01-12  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* ftp.c (ftp_pasv): ftp_command response
