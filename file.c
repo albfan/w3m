@@ -1848,6 +1848,7 @@ loadGeneralFile(char *path, ParsedURL *volatile current, char *referer,
 	t = f.guess_type;
     }
     else if (searchHeader) {
+	searchHeader = SearchHeader = FALSE;
 	if (t_buf == NULL)
 	    t_buf = newBuffer(INIT_BUFFER_WIDTH);
 	readHeader(&f, t_buf, searchHeader_through, &pu);
@@ -1868,7 +1869,6 @@ loadGeneralFile(char *path, ParsedURL *volatile current, char *referer,
 	t = checkContentType(t_buf);
 	if (t == NULL)
 	    t = "text/plain";
-	searchHeader = SearchHeader = FALSE;
     }
     else if (DefaultType) {
 	t = DefaultType;

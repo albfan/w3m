@@ -1,3 +1,9 @@
+2003-08-29  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03957] Location: from local-CGI
+	* file.c (loadGeneralFile): don't parse header for local file
+		redirected by Location: from local-CGI
+
 2003-08-12  TSUCHIYA Masatoshi <tsuchiya@pine.kuee.kyoto-u.ac.jp>
 
 	* [w3m-dev 03950] rel attribute of anchor tag
