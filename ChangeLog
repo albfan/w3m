@@ -1,3 +1,8 @@
+2005-02-15  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* [w3m-dev-en 01045] From newbie: problem with w3m-0.5.1 installation
+	* acinclude.m4 (AC_W3M_SSL): define USE_SSL after ssl library found
+
 2005-01-19  Kiyokazu SUTO <suto@ks-and-ks.ne.jp>
 
 	* [w3m-dev 04133] mouse_end() should preced reset_tty()?
