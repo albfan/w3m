@@ -1,5 +1,10 @@
 2002-11-28  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03494] Number of line is few when pager mode.
+	* display.c (redrawLine): buf->rootY
+
+2002-11-28  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03493] scroll menu
 	* menu.c (mLineU): added
 		(mLineD): added

@@ -542,7 +542,7 @@ redrawLine(Buffer *buf, Line *l, int i)
 
     if (l == NULL) {
 	if (buf->pagerSource) {
-	    l = getNextPage(buf, buf->LINES - i);
+	    l = getNextPage(buf, buf->LINES + buf->rootY - i);
 	    if (l == NULL)
 		return NULL;
 	}
