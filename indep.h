@@ -50,6 +50,7 @@ extern Str Str_form_quote(Str x);
 extern Str Str_form_unquote(Str x);
 extern char *shell_quote(char *str);
 
+extern char *w3m_auxbin_dir();
 extern char *w3m_lib_dir();
 extern char *w3m_etc_dir();
 extern char *w3m_help_dir();

@@ -749,6 +749,12 @@ w3m_dir(const char *name, char *dft)
 }
 
 char *
+w3m_auxbin_dir()
+{
+    return w3m_dir("W3M_AUXBIN_DIR", AUXBIN_DIR);
+}
+
+char *
 w3m_lib_dir()
 {
     return w3m_dir("W3M_LIB_DIR", LIB_DIR);
