@@ -229,7 +229,7 @@ StrISgets(InputStream stream)
 	    do_update(base);
 	}
 	else {
-	    if (p = memchr(&sb->buf[sb->cur], '\n', sb->next - sb->cur)) {
+	    if ((p = memchr(&sb->buf[sb->cur], '\n', sb->next - sb->cur))) {
 		len = p - &sb->buf[sb->cur] + 1;
 		if (s == NULL)
 		    s = Strnew_size(len);
