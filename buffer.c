@@ -521,7 +521,7 @@ reshapeBuffer(Buffer *buf)
 #endif
     if (buf->search_header && buf->currentURL.scheme == SCM_LOCAL) {
 	if (buf->header_source && (buf->mailcap_source ||
-	    !strcmp(buf->currentURL.file, "-"))) {
+				   !strcmp(buf->currentURL.file, "-"))) {
 	    URLFile h;
 	    init_stream(&h, SCM_LOCAL, NULL);
 	    examineFile(buf->header_source, &h);

@@ -416,8 +416,8 @@ frame_download_source(struct frame_body *b, ParsedURL *currentURL,
     }
     else if ((buf->real_scheme != SCM_LOCAL)
 #ifdef USE_IMAGE
-	|| (activeImage && !useExtImageViewer &&
-	    buf->real_type && !strncasecmp(buf->real_type, "image/", 6))
+	     || (activeImage && !useExtImageViewer &&
+		 buf->real_type && !strncasecmp(buf->real_type, "image/", 6))
 #endif
 	) {
 	tmp = tmpfname(TMPF_FRAME, NULL);
