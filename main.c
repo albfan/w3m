@@ -1432,8 +1432,8 @@ dispincsrch(int ch, Str buf)
     }
 
     if (do_next_search) {
-	SAVE_BUFPOSITION(&sbuf);
 	if (*str) {
+	    SAVE_BUFPOSITION(&sbuf);
 	    srchcore(str, searchRoutine);
 	    arrangeCursor(Currentbuf);
 	    if (Currentbuf->currentLine == currentLine
@@ -1442,15 +1442,18 @@ dispincsrch(int ch, Str buf)
 		srchcore(str, searchRoutine);
 		arrangeCursor(Currentbuf);
 	    }
+	    displayBuffer(Currentbuf, B_FORCE_REDRAW);
+	    clear_mark(Currentbuf->currentLine);
+	    return -1;
 	}
+	else
+	    return 020;	/* _prev completion for C-s C-s */
     }
-    else {
+    else if (*str) {
 	RESTORE_BUFPOSITION(&sbuf);
 	arrangeCursor(Currentbuf);
-	if (*str) {
-	    srchcore(str, searchRoutine);
-	    arrangeCursor(Currentbuf);
-	}
+	srchcore(str, searchRoutine);
+	arrangeCursor(Currentbuf);
 	currentLine = Currentbuf->currentLine;
 	pos = Currentbuf->pos;
     }
