@@ -265,7 +265,7 @@ RegexMatch(Regex *re, char *str, int len, int firstp)
 	len = strlen(str);
     re->position = NULL;
     ep = str + len;
-    for (p = str; p < ep; p++) {
+    for (p = str; p <= ep; p++) {
 	lpos = NULL;
 	re->lposition = NULL;
 	for (r = re; r != NULL; r = r->alt_regex) {
@@ -554,7 +554,7 @@ regmatch_iter(struct MatchingContext1 *c,
 	    c->re++;
 	    c->firstp = 0;
 	}
-	if (c->str >= c->end_p) {
+	if (c->str > c->end_p) {
 	    return 0;
 	}
     }

@@ -23,7 +23,8 @@ forwardSearch(Buffer *buf, char *str)
     if (l->propBuf[pos] & PC_KANJI2)
 	pos++;
 #endif
-    if (regexMatch(&l->lineBuf[pos], l->len - pos, 0) == 1) {
+    if (pos < l->len &&
+	regexMatch(&l->lineBuf[pos], l->len - pos, 0) == 1) {
 	matchedPosition(&first, &last);
 	buf->pos = first - l->lineBuf;
 	arrangeCursor(buf);

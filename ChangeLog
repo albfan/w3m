@@ -1,3 +1,10 @@
+2002-01-11  Akinori Ito <aito@fw.ipsj.or.jp>
+
+	* [w3m-dev 02819]
+	* regex.c (RegexMatch): loop condition changed (from < to <= )
+	* regex.c (regmatch_iter): end condition changed (from >= to >)
+	* search.c (forwardSearch): next search fix
+
 2002-01-11  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* [w3m-dev 02818]
