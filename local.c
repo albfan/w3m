@@ -186,9 +186,7 @@ check_local_cgi(char *file, int status)
 	return -1;
     if (S_ISDIR(st.st_mode))
 	return -1;
-    if ((st.st_uid == geteuid() && (st.st_mode & S_IXUSR)) ||
-	(st.st_gid == getegid() && (st.st_mode & S_IXGRP)) ||
-	(st.st_mode & S_IXOTH))	/* executable */
+    if ((st.st_uid == geteuid() && (st.st_mode & S_IXUSR)) || (st.st_gid == getegid() && (st.st_mode & S_IXGRP)) || (st.st_mode & S_IXOTH))	/* executable */
 	return 0;
     return -1;
 }
@@ -324,7 +322,7 @@ cgi_filename(char *uri, char **fn, char **name, char **path_info)
 	Str tmp2 = Strnew_charp(document_root);
 	if (Strlastchar(tmp2) != '/')
 	    Strcat_char(tmp2, '/');
-        Strcat_charp(tmp2, uri + 1);
+	Strcat_charp(tmp2, uri + 1);
 	if (strncmp(tmp2->ptr, tmp->ptr, tmp->length) != 0)
 	    return CGIFN_NORMAL;
 	uri = tmp2->ptr;
