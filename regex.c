@@ -660,8 +660,8 @@ matchWhich(longchar * pattern, longchar c, int igncase)
 		break;
 	    }
 	    else if (igncase && c < 127 && IS_ALPHA(c) &&
-		     ((*p <= c && tolower(c) <= *(p + 2)) ||
-		      (*p <= c && toupper(c) <= *(p + 2)))) {
+		     ((*p <= tolower(c) && tolower(c) <= *(p + 2)) ||
+		      (*p <= toupper(c) && toupper(c) <= *(p + 2)))) {
 		ans = 1;
 		break;
 	    }
