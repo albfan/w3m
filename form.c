@@ -815,11 +815,14 @@ preFormUpdateBuffer(Buffer *buf)
 {
     struct pre_form *pf;
     struct pre_form_item *pi;
-    int i, j;
+    int i;
     Anchor *a;
     FormList *fl;
     FormItemList *fi;
+#ifdef MENU_SELECT
     FormSelectOptionItem *opt;
+    int j;
+#endif
 
     if (!buf || !buf->formitem || !PreForm)
 	return;
