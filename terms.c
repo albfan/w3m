@@ -427,7 +427,7 @@ writestr(char *s)
 #define W3M_TERM_INFO(name, title, mouse)	name, title
 #endif
 
-static char XTERM_TITLE[]  = "\033]0;w3m: %s\007";
+static char XTERM_TITLE[] = "\033]0;w3m: %s\007";
 static char SCREEN_TITLE[] = "\033k%s\033\134";
 #ifdef __CYGWIN__
 static char CYGWIN_TITLE[] = "w3m: %s";
