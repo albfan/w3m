@@ -560,7 +560,7 @@ readHeader(URLFile *uf, Buffer *newBuf, int thru, ParsedURL *pu)
 	    tmp = Strnew_size(lineBuf2->length);
 	    for (p = lineBuf2->ptr; *p; p = q) {
 		for (q = p; *q && *q != '\r' && *q != '\n'; q++) ;
-		lineBuf2 = checkType(Strnew_charp(p), propBuffer,
+		lineBuf2 = checkType(Strnew_charp_n(p, q - p), propBuffer,
 #ifdef USE_ANSI_COLOR
 				     NULL, NULL,
 #endif
