@@ -196,9 +196,11 @@ _put_anchor_news(Buffer *buf, char *p1, char *p2, int line, int pos)
     p1++;
     if (*(p2 - 1) == '>')
 	p2--;
-    tmp = Strnew_size(sizeof("news:") - 1 + (p2 - p1));
-    Strcat_charp_n(tmp, "news:", sizeof("news:") - 1);
-    Strcat_charp_n(tmp, p1, p2 - p1);
+    tmp = Strnew_charp_n(p1, p2 - p1);
+#ifdef JP_CHARSET
+    tmp = conv_str(tmp, InnerCode, buf->document_code);
+#endif
+    tmp = Sprintf("news:%s", file_quote(tmp->ptr));
     return registerHref(buf, tmp->ptr, NULL, NO_REFERER, NULL, '\0', line,
 			pos);
 }
@@ -207,7 +209,13 @@ _put_anchor_news(Buffer *buf, char *p1, char *p2, int line, int pos)
 static Anchor *
 _put_anchor_all(Buffer *buf, char *p1, char *p2, int line, int pos)
 {
-    return registerHref(buf, allocStr(p1, p2 - p1), NULL, NO_REFERER, NULL,
+    Str tmp;
+
+    tmp = Strnew_charp_n(p1, p2 - p1);
+#ifdef JP_CHARSET
+    tmp = conv_str(tmp, InnerCode, buf->document_code);
+#endif
+    return registerHref(buf, url_quote(tmp->ptr), NULL, NO_REFERER, NULL,
 			'\0', line, pos);
 }
 

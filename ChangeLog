@@ -1,3 +1,10 @@
+2002-12-17  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03576] Re: news support
+	* anchor.c (_put_anchor_news): convert to document code and quote
+		(_put_anchor_all): convert to document code
+	* main.c (chkNMIDBuffer): change url_like_pat
+
 2002-12-15  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* NEWS: rc: preserve_timestamp
