@@ -1138,6 +1138,8 @@ _parsedURL2Str(ParsedURL *pu, int pass)
 	    )))
 	Strcat_char(tmp, '/');
     Strcat_charp(tmp, pu->file);
+    if (pu->scheme == SCM_FTPDIR && Strlastchar(tmp) != '/')
+	Strcat_char(tmp, '/');
     if (pu->query) {
 	Strcat_char(tmp, '?');
 	Strcat_charp(tmp, pu->query);
