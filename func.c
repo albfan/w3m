@@ -229,7 +229,7 @@ getWord(char **str)
 
     p = *str;
     SKIP_BLANKS(p);
-    for (s = p; *p && ! IS_SPACE(*p) && *p != ';'; p++) ;
+    for (s = p; *p && !IS_SPACE(*p) && *p != ';'; p++) ;
     *str = p;
     return Strnew_charp_n(s, p - s)->ptr;
 }
