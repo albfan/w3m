@@ -1590,6 +1590,27 @@ else
   fi
 fi
 
+# check alarm()
+if [ "$use_alarm" = y ]; then
+  cat > _zdmachdep.c <<EOF
+#include <unistd.h>
+#include <signal.h>
+main()
+{
+    int sa = SIGALRM;
+    void (*)() = alarm;
+}
+EOF
+  if $cc $cflags -o _zmachdep _zmachdep.c > /dev/null 2>&1
+  then
+    echo "You have alarm()."
+  else
+    echo "You don't have alarm(), disable USE_ALARM"
+    use_alarm=n
+    def_use_alarm="#undef USE_ALARM"
+  fi
+fi
+
 # check for float.h
 cat > _zmachdep.c << EOF
 #include <float.h>
