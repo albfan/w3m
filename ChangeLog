@@ -1,5 +1,10 @@
 2002-12-15  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03571] base=0 -> 10 in toNumber()
+	* parsetagx.c (toNumber): strtol base=10
+
+2002-12-15  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03570] meta tag in frame
 	* frame.c (createFrameFile): fix meta equiv parse in frame
 

@@ -45,7 +45,7 @@ toNumber(char *oval, int *num)
     char *ep;
     int x;
 
-    x = strtol(oval, &ep, 0);
+    x = strtol(oval, &ep, 10);
 
     if (ep > oval) {
 	*num = x;
