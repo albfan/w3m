@@ -725,6 +725,7 @@ global int nextpage_topline init(FALSE);
 global int displayLink init(FALSE);
 global int retryAsHttp init(TRUE);
 global int showLineNum init(FALSE);
+global int show_srch_str init(TRUE);
 global char *Editor init(DEF_EDITOR);
 global char *Mailer init(DEF_MAILER);
 global char *ExtBrowser init(DEF_EXT_BROWSER);

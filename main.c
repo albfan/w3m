@@ -1322,7 +1322,7 @@ srch_nxtprv(volatile int reverse)
     if (wrapped) {
 	disp_message("Search wrapped", FALSE);
     }
-    else {
+    else if (show_srch_str) {
 	disp_message(Sprintf("%s%s",
 			     routine[reverse] ==
 			     forwardSearch ? "Forward: " : "Backward: ",
