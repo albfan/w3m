@@ -182,6 +182,7 @@ uninstall:
 clean: sweep
 	-rm -f *.o *.a $(TARGETS) mktable$(EXT)
 	-rm -f funcname.c funcname1.h funcname2.h tagtable.c functable.c
+	-rm -f w3mimg/*.o w3mimg/*/*.o 
 	-for dir in $(SCRIPTSUBDIRS);	\
 	do	\
 		(cd $$dir; $(MAKE) clean); \
