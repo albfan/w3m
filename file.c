@@ -401,10 +401,9 @@ acceptableEncoding()
 	    pushText(l, d->encoding);
 	}
     }
+    encodings = Strnew();
     while ((p = popText(l)) != NULL) {
-	if (encodings == NULL)
-	    encodings = Strnew();
-	else
+	if (encodings->length)
 	    Strcat_charp(encodings, ", ");
 	Strcat_charp(encodings, p);
     }
