@@ -453,6 +453,7 @@ struct readbuffer {
 #define RB_IGNORE_P	0x4000
 #define RB_TITLE	0x8000
 #define RB_NFLUSHED	0x10000
+#define RB_NOFRAMES	0x20000
 
 #ifdef FORMAT_NICE
 #define RB_FILL		0x200000
