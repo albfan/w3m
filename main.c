@@ -562,6 +562,8 @@ MAIN(int argc, char **argv, char **envp)
 		w3m_dump = (DUMP_HEAD | DUMP_SOURCE | DUMP_EXTRA);
 	    else if (!strcmp("-halfdump", argv[i]))
 		w3m_dump = DUMP_HALFDUMP;
+	    else if (!strcmp("-halfdump_extra", argv[i]))
+		w3m_dump = DUMP_HALFDUMP | DUMP_HALFEXTRA;
 	    else if (!strcmp("-halfload", argv[i])) {
 		w3m_dump = 0;
 		w3m_halfload = TRUE;

@@ -772,6 +772,7 @@ extern char *w3m_version;
 #define DUMP_EXTRA    0x08
 #define DUMP_HALFDUMP 0x10
 #define DUMP_FRAME    0x20
+#define DUMP_HALFEXTRA 0x40
 global int w3m_debug;
 global int w3m_dump init(0);
 #define w3m_halfdump (w3m_dump & DUMP_HALFDUMP)
