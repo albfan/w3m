@@ -92,6 +92,7 @@ extern void vwSrc(void);
 extern void reload(void);
 extern void chkURL(void);
 extern void chkURLBuffer(Buffer *buf);
+extern void chkWORD(void);
 #ifdef USE_NNTP
 extern void chkNMID(void);
 extern void chkNMIDBuffer(Buffer *buf);
@@ -486,6 +487,7 @@ extern Anchor *retrieveCurrentImg(Buffer *buf);
 extern Anchor *retrieveCurrentForm(Buffer *buf);
 extern Anchor *searchAnchor(AnchorList *al, char *str);
 extern Anchor *searchURLLabel(Buffer *buf, char *url);
+extern void reAnchorWord(Buffer *buf, Line *l, int spos, int epos);
 extern char *reAnchor(Buffer *buf, char *re);
 #ifdef USE_NNTP
 extern char *reAnchorNews(Buffer *buf, char *re);

@@ -50,6 +50,7 @@ MAIN_MENU	mainMn
 MARK		_mark
 MARK_MID	chkNMID
 MARK_URL	chkURL
+MARK_WORD	chkWORD
 MENU		mainMn
 MOUSE		mouse
 MOUSE_TOGGLE	msToggle
