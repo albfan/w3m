@@ -4836,8 +4836,16 @@ SigAlarm(SIGNAL_ARG)
 #ifdef USE_MENU
 	CurrentMenuData = NULL;
 #endif
+#ifdef USE_MOUSE
+	if (use_mouse)
+	    mouse_inactive();
+#endif
 	w3mFuncList[alarm_event.cmd].func();
 	onA();
+#ifdef USE_MOUSE
+	if (use_mouse)
+	    mouse_active();
+#endif
 	if (alarm_status == AL_IMPLICIT) {
 	    alarm_buffer = Currentbuf;
 	    alarm_status = AL_IMPLICIT_DONE;
