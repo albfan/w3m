@@ -10,6 +10,7 @@ main(int argc, char **argv)
 {
     w3mimg_op *w_op = NULL;
     W3MImage img;
+    int w, h;
 
     fclose(stderr);
     if (argc < 2)
@@ -21,8 +22,8 @@ main(int argc, char **argv)
     if (!w_op->init(w_op))
 	exit(1);
 
-    if (!w_op->load_image(w_op, &img, argv[1], -1, -1))
+    if (!w_op->get_image_size(w_op, &img, argv[1], &w, &h))
 	exit(1);
-    printf("%d %d\n", img.width, img.height);
+    printf("%d %d\n", w, h);
     exit(0);
 }

@@ -99,10 +99,10 @@ main(int argc, char **argv)
 	case '5':
 	    if (w_op->init(w_op)) {
 		W3MImage img;
-		if (w_op->load_image(w_op, &img, &buf[2], 0, 0)) {
-		    fprintf(stdout, "%d %d\n", img.width, img.height);
+		int w, h;
+		if (w_op->get_image_size(w_op, &img, &buf[2], &w, &h)) {
+		    fprintf(stdout, "%d %d\n", w, h);
 		    fflush(stdout);
-		    w_op->free_image(w_op, &img);
 		}
 	    }
 	    break;
