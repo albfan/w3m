@@ -1397,6 +1397,10 @@ init_rc(void)
 	interpret_rc(f);
 	fclose(f);
     }
+    if ((f = fopen(confFile(CONFIG_FILE), "rt")) != NULL) {
+	interpret_rc(f);
+	fclose(f);
+    }
     if ((f = fopen(config_file, "rt")) != NULL) {
 	interpret_rc(f);
 	fclose(f);
@@ -1582,6 +1586,12 @@ char *
 etcFile(char *base)
 {
     return expandPath(Strnew_m_charp(w3m_etc_dir(), "/", base, NULL)->ptr);
+}
+
+char *
+confFile(char *base)
+{
+    return expandPath(Strnew_m_charp(w3m_conf_dir(), "/", base, NULL)->ptr);
 }
 
 #ifndef USE_HELP_CGI

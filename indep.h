@@ -68,6 +68,7 @@ extern char *shell_quote(char *str);
 extern char *w3m_auxbin_dir();
 extern char *w3m_lib_dir();
 extern char *w3m_etc_dir();
+extern char *w3m_conf_dir();
 extern char *w3m_help_dir();
 
 #define New(type)	((type*)GC_MALLOC(sizeof(type)))

@@ -580,6 +580,7 @@ extern void panel_set_option(struct parsed_tagarg *);
 extern void sync_with_option(void);
 extern char *rcFile(char *base);
 extern char *etcFile(char *base);
+extern char *confFile(char *base);
 extern char *auxbinFile(char *base);
 extern char *libFile(char *base);
 extern char *helpFile(char *base);

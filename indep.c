@@ -733,6 +733,12 @@ w3m_etc_dir()
 }
 
 char *
+w3m_conf_dir()
+{
+    return w3m_dir("W3M_CONF_DIR", CONF_DIR);
+}
+
+char *
 w3m_help_dir()
 {
     return w3m_dir("W3M_HELP_DIR", HELP_DIR);
