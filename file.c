@@ -4158,6 +4158,12 @@ HTMLtagproc1(struct parsed_tag *tag, struct html_feed_environ *h_env)
     case HTML_N_EM:
 	HTMLlineproc1("</b>", h_env);
 	return 1;
+    case HTML_Q:
+	HTMLlineproc1("`", h_env);
+	return 1;
+    case HTML_N_Q:
+	HTMLlineproc1("'", h_env);
+	return 1;
     case HTML_P:
     case HTML_N_P:
 	CLOSE_A;

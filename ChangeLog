@@ -1,3 +1,12 @@
+2003-04-19  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* [w3m-dev 03882] Re: Bug#189460: w3m: <q> tag is not recognized
+	* file.c (HTMLtagproc1): add HTML_Q, HTML_N_Q
+	* html.c (TagMAP): add "q", "/q"
+	* html.h (HTML_Q): added
+		(HTML_N_Q): added
+	* tagtable.tab: add q, /q
+
 2003-04-15  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03880] Re: convert \ -> / in URL
