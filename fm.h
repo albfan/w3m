@@ -77,6 +77,7 @@ void bzero(void *, int);
 
 #ifdef USE_IMAGE
 #define MAX_IMAGE 1000
+#define MAX_IMAGE_SIZE 10000
 
 #define DEFAULT_PIXEL_PER_CHAR  7.0	/* arbitrary */
 #define DEFAULT_PIXEL_PER_LINE  14.0	/* arbitrary */

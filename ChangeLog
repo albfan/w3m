@@ -1,3 +1,11 @@
+2002-11-16  Hiroyuki Ito <hito@crl.go.jp>
+
+	* [w3m-dev 03436] Check image size
+	* file.c (process_img): check w > MAX_IMAGE_SIZE
+		(HTMLlineproc2body): check w,h > MAX_IMAGE_SIZE
+	* fm.h (MAX_IMAGE_SIZE): added
+	* image.c (getImageSize): check w,h,width,height > MAX_IMAGE_SIZE
+
 2002-11-16  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03435] save image with SAVE
