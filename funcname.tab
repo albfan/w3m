@@ -34,6 +34,8 @@ HISTORY		ldHist
 INFO		pginfo
 INIT_MAILCAP	initMailcap
 INTERRUPT	susp
+ISEARCH		isrchfor
+ISEARCH_BACK	isrchbak
 LEFT		col1L
 LINE_BEGIN	linbeg
 LINE_END	linend

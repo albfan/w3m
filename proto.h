@@ -17,7 +17,9 @@ extern void ctrCsrV(void);
 extern void ctrCsrH(void);
 extern void rdrwSc(void);
 extern void srchfor(void);
+extern void isrchfor(void);
 extern void srchbak(void);
+extern void isrchbak(void);
 extern void srchnxt(void);
 extern void srchprv(void);
 extern void shiftl(void);
@@ -252,7 +254,10 @@ extern void pcmap(void);
 extern void escmap(void);
 extern void escbmap(void);
 extern void escdmap(char c);
-extern char *inputLineHist(char *prompt, char *def_str, int flag, Hist *hist);
+extern char *inputLineHistSearch(char *prompt, char *def_str, int flag,
+				 Hist *hist,
+				 int (*incfunc) (int ch, Str buf, short *x,
+						 short *y));
 #ifdef USE_HISTORY
 extern Buffer *historyBuffer(Hist *hist);
 extern void loadHistory(Hist *hist);
