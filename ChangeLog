@@ -1,3 +1,8 @@
+2003-04-12  NAKAJIMA Mikio <minakaji@osaka.email.ne.jp>
+
+	* [w3m-dev 03872] goodict.cgi
+	* Bonus/goodict.cgi: adapt new goo dict web page
+
 2003-04-11  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* configure.in (AUXBIN_TARGETS): don't reset, move to head
