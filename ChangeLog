@@ -1,3 +1,9 @@
+2002-11-14  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03424] Content length
+	* file.c (loadGeneralFile): current_content_length before do_download
+		(save2tmp): current_content_length move before return
+
 2002-11-12  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* [w3m-dev 03422] Re: setting form on loading
