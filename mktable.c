@@ -19,7 +19,7 @@ defhash(HashItem_ss *, int, hss_i)
 static unsigned long
 hashfunc(HashItem_ss * x)
 {
-    return (unsigned long) x;
+    return (unsigned long)x;
 }
 
 /* *INDENT-OFF* */
