@@ -1,3 +1,8 @@
+2003-03-28  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03836] CFLAGS for SSL in configure
+	* acinclude.m4 (AC_W3M_SSL): add -I$dir/include to CFLAGS
+
 2003-03-28  ABE Yuji <cbo46560@pop12.odn.ne.jp>
 
 	* [w3m-dev 03834] Re: gif animation with no delay_time
