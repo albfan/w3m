@@ -1,5 +1,20 @@
 2002-11-16  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03435] save image with SAVE
+	* buffer.c (discardBuffer): check image
+	* file.c (loadImageBuffer): add st
+			IMG_FLAG_DONE_REMOVE
+			s/sourcefile/mailcap_source/
+	* fm.h (IMG_FLAG_DONT_REMOVE): added
+	* image.c (drawImage): & IMG_FLAG_LOADED
+		(deleteImage): & IMG_FLAG_DONT_REMOVE
+		(showImageProgress): & IMG_FLAG_LOADED
+		(getImage): & IMG_FLAG_LOADED
+		(getImageSize): & IMG_FLAG_LOADED
+	* main.c (vmSrc): delete ifdef USE_IMAGE
+
+2002-11-16  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03434] Re: cygwin console on Win9X
 	* terms.c (cygwin_mouse_btn_swapped): ifdef USE_MOUSE
 		(lastConMouse): deleted

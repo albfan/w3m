@@ -238,6 +238,7 @@ extern int REV_LB[];
 #define IMG_FLAG_UNLOADED	0
 #define IMG_FLAG_LOADED		1
 #define IMG_FLAG_ERROR		2
+#define IMG_FLAG_DONT_REMOVE	4
 
 /* 
  * Macros.
