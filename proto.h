@@ -336,6 +336,11 @@ extern Str correct_irrtag(int status);
 #ifdef USE_MIGEMO
 extern void init_migemo(void);
 #endif
+#ifdef USE_M17N
+extern char *conv_search_string(char *str, wc_ces f_ces);
+#else
+#define conv_search_string(str, f_ces)	str
+#endif
 extern int forwardSearch(Buffer *buf, char *str);
 extern int backwardSearch(Buffer *buf, char *str);
 extern void pcmap(void);
