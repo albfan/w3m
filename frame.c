@@ -805,9 +805,8 @@ createFrameFile(struct frameset *f, FILE * f1, Buffer *current, int level,
 			    parsedtag_set_value(tag, ATTR_TARGET, d_target);
 			}
 			if (parsedtag_need_reconstruct(tag))
-			    Strfputs(parsedtag2str(tag), f1);
-			else
-			    Strfputs(tok, f1);
+			    tok = parsedtag2str(tag);
+			Strfputs(tok, f1);
 		    }
 		    else {
 			if (pre_mode & (RB_PLAIN | RB_INTXTA))

@@ -1,5 +1,21 @@
 2003-01-21  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03660] Re: fputs -> Strfputs
+	* Str.h (Strncmp_charp): paren
+		(Strncasecmp_charp): ditto
+		(Strinsert): ditto
+		(Strshrinkfirst): ditto
+	* display.c (disp_err_message): added
+	* file.c (loadGeneralFile): don't put function in macro arg
+		(saveBuffer): ditto
+	* frame.c (createFrameFile): ditto
+	* proto.h (disp_err_message): macro->function
+	* table.c (pushdata): if data is NULL, use ""
+		(suspend_or_pushdata): if line is NULL, use ""
+	* textlist.h (pushText): don't use (s) twice in a macro
+
+2003-01-21  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03659] Can't download from SSL.
 	* istream.c (ISfileno): case IST_SSL
 

@@ -1910,7 +1910,8 @@ loadGeneralFile(char *path, ParsedURL *volatile current, char *referer,
 	tmp = tmpfname(TMPF_SRC, ".html");
 	src = fopen(tmp->ptr, "w");
 	if (src) {
-	    Strfputs(conv_str(page, InnerCode, code), src);
+	    Str s = conv_str(page, InnerCode, code);
+	    Strfputs(s, src);
 	    fclose(src);
 	}
 	if (do_download) {
@@ -6940,7 +6941,8 @@ saveBuffer(Buffer *buf, FILE * f)
 	else
 #endif
 	    tmp = Strnew_charp_n(l->lineBuf, l->len);
-	Strfputs(conv_str(tmp, InnerCode, DisplayCode), f);
+	tmp = conv_str(tmp, InnerCode, DisplayCode);
+	Strfputs(tmp, f);
 	if (Strlastchar(tmp) != '\n')
 	    putc('\n', f);
     }

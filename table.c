@@ -449,7 +449,7 @@ pushdata(struct table *t, int row, int col, char *data)
     if (t->tabdata[row][col] == NULL)
 	t->tabdata[row][col] = newGeneralList();
 
-    pushText(t->tabdata[row][col], data);
+    pushText(t->tabdata[row][col], data ? data : "");
 }
 
 void
@@ -460,7 +460,7 @@ suspend_or_pushdata(struct table *tbl, char *line)
     else {
 	if (!tbl->suspended_data)
 	    tbl->suspended_data = newTextList();
-	pushText(tbl->suspended_data, line);
+	pushText(tbl->suspended_data, line ? line : "");
     }
 }
 

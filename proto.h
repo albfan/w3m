@@ -276,7 +276,7 @@ extern void addChar(char c, Lineprop mode);
 extern void record_err_message(char *s);
 extern Buffer *message_list_panel(void);
 extern void message(char *s, int return_x, int return_y);
-#define disp_err_message(s, f) (record_err_message((s)), disp_message((s), (f)))
+extern void disp_err_message(char *s, int redraw_current);
 extern void disp_message_nsec(char *s, int redraw_current, int sec, int purge,
 			      int mouse);
 extern void disp_message(char *s, int redraw_current);
