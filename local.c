@@ -173,9 +173,7 @@ check_local_cgi(char *file, int status)
 	char tmp[_MAX_PATH];
 	int len;
 
-	_abspath(tmp, w3m_lib_dir(), _MAX_PATH);	/* Translate '\\'  to  '/' 
-							 * 
-							 */
+	_abspath(tmp, w3m_lib_dir(), _MAX_PATH);	/* Translate '\\' to '/' */
 	len = strlen(tmp);
 	while (len > 1 && tmp[len - 1] == '/')
 	    len--;
