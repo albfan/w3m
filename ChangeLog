@@ -1,3 +1,8 @@
+2003-03-20  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03825] re-anchor for fold line
+	* anchor.c (reAnchorPos): fix for fold line
+
 2003-03-20  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* [w3m-dev-en 00910] Re: autoconf: env MAKE not respected
