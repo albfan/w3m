@@ -398,7 +398,10 @@ void clear(), wrap(), touch_line(), touch_column(int);
 void switch_wchar(FILE *);
 void switch_ascii(FILE *);
 #endif
-void need_clrtoeol(void), clrtoeol(void);	/* conflicts with curs_clear(3)? */
+#if 0
+void need_clrtoeol(void);
+#endif
+void clrtoeol(void);	/* conflicts with curs_clear(3)? */
 
 int write1(char);
 
@@ -1444,6 +1447,7 @@ clear(void)
     CurrentMode = C_ASCII;
 }
 
+#ifdef USE_RAW_SCROLL
 static void
 scroll_raw(void)
 {				/* raw scroll */
@@ -1535,6 +1539,7 @@ rscroll(int n)
 	}
     }
 }
+#endif
 
 #if 0
 void
