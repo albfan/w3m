@@ -1,3 +1,10 @@
+2003-03-11  Yuji Abe <cbo46560@pop12.odn.ne.jp>
+
+	* [w3m-dev 03803] fix autoconf
+	* acinclude.m4 (AC_W3M_MIGEMO): add missing test
+					needs quote
+		(AC_W3M_SSL): delete x
+
 2003-03-11  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03802] fix autoconf
