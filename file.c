@@ -5083,7 +5083,7 @@ HTMLlineproc2body(Buffer *buf, Str (*feed) (), int llimit)
 		int emode;
 		p = getescapecmd(&str);
 		while (*p) {
-	    	    PSIZE;
+		    PSIZE;
 		    emode = get_mctype(p);
 #ifdef JP_CHARSET
 		    if (emode == PC_KANJI) {
