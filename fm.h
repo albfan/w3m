@@ -184,6 +184,11 @@ void bzero(void *, int);
 #define LB_N_SOURCE	LB_SOURCE
 #define MAX_LB		5
 
+/* Search Result */
+#define SR_FOUND       0x1
+#define SR_NOTFOUND    0x2
+#define SR_WRAPPED     0x4
+
 #ifdef MAINPROGRAM
 int REV_LB[MAX_LB] = {
     LB_N_FRAME, LB_FRAME, LB_N_INFO, LB_INFO, LB_N_SOURCE,
