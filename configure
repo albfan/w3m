@@ -270,6 +270,7 @@ ask_choice() {
   list="$@"
 
   echo "$prompt"
+  dvar=
   varvar=
   # check old value
   eval "old_dvar=\$$var"
