@@ -35,6 +35,7 @@ open_migemo(char *migemo_command)
     if (pipe(fdw) < 0)
 	goto err1;
 
+    flush_tty();
     /* migemow:fdw[1] -|-> fdw[0]=0 {migemo} fdr[1]=1 -|-> fdr[0]:migemor */
     pid = fork();
     if (pid < 0)
