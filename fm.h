@@ -32,6 +32,7 @@
 
 #ifndef USE_COLOR
 #undef USE_ANSI_COLOR
+#undef USE_BG_COLOR
 #endif
 
 #include "ctrlcode.h"
