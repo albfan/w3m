@@ -1,3 +1,8 @@
+2002-10-27  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* 0.3.2 release candidate 2
+	* version.c.in: update
+
 2002-10-26  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* [w3m-dev-en 00788]
