@@ -1,3 +1,8 @@
+2003-05-03  Hiroyuki Ito <hito@crl.go.jp>
+
+	* [w3m-dev 03887] Re: I-search problem
+	* main.c (dispincsrch): don't move cursor if not found.
+
 2003-04-27  qhwt@myrealbox.com
 
 	* [w3m-dev 03886] Re: POSTing patch (Re: User-Agent for Bonus/2ch.cgi)
