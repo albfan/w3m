@@ -1,3 +1,9 @@
+2003-03-12  Yuji Abe <cbo46560@pop12.odn.ne.jp>
+
+	* [w3m-dev 03814] fix autoconf
+	* acinclude.m4: quote variables
+	* Bonus/oldconfigure.sh: configure using old config.param
+
 2003-03-12  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03812] fix autoconf
