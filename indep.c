@@ -13,7 +13,7 @@
 
 #ifndef HAVE_BCOPY
 void
-bcopy(void *src, void *dest, int len)
+bcopy(const void *src, void *dest, int len)
 {
     int i;
     if (src == dest)

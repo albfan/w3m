@@ -47,7 +47,7 @@
 #include "terms.h"
 
 #ifndef HAVE_BCOPY
-void bcopy(void *, void *, int);
+void bcopy(const void *, void *, int);
 void bzero(void *, int);
 #endif				/* HAVE_BCOPY */
 #ifdef __EMX__
