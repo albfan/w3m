@@ -703,6 +703,9 @@ global int useVisitedColor init(FALSE);
 global int visited_color init(5);	/* magenta  */
 #endif				/* USE_COLOR */
 global int confirm_on_quit init(TRUE);
+#ifdef EMACS_LIKE_LINEEDIT
+global int emacs_like_lineedit init(FALSE);
+#endif
 global int displayLink init(FALSE);
 global int retryAsHttp init(TRUE);
 global int showLineNum init(FALSE);
