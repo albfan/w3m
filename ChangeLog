@@ -1,3 +1,8 @@
+2003-02-06  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03728] IPv6 hostname
+	* url.c (parseURL): rewrite IPv6 address parser
+
 2003-02-04  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03724] Re: view source, edit source
