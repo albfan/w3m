@@ -199,7 +199,7 @@ UFhalfclose(URLFile *f)
 #ifdef USE_NNTP
     case SCM_NEWS:
     case SCM_NNTP:
-	closeFTP();
+	closeNews();
 	break;
 #endif
     default:

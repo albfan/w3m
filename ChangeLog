@@ -1,3 +1,8 @@
+2003-03-03  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03788] UFhalfclose
+	* file.c (UFhalfclose): closeNews() for SCM_NEWS,NNTP
+
 2003-02-28  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03783] pipe to "command1 | command2"
