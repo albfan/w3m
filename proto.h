@@ -181,6 +181,7 @@ extern Str process_n_textarea(void);
 extern void feed_textarea(char *str);
 extern Str process_form(struct parsed_tag *tag);
 extern Str process_n_form(void);
+extern int getMetaRefreshParam(char *q, Str *refresh_uri);
 extern int HTMLtagproc1(struct parsed_tag *tag,
 			struct html_feed_environ *h_env);
 extern void HTMLlineproc2(Buffer *buf, TextLineList *tl);

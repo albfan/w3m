@@ -1,3 +1,11 @@
+2002-11-27  Hiroyuki Ito <hito@crl.go.jp>
+
+	* [w3m-dev 03488] meta refresh in frame
+	* file.c (getMetaRefreshParam): added
+		(HTMLtagproc1): use getMetaRefreshParam()
+	* frame.c (createFrameFile): check meta refresh
+	* proto.h (getMetaRefreshProgram): added
+
 2002-11-27  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* w3m 0.3.2.1 security fix
