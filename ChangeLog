@@ -1,5 +1,14 @@
 2002-11-12  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03406]
+	* scripts/Makefile: add AUXBIN_DIR
+			update LIB_DIR, HELP_DIR
+			xface2xpm installed in AUXBIN_DIR
+	* scripts/multipart/Makefile: update LIB_DIR
+	* scripts/w3mman/Makefile: update LIB_DIR
+
+2002-11-12  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03405] Re: tab browser
 	* main.c (moveTab): B_FORCE_REDRAW
 
