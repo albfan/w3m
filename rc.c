@@ -1095,7 +1095,7 @@ sync_with_option(void)
     if (AcceptLang == NULL || *AcceptLang == '\0') {
 #if LANG == JA
 	AcceptLang = "ja; q=1.0, en; q=0.5";
-#else	/* LANG != JA (must be EN) */
+#else				/* LANG != JA (must be EN) */
 	AcceptLang = "en; q=1.0";
 #endif
     }
