@@ -401,7 +401,7 @@ void switch_ascii(FILE *);
 #if 0
 void need_clrtoeol(void);
 #endif
-void clrtoeol(void);	/* conflicts with curs_clear(3)? */
+void clrtoeol(void);		/* conflicts with curs_clear(3)? */
 
 int write1(char);
 
