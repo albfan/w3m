@@ -33,11 +33,11 @@
 #define FORM_ENCTYPE_URLENCODED 0
 #define FORM_ENCTYPE_MULTIPART  1
 
-#define MAX_TEXTAREA 10		/* max number of * <textarea>..</textarea> 
-				 * * within one * document */
+#define MAX_TEXTAREA 10		/* max number of <textarea>..</textarea> 
+				 * within one document */
 #ifdef MENU_SELECT
-#define MAX_SELECT 10		/* max number of <select>..</select> *
-				 * * within one document */
+#define MAX_SELECT 10		/* max number of <select>..</select>
+				 * within one document */
 #endif				/* MENU_SELECT */
 
 typedef struct form_list {

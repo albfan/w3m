@@ -1,9 +1,7 @@
 /* $Id$ */
 #if (defined(MESCHACH) && !defined(MATRIX))
 #define MATRIX
-#endif				/* (defined(MESCHACH) && !defined(MATRIX)) 
-				 * 
-				 * *  * *  * *  */
+#endif				/* (defined(MESCHACH) && !defined(MATRIX)) */
 
 #ifdef MATRIX
 #ifdef MESCHACH

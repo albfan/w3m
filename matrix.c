@@ -139,7 +139,7 @@ LUsolve(Matrix A, int *indexarray, Vector b, Vector x)
 }
 
 /* m_inverse -- returns inverse of A, provided A is not too rank deficient
- * * * * * * * -- uses LU factorisation */
+ *           -- uses LU factorisation */
 #if 0
 Matrix
 m_inverse(Matrix A, Matrix out)

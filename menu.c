@@ -26,8 +26,7 @@ extern int sysm_process_mouse(int, int, int, int);
 static int X_Mouse_Selection;
 extern int do_getch();
 #define getch()	do_getch()
-#endif				/* defined(USE_GPM) || * * * * * *
-				 * defined(USE_SYSMOUSE) */
+#endif				/* defined(USE_GPM) || defined(USE_SYSMOUSE) */
 #endif				/* USE_MOUSE */
 
 #ifdef USE_MENU
@@ -623,8 +622,7 @@ action_menu(Menu *menu)
 	    if (mselect != MENU_NOTHING)
 		break;
 	}
-#endif				/* defined(USE_GPM) || * * * * * *
-				 * defined(USE_SYSMOUSE) */
+#endif				/* defined(USE_GPM) || defined(USE_SYSMOUSE) */
 #endif				/* USE_MOUSE */
 	if (IS_ASCII(c)) {	/* Ascii */
 	    mselect = (*menu->keymap[(int)c]) (c);

@@ -635,8 +635,7 @@ getTCstr(void)
     GETSTR(T_as, "as");		/* alternative (graphic) charset start */
     GETSTR(T_ae, "ae");		/* alternative (graphic) charset end */
     GETSTR(T_ac, "ac");		/* graphics charset pairs */
-    GETSTR(T_op, "op");		/* set default color pair to its original
-				 * * * * * * * value */
+    GETSTR(T_op, "op");		/* set default color pair to its original value */
 #if defined( CYGWIN ) && CYGWIN < 1
     /* for TERM=pcansi on MS-DOS prompt. */
 #if 0
