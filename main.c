@@ -3768,8 +3768,10 @@ _peekURL(int only_img)
 	a = retrieveCurrentImg(Currentbuf);
 	if (a == NULL) {
 	    a = retrieveCurrentForm(Currentbuf);
-	    if (a == NULL)
+	    if (a == NULL) {
+		s = NULL;
 		return;
+	    }
 	    s = Strnew_charp(form2str((FormItemList *)a->url));
 	    goto disp;
 	}
