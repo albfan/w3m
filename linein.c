@@ -676,11 +676,15 @@ next_compl(int next)
 	return;
     cm_clear = FALSE;
     if (!cm_next) {
-	for (b = CPos - 1; b >= 0; b--) {
-	    if (strBuf->ptr[b] == ' ' || strBuf->ptr[b] == CTRL_I)
-		break;
+	if (cm_mode & CPL_ALWAYS) {
+	    b = 0;
+	} else {
+	    for (b = CPos - 1; b >= 0; b--) {
+		if (strBuf->ptr[b] == ' ' || strBuf->ptr[b] == CTRL_I)
+		    break;
+	    }
+	    b++;
 	}
-	b++;
 	a = CPos;
 	CBeforeBuf = Strsubstr(strBuf, 0, b);
 	buf = Strsubstr(strBuf, b, a - b);
