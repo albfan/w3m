@@ -102,6 +102,8 @@ discardBuffer(Buffer *buf)
 	if (buf->real_scheme != SCM_LOCAL || buf->bufferprop & BP_FRAME)
 	    unlink(buf->sourcefile);
     }
+    if (buf->header_source)
+	unlink(buf->header_source);
     if (buf->mailcap_source)
 	unlink(buf->mailcap_source);
     while (buf->frameset) {

@@ -172,7 +172,6 @@ void bzero(void *, int);
 #define BP_NORMAL	0x0
 #define BP_PIPE		0x1
 #define BP_FRAME	0x2
-#define BP_SOURCE	0x4
 #define BP_INTERNAL	0x8
 #define BP_NO_URL	0x10
 #define BP_REDIRECTED   0x20
@@ -766,7 +765,6 @@ global char InnerCode init(CODE_INNER_EUC);	/* use EUC-JP internally; do not cha
 #endif				/* JP_CHARSET */
 
 global char SearchHeader init(FALSE);
-global char SkipHeader init(FALSE);
 global char *DefaultType init(NULL);
 global char RenderFrame init(FALSE);
 global char TargetSelf init(FALSE);

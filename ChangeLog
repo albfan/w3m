@@ -1,5 +1,15 @@
 2003-01-23  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03677] view source, edit source
+	* buffer.c (discardBuffer): unlink header source
+	* file.c (loadFile): delete skip header
+	* fm.h (BP_SOURCE): deleted
+		(SkipHeader): deleted
+	* main (editBf): cleanup
+		(vmSrc): cleanup
+
+2003-01-23  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03676] cleanup for pipe
 	* etc.c (open_pipe_rw): added
 	* file.c (uncompress_stream): rewrite using open_pipe_rw
