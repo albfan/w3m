@@ -16,6 +16,7 @@ typedef struct _w3mimg_op {
     void *priv;			/* driver specific data */
     int width, height;		/* window width, height */
     int offset_x, offset_y;	/* offset */
+    int max_anim;
 
     int (*init) (struct _w3mimg_op * self);
     int (*finish) (struct _w3mimg_op * self);

@@ -32,7 +32,7 @@ get_image_size(char *filename, int *w, int *h)
 }
 
 FB_IMAGE **
-fb_image_load(char *filename, int w, int h)
+fb_image_load(char *filename, int w, int h, int n)
 {
     Imlib_Image image;
     FB_IMAGE **frame;

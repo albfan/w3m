@@ -294,6 +294,10 @@ x11_load_image(w3mimg_op * self, W3MImage * img, char *fname, int w, int h)
     iw = gdk_pixbuf_animation_get_width(animation);
     ih = gdk_pixbuf_animation_get_height(animation);
 
+    if (self->max_anim > 0) {
+	n = (self->max_anim > n)? n : self->max_anim;
+    }
+
     if (w < 1 || h < 1) {
 	w = iw;
 	h = ih;

@@ -67,7 +67,7 @@ w3mfb_load_image(w3mimg_op * self, W3MImage * img, char *fname, int w, int h)
 
     if (self == NULL)
 	return 0;
-    im = fb_image_load(fname, w, h);
+    im = fb_image_load(fname, w, h, self->max_anim);
     if (!im)
 	return 0;
     img->pixmap = im;
