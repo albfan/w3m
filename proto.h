@@ -537,6 +537,7 @@ extern void reAnchorWord(Buffer *buf, Line *l, int spos, int epos);
 extern char *reAnchor(Buffer *buf, char *re);
 #ifdef USE_NNTP
 extern char *reAnchorNews(Buffer *buf, char *re);
+extern char *reAnchorNewsheader(Buffer *buf);
 #endif				/* USE_NNTP */
 extern void addMultirowsForm(Buffer *buf, AnchorList *al);
 extern Anchor *closest_next_anchor(AnchorList *a, Anchor *an, int x, int y);

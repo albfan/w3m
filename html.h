@@ -361,11 +361,12 @@ struct environment {
 #define SCM_LOCAL_CGI	5
 #define SCM_EXEC	6
 #define SCM_NNTP	7
-#define SCM_NEWS	8
-#define SCM_NEWS_GROUP	9
-#define SCM_MAILTO      10
+#define SCM_NNTP_GROUP	8
+#define SCM_NEWS	9
+#define SCM_NEWS_GROUP	10
+#define SCM_MAILTO      11
 #ifdef USE_SSL
-#define SCM_HTTPS       11
+#define SCM_HTTPS       12
 #endif				/* USE_SSL */
 
 #endif				/* _HTML_H */
