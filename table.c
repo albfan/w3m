@@ -2860,7 +2860,7 @@ feed_table_tag(struct table *tbl, char *line, struct table_mode *mode, int width
 	    }
 	}
 	else
-	    suspend_or_pushdata(tbl, line);
+	    suspend_or_pushdata(tbl, Strnew_m_charp(line, ANSP, NULL)->ptr);
 	break;
     case HTML_DEL:
     case HTML_N_DEL:
