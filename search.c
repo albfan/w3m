@@ -45,6 +45,7 @@ open_migemo(char *migemo_command)
 	close(fdw[1]);
 	dup2(fdw[0], 0);
 	dup2(fdr[1], 1);
+	close(2);
 	system(migemo_command);
 	exit(1);
     }
