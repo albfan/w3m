@@ -302,6 +302,7 @@ extern void cursorXY(Buffer *buf, int x, int y);
 extern void restorePosition(Buffer *buf, Buffer *orig);
 extern int columnSkip(Buffer *buf, int offset);
 extern int columnPos(Line *line, int column);
+extern int columnLen(Line *line, int column);
 extern Line *lineSkip(Buffer *buf, Line *line, int offset, int last);
 extern Line *currentLineSkip(Buffer *buf, Line *line, int offset, int last);
 extern int gethtmlcmd(char **s);

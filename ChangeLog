@@ -1,5 +1,15 @@
 2003-01-31  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03718] Too slow when loading big file with fold_line=1
+	* etc.c (nextColumn): added
+		(calcPosition): use New_N
+				rewrite with nextColumn
+		(columnLen): added
+	* file.c (addnewline): rewrite with columnLen
+	* proto.h (columnLen): added
+
+2003-01-31  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03717] print newline before exec shell command.
 	* main.c (execsh): print newline
 
