@@ -472,16 +472,20 @@ convertLine(URLFile *uf, Str line, char *code, int mode)
 Buffer *
 loadFile(char *path)
 {
+    Buffer *buf;
     URLFile uf;
     init_stream(&uf, SCM_LOCAL, NULL);
     examineFile(path, &uf);
     if (uf.stream == NULL)
 	return NULL;
+    buf = newBuffer(INIT_BUFFER_WIDTH);
+    if (SkipHeader)
+	readHeader(&uf, buf, TRUE, NULL);
     current_content_length = 0;
 #ifdef JP_CHARSET
     content_charset = '\0';
 #endif
-    return loadSomething(&uf, path, loadBuffer, NULL);
+    return loadSomething(&uf, path, loadBuffer, buf);
 }
 
 int
@@ -1906,6 +1910,10 @@ loadGeneralFile(char *path, ParsedURL *volatile current, char *referer,
 	real_type = t;
 	if (f.guess_type)
 	    t = f.guess_type;
+    }
+    if (SkipHeader) {
+	t_buf = newBuffer(INIT_BUFFER_WIDTH);
+	readHeader(&f, t_buf, TRUE, NULL);
     }
     if (real_type == NULL)
 	real_type = t;

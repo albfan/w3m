@@ -765,6 +765,7 @@ global char InnerCode init(CODE_INNER_EUC);	/* use EUC-JP internally; do not cha
 #endif				/* JP_CHARSET */
 
 global char SearchHeader init(FALSE);
+global char SkipHeader init(FALSE);
 global char *DefaultType init(NULL);
 global char RenderFrame init(FALSE);
 global char TargetSelf init(FALSE);

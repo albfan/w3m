@@ -1,3 +1,17 @@
+2003-01-11  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03620] -m option and header
+	* buffer.c (reshapeBuffer): fix reading from stdin
+				fix -m option
+	* display.c (redrawNLine): rewrite
+		(redrawLine): return l instead of l->next
+		(redrawLineImage): ditto
+	* file.c (loadFile): read header even if skip header
+		(loadGeneralFile): read header even if skip header
+	* fm.h (SkipHeader): added
+	* main.c (main): check whether reading from stdin
+			SkipHeader
+
 2003-01-10  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03619] Re: Error occured while reset
