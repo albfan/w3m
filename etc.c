@@ -1208,11 +1208,16 @@ mySystem(char *command, int background)
 	int pid;
 	flush_tty();
 	if ((pid = fork()) == 0) {
+	    int fd, i;
 	    reset_signals();
 	    SETPGRP();
 	    close_tty();
-	    fclose(stdout);
-	    fclose(stderr);
+	    dup2(open("/dev/null", O_RDONLY), 0);
+	    dup2(open("/dev/null", O_WRONLY), 1);
+	    dup2(fd = open("/dev/null", O_WRONLY), 2);
+	    /* close all other file descriptors (socket, ...) */
+	    for (i = 3; i <= fd; i++)
+		close(i);
 	    execl("/bin/sh", "sh", "-c", command, NULL);
 	    exit(127);
 	}
