@@ -1,5 +1,9 @@
 2002-11-06  Fumitoshi UKAI  <ukai@debian.or.jp>
 
+	* NEWS: update
+
+2002-11-06  Fumitoshi UKAI  <ukai@debian.or.jp>
+
 	* rc.c (CMT_PRE_FORM_FILE): added
 		(pre_form_file): added
 
