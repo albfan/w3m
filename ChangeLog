@@ -1,5 +1,10 @@
 2003-04-08  Fumitoshi UKAI  <ukai@debian.or.jp>
 
+	* [w3m-dev 03858] configure cleanup
+	* acinclude.m4 configure.in: update
+
+2003-04-08  Fumitoshi UKAI  <ukai@debian.or.jp>
+
 	* [w3m-dev 03856] <gc.h> 
 	* backend.c entity.c fm.h hash.c indep.c indep.h matrix.c
 	  textlist.c: s/"gc.h"/<gc.h>/
