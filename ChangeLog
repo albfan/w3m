@@ -1,3 +1,9 @@
+2003-10-22  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* [w3m-dev 04006] checking GC_version for libgc
+	 reported by SAKAI Kiyotaka <ksakai@kso.netwk.ntt-at.co.jp>
+	* acinclude.m4 (AC_W3M_GC): check GC_init instead of GC_version
+
 2003-10-21  SAKAI Kiyotaka <ksakai@kso.netwk.ntt-at.co.jp>
 
 	* [w3m-dev 03996] HELP_DIR and funcname.tab
