@@ -4399,7 +4399,7 @@ vwSrc(void)
 	    f = fopen(tmpf->ptr, "w");
 	    if (f == NULL)
 		return;
-	    saveBuffer(Currentbuf, f, TRUE);
+	    saveBufferBody(Currentbuf, f, TRUE);
 	    fclose(f);
 	    Currentbuf->sourcefile = tmpf->ptr;
 	}

@@ -226,6 +226,7 @@ extern Buffer *loadBuffer(URLFile *uf, Buffer *newBuf);
 extern Buffer *loadImageBuffer(URLFile *uf, Buffer *newBuf);
 #endif
 extern void saveBuffer(Buffer *buf, FILE * f, int cont);
+extern void saveBufferBody(Buffer *buf, FILE * f, int cont);
 extern Buffer *getshell(char *cmd);
 extern Buffer *getpipe(char *cmd);
 extern Buffer *openPagerBuffer(InputStream stream, Buffer *buf);
