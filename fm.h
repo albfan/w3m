@@ -458,6 +458,7 @@ typedef struct _Buffer {
     char *ssl_certificate;
 #endif
     char image_flag;
+    char image_loaded;
     char need_reshape;
     Anchor *submit;
     struct _BufferPos *undo;

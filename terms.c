@@ -1962,12 +1962,12 @@ skip_escseq(void)
     }
 }
 
-void
+int
 sleep_till_anykey(int sec, int purge)
 {
     fd_set rfd;
     struct timeval tim;
-    int er, c;
+    int er, c, ret;
     TerminalMode ioval;
 
     TerminalGet(tty, &ioval);
@@ -1979,7 +1979,8 @@ sleep_till_anykey(int sec, int purge)
     FD_ZERO(&rfd);
     FD_SET(tty, &rfd);
 
-    if (select(tty + 1, &rfd, 0, 0, &tim) > 0 && purge) {
+    ret = select(tty + 1, &rfd, 0, 0, &tim);
+    if (ret > 0 && purge) {
 	c = getch();
 	if (c == ESC_CODE)
 	    skip_escseq();
@@ -1989,6 +1990,7 @@ sleep_till_anykey(int sec, int purge)
 	printf("Error occured: errno=%d\n", errno);
 	reset_exit(SIGNAL_ARGLIST);
     }
+    return ret;
 }
 
 #ifdef USE_MOUSE

@@ -472,7 +472,7 @@ extern void flush_tty(void);
 extern void toggle_stand(void);
 extern char getch(void);
 extern void bell(void);
-extern void sleep_till_anykey(int sec, int purge);
+extern int sleep_till_anykey(int sec, int purge);
 #ifdef USE_IMAGE
 extern void touch_cursor();
 #endif
