@@ -3314,9 +3314,9 @@ lastA(void)
     if (!hl || hl->nmark == 0)
 	return;
 
-    if( prec_num >= hl->nmark )
+    if (prec_num >= hl->nmark)
 	hseq = 0;
-    else if( prec_num > 0 )
+    else if (prec_num > 0)
 	hseq = hl->nmark - prec_num;
     do {
 	if (hseq < 0)
