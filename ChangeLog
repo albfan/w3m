@@ -1,3 +1,8 @@
+2002-12-06  Takahashi Youichirou <nikuq@hk.airnet.ne.jp>
+
+	* [w3m-dev 03530] save history
+	* history.c (saveHistory): save tmpfile and rename
+
 2002-12-06  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* NEWS: func: ACCESSKEY, LINK_MENU
