@@ -37,11 +37,11 @@ typedef unsigned short table_attr;
 struct table_cell {
     short col[MAXCELL];
     short colspan[MAXCELL];
-    char index[MAXCELL];
+    short index[MAXCELL];
     short maxcell;
     short icell;
 #ifdef MATRIX
-    char eindex[MAXCELL];
+    short eindex[MAXCELL];
     short necell;
 #endif				/* MATRIX */
     short width[MAXCELL];
