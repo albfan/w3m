@@ -1378,7 +1378,7 @@ init_rc(void)
     rc_dir = expandName(RC_DIR);
     i = strlen(rc_dir);
     if (i > 1 && rc_dir[i - 1] == '/')
-        rc_dir[i - 1] = '\0';
+	rc_dir[i - 1] = '\0';
 
     if (stat(rc_dir, &st) < 0) {
 	if (errno == ENOENT) {	/* no directory */
