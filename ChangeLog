@@ -1,5 +1,11 @@
 2002-11-14  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03427] Re: Select the nearest map area as default.
+	* map.c (newMapArea): accept sign chars
+			if points is not enough, return as SHAPE_UNKNOWN
+
+2002-11-14  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03425] charset of title
 	* display.c (displayBuffer): buffername converted to system coding
 					for term title
