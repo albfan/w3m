@@ -360,20 +360,22 @@ page_info_panel(Buffer *buf)
     Strcat_charp(tmp, "<tr><td nowrap>Document Code<td>");
     Strcat_charp(tmp, code_to_str(buf->document_code));
 #endif				/* JP_CHARSET */
-    Strcat_charp(tmp, "<tr><td nowrap>Number of line<td>");
+    Strcat_charp(tmp, "<tr><td nowrap>Number of lines<td>");
     all = buf->allLine;
     if (all == 0 && buf->lastLine)
 	all = buf->lastLine->linenumber;
     Strcat(tmp, Sprintf("%d", all));
-    Strcat_charp(tmp, "<tr><td nowrap>Transferred byte<td>");
+    Strcat_charp(tmp, "<tr><td nowrap>Transferred bytes<td>");
     Strcat(tmp, Sprintf("%d", buf->trbyte));
 
     a = retrieveCurrentAnchor(buf);
     if (a != NULL) {
+	char *aurl;
 	parseURL2(a->url, &pu, baseURL(buf));
 	s = parsedURL2Str(&pu);
+	aurl = html_quote(s->ptr);
 	Strcat_charp(tmp, "<tr><td nowrap>URL of current anchor<td>");
-	Strcat_charp(tmp, html_quote(s->ptr));
+	Strcat_m_charp(tmp, "<a href=\"", aurl, "\">", aurl, "</a>", NULL);
     }
     a = retrieveCurrentImg(buf);
     if (a != NULL) {
