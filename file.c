@@ -1585,6 +1585,10 @@ loadGeneralFile(char *path, ParsedURL *volatile current, char *referer,
     }
 
     if (status == HTST_MISSING) {
+	if (fmInitialized)
+	    term_raw();
+	if (prevtrap)
+	    signal(SIGINT, prevtrap);
 	UFclose(&f);
 	return NULL;
     }

@@ -1,3 +1,8 @@
+2002-12-03  AIDA Shinra <aida-s@jcom.home.ne.jp>
+
+	* [w3m-dev 03504] coredump when ssl error
+	* file.c (loadGeneralFile): term_raw, SIGINT
+
 2002-12-03  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* remove ununsed variables
