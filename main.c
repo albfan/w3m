@@ -2095,8 +2095,8 @@ qquitfm(void)
     char *ans;
     if (!confirm_on_quit)
 	quitfm();
-    ans = inputChar("Do you want to exit w3m? (y or n)");
-    if (ans != NULL && tolower(*ans) == 'y')
+    ans = inputChar("Do you want to exit w3m? (y/n)");
+    if (ans && tolower(*ans) == 'y')
 	quitfm();
     displayBuffer(Currentbuf, B_NORMAL);
 }
