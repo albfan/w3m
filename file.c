@@ -5104,6 +5104,8 @@ loadHTMLString(Str page)
 #ifdef JP_CHARSET
     newBuf->document_code = InnerCode;
 #endif				/* JP_CHARSET */
+    newBuf->type = "text/html";
+    newBuf->real_type = newBuf->type;
     if (n_textarea)
 	formResetBuffer(newBuf, newBuf->formitem);
     if (src)
