@@ -2062,6 +2062,8 @@ loadGeneralFile(char *path, ParsedURL *volatile current, char *referer,
 	    return NO_BUFFER;
 	}
     }
+    else if (w3m_dump & DUMP_FRAME)
+	return NULL;
 
     if (flag & RG_FRAME) {
 	if (t_buf == NULL)
