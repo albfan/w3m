@@ -56,6 +56,7 @@ typedef struct _ParsedURL {
     int port;
     char *file;
     char *real_file;
+    char *query;
     char *label;
     int is_nocache;
 } ParsedURL;

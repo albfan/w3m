@@ -75,14 +75,14 @@ currentdir()
 }
 
 char *
-cleanupName2(char *name, int flag)
+cleanupName(char *name)
 {
     char *buf, *p, *q;
 
     buf = allocStr(name, 0);
     p = buf;
     q = name;
-    while (*q != '\0' && (*q != '?' || ! flag)) {
+    while (*q != '\0') {
 	if (strncmp(p, "/../", 4) == 0) {	/* foo/bar/../FOO */
 	    if (p - 2 == buf && strncmp(p - 2, "..", 2) == 0) {
 		/* ../../       */
@@ -125,13 +125,13 @@ cleanupName2(char *name, int flag)
 	}
 	else if (strncmp(p, "//", 2) == 0) {	/* foo//bar */
 	    /* -> foo/bar           */
-#ifdef __CYGWIN__
+#if 0 /* ifdef SUPPORT_NETBIOS_SHARE */
            if (p == buf) {       /* //DRIVE/foo or //host/path */
 		p += 2;
 		q += 2;
 		continue;
 	    }
-#endif                /* __CYGWIN__ */
+#endif                /* SUPPORT_NETBIOS_SHARE */
 	    *p = '\0';
 	    q++;
 	    strcat(buf, q);

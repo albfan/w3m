@@ -98,6 +98,11 @@ extern void rFrame(void);
 extern void extbrz(void);
 extern void linkbrz(void);
 extern void curlno(void);
+#ifdef USE_ALARM
+extern void setAlarm(void);
+#else
+#define setAlarm nulcmd
+#endif
 extern int currentLn(Buffer * buf);
 extern void tmpClearBuffer(Buffer * buf);
 extern char *filename_extension(char *patch, int is_url);
@@ -421,7 +426,7 @@ extern char *libFile(char *base);
 extern char *helpFile(char *base);
 extern void setLocalCookie(void);
 extern Buffer *dirBuffer(char *dirname);
-extern FILE *localcgi_post(char *, FormList *, char*);
+extern FILE *localcgi_post(char *, char *, FormList *, char*);
 extern FILE *localcgi_get(char *, char *, char*);
 extern Str find_auth_cookie(char *host, char *realm);
 extern void add_auth_cookie(char *host, char *realm, Str cookie);
