@@ -1,3 +1,10 @@
+2001-12-20  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
+
+	* w3m 0.2.3 release candidate 2
+	* [w3m-dev 02678]
+	* configure: get mygcversion from gc/version.h
+	* Makefile: update GCLIBTGZ
+
 2001-12-20  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* w3m 0.2.3 release candidate 1
