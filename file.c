@@ -1363,6 +1363,8 @@ find_auth_user_passwd(char *host, int port, char *file, char *realm,
 
     *uname = NULL;
     *pwd = NULL;
+    if (passwd_file == NULL)
+	return 0;
     if (stat(expandName(passwd_file), &st) < 0)
 	return 0;
 
