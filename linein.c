@@ -678,7 +678,8 @@ next_compl(int next)
     if (!cm_next) {
 	if (cm_mode & CPL_ALWAYS) {
 	    b = 0;
-	} else {
+	}
+	else {
 	    for (b = CPos - 1; b >= 0; b--) {
 		if (strBuf->ptr[b] == ' ' || strBuf->ptr[b] == CTRL_I)
 		    break;
