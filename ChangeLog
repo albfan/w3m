@@ -1,3 +1,8 @@
+2003-01-12  qhwt@myrealbox.com
+
+	* [w3m-dev 03636] segfault in main.c
+	* main.c (main): check newbuf->currentURL.file
+
 2003-01-12  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* Bonus/README.eng: sync with Bonus/README

@@ -888,7 +888,8 @@ main(int argc, char **argv, char **envp)
 	}
 	else if (newbuf == NO_BUFFER)
 	    continue;
-	if (newbuf->pagerSource || strcmp(newbuf->currentURL.file, "-"))
+	if (newbuf->pagerSource ||
+	    (newbuf->currentURL.file && strcmp(newbuf->currentURL.file, "-")))
 	    newbuf->search_header = search_header;
 	if (CurrentTab == NULL) {
 	    FirstTab = LastTab = CurrentTab = newTab();
