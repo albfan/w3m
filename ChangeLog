@@ -1,5 +1,11 @@
 2002-11-09  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03396] Re: meta refresh problem
+	* main.c (MAIN): AL_IMPLICIT -> alarm_status
+		(SigAlarm): AL_IMPLICIT -> alarm_status
+
+2002-11-09  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03391] use editor when input at last line
 	* linein.c (_editor): added
 
