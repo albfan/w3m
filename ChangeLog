@@ -1,3 +1,8 @@
+2002-09-09  Hironori SAKAMOTO <h-saka@lsi.nec.co.jp>
+
+	* [w3m-dev 03296] fix configure (strtoq)
+	* configure (strtoq): fix missing semicolon
+
 2002-09-06  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* [w3m-dev 03292] Re: load file at cursor

@@ -1316,7 +1316,7 @@ EOF
 #include <limits.h>
 main()
 {
-    const char *s = "1"
+    const char *s = "1";
     quad_t q = strtoq(s, NULL, 10);
 }
 EOF
