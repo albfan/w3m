@@ -226,7 +226,7 @@ TagInfo TagMAP[MAX_HTMLTAG] = {
     {"sub", NULL, 0, 0},	/* 102 HTML_SUB       */
     {"/sub", NULL, 0, 0},	/* 103 HTML_N_SUB       */
     {"link", ALST_LINK, MAXA_LINK, 0},	/*  104 HTML_LINK      */
-    {"s", NULL, 0, 0},	/*  105 HTML_S        */
+    {"s", NULL, 0, 0},		/*  105 HTML_S        */
     {"/s", NULL, 0, TFLG_END},	/*  106 HTML_N_S      */
     {NULL, NULL, 0, 0},		/* 107 Undefined       */
 
