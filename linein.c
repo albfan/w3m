@@ -432,6 +432,15 @@ _esc(void)
 	case 'D':
 	    _mvL();
 	    break;
+#if defined(__CYGWIN__) && defined(USE_MOUSE)
+	case 'M':
+	    if ((is_xterm & (NEED_XTERM_ON | NEED_XTERM_OFF)) == NEED_XTERM_ON) {
+		getch();
+		getch();
+		getch();
+	    }
+	    break;
+#endif
 	}
 	break;
     case CTRL_I:
