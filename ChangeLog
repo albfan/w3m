@@ -1,5 +1,13 @@
 2003-01-18  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03651] Debian bug #176981
+	* file.c (checkRedirection): added
+		(loadGeneralFile): check redirection
+				t_buf only is created when it is NULL
+				remove_space
+
+2003-01-18  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03647] expandName() and expandPath()
 	* etc.c (openSecretFile): use expandPath
 		(expandName): rewrite
