@@ -1,5 +1,10 @@
 2002-12-04  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03514] Effect of tab title
+	* display.c (redrawNLine): rewrite, do without clrtoeolx()
+
+2002-12-04  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03512] Re: HTML parser
 	* table.c (feed_table_tag): HTML_N_SELECT, HTML_N_CAPTION
 
