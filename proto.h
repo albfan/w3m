@@ -90,8 +90,10 @@ extern void curURL(void);
 extern void vwSrc(void);
 extern void reload(void);
 extern void chkURL(void);
+extern void chkURLBuffer(Buffer *buf);
 #ifdef USE_NNTP
 extern void chkNMID(void);
+extern void chkNMIDBuffer(Buffer *buf);
 #else
 #define chkNMID nulcmd
 #endif
@@ -230,6 +232,7 @@ extern void cursorHome(Buffer *buf);
 extern void arrangeCursor(Buffer *buf);
 extern void arrangeLine(Buffer *buf);
 extern void cursorXY(Buffer *buf, int x, int y);
+extern void restorePosition(Buffer *buf, Buffer *orig);
 extern int columnSkip(Buffer *buf, int offset);
 extern int columnPos(Line *line, int column);
 extern Line *lineSkip(Buffer *buf, Line *line, int offset, int last);

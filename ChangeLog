@@ -1,3 +1,32 @@
+2001-12-27  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 02748] cleanup code for restoring cursor position
+	* buffer.c (reshapeBuffer): delete top, linenum, cursorY, pos, 
+		currentColumn, formitem
+	* buffer.c (reshapeBuffer): add sbuf and 
+		use copyBuffer(), restorePosition()
+	* buffer.c (reshapeBuffer): use chkURLBuffer(), chkNMIDBuffer()
+	* display.c (in_check_url): deleted
+	* display.c (displayBuffer): ditto
+	* display.c (displayBuffer): s/Currentbuf/buf/
+	* display.c (arrangeLine): ditto
+	* display.c (restorePosition): added
+	* fm.h (TOP_LINENUMBER): added
+	* fm.h (CUR_LINENUMBER): added
+	* main.c (editBf): delete type, top, linenum, cursorY, pos, 
+		currentColumn
+	* main.c (editBf): add sbuf and use copyBuffer(), restorePosition()
+	* main.c (reload): delete type, top, linenum, cursorY, pos,
+		currentColumn
+	* main.c (reload): add sbuf and use copyBuffer(), restorePosition()
+	* main.c (chkURLBuffer): added
+	* main.c (chkURL): chkRULBuffer on Currentbuf
+	* main.c (chkNMIDBuffer): added
+	* main.c (chkNMID): chkNMIDBuffer on Currentbuf
+	* proto.h (chkURLBuffer): added
+	* proto.h (chkNMIDBuffer): added
+	* proto.h (restorePosition): added
+
 2001-12-27  "OMAE, jun" <jun-o@dai.meta.ne.jp>
 
 	* [w3m-dev 02735]
