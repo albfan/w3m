@@ -1,5 +1,12 @@
 2002-11-22  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03457] open URL of command line on each new tabs
+	* main.c (delBuffer): static
+		(fusage): -N
+		(main): add open_new_tab for -N
+
+2002-11-22  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03456] tiling of tab
 	* display.c (displayBuffer): use LastTab->y
 		(redrawNLine): fix column calculation
