@@ -1319,7 +1319,11 @@ load_option_panel(void)
 		p->comment =
 		    wc_conv(_(p->comment), OptionCharset,
 			    InnerCharset)->ptr;
-		if (p->inputtype == PI_SEL_C) {
+		if (p->inputtype == PI_SEL_C
+#ifdef USE_COLOR
+			&& p->select != colorstr
+#endif
+			) {
 		    for (s = (struct sel_c *)p->select; s->text != NULL; s++) {
 			s->text =
 			    wc_conv(_(s->text), OptionCharset,
