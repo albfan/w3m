@@ -385,6 +385,8 @@ displayBuffer(Buffer *buf, int mode)
 	|| mouse_action.menu_str
 #endif
 	) {
+	if (mode == B_FORCE_REDRAW || mode == B_REDRAW_IMAGE)
+	    calcTabPos();
 	ny = LastTab->y + 2;
 	if (ny > LASTLINE)
 	    ny = LASTLINE;
@@ -578,7 +580,6 @@ redrawNLine(Buffer *buf, int n)
 	TabBuffer *t;
 	int l;
 
-	calcTabPos();
 	move(0, 0);
 #ifdef USE_MOUSE
 	if (mouse_action.menu_str)
