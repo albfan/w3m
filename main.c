@@ -4062,9 +4062,9 @@ void
 chkURL(void)
 {
     static char *url_like_pat[] = {
-	"http://[a-zA-Z0-9][a-zA-Z0-9:%\\-\\./?=~_\\&+@#,\\$]*[a-zA-Z0-9_/]",
+	"http://[a-zA-Z0-9][a-zA-Z0-9:%\\-\\./?=~_\\&+@#,\\$]*[a-zA-Z0-9_/=]",
 #ifdef USE_SSL
-	"https://[a-zA-Z0-9][a-zA-Z0-9:%\\-\\./?=~_\\&+@#,\\$]*[a-zA-Z0-9_/]",
+	"https://[a-zA-Z0-9][a-zA-Z0-9:%\\-\\./?=~_\\&+@#,\\$]*[a-zA-Z0-9_/=]",
 #endif				/* USE_SSL */
 #ifdef USE_GOPHER
 	"gopher://[a-zA-Z0-9][a-zA-Z0-9:%\\-\\./_]*",
