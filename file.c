@@ -5616,7 +5616,7 @@ HTMLlineproc0(char *line, struct html_feed_environ *h_env, int internal)
 	else {
 	    read_token(tokbuf, &line, &obuf->status, pre_mode & RB_PREMODE, 0);
 	    if (obuf->status != R_ST_NORMAL)	/* R_ST_AMP ? */
-		continue;
+		obuf->status = R_ST_NORMAL;
 	    str = tokbuf->ptr;
 	}
 
