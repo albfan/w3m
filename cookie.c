@@ -417,7 +417,7 @@ save_cookies(void)
 
     check_expired_cookies();
 
-    if (!First_cookie || is_saved || rc_dir_is_tmp)
+    if (!First_cookie || is_saved || no_rc_dir)
 	return;
 
     cookie_file = rcFile(COOKIE_FILE);
