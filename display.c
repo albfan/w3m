@@ -399,7 +399,7 @@ displayBuffer(Buffer *buf, int mode)
     standout();
     message(msg->ptr, buf->cursorX + buf->rootX, buf->cursorY + buf->rootY);
     standend();
-    term_title(buf->buffername);
+    term_title(conv_to_system(buf->buffername));
     refresh();
 #ifdef USE_IMAGE
     if (activeImage && displayImage && buf->img) {
