@@ -25,54 +25,6 @@
 #endif				/* __WATT32__ */
 
 
-#ifndef HAVE_STRCHR
-char *
-strchr(char *s, char c)
-{
-    while (*s) {
-	if (*s == c)
-	    return s;
-	s++;
-    }
-    return NULL;
-}
-#endif				/* not HAVE_STRCHR */
-
-#ifndef HAVE_STRCASECMP
-int
-strcasecmp(char *s1, char *s2)
-{
-    int x;
-    while (*s1) {
-	x = tolower(*s1) - tolower(*s2);
-	if (x != 0)
-	    break;
-	s1++;
-	s2++;
-    }
-    if (x != 0)
-	return x;
-    return -tolower(*s2);
-}
-
-int
-strncasecmp(char *s1, char *s2, int n)
-{
-    int x;
-    while (*s1 && n) {
-	x = tolower(*s1) - tolower(*s2);
-	if (x != 0)
-	    break;
-	s1++;
-	s2++;
-	n--;
-    }
-    if (x != 0)
-	return x;
-    return 0;
-}
-#endif				/* not HAVE_STRCASECMP */
-
 int
 columnSkip(Buffer *buf, int offset)
 {

@@ -1,3 +1,16 @@
+2002-06-08  Kiyokazu SUTO <suto@ks-and-ks.ne.jp>
+
+	* [w3m-dev 03207] strchr(), strcasecmp(), and strncasecmp()
+	* etc.c (strchr): removed
+		(strcasecmp): removed
+		(strncasecmp): removed
+	* indep.c (strchr): moved, cast
+		(strcasecmp): moved, fix the case that s1 = ""
+		(strncasecmp): moved, fix the case that s1 is shorter than s2
+	* indep.h (strchr): added
+		(strcasecmp): added
+		(strncasecmp): added
+
 2002-06-06  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* [w3m-dev 03206] Re: dict
