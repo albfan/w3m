@@ -231,6 +231,7 @@ static MySignalHandler
 KeyAbort(SIGNAL_ARG)
 {
     LONGJMP(AbortLoading, 1);
+    SIGNAL_RETURN;
 }
 
 #ifdef USE_SSL
