@@ -1,3 +1,15 @@
+2003-01-11  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03631] display current form item
+	* form.c (form2str): rewrite
+	* istream.c (ssl_get_certificate): fix typo
+	* map.c (follow_map_panel): valign=top
+		(append_map_info): valign=top
+		(append_link_info): valign=top
+		(append_frame_info): <pre_int>
+				html_quote ssl_certificate
+		(page_info_panel): rewrite, html_quote
+
 2003-01-11  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* doc/README.pre_form: update
