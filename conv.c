@@ -268,7 +268,7 @@ cConvSE(Str is)
 static Str
 cConvJE(Str is)
 {				/* Convert ISO-2022-JP to EUC-JP */
-    uchar *p, ub;
+    uchar *p, ub = 0;
     char cset = CSET_ASCII;
     int state = ISO_NOSTATE;
     Str os = Strnew_size(is->length);
@@ -354,7 +354,7 @@ static Str
 _cConvEE(Str is, char is_euc)
 {				/* Convert EUC-JP to EUC-JP / ISO-2022-JP
 				 * (no JIS X 0201-Kana, 0212, 0213-2) */
-    uchar *p, ub, euc = 0;
+    uchar *p, ub = 0, euc = 0;
     int state = EUC_NOSTATE;
     char cset = CSET_ASCII;
     Str os;
@@ -462,7 +462,7 @@ put_sjis(Str os, uchar ub, uchar lb)
 static Str
 cConvES(Str is)
 {				/* Convert EUC-JP to Shift-JIS */
-    uchar *p, ub;
+    uchar *p, ub = 0;
     int state = EUC_NOSTATE;
     Str os = Strnew_size(is->length);
     uchar *endp = (uchar *) & is->ptr[is->length];

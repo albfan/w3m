@@ -630,7 +630,7 @@ int
 readBufferCache(Buffer *buf)
 {
     FILE *cache;
-    Line *l = NULL, *prevl;
+    Line *l = NULL, *prevl = NULL;
     long lnum = 0, clnum, tlnum;
 #ifdef USE_ANSI_COLOR
     int colorflag;

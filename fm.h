@@ -674,7 +674,7 @@ global char *CurrentMenuData;
 #endif
 extern char *ullevel[];
 
-extern char *version;
+extern char *w3m_version;
 
 #define DUMP_BUFFER   0x01
 #define DUMP_HEAD     0x02
@@ -749,7 +749,6 @@ global char *DirBufferCommand init("file:///$LIB/dirlist.cmd");
 #else
 global char *DirBufferCommand init("file:///$LIB/dirlist.cgi");
 #endif				/* __EMX__ */
-global char *config_file init(NULL);
 global int ignore_null_img_alt init(TRUE);
 
 global struct auth_cookie *Auth_cookie init(NULL);

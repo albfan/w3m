@@ -429,7 +429,7 @@ createFrameFile(struct frameset *f, FILE * f1, Buffer *current, int level,
 #endif				/* JP_CHARSET */
     char *d_target, *p_target, *s_target, *t_target;
     ParsedURL *currentURL, base;
-    MySignalHandler(*prevtrap) (SIGNAL_ARG) = NULL;
+    MySignalHandler(*volatile prevtrap) (SIGNAL_ARG) = NULL;
     int flag;
 
     if (f == NULL)

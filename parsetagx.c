@@ -102,7 +102,7 @@ parse_tag(char **s, int internal)
     int tag_id;
     char tagname[MAX_TAG_LEN], attrname[MAX_TAG_LEN];
     char *p, *q;
-    int i, attr_id, nattr;
+    int i, attr_id = 0, nattr;
 
     /* Parse tag name */
     q = (*s) + 1;

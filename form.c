@@ -258,7 +258,7 @@ formUpdateBuffer(Anchor *a, Buffer *buf, FormItemList *form)
     int i, j, k;
     Buffer save;
     char *p;
-    int spos, epos, c_len, rows, c_rows, pos, col;
+    int spos, epos, c_len, rows, c_rows, pos, col = 0;
     Lineprop c_type;
     Line *l;
 

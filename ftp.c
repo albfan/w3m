@@ -121,9 +121,9 @@ FtpLogin(FTP * ftp_return, char *host, char *user, char *pass)
 		struct hostent *sockent;
 		Str tmp2 = Strnew_charp(pass);
 
-		if (sockent = gethostbyaddr((char *)&sockname.sin_addr,
-					    sizeof(sockname.sin_addr),
-					    sockname.sin_family))
+		if ((sockent = gethostbyaddr((char *)&sockname.sin_addr,
+					     sizeof(sockname.sin_addr),
+					     sockname.sin_family)))
 		    Strcat_charp(tmp2, sockent->h_name);
 		else
 		    Strcat_m_charp(tmp2, "[", inet_ntoa(sockname.sin_addr),
@@ -401,7 +401,7 @@ openFTP(ParsedURL *pu)
     char *qdir;
     char **flist;
     int i, nfile, nfile_max = 100;
-    Str pwd;
+    Str pwd = NULL;
     int add_auth_cookie_flag;
     char *realpath = NULL;
 #ifdef JP_CHARSET

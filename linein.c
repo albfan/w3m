@@ -411,7 +411,10 @@ ins_kanji(Str tmp)
 static void
 _esc(void)
 {
-    char c, c2;
+    char c;
+#ifdef JP_CHARSET
+    char c2;
+#endif
 
     switch (c = getch()) {
     case '[':
@@ -440,16 +443,14 @@ _esc(void)
 	    need_redraw = TRUE;
 	}
 	else
-#else
-	_rcompl();
 #endif
+	    _rcompl();
 	break;
     case CTRL_D:
 #ifdef EMACS_LIKE_LINEEDIT
 	if (!emacs_like_lineedit)
-#else
-	_rdcompl();
 #endif
+	    _rdcompl();
 	need_redraw = TRUE;
 	break;
 #ifdef EMACS_LIKE_LINEEDIT

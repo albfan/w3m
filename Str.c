@@ -428,7 +428,7 @@ Sprintf(char *fmt, ...)
 {
     int len = 0;
     int status = SP_NORMAL;
-    int p;
+    int p = 0;
     char *f;
     Str s;
     va_list ap;

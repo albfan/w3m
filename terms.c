@@ -842,7 +842,7 @@ switch_wchar(FILE * f)
 void
 putchars(unsigned char c1, unsigned char c2, FILE * f)
 {
-    Str s;
+    Str s = NULL;
     char *p;
 
     switch (DisplayCode) {
