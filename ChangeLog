@@ -1,3 +1,8 @@
+2003-12-09  Kiyokazu SUTO <suto@ks-and-ks.ne.jp>
+
+	* [w3m-dev 04021] Deeply nested table
+	* file.c (completeHTMLstream): check obuf->table_level
+
 2003-10-26  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* Bug#217509: segfaults if TERM is not set
