@@ -134,8 +134,8 @@ TagInfo TagMAP[MAX_HTMLTAG] = {
     {"hr", ALST_HR, MAXA_HR, 0},	/*  16 HTML_HR         */
     {"dl", ALST_DL, MAXA_DL, 0},	/*  17 HTML_DL         */
     {"/dl", NULL, 0, TFLG_END},	/*  18 HTML_N_DL       */
-    {"dt", ALST_NOP, MAXA_NOP, 0},		/*  19 HTML_DT         */
-    {"dd", ALST_NOP, MAXA_NOP, 0},		/*  20 HTML_DD         */
+    {"dt", ALST_NOP, MAXA_NOP, 0},	/*  19 HTML_DT         */
+    {"dd", ALST_NOP, MAXA_NOP, 0},	/*  20 HTML_DD         */
     {"pre", ALST_PRE, MAXA_PRE, 0},	/*  21 HTML_PRE        */
     {"/pre", NULL, 0, TFLG_END},	/*  22 HTML_N_PRE      */
     {"blockquote", ALST_NOP, MAXA_NOP, 0},	/*  23 HTML_BLQ        */
