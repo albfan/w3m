@@ -351,7 +351,7 @@ fb_height(void)
 int
 fb_clear(int x, int y, int w, int h, int r, int g, int b)
 {
-    int i, j, offset_fb;
+    int i, offset_fb;
     static int rr = -1, gg = -1, bb = -1;
     static char *tmp = NULL;
 
