@@ -6372,7 +6372,6 @@ loadHTMLstream(URLFile *f, Buffer *newBuf, FILE * src, int internal)
     clen_t linelen = 0;
     clen_t trbyte = 0;
     Str lineBuf2 = Strnew();
-    char *p;
     char code;
     struct html_feed_environ htmlenv1;
     struct readbuffer obuf;

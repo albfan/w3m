@@ -1449,11 +1449,6 @@ openURL(char *url, ParsedURL *pu, ParsedURL *current,
 #ifdef USE_SSL
     SSL *sslh = NULL;
 #endif				/* USE_SSL */
-#ifdef USE_NNTP
-    FILE *fw;
-    char *r;
-    InputStream stream;
-#endif				/* USE_NNTP */
     int extlen = strlen(CGI_EXTENSION);
 
     if (hr == NULL)
