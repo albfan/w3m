@@ -82,6 +82,20 @@ newHist()
     return hist;
 }
 
+Hist *
+copyHist(Hist *hist)
+{
+    Hist *new;
+    HistItem *item;
+
+    if (hist == NULL)
+	return NULL;
+    new = newHist();
+    for (item = hist->list->first; item; item = item->next)
+	pushHist(new, (char *)item->ptr);
+    return new;
+}
+
 HistItem *
 unshiftHist(Hist *hist, char *ptr)
 {

@@ -1,3 +1,11 @@
+2002-01-27  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 02914]
+	* history.c (copyHist): added
+	* history.h (copyHist): ditto
+	* main.c (goURL0): copyHist(URLHist), push current and anchor URLs
+		default set by DefaultURLString
+
 2002-01-26  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 02913] wrong table width calculation
