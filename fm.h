@@ -669,15 +669,6 @@ struct html_feed_environ {
     int blank_lines;
 };
 
-struct auth_cookie {
-    Str host;
-    int port;
-    Str file;
-    Str realm;
-    Str cookie;
-    struct auth_cookie *next;
-};
-
 #ifdef USE_COOKIE
 struct portlist {
     unsigned short port;
