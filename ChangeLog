@@ -1,3 +1,8 @@
+2003-01-29  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03700] Re: google.cgi (was: Re: keymap key SEARCH string)
+	* main.c (goURL0): check relative or *url == '#'
+
 2003-01-28  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03689] Re: fold patch

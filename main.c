@@ -3894,7 +3894,7 @@ goURL0(char *prompt, int relative)
     }
 #ifdef JP_CHARSET
     if (url != NULL) {
-	if (Currentbuf->document_code)
+	if ((relative || *url == '#') && Currentbuf->document_code)
 	    url = conv(url, InnerCode, Currentbuf->document_code)->ptr;
 	else
 	    url = conv_to_system(url);
