@@ -79,6 +79,20 @@ rpopValue(GeneralList *tl)
     return f->ptr;
 }
 
+void
+delValue(GeneralList *tl, ListItem *it)
+{
+    if (it->prev)
+	it->prev->next = it->next;
+    else
+	tl->first = it->next;
+    if (it->next)
+	it->next->prev = it->prev;
+    else
+	tl->last = it->prev;
+    tl->nitem--;
+}
+
 GeneralList *
 appendGeneralList(GeneralList *tl, GeneralList *tl2)
 {

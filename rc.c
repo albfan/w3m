@@ -1234,6 +1234,7 @@ sync_with_option(void)
     if (fmInitialized && displayImage)
 	initImage();
 #endif
+    loadPasswd();
 
     if (AcceptLang == NULL || *AcceptLang == '\0') {
 #if LANG == JA

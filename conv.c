@@ -237,7 +237,7 @@ cConvSE(Str is)
 		state = SJIS_SHIFT_L;
 	    }
 	    else if (0xe0 <= *p && *p <= 0xef) {	/* JIS X 0208 */
-/* } else if (0xe0 <= *p && *p <= 0xfc) { *//* JIS X 0213 */
+		/* } else if (0xe0 <= *p && *p <= 0xfc) { *//* JIS X 0213 */
 		ub = (*p & 0x7f) - 0x40;
 		state = SJIS_SHIFT_H;
 	    }
