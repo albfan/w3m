@@ -251,7 +251,7 @@ acceptableMimeTypes()
 
     /* generate acceptable media types */
     l = newTextList();
-    mhash = newHash_si(16); /* XXX */
+    mhash = newHash_si(16);	/* XXX */
     pushText(l, "text");
     putHash_si(mhash, "text", 1);
     pushText(l, "image");
