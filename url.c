@@ -626,8 +626,8 @@ openSocket(char *const hostname,
 #endif
 	goto error;
     }
-    regexCompile("^[0-9][0-9]*\\.[0-9][0-9]*\\.[0-9][0-9]*\\.[0-9][0-9]*$", 0);
-    if (regexMatch(hostname, 0, 1)) {
+    regexCompile("^[0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+$", 0);
+    if (regexMatch(hostname, -1, 1)) {
 	sscanf(hostname, "%d.%d.%d.%d", &a1, &a2, &a3, &a4);
 	adr = htonl((a1 << 24) | (a2 << 16) | (a3 << 8) | a4);
 	bcopy((void *)&adr, (void *)&hostaddr.sin_addr, sizeof(long));

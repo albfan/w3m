@@ -930,7 +930,7 @@ menuForwardSearch(Menu *menu, char *str, int from)
 	from = 0;
     for (i = from; i < menu->nitem; i++)
 	if (menu->item[i].type != MENU_NOP &&
-	    regexMatch(menu->item[i].label, 0, 1) == 1)
+	    regexMatch(menu->item[i].label, -1, 1) == 1)
 	    return i;
     return -1;
 }
