@@ -1,3 +1,8 @@
+2003-03-28  ABE Yuji <cbo46560@pop12.odn.ne.jp>
+
+	* [w3m-dev 03834] Re: gif animation with no delay_time
+	* w3mimg/x11/x11_w3mimg.c (x11_load_image): fix delay check
+
 2003-03-27  ABE Yuji <cbo46560@pop12.odn.ne.jp>
 
 	* [w3m-dev 03833] gif animation with no delay_time

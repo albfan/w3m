@@ -366,7 +366,7 @@ x11_load_image(w3mimg_op * self, W3MImage * img, char *fname, int w, int h)
 	width = gdk_pixbuf_get_width(pixbuf);
 	height = gdk_pixbuf_get_height(pixbuf);
 
-	if (delay >= 0)
+	if (delay > ximg->delay)
 	    ximg->delay = delay;
 
 	if (i > 0) {
