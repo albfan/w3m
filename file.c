@@ -4321,10 +4321,15 @@ HTMLtagproc1(struct parsed_tag *tag, struct html_feed_environ *h_env)
 	close_anchor(h_env, obuf);
 	return 1;
     case HTML_PRE:
-	if (!parsedtag_exists(tag, ATTR_FOR_TABLE))
+	x = parsedtag_exists(tag, ATTR_FOR_TABLE);
+	if (!x)
 	    CLOSE_P;
-	if (!(obuf->flag & RB_IGNORE_P))
+	if (!(obuf->flag & RB_IGNORE_P)) {
 	    flushline(h_env, obuf, envs[h_env->envc].indent, 0, h_env->limit);
+	    if (!x)
+		do_blankline(h_env, obuf, envs[h_env->envc].indent, 0,
+			     h_env->limit);
+	}
 	else
 	    fillline(obuf, envs[h_env->envc].indent);
 	obuf->flag |= (RB_PRE | RB_IGNORE_P);
@@ -4332,6 +4337,11 @@ HTMLtagproc1(struct parsed_tag *tag, struct html_feed_environ *h_env)
 	return 1;
     case HTML_N_PRE:
 	flushline(h_env, obuf, envs[h_env->envc].indent, 0, h_env->limit);
+	if (!(obuf->flag & RB_IGNORE_P)) {
+	    do_blankline(h_env, obuf, envs[h_env->envc].indent, 0,
+			 h_env->limit);
+	    obuf->flag |= RB_IGNORE_P;
+	}
 	obuf->flag &= ~RB_PRE;
 	close_anchor(h_env, obuf);
 	return 1;
