@@ -975,7 +975,7 @@ main(int argc, char **argv, char **envp)
 #endif
 
     Currentbuf = Firstbuf;
-    displayBuffer(Currentbuf, B_NORMAL);
+    displayBuffer(Currentbuf, B_FORCE_REDRAW);
     if (line_str) {
 	_goLine(line_str);
     }
