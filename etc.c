@@ -1325,7 +1325,7 @@ mySystem(char *command, int background)
 	system(cmd->ptr);
 #else
 	flush_tty();
-	if (! fork())
+	if (!fork())
 	    myExec(command);
 #endif
     }

@@ -659,7 +659,7 @@ matchWhich(longchar * pattern, longchar c, int igncase)
 		ans = 1;
 		break;
 	    }
-	    else if (igncase && c < 127 && IS_ALPHA(c) && 
+	    else if (igncase && c < 127 && IS_ALPHA(c) &&
 		     ((*p <= c && tolower(c) <= *(p + 2)) ||
 		      (*p <= c && toupper(c) <= *(p + 2)))) {
 		ans = 1;
@@ -672,7 +672,7 @@ matchWhich(longchar * pattern, longchar c, int igncase)
 		ans = 1;
 		break;
 	    }
-	    else if (igncase && c < 127 && IS_ALPHA(c) && 
+	    else if (igncase && c < 127 && IS_ALPHA(c) &&
 		     (*p == tolower(c) || *p == toupper(c))) {
 		ans = 1;
 		break;

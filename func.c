@@ -364,7 +364,7 @@ initMouseMenu(void)
 	}
 	if (!mouse_menu)
 	    continue;		/* "menu" is not set */
-	if (strcmp(s, "button")) 
+	if (strcmp(s, "button"))
 	    continue;		/* error */
 	s = getWord(&p);
 	b = atoi(s);
