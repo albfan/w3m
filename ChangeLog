@@ -1,5 +1,10 @@
 2002-12-04  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03510] waiting time when cookie was rejected.
+	* file.c (readHeader): display cookie warnings for only 1 sec 
+
+2002-12-04  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03509] HTML parser
 	* file.c (close_textarea): delete
 		(HTMLtagproc1): rewrite 
