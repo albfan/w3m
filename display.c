@@ -318,13 +318,14 @@ displayBuffer(Buffer *buf, int mode)
     else
 #endif				/* not USE_MOUSE */
 	msg = Strnew();
-    Strcat_charp(msg, "Viewing");
-    if (buf->currentLine != NULL && buf->lastLine != NULL)
-	Strcat(msg, Sprintf(" %3d%%",
-			    (int)((double)buf->currentLine->real_linenumber
-				  * 100.0 /
-				  (double)buf->lastLine->real_linenumber
-				  + 0.5)));
+    if (displayLineInfo && buf->currentLine != NULL && buf->lastLine != NULL) {
+	int cl = buf->currentLine->real_linenumber;
+	int ll = buf->lastLine->real_linenumber;
+	int r = (int)((double)cl * 100.0 / (double)ll + 0.5);
+	Strcat(msg, Sprintf("%d/%d (%3d%%)", cl, ll, r));
+    }
+    else
+	Strcat_charp(msg, "Viewing");
 #ifdef USE_SSL
     if (buf->ssl_certificate)
 	Strcat_charp(msg, "[SSL]");

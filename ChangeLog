@@ -1,5 +1,15 @@
 2002-10-26  Fumitoshi UKAI  <ukai@debian.or.jp>
 
+	* [w3m-dev-en 00783] hsaka@mth.biglobe.ne.jp (Hironori SAKAMOTO)
+	  add display_lineinfo option
+	* display.c (displayBuffer): check displayLineInfo
+	* fm.h (displayLineInfo): added
+	* rc.c (CMT_DISPLINEINFO): added
+		(display_lineinfo): added
+	* NEWS (rc: display_lineinfo): add
+
+2002-10-26  Fumitoshi UKAI  <ukai@debian.or.jp>
+
 	* [w3m-dev-en 00781] "Clemens Fischer" <ino-waiting@gmx.net>
 	  zope doesn't recognize implied *LWS in accept-language
 	* rc.c (sync_with_option): remove optional LWS
