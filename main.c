@@ -2002,6 +2002,7 @@ execsh(void)
 	cmd = conv_to_system(cmd);
     if (cmd != NULL && *cmd != '\0') {
 	fmTerm();
+	printf("\n");
 	system(cmd);
 	printf("\n[Hit any key]");
 	fflush(stdout);
