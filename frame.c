@@ -386,6 +386,10 @@ frame_download_source(struct frame_body *b, ParsedURL *currentURL,
 	buf = loadGeneralFile(b->url,
 			      baseURL ? baseURL : currentURL,
 			      b->referer, flag | RG_FRAME_SRC, b->request);
+#ifdef USE_SSL
+	/* XXX certificate? */
+	b->ssl_certificate = buf->ssl_certificate;
+#endif
 	w3m_dump &= ~DUMP_FRAME;
 	is_redisplay = FALSE;
 	break;

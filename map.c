@@ -310,6 +310,12 @@ append_frame_info(Buffer *buf, Str html, struct frameset *set, int level)
 		Strcat_charp(html, " ");
 		Strcat_charp(html, q);
 		Strcat_charp(html, "</a>\n");
+#ifdef USE_SSL
+		if (frame.body->ssl_certificate)
+		    Strcat_m_charp(html, "<blockquote><pre>\n",
+				   frame.body->ssl_certificate,
+				   "</pre></blockquote>\n", NULL);
+#endif
 		break;
 	    case F_FRAMESET:
 		append_frame_info(buf, html, frame.set, level + 1);
