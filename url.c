@@ -2077,13 +2077,13 @@ searchURIMethods(ParsedURL *pu)
 
     for (i = 0; (ump = urimethods[i]) != NULL; i++) {
 	for (; ump->item1 != NULL; ump++) {
-	    if (strcmp(ump->item1, scheme->ptr) == 0) {
+	    if (strcasecmp(ump->item1, scheme->ptr) == 0) {
 		return Sprintf(ump->item2, url_quote(url->ptr));
 	    }
 	}
     }
     for (ump = default_urimethods; ump->item1 != NULL; ump++) {
-	if (strcmp(ump->item1, scheme->ptr) == 0) {
+	if (strcasecmp(ump->item1, scheme->ptr) == 0) {
 	    return Sprintf(ump->item2, url_quote(url->ptr));
 	}
     }

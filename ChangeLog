@@ -1,3 +1,8 @@
+2002-02-08  Yuji Abe <cbo46560@pop12.odn.ne.jp>
+
+	* [w3m-dev 03017] URI scheme is case insensitive
+	* url.c (searchURIMethods): s/strcmp/strcasecmp/
+
 2002-02-08  Tsutomu Okada <okada@furuno.co.jp>
 
 	* [w3m-dev 03011] segmentation fault on <input> tag without <form>
