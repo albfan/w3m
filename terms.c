@@ -1866,7 +1866,7 @@ term_title(char *s)
     if (!fmInitialized)
         return;
     if (title_str != NULL)
-        fprintf(stderr, title_str, s);
+        fprintf(ttyf, title_str, s);
 }
 
 char
