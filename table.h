@@ -62,7 +62,7 @@ struct table_in {
 struct table_linfo {
     Lineprop prev_ctype;
     signed char prev_spaces;
-    int prevchar;
+    Str prevchar;
     short length;
 };
 
@@ -128,8 +128,6 @@ struct table {
 #define TBLM_S		RB_S
 #define TBLM_ANCHOR	0x1000000
 
-#define  uchar           unsigned char
-#define  ushort           unsigned short
 struct table_mode {
     unsigned int pre_mode;
     char indent_level;

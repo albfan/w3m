@@ -11,10 +11,12 @@ BEGIN		goLineF
 BOOKMARK	ldBmark
 CENTER_H	ctrCsrH
 CENTER_V	ctrCsrV
+CHARSET		docCSet
 CLOSE_TAB	closeT
 CLOSE_TAB_MOUSE	closeTMs
 COMMAND		execCmd
 COOKIE		cooLst
+DEFAULT_CHARSET	defCSet
 DEFINE_KEY	defKey
 DELETE_PREVBUF	deletePrevBuf
 DICT_WORD	dictword

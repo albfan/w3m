@@ -166,6 +166,7 @@ print "<P><A HREF=\"$keymap\">$head</A>\n";
 
 &show_keymap("Miscellany",
 	     split(" ", "mainMn ldhelp ldOpt dispVer cooLst ldHist ldDL
+		docCSet defCSet
 		msgs msToggle wrapToggle execCmd setAlarm setOpt setEnv defKey
 		reinit execsh susp qquitfm quitfm"));
 

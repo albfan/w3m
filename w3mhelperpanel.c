@@ -81,7 +81,11 @@ printMailcapPanel(char *mailcap)
 	    }
 	}
     }
+#if LANG == JA
+    printf("Content-Type: text/html; charset=EUC-JP\n\n");
+#else
     printf("Content-Type: text/html\n\n");
+#endif
     printf("<html>\n<head>\n<title>%s</title>\n</head>\n<body>\n<h1>%s</h1>\n",
 	   MSG_TITLE, MSG_TITLE);
     printf("<form method=post action=\"file:///$LIB/" W3MHELPERPANEL_CMDNAME

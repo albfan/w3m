@@ -57,7 +57,11 @@ print_bookmark_panel(char *bmark, char *url, char *title)
     FILE *f;
     char *p;
 
+#if LANG == JA
+    printf("Content-Type: text/html; charset=EUC-JP\n\n");
+#else
     printf("Content-Type: text/html\n\n");
+#endif
     printf(bkmark_src1, html_quote(bmark), html_quote(Local_cookie));
     if ((f = fopen(bmark, "r")) != NULL) {
 	printf("<tr><td>Section:<td><select name=\"section\">\n");

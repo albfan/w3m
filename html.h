@@ -205,8 +205,8 @@ typedef struct {
 #define HTML_TEXTAREA_INT   113
 #define HTML_N_TEXTAREA_INT 114
 #define HTML_TABLE_ALT      115
-#define HTML_RULE           116
-#define HTML_N_RULE         117
+#define HTML_SYMBOL         116
+#define HTML_N_SYMBOL       117
 #define HTML_PRE_INT        118
 #define HTML_N_PRE_INT      119
 #define HTML_TITLE_ALT      120
@@ -352,7 +352,7 @@ struct environment {
 #define MAX_ENV_LEVEL    20
 #define MAX_INDENT_LEVEL 10
 
-#define INDENT_INCR 4
+#define INDENT_INCR IndentIncr
 
 #define SCM_UNKNOWN	255
 #define SCM_MISSING	254

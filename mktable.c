@@ -4,6 +4,7 @@
 #include "myctype.h"
 #include "config.h"
 #include "hash.h"
+#include "myctype.h"
 #include "Str.h"
 #include <gc.h>
 
