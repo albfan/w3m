@@ -1,3 +1,12 @@
+2002-12-11  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03554] Re: Undo/Redo
+	* doc/README.func (REDO): added
+			(UNDO): added
+	* doc-jp/README.func (REDO): added
+			(UNDO): added
+	* scripts/w3mhelp.cgi.in: (Page/Cursor motion): add undoPos, redoPos
+
 2002-12-11  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* NEWS: func: REDO, UNDO
