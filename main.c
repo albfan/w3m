@@ -5932,17 +5932,7 @@ download_action(struct parsed_tagarg *arg)
 	    }
 	}
     }
-    if (FirstDL)
-	ldDL();
-    else {
-	if (Currentbuf == Firstbuf && Currentbuf->nextBuffer == NULL) {
-	    if (nTab > 1)
-		deleteTab(CurrentTab);
-	}
-	else
-	    delBuffer(Currentbuf);
-	displayBuffer(Currentbuf, B_FORCE_REDRAW);
-    }
+    ldDL();
 }
 
 void
@@ -5970,12 +5960,23 @@ ldDL(void)
     int reload;
 #endif
 
-    if (!FirstDL)
-	return;
     if (Currentbuf->bufferprop & BP_INTERNAL &&
 	!strcmp(Currentbuf->buffername, DOWNLOAD_LIST_TITLE))
 	delete = TRUE;
-    else if (open_tab_dl_list) {
+    if (!FirstDL) {
+	if (delete) {
+	    Currentbuf->bufferprop &= ~BP_RELOAD;
+	    if (Currentbuf == Firstbuf && Currentbuf->nextBuffer == NULL) {
+		if (nTab > 1)
+		    deleteTab(CurrentTab);
+	    }
+	    else
+		delBuffer(Currentbuf);
+	    displayBuffer(Currentbuf, B_FORCE_REDRAW);
+	}
+	return;
+    }
+    if (!delete && open_tab_dl_list) {
 	_newT();
 	prev = Currentbuf;
 	delete = TRUE;
