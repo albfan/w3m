@@ -29,8 +29,6 @@ if [ -f config.param ] ; then
 	fi
 fi
 
-echo "# Configuration at $host" > config.param
-
 # parameters:
 
 prefix=/usr/local
@@ -149,6 +147,9 @@ do
   esac
   shift
 done
+
+mv -f config.param config.param.bak
+echo "# Configuration at $host" > config.param
 
 if [ "x$IMLIB_CONFIG" = x ]; then
   IMLIB_CONFIG=imlib-config

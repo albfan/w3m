@@ -1,3 +1,8 @@
+2003-01-22  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03664] config.param is clear when configure -help
+	* configure: config.param created after arg parsing
+
 2003-01-21  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* map.c (follow_map_menu): if USE_IMAGE or MENU_MAP
