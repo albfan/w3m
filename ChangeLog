@@ -1,3 +1,9 @@
+2003-07-09  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03931] Re: clear image
+	* w3mimgdisplay.c (ClearImage): offset
+	* w3mimg/fb/fb.c (fb_clear): memcpy by pixel_size
+
 2003-07-08  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03929] clear image

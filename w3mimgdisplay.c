@@ -324,5 +324,5 @@ ClearImage(char *buf)
     for (; isdigit(*p); p++)
 	h = 10 * h + (*p - '0');
 
-    w_op->clear(w_op, x, y, w, h);
+    w_op->clear(w_op, x + offset_x, y + offset_y, w, h);
 }
