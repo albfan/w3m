@@ -3722,12 +3722,6 @@ HTMLlineproc2body(Buffer * buf, Str (*feed) (), int llimit)
 	if (++nlines == llimit)
 	    break;
 	pos = 0;
-	if (showLineNum) {
-	    tmp = Sprintf("%4d:", nlines);
-	    for (p = tmp->ptr; *p; p++) {
-		PPUSH(PC_ASCII, *p);
-	    }
-	}
 #ifdef ENABLE_REMOVE_TRAILINGSPACES
 	Strremovetrailingspaces(line);
 #endif
@@ -5154,11 +5148,6 @@ loadBuffer(URLFile * uf, Buffer * newBuf)
 	    pre_lbuf = lineBuf2->ptr[0];
 	}
 	++nlines;
-	if (showLineNum) {
-	    Str tmp = Sprintf("%4d:", nlines);
-	    Strcat(tmp, lineBuf2);
-	    lineBuf2 = tmp;
-	}
 #ifdef USE_NNTP
 	if (uf->scheme == SCM_NEWS) {
 	    if (Str_news_endline(lineBuf2)) {
@@ -5254,8 +5243,6 @@ saveBufferDelNum(Buffer * buf, FILE * f, int del)
         else
 #endif
             tmp = Strnew_charp_n(l->lineBuf, l->len);
-        if (del && l->real_linenumber && (p = strchr(tmp->ptr, ':')) != NULL)
-            Strdelete(tmp, 0, p - tmp->ptr + 1);
 #ifdef JP_CHARSET
 	tmp = conv_str(tmp, InnerCode, DisplayCode);
 #endif
@@ -5434,11 +5421,6 @@ getNextPage(Buffer * buf, int plen)
     if (pl != NULL) {
 	nlines = pl->real_linenumber;
 	pre_lbuf = *(pl->lineBuf);
-	if (showLineNum) {
-	    char *p;
-	    if ((p = strchr(pl->lineBuf, ':')) != NULL)
-		pre_lbuf = *(p + 1);
-	}
 	if (pre_lbuf == '\0')
 	    pre_lbuf = '\n';
     }
@@ -5475,11 +5457,6 @@ getNextPage(Buffer * buf, int plen)
 	    pre_lbuf = lineBuf2->ptr[0];
 	}
 	++nlines;
-	if (showLineNum) {
-	    Str tmp = Sprintf("%4d:", nlines);
-	    Strcat(tmp, lineBuf2);
-	    lineBuf2 = tmp;
-	}
 	Strchop(lineBuf2);
 	lineBuf2 = checkType(lineBuf2, propBuffer,
 #ifdef ANSI_COLOR

@@ -333,6 +333,8 @@ typedef struct _Buffer {
     short cursorY;
     short pos;
     short visualpos;
+    short rootX;
+    short COLS;
     InputStream pagerSource;
     AnchorList *href;
     AnchorList *name;

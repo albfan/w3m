@@ -102,7 +102,7 @@ columnSkip(Buffer * buf, int offset)
 	if (l->width - 1 > maxColumn)
 	    maxColumn = l->width - 1;
     }
-    maxColumn -= COLS - 1;
+    maxColumn -= buf->COLS - 1;
     if (column < maxColumn)
 	maxColumn = column;
     if (maxColumn < 0)
