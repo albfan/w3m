@@ -1059,6 +1059,68 @@ mySystem(char *command, int background)
 	system(command);
 }
 
+Str
+myExtCommand(char *cmd, char *arg, int redirect)
+{
+    Str tmp = NULL;
+    char *p;
+    int set_arg = FALSE;
+
+    for (p = cmd; *p; p++) {
+	if (*p == '%' && *(p + 1) == 's' && !set_arg) {
+	    if (tmp == NULL)
+		tmp = Strnew_charp_n(cmd, (int)(p - cmd));
+	    Strcat_charp(tmp, arg);
+	    set_arg = TRUE;
+	    p++;
+	}
+	else {
+	    if (tmp)
+		Strcat_char(tmp, *p);
+	}
+    }
+    if (!set_arg)
+	tmp = Strnew_m_charp(cmd, (redirect ? " < " : " "), arg, NULL);
+    return tmp;
+}
+
+Str
+myEditor(char *cmd, char *file, int line)
+{
+    Str tmp = NULL;
+    char *p;
+    int set_file = FALSE, set_line = FALSE;
+
+    for (p = cmd; *p; p++) {
+	if (*p == '%' && *(p + 1) == 's' && !set_file) {
+	    if (tmp == NULL)
+		tmp = Strnew_charp_n(cmd, (int)(p - cmd));
+	    Strcat_charp(tmp, file);
+	    set_file = TRUE;
+	    p++;
+	}
+	else if (*p == '%' && *(p + 1) == 'd' && !set_line && line > 0) {
+	    if (tmp == NULL)
+		tmp = Strnew_charp_n(cmd, (int)(p - cmd));
+	    Strcat(tmp, Sprintf("%d", line));
+	    set_line = TRUE;
+	    p++;
+	}
+	else {
+	    if (tmp)
+		Strcat_char(tmp, *p);
+	}
+    }
+    if (!set_file) {
+	if (tmp == NULL)
+	    tmp = Strnew_charp(cmd);
+	if (!set_line && line > 0 && strcasestr(cmd, "vi"))
+	    Strcat(tmp, Sprintf(" +%d", line));
+	Strcat_m_charp(tmp, " ", file, NULL);
+    }
+    return tmp;
+}
+
 char *
 expandName(char *name)
 {
