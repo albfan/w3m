@@ -560,7 +560,10 @@ extern char *last_modified(Buffer *buf);
 extern Str romanNumeral(int n);
 extern Str romanAlphabet(int n);
 extern void reset_signals(void);
+extern void close_all_fds(int i);
+#ifdef HAVE_SETPGRP
 extern void myExec(char *command);
+#endif
 extern void mySystem(char *command, int background);
 extern Str myExtCommand(char *cmd, char *arg, int redirect);
 extern Str myEditor(char *cmd, char *file, int line);

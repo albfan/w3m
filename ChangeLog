@@ -1,3 +1,18 @@
+2002-11-25  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* [w3m-dev 03471] Re: SETPGRP()
+	* configure: SETPGRP() always defined
+	* proto.h (close_all_fds): added
+		(myExec): #ifdef HAVE_SETPGRP
+	* etc.c (close_all_fds): added
+		(myExec): #ifdef HAVE_SETPGRP
+		(mySystem): #ifndef -> #ifdef
+	* file.c (_doFileCopy): delete #ifdef HAVE_SETPGRP
+		(doFileSave): ditto
+	* image.c (openImgdisplay): delete #ifdef HAVE_SETPGRP
+				use close_all_fds()
+	* search.c (open_migemo): ditto
+
 2002-11-23  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03466] Re: background download when external viewer

@@ -7274,9 +7274,7 @@ _doFileCopy(char *tmpf, char *defstr, int download)
 	if (!pid) {
 	    reset_signals();
 	    signal(SIGINT, SIG_IGN);
-#ifdef HAVE_SETPGRP
 	    SETPGRP();
-#endif
 	    close_tty();
 	    QuietMessage = TRUE;
 	    fmInitialized = FALSE;
@@ -7374,9 +7372,7 @@ doFileSave(URLFile uf, char *defstr)
 	if (!pid) {
 	    reset_signals();
 	    signal(SIGINT, SIG_IGN);
-#ifdef HAVE_SETPGRP
 	    SETPGRP();
-#endif
 	    close_tty();
 	    QuietMessage = TRUE;
 	    fmInitialized = FALSE;

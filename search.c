@@ -50,24 +50,16 @@ open_migemo(char *migemo_command)
 	goto err2;
     if (migemo_pid == 0) {
 	/* child */
-	int i;
 	reset_signals();
-#ifdef HAVE_SETPGRP
 	SETPGRP();
-#endif
 	close_tty();
 	close(fdr[0]);
 	close(fdw[1]);
 	dup2(fdw[0], 0);
 	dup2(fdr[1], 1);
-	dup2(open("/dev/null", O_WRONLY), 2);
-#ifndef FOPEN_MAX
-#define FOPEN_MAX 1024		/* XXX */
-#endif
-	/* close all other file descriptors (socket, ...) */
-	for (i = 3; i < FOPEN_MAX; i++)
-	    close(i);
+	close_all_fds(2);
 	execl("/bin/sh", "sh", "-c", migemo_command, NULL);
+	/* XXX: ifndef HAVE_SETPGRP, use "start /f"? */
 	exit(1);
     }
     close(fdr[1]);
