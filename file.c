@@ -1922,8 +1922,10 @@ loadGeneralFile(char *path, ParsedURL *volatile current, char *referer,
 	else if (proc == loadImageBuffer)
 	    b->type = b->real_type;
 #endif
+#ifdef USE_GOPHER
 	else if (proc == loadGopherDir)
 	    b->type = b->real_type;
+#endif
 	else
 	    b->type = "text/plain";
 	if (pu.label) {
