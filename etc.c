@@ -1143,7 +1143,7 @@ myEditor(char *cmd, char *file, int line)
     if (!set_file) {
 	if (tmp == NULL)
 	    tmp = Strnew_charp(cmd);
-	if (!set_line && line > 0 && strcasestr(cmd, "vi"))
+	if (!set_line && line > 1 && strcasestr(cmd, "vi"))
 	    Strcat(tmp, Sprintf(" +%d", line));
 	Strcat_m_charp(tmp, " ", file, NULL);
     }
