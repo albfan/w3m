@@ -152,8 +152,15 @@ newRegex0(char **ex, int igncase, Regex *regex, char **msg, int level)
 		m = RE_WHICH;
 	    while (*p != ']') {
 		if (*p == '\\') {
-		    *(st_ptr++) = *(p + 1);
-		    p += 2;
+		    p++;
+#ifdef JP_CHARSET
+		    if (IS_KANJI1(*p)) {
+			*(st_ptr++) = RE_KANJI(p);
+			p += 2;
+		    }
+		    else
+#endif
+			*(st_ptr++) = (unsigned char)*(p++);
 		}
 		else if (*p == '-') {
 		    *(st_ptr++) = RE_WHICH_RANGE;

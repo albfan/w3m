@@ -6,20 +6,20 @@ $rcsid = q$Id$;
 
 $query = $ENV{'QUERY_STRING'};
 $local_cookie = $ENV{'LOCAL_COOKIE'};
-$url = $query;
 $SENDMAIL = '/usr/lib/sendmail';
 $SENDMAIL = '/usr/sbin/sendmail' if -x '/usr/sbin/sendmail';
 $SENDMAIL_OPT = '-oi -t';
 
-$qurl = &html_quote($url);
-
 if ($query =~ s/^\w+://) {
+    $url = $query;
+    $qurl = &html_quote($url);
     $to = $query;
     $opt = '';
     if ($to =~ /^([^?]*)\?(.*)$/) {
 	$to = $1;
 	$opt = $2;
     }
+    $to = &url_unquote($to);
     %opt = &parse_opt($opt);
 
     @to = ($to);

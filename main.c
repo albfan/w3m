@@ -439,8 +439,10 @@ MAIN(int argc, char **argv, char **envp)
 
     if (Editor == NULL && (p = getenv("EDITOR")) != NULL)
 	Editor = p;
+#ifndef USE_W3MMAILER
     if (Mailer == NULL && (p = getenv("MAILER")) != NULL)
 	Mailer = p;
+#endif
 
     /* argument search 2 */
     i = 1;
@@ -4780,7 +4782,7 @@ void
 w3m_exit(int i)
 {
 #ifdef USE_MIGEMO
-    init_migemo();	/* close pipe to migemo */
+    init_migemo();		/* close pipe to migemo */
 #endif
     deleteFiles();
 #ifdef USE_SSL
