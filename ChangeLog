@@ -1,4 +1,10 @@
 2002-01-25  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 02901] DNS_ORDER_*
+	* fm.h (DNS_ORDER_*): added
+	* rc.c (dnsorders): use N_S(DNS_ORDER_*)
+
+2002-01-25  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
 	
 	* [w3m-dev 02901] ACCEPT_BAD_COOKIE_*
 	* file.c (readHeader): accept_bad_cookie is one of ACCEPT_BAD_COOKIE_*

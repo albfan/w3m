@@ -371,9 +371,9 @@ static char n_s[][2] = {
 
 #ifdef INET6
 static struct sel_c dnsorders[] = {
-    {0, "0", "unspec"},
-    {1, "1", "inet inet6"},
-    {2, "2", "inet6 inet"},
+    {N_S(DNS_ORDER_UNSPEC), "unspec"},
+    {N_S(DNS_ORDER_INET_INET6), "inet inet6"},
+    {N_S(DNS_ORDER_INET6_INET), "inet6 inet"},
     {0, NULL, NULL}
 };
 #endif				/* INET6 */
