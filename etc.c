@@ -1745,8 +1745,9 @@ mymktime(char *timestr)
 	    return -1;
     }
 #ifdef DEBUG
-    fprintf(stderr, "year=%d month=%d day=%d hour:min:sec=%d:%d:%d zone=%d:%d\n",
-	    year, mon, day, hour, min, sec, z_hour, z_min);
+    fprintf(stderr,
+	    "year=%d month=%d day=%d hour:min:sec=%d:%d:%d zone=%d:%d\n", year,
+	    mon, day, hour, min, sec, z_hour, z_min);
 #endif				/* DEBUG */
 
     mon -= 3;
