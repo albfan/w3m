@@ -476,33 +476,33 @@ writestr(char *s)
 #define MOVE(line,column)       writestr(tgoto(T_cm,column,line));
 
 #ifdef USE_MOUSE
-#define TERM_INFO(name, title, mouse)	name, title, mouse
+#define W3M_TERM_INFO(name, title, mouse)	name, title, mouse
 #else
-#define TERM_INFO(name, title, mouse)	name, title
+#define W3M_TERM_INFO(name, title, mouse)	name, title
 #endif
 
 #define XTERM_TITLE	"\033]0;w3m: %s\007"
 #define SCREEN_TITLE	"\033k%s\033\134"
 
 /* *INDENT-OFF* */
-static struct term_info {
+static struct w3m_term_info {
     char *term;
     char *title_str;
 #ifdef USE_MOUSE
     int mouse_flag;
 #endif
-} term_info_list[] = {
-    {TERM_INFO("xterm", XTERM_TITLE, (NEED_XTERM_ON|NEED_XTERM_OFF))},
-    {TERM_INFO("kterm", XTERM_TITLE, (NEED_XTERM_ON|NEED_XTERM_OFF))},
-    {TERM_INFO("rxvt", XTERM_TITLE, (NEED_XTERM_ON|NEED_XTERM_OFF))},
-    {TERM_INFO("Eterm", XTERM_TITLE, (NEED_XTERM_ON|NEED_XTERM_OFF))},
-    {TERM_INFO("screen", SCREEN_TITLE, 0)},
+} w3m_term_info_list[] = {
+    {W3M_TERM_INFO("xterm", XTERM_TITLE, (NEED_XTERM_ON|NEED_XTERM_OFF))},
+    {W3M_TERM_INFO("kterm", XTERM_TITLE, (NEED_XTERM_ON|NEED_XTERM_OFF))},
+    {W3M_TERM_INFO("rxvt", XTERM_TITLE, (NEED_XTERM_ON|NEED_XTERM_OFF))},
+    {W3M_TERM_INFO("Eterm", XTERM_TITLE, (NEED_XTERM_ON|NEED_XTERM_OFF))},
+    {W3M_TERM_INFO("screen", SCREEN_TITLE, 0)},
 #ifdef __CYGWIN__
-    {TERM_INFO("cygwin", NULL, NEED_XTERM_ON)},
+    {W3M_TERM_INFO("cygwin", NULL, NEED_XTERM_ON)},
 #endif
-    {TERM_INFO(NULL, NULL, 0)}
+    {W3M_TERM_INFO(NULL, NULL, 0)}
 };
-#undef TERM_INFO
+#undef W3M_TERM_INFO
 /* *INDENT-ON * */
 
 int
@@ -525,8 +525,8 @@ set_tty(void)
 #endif
     TerminalGet(tty, &d_ioval);
     if (displayTitleTerm != NULL) {
-	struct term_info *p;
-	for (p = term_info_list; p->term != NULL; p++) {
+	struct w3m_term_info *p;
+	for (p = w3m_term_info_list; p->term != NULL; p++) {
 	    if (!strncmp(displayTitleTerm, p->term, strlen(p->term))) {
 		title_str = p->title_str;
 		break;
@@ -536,8 +536,8 @@ set_tty(void)
 #ifdef USE_MOUSE
     {
 	char *term = getenv("TERM");
-	struct term_info *p;
-	for (p = term_info_list; p->term != NULL; p++) {
+	struct w3m_term_info *p;
+	for (p = w3m_term_info_list; p->term != NULL; p++) {
 	    if (!strncmp(term, p->term, strlen(p->term))) {
 		is_xterm = p->mouse_flag;
 		break;
