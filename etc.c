@@ -92,7 +92,8 @@ lineSkip(Buffer *buf, Line *line, int offset, int last)
     if (!nextpage_topline)
 #endif
 	for (i = (LASTLINE - 1 - buf->rootY) - (buf->lastLine->linenumber
-	     - l->linenumber); i > 0 && l->prev != NULL; i--, l = l->prev) ;
+						- l->linenumber);
+	     i > 0 && l->prev != NULL; i--, l = l->prev) ;
     return l;
 }
 

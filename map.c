@@ -60,7 +60,7 @@ inMapArea(MapArea * a, int x, int y)
 #endif
 
 MapArea *
-follow_map_menu(Buffer *buf, struct parsed_tagarg *arg, Anchor *a_img, int x,
+follow_map_menu(Buffer *buf, struct parsed_tagarg * arg, Anchor *a_img, int x,
 		int y)
 {
     MapList *ml;
