@@ -723,7 +723,8 @@ w3m_auxbin_dir()
 char *
 w3m_lib_dir()
 {
-    return w3m_dir("W3M_LIB_DIR", LIB_DIR);
+    /* FIXME: use W3M_CGIBIN_DIR? */
+    return w3m_dir("W3M_LIB_DIR", CGIBIN_DIR);
 }
 
 char *
