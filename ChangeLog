@@ -1,3 +1,9 @@
+2002-01-18  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 02873] delete "decode MIME-body" in doc{,-jp}/README
+	* doc-jp/README: delete "decode MIME-body"
+	* doc/README: ditto
+
 2002-01-18  Yoshinobu Sakane <sakane@d4.bsd.nes.nec.co.jp>
 
 	* [w3m-dev 02872] EWS4800 sh doesn't work ${param-word}
