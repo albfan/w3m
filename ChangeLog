@@ -1,3 +1,11 @@
+2002-11-12  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03413] Re: setting form on loading
+	* form.c (loadPreForm): add textarea
+		(preFormUpdateBuffer): submit if value is matched as well
+				case FORM_TEXTAREA
+				case FORM_SELECT ifdef MENU_SELECT
+
 2002-11-12  Yuji Abe <cbo46560@pop12.odn.ne.jp>
 
 	* [w3m-dev 03411] do AUXBIN_TARGETS
