@@ -1198,8 +1198,8 @@ otherinfo(ParsedURL *target, ParsedURL *current, char *referer)
 	Strcat_charp(s, UserAgent);
     Strcat_charp(s, "\r\n");
 
-    Strcat_m_charp(s, "Accept: ", AcceptMedia, "\r\n");
-    Strcat_m_charp(s, "Accept-Encoding: ", AcceptEncoding, "\r\n");
+    Strcat_m_charp(s, "Accept: ", AcceptMedia, "\r\n", NULL);
+    Strcat_m_charp(s, "Accept-Encoding: ", AcceptEncoding, "\r\n", NULL);
 
     Strcat_charp(s, "Accept-Language: ");
     if (AcceptLang != NULL && *AcceptLang != '\0') {
