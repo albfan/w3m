@@ -1310,22 +1310,42 @@ HTTPrequest(ParsedURL *pu, ParsedURL *current, HRequest *hr, TextList *extra)
     if (extra != NULL)
 	for (i = extra->first; i != NULL; i = i->next) {
 	    if (strncasecmp(i->ptr, "Authorization:",
-			    sizeof("Authorization:") - 1) == 0)
+			    sizeof("Authorization:") - 1) == 0) {
 		seen_www_auth = 1;
+#ifdef USE_SSL
+		if (hr->command == HR_COMMAND_CONNECT)
+		    continue;
+#endif
+	    }
 	    if (strncasecmp(i->ptr, "Proxy-Authorization:",
-			    sizeof("Proxy-Authorization:") - 1) == 0)
+			    sizeof("Proxy-Authorization:") - 1) == 0) {
 		seen_proxy_auth = 1;
+#ifdef USE_SSL
+		if (pu->scheme == SCM_HTTPS
+			&& hr->command != HR_COMMAND_CONNECT)
+		    continue;
+#endif
+	    }
 	    Strcat_charp(tmp, i->ptr);
 	}
 
-    if (!seen_www_auth) {
+    if (!seen_www_auth
+#ifdef USE_SSL
+	    && hr->command != HR_COMMAND_CONNECT
+#endif
+	    ) {
 	Str auth_cookie = find_auth_cookie(pu->host, pu->port, pu->file, NULL);
 	if (auth_cookie)
 	    Strcat_m_charp(tmp, "Authorization: ", auth_cookie->ptr,
 			   "\r\n", NULL);
     }
 
-    if (!seen_proxy_auth && (hr->flag & HR_FLAG_PROXY)) {
+    if (!seen_proxy_auth && (hr->flag & HR_FLAG_PROXY)
+#ifdef USE_SSL
+	    && (pu->scheme != SCM_HTTPS
+		|| hr->command == HR_COMMAND_CONNECT)
+#endif
+	    ) {
 	ParsedURL *proxy_pu = schemeToProxy(pu->scheme);
 	Str auth_cookie = find_auth_cookie(
 		proxy_pu->host, proxy_pu->port, proxy_pu->file, NULL);
