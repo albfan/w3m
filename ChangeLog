@@ -1,3 +1,16 @@
+2003-05-14  SAKAI Kiyotaka <ksakai@kso.netwk.ntt-at.co.jp>
+
+	* [w3m-dev 03899] minor fixes
+	* acinclude.m4: fix s/SSLCFLAGS/SSL_CFLAGS/
+	* doc/README: update, fix typo
+	* doc-jp/FAQ.html: update, fix URL
+	* doc-jp/README: update
+	* doc-jp/README.SSL: update
+	* doc-jp/README.cookie: update
+	* doc-jp/README.img: update URL
+	* doc-jp/README.migemo: update
+	* doc-jp/STORY.html: fix URL
+
 2003-05-14  Akinori Ito <aito@fw.ipsj.or.jp>
 
 	* [w3m-dev 03898] Re: table rendering
