@@ -3490,7 +3490,7 @@ nextA(void)
 	    int hseq = an->hseq + 1;
 	    do {
 		if (hseq >= hl->nmark) {
-		    pan = an;
+		    an = pan;
 		    goto _end;
 		}
 		po = &hl->marks[hseq];
