@@ -1,3 +1,8 @@
+2004-08-17  Hiroyuki Ito <ZXB01226@nifty.com>
+
+	* [w3m-dev 04099] Re: w3m-img gtk2
+	* w3mimg/fb/fb_gdkpixbuf.c (fb_image_load): fix resize bug
+
 2004-08-06  Hiroyuki Ito <ZXB01226@nifty.com>
 
 	* [w3m-dev 04097] Re: w3m-img gtk2

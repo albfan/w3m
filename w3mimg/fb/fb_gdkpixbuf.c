@@ -183,11 +183,11 @@ fb_image_load(char *filename, int w, int h, int max_anim)
 	GdkPixbuf *org_pixbuf, *pixbuf;
 
 	org_pixbuf = gdk_pixbuf_animation_iter_get_pixbuf(iter);
-	pixbuf = resize_image(org_pixbuf, fw, fh);
+	pixbuf = resize_image(org_pixbuf, w, h);
 
 	fb_frame[j]->delay = gdk_pixbuf_animation_iter_get_delay_time(iter);
 	g_time_val_add(&time, fb_frame[j]->delay * 1000);
-	draw(fb_frame[j], 0, 0, fw, fh, pixbuf);
+	draw(fb_frame[j], 0, 0, w, h, pixbuf);
 	if (org_pixbuf != pixbuf)
 	    g_object_unref(G_OBJECT(pixbuf));
 	gdk_pixbuf_animation_iter_advance(iter, &time);
