@@ -1,3 +1,8 @@
+2003-10-08  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03985] Re: support for 307 Temporary Redirect
+	* file.c (loadGeneralFile): support 307 Temporary Redirect
+
 2003-10-06  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* fix build error --disbable-m17n
