@@ -475,11 +475,13 @@ redrawNLine(Buffer *buf, int n)
 		bold();
 	    addch('[');
 	    l = t->x2 - t->x1 - 1 - strlen(t->currentBuffer->buffername);
+	    if (l < 0)
+		l = 0;
 	    if (l / 2 > 0)
 		addnstr_sup(" ", l / 2);
 	    if (t == CurrentTab)
 		EFFECT_ACTIVE_START;
-	    addstr(t->currentBuffer->buffername);
+	    addnstr(t->currentBuffer->buffername, t->x2 - t->x1 - l);
 	    if (t == CurrentTab)
 		EFFECT_ACTIVE_END;
 	    if ((l + 1) / 2 > 0)

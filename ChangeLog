@@ -1,3 +1,9 @@
+2002-12-12  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03558] long title is displayed over tab region
+	* display.c (redrawNLine): check l < 0
+				use addnstr
+
 2002-12-11  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03554] Re: Undo/Redo
