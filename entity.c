@@ -4,7 +4,7 @@
 #define NBSP " "
 #define UseAltEntity 1
 #undef USE_M17N
-#else /* DUMMY */
+#else				/* DUMMY */
 #include "fm.h"
 #ifdef USE_M17N
 #ifdef USE_UNICODE
@@ -12,7 +12,7 @@
 #include "utf8.h"
 #endif
 #endif
-#endif /* DUMMY */
+#endif				/* DUMMY */
 
 /* *INDENT-OFF* */
 static char *alt_latin1[ 96 ] = {

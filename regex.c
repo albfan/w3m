@@ -635,7 +635,7 @@ regmatch1(regexchar * re, longchar * c)
 	if (verbose)
 	    printf("RE=%s vs %s -> %d\n", lc2c(re->p.pattern, 1), lc2c(c, 1),
 		   ans);
-#endif                         /* REGEX_DEBUG */
+#endif				/* REGEX_DEBUG */
 	return ans;
     case RE_WHICH:
 	return matchWhich(re->p.pattern, c, re->mode & RE_IGNCASE);
@@ -690,7 +690,7 @@ match_longchar(longchar * a, longchar * b, int ignore)
     if (ignore && IS_ALPHA(b->ch))
 	return (a->ch == TOLOWER(b->ch) || a->ch == TOUPPER(b->ch));
     else
-        return a->ch == b->ch;
+	return a->ch == b->ch;
 }
 
 static int

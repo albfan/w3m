@@ -51,7 +51,7 @@
 #include <locale.h>
 #endif
 #if !HAVE_SETLOCALE
-#define setlocale(category, locale) /* empty */
+#define setlocale(category, locale)	/* empty */
 #endif
 
 #if ENABLE_NLS
@@ -60,9 +60,9 @@
 #define N_(String) (String)
 #else
 # undef bindtextdomain
-# define bindtextdomain(Domain, Directory) /* empty */
+# define bindtextdomain(Domain, Directory)	/* empty */
 # undef textdomain
-# define textdomain(Domain) /* empty */
+# define textdomain(Domain)	/* empty */
 # define _(Text) Text
 # define N_(Text) Text
 # define gettext(Text) Text

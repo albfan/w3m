@@ -79,13 +79,13 @@ setKeymap(char *p, int lineno, int verbose)
 	if (keyData == NULL)
 	    keyData = newHash_iv(KEYDATA_HASH_SIZE);
 	putHash_iv(keyData, m, (void *)mmap);
-    if (c & K_ESCD)
+	if (c & K_ESCD)
 	    map = mmap[3];
-    else if (c & K_ESCB)
+	else if (c & K_ESCB)
 	    map = mmap[2];
-    else if (c & K_ESC)
+	else if (c & K_ESC)
 	    map = mmap[1];
-    else
+	else
 	    map = mmap[0];
     }
     else {
@@ -610,7 +610,8 @@ initMouseAction(void)
 #else
 	char **symbol = get_symbol();
 #endif
-	mouse_action.lastline_str = Strnew_charp(symbol[N_GRAPH_SYMBOL + 13])->ptr;
+	mouse_action.lastline_str =
+	    Strnew_charp(symbol[N_GRAPH_SYMBOL + 13])->ptr;
     }
 
     if ((mf = fopen(confFile(MOUSE_FILE), "rt")) != NULL) {
