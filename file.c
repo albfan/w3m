@@ -1492,7 +1492,7 @@ same_url_p(ParsedURL *pu1, ParsedURL *pu2)
 	    && (pu1->file ? pu2->
 		file ? !strcmp(pu1->file, pu2->file) : 0 : 1));
 }
-		
+
 static int
 checkRedirection(ParsedURL *pu)
 {
