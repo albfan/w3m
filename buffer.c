@@ -573,7 +573,7 @@ reshapeBuffer(Buffer *buf)
 	if (n) {
 	    buf->topLine = lineSkip(buf, buf->topLine, n, FALSE);
 	    if (cur->real_linenumber > 0)
-	        gotoRealLine(buf, cur->real_linenumber);
+		gotoRealLine(buf, cur->real_linenumber);
 	    else
 		gotoLine(buf, cur->linenumber);
 	}

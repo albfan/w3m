@@ -340,7 +340,7 @@ loadImage(int flag)
 	    i = 0;
 	else
 	    i = maxLoadImage;
-	for ( ; i < n_load_image; i++) {
+	for (; i < n_load_image; i++) {
 	    cache = image_cache[i];
 	    if (!cache)
 		continue;
