@@ -1427,9 +1427,11 @@ dispincsrch(int ch, Str buf, Lineprop *prop)
 	do_next_search = TRUE;
 	break;
 
+#ifdef USE_MIGEMO
     case 034:
 	migemo_active = -migemo_active;
 	goto done;
+#endif
 
     default:
 	if (ch >= 0)
@@ -1464,16 +1466,15 @@ dispincsrch(int ch, Str buf, Lineprop *prop)
     }
     displayBuffer(Currentbuf, B_FORCE_REDRAW);
     clear_mark(Currentbuf->currentLine);
+#ifdef USE_MIGEMO
   done:
-    {
-	int i;
-	for (i = 0; str[i] != '\0'; i++) {
-	    if (migemo_active > 0)
-		prop[i] |= PE_UNDER;
-	    else
-		prop[i] &= ~PE_UNDER;
-	}
+    while (*str++ != '\0') {
+	if (migemo_active > 0)
+	    *prop++ |= PE_UNDER;
+	else
+	    *prop++ &= ~PE_UNDER;
     }
+#endif
     return -1;
 }
 
