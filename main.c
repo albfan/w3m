@@ -382,6 +382,9 @@ main(int argc, char **argv, char **envp)
     wc_ces CodePage;
 #endif
 #endif
+    setlocale(LC_ALL, "");
+    bindtextdomain(PACKAGE, LOCALEDIR);
+    textdomain(PACKAGE);
 
 #ifndef HAVE_SYS_ERRLIST
     prepare_sys_errlist();
@@ -4149,6 +4152,12 @@ adBmark(void)
 		  ptr,
 #ifdef USE_M17N
 #if LANG == JA
+		  /* FIXME: why WC_CES_EUC_JP hardcoded? 
+		   *   It should be SystemCharset, that is, we don't
+		   *   need if LANG==JA here.
+		   *   For example, Cygwin environment, it should be
+		   *   WC_CES_SHIFT_JIS, shouldn't it? - ukai
+		   */
 		  (Str_form_quote(wc_conv_strict(Currentbuf->buffername,
 					  InnerCharset, WC_CES_EUC_JP)))->ptr);
 #else

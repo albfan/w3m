@@ -257,6 +257,7 @@ static int smDelTab(char c);
 
 static Menu MainMenu;
 #if LANG == JA
+/* FIXME: gettextize here */
 static wc_ces MainMenuCharset = WC_CES_EUC_JP;
 static int MainMenuEncode = FALSE;
 static MenuItem MainMenuItem[] = {

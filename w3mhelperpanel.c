@@ -11,6 +11,7 @@
 #include "myctype.h"
 
 #if LANG == JA
+/* FIXME: gettextize here */
 #define MSG_TITLE		"外部ビューアの編集"
 #define MSG_NEW_ENTRY		"新規登録"
 #define MSG_TYPE		"データタイプ"
@@ -82,6 +83,7 @@ printMailcapPanel(char *mailcap)
 	}
     }
 #if LANG == JA
+    /* FIXME: gettextize here */
     printf("Content-Type: text/html; charset=EUC-JP\n\n");
 #else
     printf("Content-Type: text/html\n\n");

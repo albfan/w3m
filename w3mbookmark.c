@@ -8,6 +8,7 @@
 #include "parsetag.h"
 
 #if LANG == JA
+/* FIXME: gettextize here */
 #define BKMARK_TITLE "¥Ö¥Ã¥¯¥Þ¡¼¥¯¤ÎÅÐÏ¿"
 #define BKMARK_ADD "ÅÐÏ¿"
 #define DEFAULT_SECTION "Ì¤Ê¬Îà"
@@ -58,6 +59,7 @@ print_bookmark_panel(char *bmark, char *url, char *title)
     char *p;
 
 #if LANG == JA
+    /* FIXME: gettextize here */
     printf("Content-Type: text/html; charset=EUC-JP\n\n");
 #else
     printf("Content-Type: text/html\n\n");
