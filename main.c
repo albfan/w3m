@@ -4139,6 +4139,10 @@ vwSrc(void)
 
     if (Currentbuf->type == NULL || Currentbuf->bufferprop & BP_FRAME)
 	return;
+#ifdef USE_IMAGE
+    if (!strncasecmp(Currentbuf->real_type, "image/", 6))
+	return;
+#endif
     if ((buf = Currentbuf->linkBuffer[LB_SOURCE]) != NULL ||
 	(buf = Currentbuf->linkBuffer[LB_N_SOURCE]) != NULL) {
 	Currentbuf = buf;

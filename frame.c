@@ -342,7 +342,12 @@ resetFrameElement(union frameset_element *f_element,
 	f_body->attr = F_BODY;
 	f_body->name = f_name;
 	f_body->url = parsedURL2Str(&buf->currentURL)->ptr;
-	if (buf->real_scheme == SCM_LOCAL) {
+	if (buf->mailcap_source) {
+	    f_body->source = buf->mailcap_source;
+	    f_body->flags |= FB_TODELETE;
+	    buf->mailcap_source = NULL;
+	}
+	else if (buf->real_scheme == SCM_LOCAL) {
 	    f_body->source = buf->sourcefile;
 	}
 	else {
@@ -404,7 +409,12 @@ frame_download_source(struct frame_body *b, ParsedURL *currentURL,
     b->url = parsedURL2Str(&buf->currentURL)->ptr;
     b->source = buf->sourcefile;
     b->type = buf->type;
-    if ((buf->real_scheme != SCM_LOCAL)
+    if (buf->mailcap_source) {
+	b->source = buf->mailcap_source;
+	b->flags |= FB_TODELETE;
+	buf->mailcap_source = NULL;
+    }
+    else if ((buf->real_scheme != SCM_LOCAL)
 #ifdef USE_IMAGE
 	|| (activeImage && !useExtImageViewer &&
 	    buf->real_type && !strncasecmp(buf->real_type, "image/", 6))
