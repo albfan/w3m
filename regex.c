@@ -164,7 +164,7 @@ newRegex0(char **ex, int igncase, Regex *regex, char **msg, int level)
 #endif
 			*(st_ptr++) = (unsigned char)*(p++);
 		}
-		else if (*p == '-' && *(p+1) != ']') {
+		else if (*p == '-' && *(p + 1) != ']') {
 		    *(st_ptr++) = RE_WHICH_RANGE;
 		    p++;
 		}
