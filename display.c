@@ -303,6 +303,7 @@ displayBuffer(Buffer *buf, int mode)
 
 #ifdef USE_IMAGE
     if (buf->need_reshape) {
+	buf->need_reshape = 0;
 	displayBuffer(buf, B_FORCE_REDRAW);
 	return;
     }
