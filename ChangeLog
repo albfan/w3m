@@ -1,3 +1,8 @@
+2002-12-27  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03604] http response code and content-type
+	* file.c (loadGeneralFile): don't guessContentType if http errors
+
 2002-12-26  Hiroyuki Ito <hito@crl.go.jp>
 
 	* [w3m-dev 03602] Re: w3mimgdisplay core dump
