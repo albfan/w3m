@@ -1,3 +1,9 @@
+2002-11-12  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* doc/w3m.1: update
+	* doc-jp/w3m.1: update
+	* NEWS: update: -show-option
+
 2002-11-12  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03414] Re: show parameter
