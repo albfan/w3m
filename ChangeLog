@@ -1,5 +1,10 @@
 2003-04-08  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03846] fix use_history
+	* main.c (main): move loadHistory
+
+2003-04-08  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03844] w3mhelp.cgi update
 	* scripts/w3mhelp-funcdesc.en.pl.in: add %menu_funcdesc
 	* scripts/w3mhelp-funcdesc.ja.pl.in: add %menu_funcdesc

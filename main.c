@@ -409,10 +409,6 @@ main(int argc, char **argv, char **envp)
     ShellHist = newHist();
     TextHist = newHist();
     URLHist = newHist();
-#ifdef USE_HISTORY
-    if (UseHistory)
-	loadHistory(URLHist);
-#endif				/* not USE_HISTORY */
 
     if (!non_null(HTTP_proxy) &&
 	((p = getenv("HTTP_PROXY")) ||
@@ -747,6 +743,10 @@ main(int argc, char **argv, char **envp)
     initCookie();
 #endif				/* USE_COOKIE */
     setLocalCookie();		/* setup cookie for local CGI */
+#ifdef USE_HISTORY
+    if (UseHistory)
+	loadHistory(URLHist);
+#endif				/* not USE_HISTORY */
 
     if (w3m_backend)
 	backend();
