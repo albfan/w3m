@@ -42,11 +42,11 @@ typedef struct {
 } Regex;
 
 
-Regex *newRegex(char *ex, int igncase, Regex * regex, char **error_msg);
+Regex *newRegex(char *ex, int igncase, Regex *regex, char **error_msg);
 
-int RegexMatch(Regex * re, char *str, int len, int firstp);
+int RegexMatch(Regex *re, char *str, int len, int firstp);
 
-void MatchedPosition(Regex * re, char **first, char **last);
+void MatchedPosition(Regex *re, char **first, char **last);
 
 
 /* backward compatibility */

@@ -268,10 +268,10 @@ typedef struct {
 /* HTML Tag Information Table */
 
 typedef struct html_tag_info {
-    char 		*name;
-    unsigned char 	*accept_attribute;
-    unsigned char 	max_attribute;
-    unsigned char 	flag;
+    char *name;
+    unsigned char *accept_attribute;
+    unsigned char max_attribute;
+    unsigned char flag;
 } TagInfo;
 
 #define TFLG_END	1
@@ -280,9 +280,9 @@ typedef struct html_tag_info {
 /* HTML Tag Attribute Information Table */
 
 typedef struct tag_attribute_info {
-    char 		*name;
-    unsigned char 	vtype;
-    unsigned char 	flag;
+    char *name;
+    unsigned char vtype;
+    unsigned char flag;
 } TagAttrInfo;
 
 #define AFLG_INT	1

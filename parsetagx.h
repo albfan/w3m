@@ -8,11 +8,11 @@
 /* Parsed Tag structure */
 
 struct parsed_tag {
-    unsigned char 	tagid;
-    unsigned char 	*attrid;
-    char 		**value;
-    unsigned char 	*map;
-    char 		need_reconstruct;
+    unsigned char tagid;
+    unsigned char *attrid;
+    char **value;
+    unsigned char *map;
+    char need_reconstruct;
 };
 
 #define parsedtag_accepts(tag, id) ((tag)->map&&(tag)->map[id]!=MAX_TAGATTR)

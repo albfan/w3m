@@ -13,8 +13,8 @@ typedef GeneralList HistList;
 
 typedef struct {
     HistList *list;
-    HistItem *current;   
-    Hash_hist *hash;   
+    HistItem *current;
+    Hash_hist *hash;
 } Hist;
 
 extern Hist *newHist();
@@ -26,4 +26,4 @@ extern char *lastHist(Hist *hist);
 extern char *nextHist(Hist *hist);
 extern char *prevHist(Hist *hist);
 
-#endif /* HISTORY_H */
+#endif				/* HISTORY_H */

@@ -22,6 +22,8 @@ hashfunc(char *s)
 
 #define keycomp(x,y) !strcmp(x,y)
 
+/* *INDENT-OFF* */
 defhashfunc(char *, int, si)
 defhashfunc(char *, char *, ss)
 defhashfunc(char *, void *, hist)
+/* *INDENT-ON* */

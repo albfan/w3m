@@ -106,7 +106,7 @@ struct table {
     short ntable;
     short tables_size;
     TextList *suspended_data;
-/* use for counting skipped spaces */
+    /* use for counting skipped spaces */
     struct table_linfo linfo;
 #ifdef MATRIX
     MAT *matrix;

@@ -17,11 +17,11 @@ typedef struct _generallist {
     short nitem;
 } GeneralList;
 
-extern ListItem *newListItem(void *s, ListItem * n, ListItem * p);
+extern ListItem *newListItem(void *s, ListItem *n, ListItem *p);
 extern GeneralList *newGeneralList(void);
-extern void pushValue(GeneralList * tl, void *s);
-extern void *popValue(GeneralList * tl);
-extern void *rpopValue(GeneralList * tl);
+extern void pushValue(GeneralList *tl, void *s);
+extern void *popValue(GeneralList *tl);
+extern void *rpopValue(GeneralList *tl);
 extern GeneralList *appendGeneralList(GeneralList *, GeneralList *);
 
 /* Text list */
@@ -64,7 +64,7 @@ typedef struct _textlinelist {
 } TextLineList;
 
 extern TextLine *newTextLine(Str line, int pos);
-extern void appendTextLine(TextLineList * tl, Str line, int pos);
+extern void appendTextLine(TextLineList *tl, Str line, int pos);
 #define newTextLineList() ((TextLineList *)newGeneralList())
 #define pushTextLine(tl,lbuf) pushValue((GeneralList *)(tl),(void *)(lbuf))
 #define popTextLine(tl) ((TextLine *)popValue((GeneralList *)(tl)))
