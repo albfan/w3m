@@ -1,3 +1,9 @@
+2003-02-04  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03724] Re: view source, edit source
+	* buffer.c (reshapeBuffer): initialize buf->width first
+	* display.c (displayBuffer): no need to check buf>sourcefile
+
 2003-02-01  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03721] PATH_INFO support of local CGI

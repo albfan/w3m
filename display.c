@@ -363,10 +363,9 @@ displayBuffer(Buffer *buf, int mode)
 	buf->width = INIT_BUFFER_WIDTH;
     if (buf->height == 0)
 	buf->height = LASTLINE + 1;
-    if (buf->sourcefile &&
-	((buf->width != INIT_BUFFER_WIDTH &&
-	  ((buf->type && !strcmp(buf->type, "text/html")) || FoldLine))
-	 || buf->need_reshape)) {
+    if ((buf->width != INIT_BUFFER_WIDTH &&
+	 ((buf->type && !strcmp(buf->type, "text/html")) || FoldLine))
+	|| buf->need_reshape) {
 	buf->need_reshape = TRUE;
 	reshapeBuffer(buf);
     }
