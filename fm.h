@@ -774,6 +774,7 @@ global Str proxy_auth_cookie init(NULL);
 global int UseExternalDirBuffer init(TRUE);
 global char *DirBufferCommand init("file:///$LIB/dirlist" CGI_EXTENSION);
 global int ignore_null_img_alt init(TRUE);
+global int FoldTextarea init(FALSE);
 
 global struct auth_cookie *Auth_cookie init(NULL);
 global char *Local_cookie init(NULL);
