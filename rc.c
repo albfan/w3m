@@ -1323,7 +1323,7 @@ sync_with_option(void)
     if (fmInitialized) {
 	initKeymap(FALSE);
 #ifdef USE_MOUSE
-	initMouseMenu();
+	initMouseAction();
 #endif				/* MOUSE */
 #ifdef USE_MENU
 	initMenu();
