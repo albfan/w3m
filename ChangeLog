@@ -1,3 +1,7 @@
+2002-04-27  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* scripts/.cvsignore: add xface2xpm
+
 2002-04-26  Tushar Samant <scribble@pobox.com>
 	
 	* [w3m-dev-en 00733] Submission: "English" patch
