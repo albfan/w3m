@@ -17,12 +17,6 @@ static int bg_r = 0, bg_g = 0, bg_b = 0;
 #error no Imlib2 and GdkPixbuf support
 #endif
 
-int
-fb_image_draw_simple(FB_IMAGE * img, int x, int y)
-{
-    return fb_image_draw(img, x, y, 0, 0, img->width, img->height);
-}
-
 void
 fb_image_set_bg(int r, int g, int b)
 {
