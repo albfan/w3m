@@ -1,5 +1,10 @@
 2002-12-13  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03566] configure prefix
+	* configure: add X prefix for expr args
+
+2002-12-13  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03564] clean up displayBuffer()
 	* display.c (delayed_msg): static
 		(drawAnchorCursor): static
