@@ -838,7 +838,7 @@ global char *ExtBrowser init(DEF_EXT_BROWSER);
 global char *ExtBrowser2 init(NULL);
 global char *ExtBrowser3 init(NULL);
 global int BackgroundExtViewer init(TRUE);
-global char *passwd_file init(NULL);
+global char *passwd_file init(PASSWD_FILE);
 global char *ftppasswd init(NULL);
 #ifdef FTPPASS_HOSTNAMEGEN
 global int ftppass_hostnamegen init(TRUE);
