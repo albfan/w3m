@@ -6675,6 +6675,15 @@ openGeneralPagerBuffer(InputStream stream)
 	buf = openPagerBuffer(stream, t_buf);
 	buf->type = "text/plain";
     }
+#ifdef USE_IMAGE
+    else if (activeImage && displayImage && !useExtImageViewer &&
+	     !(w3m_dump & ~DUMP_FRAME) && !strncasecmp(t, "image/", 6)) {
+	cur_baseURL = New(ParsedURL);
+	parseURL("-", cur_baseURL, NULL);
+	buf = loadImageBuffer(&uf, t_buf);
+	buf->type = t;
+    }
+#endif
     else {
 	if (doExternal(uf, "-", t, &buf, t_buf)) {
 	    if (buf == NULL || buf == NO_BUFFER)
