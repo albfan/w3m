@@ -2759,9 +2759,9 @@ flushline(struct html_feed_environ *h_env, struct readbuffer *obuf, int indent,
 	    char *c = html_quote_char(obuf->anchor.accesskey);
 	    Strcat_charp(tmp, "\" ACCESSKEY=\"");
 	    if (c)
-	        Strcat_charp(tmp, c);
+		Strcat_charp(tmp, c);
 	    else
-	        Strcat_char(tmp, obuf->anchor.accesskey);
+		Strcat_char(tmp, obuf->anchor.accesskey);
 	}
 	Strcat_charp(tmp, "\">");
 	push_tag(obuf, tmp->ptr, HTML_A);

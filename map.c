@@ -285,7 +285,7 @@ follow_map_panel(Buffer *buf, char *name)
 	parseURL2(a->url, &pu, baseURL(buf));
 	url = html_quote(parsedURL2Str(&pu)->ptr);
 	Strcat_m_charp(mappage, "<tr><td><a href=\"", url, "\">",
-		       html_quote(*a->alt ? a->alt : mybasename(a->url)), 
+		       html_quote(*a->alt ? a->alt : mybasename(a->url)),
 		       "</a><td>", url, NULL);
     }
     Strcat_charp(mappage, "</table></body></html>");
