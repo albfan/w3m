@@ -1,5 +1,4 @@
 /* 
-/* 
  * matrix.h, matrix.c: Liner equation solver using LU decomposition.
  * $Id$
  * 
