@@ -33,8 +33,6 @@ struct rc_search_table {
 static struct rc_search_table *RC_search_table;
 static int RC_table_size;
 
-static char *config_file = NULL;
-
 #define P_INT      0
 #define P_SHORT    1
 #define P_CHARINT  2
@@ -1372,7 +1370,7 @@ init_rc(void)
     struct stat st;
     FILE *f;
 
-    if (config_file != NULL)
+    if (rc_dir != NULL)
 	goto open_rc;
 
     rc_dir = expandPath(RC_DIR);

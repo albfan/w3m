@@ -1,5 +1,12 @@
 2003-01-21  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03658] Re: Other user can see local cookie.
+	* fm.h (rc_dir): init(NULL)
+	* rc.c (config_file): deleted
+		(init_rc): use rc_dir
+
+2003-01-21  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03657] fputs -> Strfputs
 	* form.c (form_fputs_decode): use Strfputs()
 

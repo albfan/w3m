@@ -1019,7 +1019,7 @@ extern char alt_rule[];
 #endif				/* not KANJI_SYMBOLS */
 extern char UseAltEntity;
 global int no_rc_dir init(FALSE);
-global char *rc_dir;
+global char *rc_dir init(NULL);
 global char *tmp_dir;
 global char *config_file init(NULL);
 
