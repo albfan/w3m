@@ -430,16 +430,6 @@ form_fputs_decode(Str s, FILE * f)
 
     for (p = s->ptr; *p;) {
 	switch (*p) {
-	case '<':
-	    if (!strncasecmp(p, "<eol>", 5)) {
-		Strcat_char(z, '\n');
-		p += 5;
-	    }
-	    else {
-		Strcat_char(z, *p);
-		p++;
-	    }
-	    break;
 #if !defined( __CYGWIN__ ) && !defined( __EMX__ )
 	case '\r':
 	    if (*(p + 1) == '\n')
