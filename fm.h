@@ -20,6 +20,8 @@
 #include <string.h>
 #include <unistd.h>
 #include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
 #include "config.h"
 #include "history.h"
 
@@ -977,6 +979,8 @@ global int set_pixel_per_line init(FALSE);
 global double image_scale init(100);
 #endif
 global int use_lessopen init(FALSE);
+
+global char *keymap_file init(KEYMAP_FILE);
 
 #ifdef JP_CHARSET
 #define is_kanji(s)    (IS_KANJI1((s)[0])&&IS_KANJI2((s)[1]))

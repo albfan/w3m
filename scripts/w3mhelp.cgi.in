@@ -148,7 +148,7 @@ for $otherlang (@docdirs) {
 
 &show_keymap("Miscellany",
 	     split(" ", "mainMn ldhelp ldOpt cooLst ldHist msgs msToggle
-		wrapToggle setAlarm setOpt setEnv execsh susp qquitfm quitfm"));
+		wrapToggle setAlarm setOpt setEnv execsh susp qquitfm quitfm defKey"));
 
 &show_keymap("Buffer selection mode",
 	     split(" ", "buffer_next buffer_prev buffer_delete buffer_go"));

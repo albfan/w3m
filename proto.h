@@ -116,6 +116,7 @@ extern void setAlarmEvent(int sec, short status, int cmd, void *data);
 #else
 #define setAlarm nulcmd
 #endif
+extern void defKey(void);
 extern int currentLn(Buffer *buf);
 extern void tmpClearBuffer(Buffer *buf);
 extern char *filename_extension(char *patch, int is_url);
@@ -583,7 +584,8 @@ extern void clearImage(void);
 
 extern char *searchKeyData(void);
 
-extern void initKeymap(void);
+extern void setKeymap(char *p, int lineno, int verbose);
+extern void initKeymap(int force);
 extern int getFuncList(char *id);
 extern int getKey(char *s);
 extern char *getKeyData(int key);
