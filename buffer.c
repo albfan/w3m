@@ -240,14 +240,14 @@ gotoLine(Buffer *buf, int n)
     }
     if (l->linenumber > n) {
 	sprintf(msg, "First line is #%ld", l->linenumber);
-	disp_message(msg, FALSE);
+	set_delayed_message(msg);
 	buf->topLine = buf->currentLine = l;
 	return;
     }
     if (buf->lastLine->linenumber < n) {
 	l = buf->lastLine;
 	sprintf(msg, "Last line is #%ld", buf->lastLine->linenumber);
-	disp_message(msg, FALSE);
+	set_delayed_message(msg);
 	buf->currentLine = l;
 	buf->topLine = lineSkip(buf, buf->currentLine, -(LASTLINE - 1), FALSE);
 	return;
@@ -282,14 +282,14 @@ gotoRealLine(Buffer *buf, int n)
     }
     if (l->real_linenumber > n) {
 	sprintf(msg, "First line is #%ld", l->real_linenumber);
-	disp_message(msg, FALSE);
+	set_delayed_message(msg);
 	buf->topLine = buf->currentLine = l;
 	return;
     }
     if (buf->lastLine->real_linenumber < n) {
 	l = buf->lastLine;
 	sprintf(msg, "Last line is #%ld", buf->lastLine->real_linenumber);
-	disp_message(msg, FALSE);
+	set_delayed_message(msg);
 	buf->currentLine = l;
 	buf->topLine = lineSkip(buf, buf->currentLine, -(LASTLINE - 1), FALSE);
 	return;

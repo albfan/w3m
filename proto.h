@@ -219,6 +219,7 @@ extern void disp_message_nomouse(char *s, int redraw_current);
 #else
 #define disp_message_nomouse disp_message
 #endif
+extern void set_delayed_message(char *s);
 extern void cursorUp(Buffer *buf, int n);
 extern void cursorDown(Buffer *buf, int n);
 extern void cursorUpDown(Buffer *buf, int n);

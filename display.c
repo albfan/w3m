@@ -190,6 +190,8 @@ static Buffer *save_current_buf = NULL;
 
 int in_check_url = FALSE;
 
+char *delayed_msg = NULL;
+
 void
 displayBuffer(Buffer *buf, int mode)
 {
@@ -314,6 +316,11 @@ displayBuffer(Buffer *buf, int mode)
     if (buf->firstLine == NULL) {
 	Strcat_charp(msg, "\tNo Line");
 	clear();
+    }
+    if (delayed_msg != NULL) {
+	disp_message(delayed_msg, FALSE);
+	delayed_msg = NULL;
+	refresh();
     }
     standout();
     message(msg->ptr, buf->cursorX + buf->rootX, buf->cursorY);
@@ -857,6 +864,12 @@ disp_message_nomouse(char *s, int redraw_current)
     disp_message_nsec(s, redraw_current, 10, FALSE, FALSE);
 }
 #endif
+
+void
+set_delayed_message(char *s)
+{
+    delayed_msg = allocStr(s, -1);
+}
 
 void
 cursorUp(Buffer *buf, int n)
