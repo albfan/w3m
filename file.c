@@ -3073,7 +3073,7 @@ process_input(struct parsed_tag *tag)
 {
     int i, w, v, x, y, z, iw, ih;
     char *q, *p, *r, *p2, *s;
-    Str tmp = Strnew();
+    Str tmp = NULL;
     char *qq = "";
     int qlen = 0;
 
@@ -3081,6 +3081,8 @@ process_input(struct parsed_tag *tag)
 	char *s = "<form_int method=internal action=none>";
 	tmp = process_form(parse_tag(&s, TRUE));
     }
+    if (tmp == NULL)
+	tmp = Strnew();
 
     p = "text";
     parsedtag_get_value(tag, ATTR_TYPE, &p);
