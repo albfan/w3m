@@ -449,7 +449,7 @@ redrawNLine(Buffer *buf, int n)
 	TabBuffer *t;
 	int nx = nTabLine(), col = COLS - 2, x, l;
 
-        i = 0;
+	i = 0;
 	move(0, 0);
 	if (mouse_menu) {
 	    addstr(mouse_menu);

@@ -356,7 +356,7 @@ initMouseMenu(void)
 		mouse_menu = Strnew_charp(s)->ptr;
 	    continue;
 	}
-	if (strcmp(s, "button")) 
+	if (strcmp(s, "button"))
 	    continue;		/* error */
 	s = getWord(&p);
 	b = atoi(s);
