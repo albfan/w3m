@@ -229,8 +229,7 @@ inputLineHistSearch(char *prompt, char *def_str, int flag, Hist *hist,
 	    cm_disp_next = -1;
 	}
 	else if (!i_quote && c < 0x20) {	/* Control code */
-	    if (incrfunc == NULL
-		|| (c = incrfunc((int)c, strBuf)) < 0x20)
+	    if (incrfunc == NULL || (c = incrfunc((int)c, strBuf)) < 0x20)
 		(*InputKeymap[(int)c]) (c);
 	    if (incrfunc)
 		incrfunc(-1, strBuf);

@@ -1444,7 +1444,7 @@ dispincsrch(int ch, Str buf)
 	    return -1;
 	}
 	else
-	    return 020;	/* _prev completion for C-s C-s */
+	    return 020;		/* _prev completion for C-s C-s */
     }
     else if (*str) {
 	RESTORE_BUFPOSITION(&sbuf);
