@@ -5311,7 +5311,6 @@ HTMLlineproc2body(Buffer *buf, Str (*feed) (), int llimit)
 static void
 addLink(Buffer *buf, struct parsed_tag *tag)
 {
-    struct parsed_tag *t;
     char *href = NULL, *title = NULL, *ctype = NULL, *rel = NULL, *rev = NULL;
     char type = LINK_TYPE_NONE;
     LinkList *l;

@@ -1694,7 +1694,6 @@ lmGoURL(void)
 {
     LinkList *l;
     int i;
-    ParsedURL pu;
 
     for (i = 0, l = Currentbuf->linklist; l; i++, l = l->next) {
 	if (i == LinkV)
