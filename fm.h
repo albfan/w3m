@@ -406,6 +406,7 @@ typedef struct _Buffer {
     short rootX;
     short rootY;
     short COLS;
+    short LINES;
     InputStream pagerSource;
     AnchorList *href;
     AnchorList *name;
