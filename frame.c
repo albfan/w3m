@@ -792,6 +792,9 @@ renderFrame(Buffer *Cbuf, int force_reload)
     if (buf == NULL || buf == NO_BUFFER)
 	return NULL;
     buf->sourcefile = tmp->ptr;
+#ifdef JP_CHARSET
+    buf->document_code = Cbuf->document_code;
+#endif
     copyParsedURL(&buf->currentURL, &Cbuf->currentURL);
     return buf;
 }
