@@ -758,6 +758,7 @@ do_refill(struct table *tbl, int row, int col, int maxlimit)
     init_henv(&h_env, &obuf, envs, MAX_ENV_LEVEL,
 	      (TextLineList *)tbl->tabdata[row][col],
 	      get_spec_cell_width(tbl, row, col), 0);
+    obuf.flag |= RB_INTABLE;
     if (h_env.limit > maxlimit)
 	h_env.limit = maxlimit;
     if (tbl->border_mode != BORDER_NONE && tbl->vcellpadding > 0)

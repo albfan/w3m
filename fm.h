@@ -517,10 +517,10 @@ struct readbuffer {
 #define RB_XMPMODE	0x02
 #define RB_LSTMODE	0x04
 #define RB_PLAIN	0x08
-#define RB_LEFT		0x00
+#define RB_LEFT		0x80000
 #define RB_CENTER	0x10
 #define RB_RIGHT	0x20
-#define RB_ALIGN	(RB_CENTER | RB_RIGHT)
+#define RB_ALIGN	(RB_LEFT| RB_CENTER | RB_RIGHT)
 #define RB_NOBR		0x40
 #define RB_P		0x80
 #define RB_PRE_INT	0x100
@@ -537,6 +537,7 @@ struct readbuffer {
 #define RB_TITLE	0x8000
 #define RB_NFLUSHED	0x10000
 #define RB_NOFRAMES	0x20000
+#define RB_INTABLE	0x40000
 
 #ifdef FORMAT_NICE
 #define RB_FILL		0x200000
