@@ -1,5 +1,13 @@
 2002-11-28  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03497] incorrect image size
+	* image.c (getImageSize): invoke w3mimgdiplay -size instead of "5;..."
+	* w3mimgdisplay.c (defined_size): added
+			(main): if defined_size get_image_size()
+			(GetOption): -size
+
+2002-11-28  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03496] parse <!-- ... --> in <script>
 	* etc.c (read_token): check <pre>
 	* file.c (HTMLlineproc0): remove comment processing
