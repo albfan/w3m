@@ -1366,7 +1366,6 @@ openURL(char *url, ParsedURL *pu, ParsedURL *current,
 						   option->referer),
 				      (void (*)())pclose);
 	    if (uf.stream == NULL) {
-		pu->file = p;
 		goto ordinary_local_file;
 	    }
 	    uf.is_cgi = TRUE;
