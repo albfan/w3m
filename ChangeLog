@@ -1,5 +1,13 @@
 2002-10-26  Fumitoshi UKAI  <ukai@debian.or.jp>
 
+	* [w3m-dev-en 00788]
+	* fm.h (displayImage): FALSE ifndef USE_IMAGE
+	* rc.c (displayImage): display_image even if USE_IMAGE undefined
+		(sync_with_options): display_image is forced to be FALSE 
+				ifndef USE_IMAGE
+
+2002-10-26  Fumitoshi UKAI  <ukai@debian.or.jp>
+
 	* [w3m-dev-en 00783] hsaka@mth.biglobe.ne.jp (Hironori SAKAMOTO)
 	  add display_lineinfo option
 	* display.c (displayBuffer): check displayLineInfo
