@@ -1,3 +1,8 @@
+2003-01-19  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* [w3m-dev 03653] SourceForge.net: 576032 w3m https crashes with OpenSSL-0.9.7
+	* istream.c (ssl_check_cert_ident): use sk_GENERAL_NAME_free()
+
 2003-01-18  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* [w3m-dev 03652] Re: Debian bug #176981

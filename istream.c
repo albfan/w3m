@@ -446,7 +446,7 @@ ssl_check_cert_ident(X509 * x, char *hostname)
 		}
 	    }
 	    method = X509V3_EXT_get(ex);
-	    method->ext_free(alt);
+	    sk_GENERAL_NAME_free(alt);
 	    if (i < n)		/* Found a match */
 		match_ident = TRUE;
 	    else if (seen_dnsname)
