@@ -734,9 +734,9 @@ link_list_panel(Buffer *buf)
 	    p = parsedURL2Str(&pu)->ptr;
 	    u = html_quote(p);
 	    if (DecodeURL)
-		 p = html_quote(url_unquote_conv(p, buf->document_code));
+		p = html_quote(url_unquote_conv(p, buf->document_code));
 	    else
-		 p = u;
+		p = u;
 	    t = getAnchorText(buf, al, a);
 	    t = t ? html_quote(t) : "";
 	    Strcat_m_charp(tmp, "<li><a href=\"", u, "\">", t, "</a><br>", p,
@@ -756,9 +756,9 @@ link_list_panel(Buffer *buf)
 	    p = parsedURL2Str(&pu)->ptr;
 	    u = html_quote(p);
 	    if (DecodeURL)
-		 p = html_quote(url_unquote_conv(p, buf->document_code));
+		p = html_quote(url_unquote_conv(p, buf->document_code));
 	    else
-		 p = u;
+		p = u;
 	    if (a->title && *a->title)
 		t = html_quote(a->title);
 	    else if (DecodeURL)
@@ -788,10 +788,10 @@ link_list_panel(Buffer *buf)
 		    p = parsedURL2Str(&pu)->ptr;
 		    u = html_quote(p);
 		    if (DecodeURL)
-			 p = html_quote(url_unquote_conv(p,
-							 buf->document_code));
+			p = html_quote(url_unquote_conv(p,
+							buf->document_code));
 		    else
-			 p = u;
+			p = u;
 		    if (m->alt && *m->alt)
 			t = html_quote(m->alt);
 		    else if (DecodeURL)
