@@ -1,3 +1,7 @@
+2003-02-25  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* version.c.in: cvs version
+
 2003-02-24  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* w3m 0.4
