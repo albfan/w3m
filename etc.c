@@ -1372,7 +1372,7 @@ open_pipe_rw(FILE ** fr, FILE ** fw)
 	    if (*fr == stdin)
 		dup2(fdr[0], 0);
 	    else
-	        *fr = fdopen(fdr[0], "r");
+		*fr = fdopen(fdr[0], "r");
 	}
 	if (fw) {
 	    close(fdw[0]);
