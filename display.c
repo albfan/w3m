@@ -677,8 +677,8 @@ redrawLineImage(Buffer *buf, Line *l, int i)
 		    h = image->height - sy;
 		else
 		    h = (int)(pixel_per_line - sy);
-		if (w > (int)((buf->COLS - rcol + column) * pixel_per_char))
-		    w = (int)((buf->COLS - rcol + column) * pixel_per_char);
+		if (w > (int)((buf->rootX + buf->COLS) * pixel_per_char - x))
+		    w = (int)((buf->rootX + buf->COLS) * pixel_per_char - x);
 		if (h > (int)(LASTLINE * pixel_per_line - y))
 		    h = (int)(LASTLINE * pixel_per_line - y);
 		addImage(cache, x, y, sx, sy, w, h);
