@@ -1,3 +1,9 @@
+2002-02-01  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 02961] halfdump image is not consistent
+	* file.c (flushline): check f
+	* file.c (do_blankline): fix blanklink conditions
+
 2002-02-01  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* gcc -Wall -Werror safe
