@@ -675,6 +675,14 @@ parseURL(char *url, ParsedURL *p_url, ParsedURL *current)
     p_url->query = NULL;
     p_url->label = NULL;
 
+    /* RFC1808: Relative Uniform Resource Locators
+     * 4.  Resolving Relative URLs
+     */
+    if (*url == '\0' && current) {
+	copyParsedURL(p_url, current);
+	return;
+    }
+
     if (*url == '#') {		/* label only */
 	if (current)
 	    copyParsedURL(p_url, current);
