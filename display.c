@@ -226,7 +226,7 @@ void
 displayBuffer(Buffer *buf, int mode)
 {
     Str msg;
-    Anchor *aa = NULL;
+    Str s = NULL;
     int ny = 0;
 
     if (buf->topLine == NULL && readBufferCache(buf) == 0) {	/* clear_buffer */
@@ -341,14 +341,22 @@ displayBuffer(Buffer *buf, int mode)
 #endif
     Strcat_charp(msg, " <");
     Strcat_charp(msg, buf->buffername);
-    if (displayLink)
-	aa = retrieveCurrentAnchor(buf);
-    if (aa) {
-	ParsedURL url;
-	Str s;
+    if (displayLink) {
+#ifdef USE_IMAGE
+	s = getCurrentMapLabel(buf);
+	if (!s)
+#endif
+	{
+	    Anchor *a = retrieveCurrentAnchor(buf);
+	    if (a) {
+		ParsedURL pu;
+		parseURL2(a->url, &pu, baseURL(buf));
+		s = parsedURL2Str(&pu);
+	    }
+	}
+    }
+    if (s) {
 	int l;
-	parseURL2(aa->url, &url, baseURL(buf));
-	s = parsedURL2Str(&url);
 	l = buf->width - 2;
 	if (s->length > l) {
 	    if (l >= 4) {

@@ -290,14 +290,12 @@ typedef struct _MapArea {
     char *url;
     char *target;
     char *alt;
-#ifdef MENU_MAP
 #ifdef USE_IMAGE
     char shape;
     short *coords;
     int ncoords;
     short center_x;
     short center_y;
-#endif
 #endif
 } MapArea;
 
@@ -878,6 +876,7 @@ global int displayImage init(TRUE);
 global int autoImage init(TRUE);
 global int useExtImageViewer init(TRUE);
 global int maxLoadImage init(4);
+global int image_map_list init(TRUE);
 #else
 global int displayImage init(FALSE); /* XXX: emacs-w3m use display_image=off */
 #endif
