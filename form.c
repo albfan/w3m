@@ -635,10 +635,10 @@ form_write_from_file(FILE * f, char *boundary, char *name, char *filename,
     fprintf(f, "Content-Type: %s\r\n\r\n",
 	    type ? type : "application/octet-stream");
 
-#ifdef	HAVE_READLINK		/* readline == lstat ? (ukai) */
+#ifdef HAVE_LSTAT
     if (lstat(file, &st) < 0)
 	goto write_end;
-#endif				/* HAVE_READLINK */
+#endif				/* HAVE_LSTAT */
     if (S_ISDIR(st.st_mode))
 	goto write_end;
     fd = fopen(file, "r");

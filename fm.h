@@ -824,6 +824,7 @@ global int activeImage init(FALSE);
 global int displayImage init(TRUE);
 global int autoImage init(TRUE);
 global int useExtImageViewer init(TRUE);
+global int maxLoadImage init(4);
 #endif
 global char *Editor init(DEF_EDITOR);
 #ifndef USE_W3MMAILER
