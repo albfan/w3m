@@ -23,6 +23,7 @@
 2002-01-17  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 02854] highlight for incremental search
+	* NEWS: highlight for incremental search
 	* display.c (EFFECT_MARK_START): added
 	* display.c (EFFECT_MARK_END): added
 	* display.c (EFFECT_MARK_START_C): added
