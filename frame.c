@@ -804,8 +804,11 @@ createFrameFile(struct frameset *f, FILE * f1, Buffer *current, int level,
 			Strfputs(tok, f1);
 		    }
 		    else {
-			if (pre_mode & (RB_PLAIN | RB_INTXTA))
+			if (pre_mode & RB_PLAIN)
 			    fprintf(f1, "%s", html_quote(tok->ptr));
+			else if (pre_mode & RB_INTXTA)
+			    fprintf(f1, "%s",
+				    html_quote(html_unquote(tok->ptr)));
 			else
 			    Strfputs(tok, f1);
 		    }
