@@ -1,3 +1,8 @@
+2003-01-23  Yoshinobu Sakane <sakane@d4.bsd.nes.nec.co.jp>
+
+	* [w3m-dev 03671] Re: config.param is clear when configure -help
+	* configure: test -f config.param
+
 2003-01-22  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03665] imlib2 support (on X11)

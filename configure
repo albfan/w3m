@@ -148,7 +148,9 @@ do
   shift
 done
 
-mv -f config.param config.param.bak
+if [ -f config.param ]; then
+    mv -f config.param config.param.bak
+fi
 echo "# Configuration at $host" > config.param
 
 if [ "x$IMLIB_CONFIG" = x ]; then
