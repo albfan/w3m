@@ -565,8 +565,7 @@ checkShiftCode(Str buf, uchar hint)
 	    case EUC_NOSTATE:
 		if (!(*p & 0x80))	/* ASCII */
 		    ;
-		else if (0xa1 <= *p && *p <= 0xfe)	/* JIS X 0208,
-							 * * * * * 0213-1 */
+		else if (0xa1 <= *p && *p <= 0xfe)	/* JIS X 0208, 0213-1 */
 		    euc = (CODE_STATE(euc) | EUC_MBYTE1);
 		else if (*p == EUC_SS2_CODE)	/* SS2 + JIS X 0201-Kana */
 		    euc = (CODE_STATE(euc) | EUC_SS2);
@@ -625,8 +624,7 @@ checkShiftCode(Str buf, uchar hint)
 	    case SJIS_SHIFT_H:
 		if (CODE_STATE(sjis) == CODE_NORMAL)
 		    sjis = CODE_OK;
-		if ((0x40 <= *p && *p <= 0x7e) || (0x80 <= *p && *p <= 0xfc))	/* JIS X 0208,
-										 * * * * * 0213 */
+		if ((0x40 <= *p && *p <= 0x7e) || (0x80 <= *p && *p <= 0xfc))	/* JIS X 0208, 0213 */
 		    sjis = (CODE_STATE(sjis) | SJIS_NOSTATE);
 		else if (sjis & CODE_BROKEN)
 		    sjis = CODE_ERROR;

@@ -2362,12 +2362,9 @@ loadLink(char *url, char *target, char *referer, FormList *request)
     if (do_download)		/* download (thus no need to render frame) */
 	return loadNormalBuf(buf, FALSE);
 
-    if (target == NULL ||	/* no target specified (that means * this
-				 * page is not a frame page) */
-	!strcmp(target, "_top") ||	/* this link is specified to * be
-					 * opened as an indivisual * page */
-	!(Currentbuf->bufferprop & BP_FRAME)	/* This page is not a *
-						 * * * * * frame page */
+    if (target == NULL ||	/* no target specified (that means this page is not a frame page) */
+	!strcmp(target, "_top") ||	/* this link is specified to be opened as an indivisual * page */
+	!(Currentbuf->bufferprop & BP_FRAME)	/* This page is not a frame page */
 	) {
 	return loadNormalBuf(buf, TRUE);
     }
