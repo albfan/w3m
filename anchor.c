@@ -395,7 +395,7 @@ reAnchorNewsheader(Buffer *buf)
 	    header = header_group;
 	}
 	for (l = buf->firstLine; l != NULL && l->real_linenumber == 0;
-	    l = l->next) {
+	     l = l->next) {
 	    p = l->lineBuf;
 	    if (!IS_SPACE(*p)) {
 		search = FALSE;

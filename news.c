@@ -284,7 +284,7 @@ openNewsStream(ParsedURL *pu)
 		return NULL;
 	    p = group;
 	}
-	else {	/* <newsgroup>/<message-id or article-number> */
+	else {			/* <newsgroup>/<message-id or article-number> */
 	    *p++ = '\0';
 	    news_command(&current_news, Sprintf("GROUP %s", group)->ptr,
 			 &status);
@@ -294,7 +294,7 @@ openNewsStream(ParsedURL *pu)
 	if (strchr(p, '@'))	/* <message-id> */
 	    news_command(&current_news, Sprintf("ARTICLE <%s>", p)->ptr,
 			 &status);
-	else	/* <article-number> */
+	else			/* <article-number> */
 	    news_command(&current_news, Sprintf("ARTICLE %s", p)->ptr,
 			 &status);
 	if (status != 220)
@@ -338,8 +338,7 @@ readNewsgroup(ParsedURL *pu)
     qgroup = html_quote(group);
     group = file_unquote(group);
     page = Sprintf("<title>Newsgroup: %s</title>\n\
-<h1>Newsgroup:&nbsp;%s</h1>\n<hr>\n",
-	 	   qgroup, qgroup);
+<h1>Newsgroup:&nbsp;%s</h1>\n<hr>\n", qgroup, qgroup);
 
     if (SETJMP(AbortLoading) != 0) {
 	news_close(&current_news);
@@ -359,7 +358,7 @@ readNewsgroup(ParsedURL *pu)
     if (list && *list) {
 	if ((p = strchr(list, '-'))) {
 	    *p++ = '\0';
-	    end = atoi(p); 
+	    end = atoi(p);
 	}
 	start = atoi(list);
 	if (start > 0) {
@@ -376,8 +375,7 @@ readNewsgroup(ParsedURL *pu)
 	    start = end - MaxNewsMessage + 1;
     }
     page = Sprintf("<title>Newsgroup: %s %d-%d</title>\n\
-<h1>Newsgroup:&nbsp;%s %d-%d</h1>\n<hr>\n",
-	 	   qgroup, start, end, qgroup, start, end);
+<h1>Newsgroup:&nbsp;%s %d-%d</h1>\n<hr>\n", qgroup, start, end, qgroup, start, end);
     if (start > first) {
 	i = start - MaxNewsMessage;
 	if (i < first)
