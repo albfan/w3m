@@ -652,7 +652,8 @@ readHeader(URLFile * uf,
 		    if (fmInitialized && (err & COO_OVERRIDE_OK) &&
 			accept_bad_cookie == PERHAPS) {
 			Str msg = Sprintf("Accept bad cookie from %s for %s? (y or n) ",
-					pu->host, domain->ptr);
+					pu->host, 
+					domain && domain->ptr ? domain->ptr : "<localdomain>");
 			if (msg->length > COLS - 4)
 			    Strshrink(msg, msg->length - (COLS - 4));
 			term_raw();
