@@ -4797,8 +4797,7 @@ curlno()
     else
 	tmp = Sprintf("line %d/%d (%d%%) col %d/%d", cur, all,
 		      (int)((double)cur * 100.0 / (double)(all ? all : 1)
-			    + 0.5),
-		      col, len);
+			    + 0.5), col, len);
 #ifdef JP_CHARSET
     Strcat_charp(tmp, "  ");
     Strcat_charp(tmp, code_to_str(Currentbuf->document_code));
