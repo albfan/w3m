@@ -803,9 +803,7 @@ global TextList *Cookie_reject_domains;
 global TextList *Cookie_accept_domains;
 #endif				/* USE_COOKIE */
 
-#ifdef VIEW_UNSEENOBJECTS
 global int view_unseenobject init(TRUE);
-#endif				/* VIEW_UNSEENOBJECTS */
 
 #if defined(USE_SSL) && defined(USE_SSL_VERIFY)
 global int ssl_verify_server init(FALSE);

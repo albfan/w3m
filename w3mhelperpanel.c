@@ -81,11 +81,7 @@ printMailcapPanel(char *mailcap)
     }
     printf("Content-Type: text/html\n\n");
     printf("<html><head><title>External Viewer Setup</title></head><body><h1>%s</h1>\n", MSG_TITLE);
-#ifdef __EMX__
-    printf("<form method=get action=\"file:///$LIB/w3mhelperpanel.exe\">\n");
-#else
-    printf("<form method=get action=\"file:///$LIB/w3mhelperpanel\">\n");
-#endif
+    printf("<form method=get action=\"file:///$LIB/" W3MHELPERPANEL_CMDNAME "\">\n");
     printf("<input type=hidden name=mode value=edit>\n");
     printf("<input type=hidden name=cookie value=\"%s\">\n",local_cookie);
     printf("%s: %s=<input type=text name=newtype><br>%s=<input type=text name=newcmd><br><input type=submit name=submit value=\"%s\">\n",

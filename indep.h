@@ -39,6 +39,9 @@ extern Str Str_form_quote(Str x);
 extern Str Str_form_unquote(Str x);
 extern char *shell_quote(char *str);
 
+extern char *w3m_lib_dir();
+extern char *w3m_help_dir();
+
 #define New(type)	((type*)GC_MALLOC(sizeof(type)))
 #define NewAtom(type)	((type*)GC_MALLOC_ATOMIC(sizeof(type)))
 #define New_N(type,n)	((type*)GC_MALLOC((n)*sizeof(type)))

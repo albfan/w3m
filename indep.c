@@ -658,6 +658,28 @@ shell_quote(char *str)
     return str;
 }
 
+static char*
+w3m_dir(const char *name, char *dft)
+{
+#ifdef USE_PATH_ENVVAR
+    char *value = getenv(name);
+    return value ? value : dft;
+#else
+    return dft;
+#endif
+}
+
+char *
+w3m_lib_dir()
+{
+    return w3m_dir("W3M_LIB_DIR", LIB_DIR);
+}
+
+char *
+w3m_help_dir()
+{
+    return w3m_dir("W3M_HELP_DIR", HELP_DIR);
+}
 /* Local Variables:    */
 /* c-basic-offset: 4   */
 /* tab-width: 8        */
