@@ -162,9 +162,6 @@ fmInit(void)
 {
     if (!fmInitialized) {
 	initscr();
-#if defined( __CYGWIN__ ) && defined( JP_CHARSET )
-	init_win32_console_handle();
-#endif
 	term_raw();
 	term_noecho();
     }
