@@ -2798,19 +2798,6 @@ flushline(struct html_feed_environ *h_env, struct readbuffer *obuf, int indent,
 	push_tag(obuf, "<U>", HTML_U);
 }
 
-static void
-discardline(struct readbuffer *obuf, int indent)
-{
-    append_tags(obuf);
-    Strclear(obuf->line);
-    obuf->pos = 0;
-    obuf->prevchar = ' ';
-    obuf->bp.init_flag = 1;
-    set_breakpoint(obuf, 0);
-    obuf->prev_ctype = PC_ASCII;
-    fillline(obuf, indent);
-}
-
 void
 do_blankline(struct html_feed_environ *h_env, struct readbuffer *obuf,
 	     int indent, int indent_incr, int width)

@@ -1,3 +1,7 @@
+2002-12-22  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* file.c (discardline): not used
+
 2002-12-22  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03593] Re: segmentation fault when <title> exist after <img>
