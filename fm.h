@@ -325,6 +325,8 @@ typedef struct _imageCache {
     char *url;
     ParsedURL *current;
     char *file;
+    char *touch;
+    pid_t pid;
     char loaded;
     int index;
     short width;
