@@ -1070,6 +1070,7 @@ void w3m_exit(int i);
 #define AL_IMPLICIT_DONE 4
 #define AL_ONCE          8
 #define AL_IMPLICIT_ONCE (AL_IMPLICIT|AL_ONCE)
+#define AL_RESTORE       16
 #endif
 
 /* 
