@@ -1,5 +1,11 @@
 2003-09-25  Fumitoshi UKAI  <ukai@debian.or.jp>
 
+	* fix [w3m-dev 03975] Re: gettextize
+	* Makefile.in: add INTLTARGET, cleanup
+	* configure.in: INTLTARGET=intl if USE_NLS
+
+2003-09-25  Fumitoshi UKAI  <ukai@debian.or.jp>
+
 	* gettextize
 	* Makefile.in: updated
 	* menu.c: gettextize
