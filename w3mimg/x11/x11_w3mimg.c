@@ -131,7 +131,7 @@ x11_clear(w3mimg_op * self, int x, int y, int w, int h)
     xi = (struct x11_info *)self->priv;
     if (xi == NULL)
 	return 0;
-    XClearArea(xi->display, xi->window, x, y, w, h, FALSE);
+    XClearArea(xi->display, xi->window, x, y, w, h, False);
     return 1;
 }
 
