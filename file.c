@@ -7351,8 +7351,7 @@ doFileSave(URLFile uf, char *defstr)
 	    unlink(lock);
 	    exit(0);
 	}
-	addDownloadList(pid, uf.url, p, lock,
-			current_content_length);
+	addDownloadList(pid, uf.url, p, lock, current_content_length);
     }
     else {
 	q = searchKeyData();
