@@ -5351,7 +5351,7 @@ addLink(Buffer *buf, struct parsed_tag *tag)
 	i->next = l;
     }
     else
-        buf->linklist = l;
+	buf->linklist = l;
 }
 
 void

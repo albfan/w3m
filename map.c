@@ -417,9 +417,9 @@ append_map_info(Buffer *buf, Str tmp, FormItemList *fi)
 
 /* append links */
 static void
-append_link_info(Buffer *buf, Str html, LinkList *link)
+append_link_info(Buffer *buf, Str html, LinkList * link)
 {
-    LinkList  *l;
+    LinkList *l;
     ParsedURL pu;
     char *url;
 
