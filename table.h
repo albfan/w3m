@@ -139,6 +139,7 @@ struct table_mode {
     short nobr_offset;
     char nobr_level;
     short anchor_offset;
+    Str ignore_tag;
 };
 
 /* Local Variables:    */

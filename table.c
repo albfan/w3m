@@ -2969,9 +2969,11 @@ feed_table_tag(struct table *tbl, char *line, struct table_mode *mode,
 	break;
     case HTML_SCRIPT:
 	mode->pre_mode |= TBLM_SCRIPT;
+	mode->ignore_tag = Strnew_charp("</script>");
 	break;
     case HTML_STYLE:
 	mode->pre_mode |= TBLM_STYLE;
+	mode->ignore_tag = Strnew_charp("</style>");
 	break;
     case HTML_N_A:
 	table_close_anchor0(tbl, mode);
