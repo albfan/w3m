@@ -1,3 +1,9 @@
+2002-07-31  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* Debian Bug#154766: w3m-img: support DirectColor framebuffer visuals?
+	  from Colin Watson <cjwatson@debian.org>
+	* w3mimg/fb/fb.c (fb_open): accept FB_VISUAL_DIRECTCOLOR
+
 2002-07-30  Hiroyuki Ito <hito@crl.go.jp>
 
 	* [w3m-dev 03282] Re: w3m-img for framebuffer update

@@ -78,7 +78,8 @@ fb_open(void)
 	goto ERR_END;
     }
 
-    if (!(fscinfo.visual == FB_VISUAL_TRUECOLOR &&
+    if (!((fscinfo.visual == FB_VISUAL_TRUECOLOR ||
+	   fscinfo.visual == FB_VISUAL_DIRECTCOLOR) &&
 	  (vscinfo.bits_per_pixel == 15 ||
 	   vscinfo.bits_per_pixel == 16 ||
 	   vscinfo.bits_per_pixel == 24 || vscinfo.bits_per_pixel == 32))) {
