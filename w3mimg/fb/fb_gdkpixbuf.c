@@ -233,6 +233,7 @@ fb_image_load(char *filename, int w, int h, int max_anim)
 	    fb_image_copy(tmp_image, fb_frame[i]);
 	    break;
 	case GDK_PIXBUF_FRAME_DISPOSE:
+	    fb_image_fill(tmp_image, bg_r, bg_g, bg_b);
 	    break;
 	case GDK_PIXBUF_FRAME_REVERT:
 	    fb_image_copy(tmp_image, fb_frame[0]);

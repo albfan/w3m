@@ -109,6 +109,7 @@ get_animation_size(GdkPixbufAnimation * animation, int *w, int *h, int *delay)
     }
     if (delay)
 	*delay = d;
+    return n;
 }
 #endif
 #endif
@@ -522,6 +523,9 @@ x11_load_image(w3mimg_op * self, W3MImage * img, char *fname, int w, int h)
 		      xi->imageGC, 0, 0, w, h, 0, 0);
 	    break;
 	case GDK_PIXBUF_FRAME_DISPOSE:
+	    XSetForeground(xi->display, xi->imageGC, xi->background_pixel);
+	    XFillRectangle(xi->display, tmp_pixmap, xi->imageGC,
+			   0, 0, w, h);
 	    break;
 	case GDK_PIXBUF_FRAME_REVERT:
 	    XCopyArea(xi->display, ximg->pixmap[0], tmp_pixmap,
