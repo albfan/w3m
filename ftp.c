@@ -249,6 +249,27 @@ ftp_pasv(FTP ftp)
     return 0;
 }
 
+static int
+ftp_fclose(FTP ftp)
+{
+    int control_closed = 0;
+
+    if (ftp->rcontrol != NULL) {
+	fclose(ftp->rcontrol);
+	ftp->rcontrol = NULL;
+	control_closed = 1;
+    }
+    if (ftp->wcontrol != NULL) {
+	fclose(ftp->wcontrol);
+	ftp->wcontrol = NULL;
+	control_closed = 1;
+    }
+    if (control_closed && ftp->data != NULL) {
+	fclose(ftp->data);
+	ftp->data = NULL;
+    }
+}
+
 int
 FtpCwd(FTP ftp, char *path)
 {
@@ -298,7 +319,7 @@ Ftpfclose(FILE * f)
     fclose(f);
     if (f == current_ftp->data)
 	current_ftp->data = NULL;
-    read_response(current_ftp);
+    ftp_fclose(current_ftp);
     return 0;
 }
 
@@ -346,7 +367,7 @@ int
 FtpBye(FTP ftp)
 {
     Str tmp;
-    int ret_val, control_closed;
+    int ret_val;
 
     fwrite("QUIT\r\n", 6, sizeof(char), ftp->wcontrol);
     fflush(ftp->wcontrol);
@@ -355,21 +376,7 @@ FtpBye(FTP ftp)
 	ret_val = -1;
     else
 	ret_val = 0;
-    control_closed = 0;
-    if (ftp->rcontrol != NULL) {
-	fclose(ftp->rcontrol);
-	ftp->rcontrol = NULL;
-	control_closed = 1;
-    }
-    if (ftp->wcontrol != NULL) {
-	fclose(ftp->wcontrol);
-	ftp->wcontrol = NULL;
-	control_closed = 1;
-    }
-    if (control_closed && ftp->data != NULL) {
-	fclose(ftp->data);
-	ftp->data = NULL;
-    }
+    ftp_fclose(ftp);
     return ret_val;
 }
 
