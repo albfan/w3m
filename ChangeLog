@@ -1,3 +1,8 @@
+2002-01-25  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* [w3m-dev 02904]
+	* rc.c (N_STR): use cpp stringification
+
 2002-01-25  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 02902] mouse inactive after calling some command with ALARM.
