@@ -1,3 +1,15 @@
+2003-09-23  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* [w3m-dev 03967] Re: IPv4/IPv6 only option patch
+	* NEWS: options: -4, -6
+	* fm.h (DNS_ORDER_INET_ONLY): added
+		(DNS_ORDER_INET6_ONLY): added
+		(ai_family_order_table): [3]->[7]
+	* main.c (fusage): add -4/-6
+		(main): -4/-6 mapped to dns_order=4/dns_order=6
+	* rc.c (dnsorders): add DNS_ORDER_INET_ONLY, DNS_ORDER_INET6_ONLY
+	* url.c (dnsorders): add 3-6
+
 2003-09-16  Hiroyuki Ito <hito@crl.go.jp>
 
 	* [w3m-dev 03960] 

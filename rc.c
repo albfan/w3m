@@ -470,6 +470,8 @@ static struct sel_c dnsorders[] = {
     {N_S(DNS_ORDER_UNSPEC), "unspecified"},
     {N_S(DNS_ORDER_INET_INET6), "inet inet6"},
     {N_S(DNS_ORDER_INET6_INET), "inet6 inet"},
+    {N_S(DNS_ORDER_INET_ONLY), "inet only"},
+    {N_S(DNS_ORDER_INET6_ONLY), "inet6 only"},
     {0, NULL, NULL}
 };
 #endif				/* INET6 */

@@ -824,8 +824,10 @@ global int NOproxy_netaddr init(TRUE);
 #define DNS_ORDER_UNSPEC     0
 #define DNS_ORDER_INET_INET6 1
 #define DNS_ORDER_INET6_INET 2
+#define DNS_ORDER_INET_ONLY  4
+#define DNS_ORDER_INET6_ONLY 6
 global int DNS_order init(DNS_ORDER_UNSPEC);
-extern int ai_family_order_table[3][3];	/* XXX */
+extern int ai_family_order_table[7][3];	/* XXX */
 #endif				/* INET6 */
 global TextList *NO_proxy_domains;
 global char NoCache init(FALSE);
