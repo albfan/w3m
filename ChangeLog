@@ -1,3 +1,7 @@
+2004-03-23  Fumitoshi UKAI  <ukai@ukai.org>
+
+	* rc.c: cleanup LANG == JA
+
 2004-03-23  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* main.c (main): DisplayCharset also follow locale
