@@ -336,6 +336,5 @@ ClearImage(char *buf)
     w_op->clear(w_op,
 		x + offset_x - w_op->clear_margin,
 		y + offset_y - w_op->clear_margin,
-		w + w_op->clear_margin * 2,
-		h + w_op->clear_margin * 2);
+		w + w_op->clear_margin * 2, h + w_op->clear_margin * 2);
 }
