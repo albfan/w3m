@@ -753,7 +753,7 @@ loadPreForm(void)
 	if (line->length == 0)
 	    break;
 	if (textarea && !(!strncmp(line->ptr, "/textarea", 9) &&
-	    IS_SPACE(line->ptr[9]))) {
+			  IS_SPACE(line->ptr[9]))) {
 	    Strcat(textarea, line);
 	    continue;
 	}
