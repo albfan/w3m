@@ -826,7 +826,9 @@ global int useExtImageViewer init(TRUE);
 global int maxLoadImage init(4);
 #endif
 global char *Editor init(DEF_EDITOR);
-#ifndef USE_W3MMAILER
+#ifdef USE_W3MMAILER
+global char *Mailer init(NULL);
+#else
 global char *Mailer init(DEF_MAILER);
 #endif
 global char *ExtBrowser init(DEF_EXT_BROWSER);
