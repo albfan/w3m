@@ -4,7 +4,6 @@
 	* table.c (feed_table_tag): fix <center>,</center>,<div>,</div>,
 				<p>,<br>,<nobr>,</nobr>,<wbr>
 			check_rowcol() for <img>
-	
 
 2003-07-10  Fumitoshi UKAI  <ukai@debian.or.jp>
 
