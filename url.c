@@ -2075,6 +2075,12 @@ searchURIMethods(ParsedURL *pu)
     if (scheme == NULL)
 	return NULL;
 
+    /*
+     * RFC2396 3.1. Scheme Component
+     * For resiliency, programs interpreting URI should treat upper case
+     * letters as equivalent to lower case in scheme names (e.g., allow
+     * "HTTP" as well as "http").
+     */
     for (i = 0; (ump = urimethods[i]) != NULL; i++) {
 	for (; ump->item1 != NULL; ump++) {
 	    if (strcasecmp(ump->item1, scheme->ptr) == 0) {
