@@ -1,3 +1,10 @@
+2001-12-22  Dai Sato <satodai@dog.intcul.tohoku.ac.jp>
+
+	* [w3m-dev 02687] version number in w3mhelp-*.html (+[w3m-dev 02689])
+	* configure (cur_ver): w3mhelp*.html version subst
+	* w3mhelp*.html: deleted
+	* w3mhelp*.html.in: added
+
 2001-12-22  Tsutomu Okada <okada@furuno.co.jp>
 
 	* [w3m-dev 02682]
