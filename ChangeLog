@@ -1,5 +1,10 @@
 2004-03-22  Akihiro Sagawa <sagawa@sohgoh.net>
 
+	* [w3m-dev 04046]
+	* configure.in (AC_W3M_IPv6): should check it after ext libs
+
+2004-03-22  Akihiro Sagawa <sagawa@sohgoh.net>
+
 	* [w3m-dev 04045]
 	* Makefile.in (DEFUNS): need $(top_srcdir)
 
