@@ -1,3 +1,8 @@
+2002-01-16  Tsutomu Okada <okada@furuno.co.jp>
+
+	* [w3m-dev 02851]
+	* regex.c (newRegex0): fix return NULL;
+
 2002-01-16  Yoshinobu Sakane <sakane@d4.bsd.nes.nec.co.jp>
 
 	* [w3m-dev 02847]

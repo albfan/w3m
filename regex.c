@@ -175,8 +175,8 @@ newRegex0(char **ex, int igncase, Regex *regex, char **msg, int level)
 		if (st_ptr >= &regex->storage[STORAGE_MAX]) {
 		    if (msg)
 			*msg = "Regular expression too long";
+		    return NULL;
 		}
-		return NULL;
 	    }
 	    *(st_ptr++) = '\0';
 	    re->p.pattern = r;
