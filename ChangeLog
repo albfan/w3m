@@ -1,5 +1,9 @@
 2003-03-28  Dai Sato <satodai@dog.intcul.tohoku.ac.jp>
 
+	* doc(-jp)/keymap.default: ';' is quoted
+
+2003-03-28  Dai Sato <satodai@dog.intcul.tohoku.ac.jp>
+
 	* Makefile.in: distclean removes core
 
 2003-03-28  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
