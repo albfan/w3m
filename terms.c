@@ -584,7 +584,8 @@ reset_tty(void)
     writestr(T_se);		/* reset terminal */
     fflush(ttyf);
     TerminalSet(tty, &d_ioval);
-    close(tty);
+    if (tty != 2)
+	close(tty);
 }
 
 MySignalHandler

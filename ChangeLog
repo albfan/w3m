@@ -1,3 +1,8 @@
+2002-12-05  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev-en 00841] Re: w3m segfaults if the terminal is not writable
+	* terms.c (reset_tty): don't close stderr
+
 2002-12-04  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03516] Re: 2 stroke keybinding
