@@ -1,6 +1,8 @@
 #! /bin/sh
 # $Id$
 
+set -e
+
 while :
 do
   case $1 in
