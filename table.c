@@ -2472,7 +2472,9 @@ feed_table_tag(struct table *tbl, char *line, struct table_mode *mode,
 	       int width, struct parsed_tag *tag)
 {
     int cmd;
+#ifdef ID_EXT
     char *p;
+#endif
     struct table_cell *cell = &tbl->cell;
     int colspan, rowspan;
     int col, prev_col;

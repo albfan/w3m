@@ -105,7 +105,6 @@ ftp_close(FTP ftp)
 static int
 ftp_login(FTP ftp)
 {
-    Str tmp;
     int sock, status;
 
     sock = openSocket(ftp->host, "ftp", 21);
@@ -121,7 +120,7 @@ ftp_login(FTP ftp)
 
 	    if (!getsockname(sock, (struct sockaddr *)&sockname, &socknamelen)) {
 		struct hostent *sockent;
-		tmp = Strnew_charp(ftp->pass);
+		Str tmp = Strnew_charp(ftp->pass);
 
 		if ((sockent = gethostbyaddr((char *)&sockname.sin_addr,
 					     sizeof(sockname.sin_addr),
