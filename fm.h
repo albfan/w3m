@@ -706,6 +706,9 @@ global int confirm_on_quit init(TRUE);
 #ifdef EMACS_LIKE_LINEEDIT
 global int emacs_like_lineedit init(FALSE);
 #endif
+#ifdef VI_PREC_NUM
+global int vi_prec_num init(FALSE);
+#endif
 global int displayLink init(FALSE);
 global int retryAsHttp init(TRUE);
 global int showLineNum init(FALSE);

@@ -1129,11 +1129,12 @@ void
 pgFore(void)
 {
 #ifdef VI_PREC_NUM
-    nscroll(searchKeyNum() * (LASTLINE - 1), B_NORMAL);
-#else				/* not VI_PREC_NUM */
-    nscroll(prec_num ? searchKeyNum() : searchKeyNum() * (LASTLINE - 1),
-	prec_num ? B_SCROLL : B_NORMAL);
-#endif				/* not VI_PREC_NUM */
+    if (vi_prec_num)
+	nscroll(searchKeyNum() * (LASTLINE - 1), B_NORMAL);
+    else
+#endif
+	nscroll(prec_num ? searchKeyNum() : searchKeyNum() * (LASTLINE - 1),
+		prec_num ? B_SCROLL : B_NORMAL);
 }
 
 /* Move page backward */
@@ -1141,11 +1142,12 @@ void
 pgBack(void)
 {
 #ifdef VI_PREC_NUM
-    nscroll(- searchKeyNum() * (LASTLINE - 1), B_NORMAL);
-#else				/* not VI_PREC_NUM */
-    nscroll(- (prec_num ? searchKeyNum() : searchKeyNum() * (LASTLINE - 1)),
-	prec_num ? B_SCROLL : B_NORMAL);
-#endif				/* not VI_PREC_NUM */
+    if (vi_prec_num)
+	nscroll(- searchKeyNum() * (LASTLINE - 1), B_NORMAL);
+    else
+#endif
+	nscroll(-(prec_num ? searchKeyNum() : searchKeyNum() * (LASTLINE - 1)),
+		prec_num ? B_SCROLL : B_NORMAL);
 }
 
 /* 1 line up */
