@@ -424,6 +424,7 @@ extern char *guessContentType(char *filename);
 extern TextList *make_domain_list(char *domain_list);
 extern int check_no_proxy(char *domain);
 extern FILE *openFTP(ParsedURL *pu);
+extern Str readFTPDir(ParsedURL *pu);
 extern void closeFTP(FILE * f);
 extern int Ftpfclose(FILE * f);
 extern AnchorList *putAnchor(AnchorList *al, char *url, char *target,
