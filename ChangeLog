@@ -1,3 +1,7 @@
+2002-11-26  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* func.c (initMouseAction): remove unsed variables: x, width, map
+
 2002-11-26  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03478] mouse action configuration

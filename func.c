@@ -431,8 +431,7 @@ initMouseAction(void)
     FILE *mf;
     Str line;
     char *p, *s;
-    int b, x, width;
-    MouseActionMap *map;
+    int b;
 
     bcopy((void *)&default_mouse_action, (void *)&mouse_action,
 	  sizeof(default_mouse_action));
