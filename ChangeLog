@@ -1,3 +1,8 @@
+2002-10-28  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03351] w3m core dump
+	* table.c (feed_table_tag): fix rendering problem (maybe security hole?)
+
 2002-10-28  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* [w3m-dev-en 00796]
