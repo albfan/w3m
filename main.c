@@ -5828,7 +5828,7 @@ DownloadListBuffer(void)
 	    d->ok = TRUE;
 	Strcat_charp(src, "<pre>\n");
 	Strcat(src, Sprintf("%s\n  --&gt; %s\n  ", html_quote(d->url),
-			    html_quote(d->save)));
+			    html_quote(conv_from_system(d->save))));
 	duration = cur_time - d->time;
 	if (!stat(d->save, &st)) {
 	    size = st.st_size;

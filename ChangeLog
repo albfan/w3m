@@ -1,5 +1,12 @@
 2002-11-16  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03441] charset of save file
+	* file.c (_doFileCopy): use conv_from_system()
+		(doFileSave): conv_from_system()
+	* main.c (DownloadListBuffer): conv_from_system()
+
+2002-11-16  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03440] Re: restore alarm event
 	* fm.h (BP_RELOAD): added
 		(DOWNLOAD_LIST_TITLE): added
