@@ -622,12 +622,13 @@ createFrameFile(struct frameset *f, FILE * f1, Buffer *current, int level,
 				parsedtag_get_value(tag, ATTR_CONTENT, &q);
 				if (q) {
 				    Str s_tmp;
-				    int refresh_interval = getMetaRefreshParam(q, &s_tmp);
+				    int refresh_interval =
+					getMetaRefreshParam(q, &s_tmp);
 				    if (s_tmp) {
-				        q = html_quote(s_tmp->ptr);
-				        fprintf(f1, "Refresh (%d sec) <a href=\"%s\">%s</a>\n",
-						refresh_interval, 
-						html_quote(q), html_quote(q));
+					q = html_quote(s_tmp->ptr);
+					fprintf(f1,
+						"Refresh (%d sec) <a href=\"%s\">%s</a>\n",
+						refresh_interval, q, q);
 				    }
 				}
 			    }
