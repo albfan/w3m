@@ -1,3 +1,13 @@
+2003-03-06  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* [w3m-dev 03792] URL match string
+			incremental search fix
+	* main.c (chkURLBuffer): allow - at end of URL string
+		(dispincsrch): start from current position in case of
+				incremental search
+	* search.c (forwardSearch): found if same position
+		(backwardSearch): ditto
+
 2003-03-03  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03788] UFhalfclose
