@@ -713,6 +713,9 @@ global char *ExtBrowser2 init(NULL);
 global char *ExtBrowser3 init(NULL);
 global int BackgroundExtViewer init(TRUE);
 global char *ftppasswd init(NULL);
+#ifdef FTPPASS_HOSTNAMEGEN
+global int ftppass_hostnamegen init(TRUE);
+#endif
 global int do_download init(FALSE);
 global char *UserAgent init(NULL);
 global int NoSendReferer init(FALSE);

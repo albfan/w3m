@@ -110,7 +110,7 @@ FtpLogin(FTP * ftp_return, char *host, char *user, char *pass)
     if (fd < 0)
 	return -1;
 #ifdef FTPPASS_HOSTNAMEGEN
-    if (!strcmp(user, "anonymous")) {
+    if (ftppass_hostnamegen && !strcmp(user, "anonymous")) {
 	size_t n = strlen(pass);
 
 	if (n > 0 && pass[n - 1] == '@') {
