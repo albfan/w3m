@@ -107,7 +107,7 @@ forwardSearch(Buffer *buf, char *str)
     if (l == NULL) {
 	return SR_NOTFOUND;
     }
-    pos = buf->pos + 1;
+    pos = buf->pos;
     if (l->bpos) {
 	pos += l->bpos;
 	while (l->bpos && l->prev)
