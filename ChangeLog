@@ -1,3 +1,11 @@
+2002-10-31  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* [w3m-dev 03359] support for http://user:pass@www.url.com
+	* etc.c (find_auth_user_passwd): use ParsedURL for args
+		use user and passwd if these are defined in ParsedURL
+	* file.c (getAuthCookie): change find_auth_user_passwd()
+	* proto.h (find_auth_user_passwd): change prototype
+
 2002-10-30  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03357] tab in <pre> in <ul>,<ol>,...

@@ -521,7 +521,7 @@ extern void set_environ(char *var, char *value);
 extern FILE *localcgi_post(char *, char *, FormList *, char *);
 extern FILE *localcgi_get(char *, char *, char *);
 extern void loadPasswd(void);
-extern int find_auth_user_passwd(char *host, int port, char *file, char *realm,
+extern int find_auth_user_passwd(ParsedURL *pu, char *realm,
 				 Str *uname, Str *pwd, int is_proxy);
 extern Str find_auth_cookie(char *host, int port, char *file, char *realm);
 extern void add_auth_cookie(char *host, int port, char *file, char *realm,
