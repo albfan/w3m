@@ -1,3 +1,27 @@
+2003-10-06  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* fix problem reported on [w3m-dev 03981]
+	  from Mamoru KOMACHI <usata@sodan.ecc.u-tokyo.ac.jp>
+	* configure.in: add AC_SUBST(HELP_DIR)
+	* Makefile.in (HELP_DIR): use AC_SUBT(HELP_DIR)
+	* scripts/Makefile.in: add PACKAGE, VERSION, DOMAIN
+			use PACKAGE instead of package: 
+			 CGIBIN_DIR,AUXBIN_DIR,CONF_DIR
+			add HELP_DIR
+			add SUBDIRS
+			(install unstall): do $(SUBDIRS)
+	* scripts/multipart/Makefile.in: add PACKAGE,VERSION,DOMAIN
+			use PACKAGE instead of package: 
+			 CGIBIN_DIR,AUXBIN_DIR,CONF_DIR
+			add HELP_DIR
+	* scripts/w3mman/Makefile.in: add PACKAGE,VERSION,DOMAIN
+			use PACKAGE instead of package: 
+			 CGIBIN_DIR,AUXBIN_DIR,CONF_DIR
+			add HELP_DIR
+			add BIN_DIR, MAN1_DIR
+			LIB_TARGETS->CGIBIN_TARGETS
+			fix INSTALL_MAN
+
 2003-10-01  Akira TAGOH <at@gclab.org>
 
 	* acinclude.m4 (AC_W3M_SSL): use PKG_CHECK_MODULES
