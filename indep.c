@@ -696,6 +696,12 @@ w3m_lib_dir()
 }
 
 char *
+w3m_etc_dir()
+{
+    return w3m_dir("W3M_ETC_DIR", ETC_DIR);
+}
+
+char *
 w3m_help_dir()
 {
     return w3m_dir("W3M_HELP_DIR", HELP_DIR);
