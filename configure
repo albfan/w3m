@@ -1013,9 +1013,8 @@ EOF
     echo "GC_version is $gcversion."    
     if [ $gcversion -lt $mygcversion ]; then
       echo "GC library on your system seems to be old."
-      echo "Do you want to use GC library comes with w3m?"
-      yesno ans y y
-      if [ "$ans" = 'n' -o "$ans" = 'N' ]; then
+      ask_param "Do you want to use GC library comes with w3m?" "use_bundled_gclib" y
+      if [ "$use_bundled_gclib" = 'n' -o "$use_bundled_gclib" = 'N' ]; then
         cflags="$cflags -I$gcinclude"
       else
         cflags="$cflags -I./gc/include"

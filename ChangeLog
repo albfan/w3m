@@ -1,3 +1,8 @@
+2001-12-20  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* w3m 0.2.3 release condidate 3
+	* configure (use_bundled_gclib): added
+
 2001-12-20  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
 
 	* w3m 0.2.3 release candidate 2
