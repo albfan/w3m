@@ -1,3 +1,9 @@
+2003-06-13  Hiroyuki Ito <hito@crl.go.jp>
+
+	* [w3m-dev 03913] fix gif animation support
+	* w3mimg/fb/fb_gdkpixbuf.c (fb_image_load): fix gif animation
+	* w3mimg/x11/x11_w3mimg.c (x11_load_image): ditto
+
 2003-05-15  Akinori Ito <aito@fw.ipsj.or.jp>
 
 	* [w3m-dev 03902] Re: table rendering
