@@ -1,3 +1,8 @@
+2003-09-16  Hiroyuki Ito <hito@crl.go.jp>
+
+	* [w3m-dev 03960] 
+	* acinclude.m4 (AC_W3M_CHECK_VER): fix version check logic
+
 2003-08-30  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* [w3m-dev 03958] w3mimgdisplay on jfbterm
