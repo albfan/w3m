@@ -1,3 +1,10 @@
+2003-01-28  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03689] Re: fold patch
+	* fm.h (BufferPos): add bpos
+	* main.c (save_buffer_position): bpos initialize
+		(resetPos): reset bpos
+
 2003-01-26  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03686] Re: fold patch

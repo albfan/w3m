@@ -471,6 +471,7 @@ typedef struct _BufferPos {
     long cur_linenumber;
     int currentColumn;
     int pos;
+    int bpos;
     struct _BufferPos *next;
     struct _BufferPos *prev;
 } BufferPos;
