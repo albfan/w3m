@@ -1,5 +1,23 @@
 2002-11-06  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03377] sync_with_option
+	* etc.c (loadPassword): reset passwords
+	* form.c (loadPreForm): reset PreForm
+	* main.c (option_assigned): deleted
+		(parse_proxy): deleted
+		(MAIN): move initCookie(), setLocalCookie() 
+			  after sync_with_option()
+			delete parseURL for *_proxy
+			s/WrapSearch/WrapDefault/
+			move initKeymap(), initMenu() after setupscreen()
+			sync_with_option() after init_rc()
+	* rc.c (pre_form_file): move in params9 (network settting)
+		(sync_with_option): initKeymap(), initMenu() is done
+				if fmInitialized
+		(init_rc): delete sync_with_option()
+
+2002-11-06  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03375] NULL check of CurrentTab
 	* display.c (disp_message_nsec): check CurrentTab
 	* file.c (doExternal): check CurrentTab

@@ -735,11 +735,10 @@ loadPreForm(void)
     struct pre_form *pf = NULL;
     struct pre_form_item *pi = NULL;
 
+    PreForm = NULL;
     fp = openSecretFile(pre_form_file);
-    if (fp == NULL) {
-	PreForm = NULL;
+    if (fp == NULL)
 	return;
-    }
     while (1) {
 	int type = 0;
 	char *p, *s, *arg;

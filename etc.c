@@ -1076,6 +1076,8 @@ void
 loadPasswd(void)
 {
     FILE *fp;
+
+    passwords = NULL;
     fp = openSecretFile(passwd_file);
     if (fp != NULL) {
 	parsePasswd(fp, 0);
