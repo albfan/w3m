@@ -581,7 +581,7 @@ extern char *etcFile(char *base);
 extern char *auxbinFile(char *base);
 extern char *libFile(char *base);
 extern char *helpFile(char *base);
-extern void setLocalCookie(void);
+extern Str localCookie(void);
 extern Str loadLocalDir(char *dirname);
 extern void set_environ(char *var, char *value);
 extern FILE *localcgi_post(char *, char *, FormList *, char *);

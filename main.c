@@ -369,8 +369,6 @@ main(int argc, char **argv, char **envp)
     prepare_sys_errlist();
 #endif				/* not HAVE_SYS_ERRLIST */
 
-    srand48(time(0));
-
     NO_proxy_domains = newTextList();
     fileToDelete = newTextList();
 
@@ -742,7 +740,6 @@ main(int argc, char **argv, char **envp)
 #ifdef USE_COOKIE
     initCookie();
 #endif				/* USE_COOKIE */
-    setLocalCookie();		/* setup cookie for local CGI */
 #ifdef USE_HISTORY
     if (UseHistory)
 	loadHistory(URLHist);
@@ -4009,7 +4006,7 @@ adBmark(void)
     FormList *request;
 
     tmp = Sprintf("mode=panel&cookie=%s&bmark=%s&url=%s&title=%s",
-		  (Str_form_quote(Local_cookie))->ptr,
+		  (Str_form_quote(localCookie()))->ptr,
 		  (Str_form_quote(Strnew_charp(BookmarkFile)))->ptr,
 		  (Str_form_quote(parsedURL2Str(&Currentbuf->currentURL)))->
 		  ptr,

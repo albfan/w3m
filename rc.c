@@ -1458,7 +1458,7 @@ Buffer *
 load_option_panel(void)
 {
     Str src = Sprintf(optionpanel_src1, html_quote(w3m_version),
-		      html_quote(Local_cookie->ptr), CMT_HELPER);
+		      html_quote(localCookie()->ptr), CMT_HELPER);
     struct param_ptr *p;
     struct sel_c *s;
     int x, i;
