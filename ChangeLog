@@ -1,3 +1,11 @@
+2002-07-12  WATANABE Katsuyuki <katsuyuki_1.watanabe@toppan.co.jp>
+
+	* [w3m-dev 03255] update cygwin info
+	* doc-jp/README: update
+	* doc/README: update
+	* doc-jp/README.cygwin: deleted
+	* doc/README.cygwin: deleted
+
 2002-07-10  SAKAI Kiyotaka <ksakai@kso.netwk.ntt-at.co.jp>
 
 	* [w3m-dev 03240] doc-jp update
