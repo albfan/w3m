@@ -89,7 +89,7 @@ unshiftHist(Hist *hist, char *ptr)
 
     if (hist == NULL || hist->list == NULL)
 	return NULL;
-    item = (HistItem *)newListItem((void *)allocStr(ptr, 0),
+    item = (HistItem *)newListItem((void *)allocStr(ptr, -1),
 				   (ListItem *)hist->list->first, NULL);
     if (hist->list->first)
 	hist->list->first->prev = item;
@@ -107,7 +107,7 @@ pushHist(Hist *hist, char *ptr)
 
     if (hist == NULL || hist->list == NULL)
 	return NULL;
-    item = (HistItem *)newListItem((void *)allocStr(ptr, 0),
+    item = (HistItem *)newListItem((void *)allocStr(ptr, -1),
 				   NULL, (ListItem *)hist->list->last);
     if (hist->list->last)
 	hist->list->last->next = item;

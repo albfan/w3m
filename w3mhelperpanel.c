@@ -46,7 +46,7 @@ extractMailcapEntry(char *mcap_entry, char **type, char **cmd)
 	j++;
     while (mcap_entry[j] && IS_SPACE(mcap_entry[j]))
 	j++;
-    *cmd = allocStr(&mcap_entry[j], 0);
+    *cmd = allocStr(&mcap_entry[j], -1);
 }
 
 static void

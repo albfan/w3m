@@ -640,7 +640,7 @@ lastFileName(char *path)
 	p++;
     }
 
-    return allocStr(q, 0);
+    return allocStr(q, -1);
 }
 
 #ifndef HAVE_BCOPY
@@ -704,7 +704,7 @@ mybasename(char *s)
 	p++;
     else
 	p = s;
-    return allocStr(p, 0);
+    return allocStr(p, -1);
 }
 
 char *
@@ -1518,7 +1518,7 @@ FQDN(char *host)
     if (!(entry = gethostbyname(host)))
 	return NULL;
 
-    return allocStr(entry->h_name, 0);
+    return allocStr(entry->h_name, -1);
 #else				/* INET6 */
     for (af = ai_family_order_table[DNS_order];; af++) {
 	int error;

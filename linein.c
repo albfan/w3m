@@ -293,7 +293,7 @@ inputLineHist(char *prompt, char *def_str, int flag, Hist *hist)
     if (flag & IN_FILENAME)
 	return expandName(p);
     else
-	return allocStr(p, 0);
+	return allocStr(p, -1);
 }
 
 #ifdef __EMX__

@@ -64,7 +64,7 @@ dirBuffer(char *dname)
     flist = New_N(char *, nfile_max);
     nfile = 0;
     while ((dir = readdir(d)) != NULL) {
-	flist[nfile++] = allocStr(dir->d_name, 0);
+	flist[nfile++] = allocStr(dir->d_name, -1);
 	if (nfile == nfile_max) {
 	    nfile_max *= 2;
 	    flist = New_Reuse(char *, flist, nfile_max);

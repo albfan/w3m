@@ -107,7 +107,8 @@ all-scripts:
 install-scripts: all-scripts
 	for dir in $(SCRIPTSUBDIRS);	\
 	do	\
-		(cd $$dir; $(MAKE) PERL='$(PERL)' BIN_DIR='$(BIN_DIR)' LIB_DIR='$(LIB_DIR)' HELP_DIR='$(HELP_DIR)' DESTDIR='$(DESTDIR)' INSTALL='sh $(PWD)/install.sh' install);	\
+		TOPDIR=`pwd`; \
+		(cd $$dir; $(MAKE) PERL='$(PERL)' BIN_DIR='$(BIN_DIR)' LIB_DIR='$(LIB_DIR)' HELP_DIR='$(HELP_DIR)' DESTDIR='$(DESTDIR)' INSTALL="sh $$TOPDIR/install.sh" install);	\
 	done
 
 uninstall:

@@ -39,7 +39,7 @@ typedef struct _textlist {
 } TextList;
 
 #define newTextList() ((TextList *)newGeneralList())
-#define pushText(tl, s) pushValue((GeneralList *)(tl), (void *)allocStr((s)?(s):"",0))
+#define pushText(tl, s) pushValue((GeneralList *)(tl), (void *)allocStr((s)?(s):"",-1))
 #define popText(tl) ((char *)popValue((GeneralList *)(tl)))
 #define rpopText(tl) ((char *)rpopValue((GeneralList *)(tl)))
 #define appendTextList(tl, tl2) ((TextList *)appendGeneralList((GeneralList *)(tl), (GeneralList *)(tl2)))

@@ -782,7 +782,7 @@ record_err_message(char *s)
 	    message_list = newGeneralList();
 	if (message_list->nitem >= LINES)
 	    popValue(message_list);
-	pushValue(message_list, allocStr(s, 0));
+	pushValue(message_list, allocStr(s, -1));
     }
 }
 

@@ -248,7 +248,7 @@ addKeyList(KeyList *list, int key, char *data)
     if (data == NULL || *data == '\0')
 	data = NULL;
     else
-	data = allocStr(data, 0);
+	data = allocStr(data, -1);
     item = searchKeyList(list, key);
     if (item == NULL) {
 	if (data == NULL)

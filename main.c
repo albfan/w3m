@@ -2448,7 +2448,7 @@ gotoLabel(char *label)
     copyBuffer(buf, Currentbuf);
     for (i = 0; i < MAX_LB; i++)
 	buf->linkBuffer[i] = NULL;
-    buf->currentURL.label = allocStr(label, 0);
+    buf->currentURL.label = allocStr(label, -1);
     pushHashHist(URLHist, parsedURL2Str(&buf->currentURL)->ptr);
     (*buf->clone)++;
     pushBuffer(buf);
@@ -4619,17 +4619,17 @@ searchKeyData(void)
     KeyListItem *item;
 
     if (CurrentKeyData != NULL && *CurrentKeyData != '\0')
-	return allocStr(CurrentKeyData, 0);
+	return allocStr(CurrentKeyData, -1);
 #ifdef USE_MENU
     if (CurrentMenuData != NULL && *CurrentMenuData != '\0')
-	return allocStr(CurrentMenuData, 0);
+	return allocStr(CurrentMenuData, -1);
 #endif
     if (CurrentKey < 0)
 	return NULL;
     item = searchKeyList(&w3mKeyList, CurrentKey);
     if (item == NULL || item->data == NULL || *item->data == '\0')
 	return NULL;
-    return allocStr(item->data, 0);
+    return allocStr(item->data, -1);
 }
 
 static int
