@@ -1,3 +1,26 @@
+2002-07-30  Hiroyuki Ito <hito@crl.go.jp>
+
+	* [w3m-dev 03282] Re: w3m-img for framebuffer update
+	* w3mimg/fb/fb.c (fb_image_new): ignore no image
+					calloc multiple images
+			(fb_image_fill): added
+			(fb_image_draw): width, height fix
+			(fb_image_rotate): fix typo
+			(fb_image_copy): added
+			(fb_frame_new): added
+			(fb_freme_free): added
+			(fb_frame_rotate): added
+	* w3mimg/fb/fb.h (FB_IMAGE): add num, id, delay
+			(fb_frame_new): added
+			(fb_frame_free): added
+			(fb_frame_rotate): added
+	* w3mimg/fb/fb_gdkpixbuf.c (get_image_size): animation support
+			(fb_image_load): animation support
+			(draw): add bg, x, y, w, h args
+	* w3mimg/fb/fb_img.h (fb_image_load): return FB_IMAGE**
+	* w3mimg/fb/fb_imlib2.c (fb_image_load): return FB_IMAGE**
+	* w3mimg/fb/fb_w3mimg.c (w3mfb_show_image): animation support
+
 2002-07-23  Hiroyuki Ito <hito@crl.go.jp>
 
 	* [w3m-dev 03280] w3m-img without w3mimgsize
