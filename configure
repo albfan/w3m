@@ -2502,6 +2502,9 @@ $def_ipv6_ss_family
 
 #if defined( __CYGWIN__ )
 #define SUPPORT_NETBIOS_SHARE 1
+#if LANG == JA
+#define SUPPORT_WIN9X_CONSOLE_MBCS 1
+#endif
 #endif
 
 #if defined(__DJGPP__)

@@ -1142,6 +1142,14 @@ mMouse(char c)
     int btn, x, y;
 
     btn = (unsigned char)getch() - 32;
+#if defined(__CYGWIN__)
+    if (cygwin_mouse_btn_swapped) {
+	if (btn == MOUSE_BTN2_DOWN)
+	    btn = MOUSE_BTN3_DOWN;
+	else if (btn == MOUSE_BTN3_DOWN)
+	    btn = MOUSE_BTN2_DOWN;
+    }
+#endif
     x = (unsigned char)getch() - 33;
     if (x < 0)
 	x += 0x100;

@@ -40,6 +40,13 @@ extern int LINES, COLS;
 
 #ifdef __CYGWIN__
 extern int is_xterm;
+extern int cygwin_mouse_btn_swapped;
+#ifdef SUPPORT_WIN9X_CONSOLE_MBCS
+void enable_win9x_console_input(void);
+void disable_win9x_console_input(void);
+#endif
+#define NEED_CYGWIN_ON	(1<<2)
+#define NEED_CYGWIN_OFF	(1<<3)
 #endif
 #define NEED_XTERM_ON	(1)
 #define NEED_XTERM_OFF	(1<<1)
