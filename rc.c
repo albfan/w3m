@@ -1370,8 +1370,7 @@ load_option_panel(void)
 			       (x ? " checked" : ""),
 			       ">YES&nbsp;&nbsp;<input type=radio name=",
 			       p->name,
-			       " value=0",
-			       (x ? "" : " checked"), ">NO", NULL);
+			       " value=0", (x ? "" : " checked"), ">NO", NULL);
 		break;
 	    case PI_SEL_C:
 		tmp = to_str(p);

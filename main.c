@@ -5151,10 +5151,8 @@ reinit()
     }
 #endif
 
-    disp_err_message(
-	Sprintf("Don't know how to reinitialize '%s'", resource)->ptr,
-	FALSE
-    );
+    disp_err_message(Sprintf("Don't know how to reinitialize '%s'", resource)->
+		     ptr, FALSE);
 }
 
 void
