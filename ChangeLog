@@ -1,5 +1,9 @@
 2003-02-11  Fumitoshi UKAI  <ukai@debian.or.jp>
 
+	* version.c.in: cvs version
+
+2003-02-11  Fumitoshi UKAI  <ukai@debian.or.jp>
+
 	* 0.4 release candidate 1
         * version.c.in: update
 
