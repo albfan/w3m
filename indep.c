@@ -48,8 +48,12 @@ currentdir()
 {
     char *path;
 #ifdef HAVE_GETCWD
+#ifdef MAXPATHLEN
     path = NewAtom_N(char, MAXPATHLEN);
     getcwd(path, MAXPATHLEN);
+#else
+    path = getcwd(NULL, 0);
+#endif
 #else				/* not HAVE_GETCWD */
 #ifdef HAVE_GETWD
     path = NewAtom_N(char, 1024);
