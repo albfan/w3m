@@ -1,3 +1,11 @@
+2003-07-09  Hiroyuki Ito <hito@crl.go.jp>
+
+	* [w3m-dev 03935] Re: clear image
+	* w3mimg/fb/fb.c (fb_get_packed_color): added
+		(fb_image_pset): use fb_get_packed_color
+		(fb_image_fill): use fb_get_packed_color
+		(fb_clear): use tmp to store pixels
+
 2003-07-09  ABE Yuji <cbo46560@pop12.odn.ne.jp>
 
 	* [w3m-dev 03934] Re: clear image
