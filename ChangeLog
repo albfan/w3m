@@ -1,5 +1,11 @@
 2002-10-26  Fumitoshi UKAI  <ukai@debian.or.jp>
 
+	* [w3m-dev-en 00781] "Clemens Fischer" <ino-waiting@gmx.net>
+	  zope doesn't recognize implied *LWS in accept-language
+	* rc.c (sync_with_option): remove optional LWS
+
+2002-10-26  Fumitoshi UKAI  <ukai@debian.or.jp>
+
 	* [w3m-dev-en 00780] "Carlo E. Prelz" <fluido@fluido.as>
 	  always print on screen the relative position
 	* display.c (displayBuffer): relative position
