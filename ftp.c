@@ -196,7 +196,11 @@ ftp_pasv(FTP ftp)
     if (getpeername(fileno(ftp->wf),
 		    (struct sockaddr *)&sockaddr, &sockaddrlen) < 0)
 	return -1;
+#ifdef HAVE_OLD_SS_FAMILY
+    family = sockaddr.__ss_family;
+#else
     family = sockaddr.ss_family;
+#endif
 #else
     family = AF_INET;
 #endif
