@@ -45,7 +45,7 @@ fb_image_load(char *filename, int w, int h, int max_anim)
     fh = gdk_pixbuf_animation_get_height(animation);
     n = gdk_pixbuf_animation_get_num_frames(animation);
     if (max_anim > 0) {
-     n = (max_anim > n)? n : max_anim;
+	n = (max_anim > n) ? n : max_anim;
     }
     if (w < 1 || h < 1) {
 	w = fw;
