@@ -150,7 +150,7 @@ fversion(FILE * f)
 #ifdef USE_GOPHER
 	    ",gopher"
 #endif
-#ifdef USE_INET6
+#ifdef INET6
 	    ",ipv6"
 #endif
 #ifdef USE_ALARM
