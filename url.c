@@ -994,7 +994,7 @@ parseURL2(char *url, ParsedURL *pu, ParsedURL *current)
 	    }
 	}
 	return;
-    }n
+    }
     if (pu->scheme == SCM_LOCAL)
 	pu->file = file_quote(expandName(file_unquote(pu->file)));
 
