@@ -2009,7 +2009,7 @@ list_menu(Buffer *buf)
 	    else if (two)
 		label[n] = Sprintf("%c%c: %s", lmKeys2[n / nlmKeys],
 				   lmKeys[n % nlmKeys], t)->ptr;
-	    else 
+	    else
 		label[n] = Sprintf("%c: %s", lmKeys[n], t)->ptr;
 	    ap[n] = a;
 	    n++;

@@ -643,8 +643,8 @@ link_list_panel(Buffer *buf)
 	for (i = 0; i < al->nanchor; i++) {
 	    a = &al->anchors[i];
 	    if (a->slave)
-	        continue;
-            parseURL2(a->url, &pu, baseURL(buf));
+		continue;
+	    parseURL2(a->url, &pu, baseURL(buf));
 	    u = html_quote(parsedURL2Str(&pu)->ptr);
 	    t = getAnchorText(buf, al, a);
 	    t = t ? html_quote(t) : "";
@@ -660,8 +660,8 @@ link_list_panel(Buffer *buf)
 	for (i = 0; i < al->nanchor; i++) {
 	    a = &al->anchors[i];
 	    if (a->slave)
-	        continue;
-            parseURL2(a->url, &pu, baseURL(buf));
+		continue;
+	    parseURL2(a->url, &pu, baseURL(buf));
 	    u = html_quote(parsedURL2Str(&pu)->ptr);
 	    t = (a->title && *a->title) ? html_quote(a->title) :
 		html_quote(a->url);

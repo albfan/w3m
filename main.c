@@ -4178,7 +4178,7 @@ linkMn(void)
 }
 
 static void
-anchorMn(Anchor * (*menu_func) (Buffer *), int go)
+anchorMn(Anchor *(*menu_func) (Buffer *), int go)
 {
     Anchor *a;
     BufferPoint *po;
@@ -4230,7 +4230,7 @@ linkLst(void)
     if (buf != NULL) {
 #ifdef JP_CHARSET
 	buf->document_code = Currentbuf->document_code;
-#endif                          /* JP_CHARSET */
+#endif				/* JP_CHARSET */
 	cmd_loadBuffer(buf, BP_NORMAL, LB_NOLINK);
     }
 }
