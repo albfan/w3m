@@ -286,13 +286,11 @@ getescapechar(char **str)
 		*str = p;
 		return -1;
 	    }
-	    q = p;
-	    for (p++; IS_XDIGIT(*p); p++) ;
-	    q = allocStr(q, p - q);
+	    for (dummy = GET_MYCDIGIT(*p), p++; IS_XDIGIT(*p); p++)
+		dummy = dummy * 0x10 + GET_MYCDIGIT(*p);
 	    if (*p == ';')
 		p++;
 	    *str = p;
-	    sscanf(q, "%x", &dummy);
 	    return dummy;
 	}
 	else {
@@ -300,13 +298,11 @@ getescapechar(char **str)
 		*str = p;
 		return -1;
 	    }
-	    q = p;
-	    for (p++; IS_DIGIT(*p); p++) ;
-	    q = allocStr(q, p - q);
+	    for (dummy = GET_MYCDIGIT(*p), p++; IS_DIGIT(*p); p++)
+		dummy = dummy * 10 + GET_MYCDIGIT(*p);
 	    if (*p == ';')
 		p++;
 	    *str = p;
-	    sscanf(q, "%d", &dummy);
 	    return dummy;
 	}
     }
