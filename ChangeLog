@@ -1,3 +1,8 @@
+2002-12-03  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03505] Re: coredump when ssl error
+	* file.c (loadGeneralFile): term_raw(), SIGINT before retry
+
 2002-12-03  AIDA Shinra <aida-s@jcom.home.ne.jp>
 
 	* [w3m-dev 03504] coredump when ssl error
