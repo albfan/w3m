@@ -484,7 +484,8 @@ visible_length(char *str)
 	    Strcat_char(tagbuf, *str);
 	}
 	else if (status == R_ST_TAG || status == R_ST_DQUOTE
-		 || status == R_ST_QUOTE || status == R_ST_EQL) {
+		 || status == R_ST_QUOTE || status == R_ST_EQL
+		 || status == R_ST_VALUE) {
 	    Strcat_char(tagbuf, *str);
 	}
 	else if (status == R_ST_AMP) {

@@ -623,10 +623,9 @@ struct readbuffer {
 #define R_ST_NCMNT2 12		/* comment -- */
 #define R_ST_NCMNT3 13		/* comment -- space */
 #define R_ST_IRRTAG 14		/* within irregular tag */
+#define R_ST_VALUE  15		/* within tag attribule value */
 
-#define ST_IS_REAL_TAG(s)   ((s)==R_ST_TAG||(s)==R_ST_TAG0||(s)==R_ST_EQL)
-#define ST_IS_COMMENT(s)    ((s)>=R_ST_CMNT1)
-#define ST_IS_TAG(s)        ((s)!=R_ST_NORMAL&&(s)!=R_ST_AMP&&!ST_IS_COMMENT(s)&&(s)!=R_ST_EOL)
+#define ST_IS_REAL_TAG(s)   ((s)==R_ST_TAG||(s)==R_ST_TAG0||(s)==R_ST_EQL||(s)==R_ST_VALUE)
 
 /* is this '<' really means the beginning of a tag? */
 #define REALLY_THE_BEGINNING_OF_A_TAG(p) \
