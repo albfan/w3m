@@ -781,9 +781,9 @@ read_token(Str buf, char **instr, int *status, int pre, int append)
 	    }
 	    if (*status == R_ST_TAG0 && !REALLY_THE_BEGINNING_OF_A_TAG(p)) {
 		/* it seems that this '<' is not a beginning of a tag */
-/*
-		Strcat_charp(buf, "&lt;");
-*/
+		/*
+		 * Strcat_charp(buf, "&lt;");
+		 */
 		Strcat_char(buf, '<');
 		*status = R_ST_NORMAL;
 	    }

@@ -5447,8 +5447,7 @@ HTMLlineproc0(char *str, struct html_feed_environ *h_env, int internal)
     while (*str != '\0') {
 	int is_tag = FALSE;
 	int pre_mode = (obuf->table_level >= 0) ?
-		       tbl_mode->pre_mode & TBLM_PLAIN :
-		       obuf->flag & RB_PLAINMODE;
+	    tbl_mode->pre_mode & TBLM_PLAIN : obuf->flag & RB_PLAINMODE;
 
 	if (obuf->flag & RB_PLAIN)
 	    goto read_as_plain;	/* don't process tag */
@@ -5519,7 +5518,7 @@ HTMLlineproc0(char *str, struct html_feed_environ *h_env, int internal)
 	    q = h_env->tagbuf->ptr;
 	}
 
-    read_as_pre_mode:
+      read_as_pre_mode:
 	if (obuf->flag & (RB_INTXTA | RB_INSELECT | RB_IGNORE)) {
 	    cmd = HTML_UNKNOWN;
 	    if (!is_tag) {
