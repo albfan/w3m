@@ -41,12 +41,13 @@
 #include "funcname1.h"
 #include "terms.h"
 
-#ifdef NOBCOPY
+#ifndef HAVE_BCOPY
 void bcopy(void *, void *, int);
 void bzero(void *, int);
-#else				/* not NOBCOPY */
-#include <string.h>
-#endif				/* not NOBCOPY */
+#endif				/* HAVE_BCOPY */
+#ifdef __EMX__
+#include <strings.h>	/* for bzero() and bcopy() */
+#endif
 
 #ifdef MAINPROGRAM
 #define global
@@ -229,7 +230,7 @@ extern int REV_LB[];
 #define free(x)  GC_free(x)	/* let GC do it. */
 
 #ifdef __EMX__
-#define STRCASECMP
+#define HAVE_STRCASECMP
 #define strcasecmp	stricmp
 #define strncasecmp	strnicmp
 #endif				/* __EMX__ */

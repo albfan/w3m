@@ -6,10 +6,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
-#ifdef __EMX__
-#include <strings.h>
-#endif				/* __EMX__ */
-
 #include "fm.h"
 #include "html.h"
 #include "parsetagx.h"

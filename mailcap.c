@@ -5,9 +5,6 @@
 #include <errno.h>
 #include "parsetag.h"
 #include "local.h"
-#ifdef __EMX__
-#include <strings.h>        /* for bzero() */
-#endif                /* __EMX__ */
 
 static struct mailcap DefaultMailcap[] =
 {

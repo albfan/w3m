@@ -2,9 +2,6 @@
 #include "fm.h"
 #include "istream.h"
 #include <signal.h>
-#ifdef __EMX__
-#include <strings.h>        /* for bzero() */
-#endif                /* __EMX__ */
 
 #define	uchar		unsigned char
 

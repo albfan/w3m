@@ -12,10 +12,6 @@
 #include "fm.h"
 #include "html.h"
 
-#ifdef __EMX__
-#include <strings.h>
-#endif
-
 #ifdef USE_COOKIE
 #include <time.h>
 #include "local.h"

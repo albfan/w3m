@@ -1,8 +1,4 @@
 /* $Id$ */
-#ifdef __EMX__
-#include <strings.h>
-#endif
-
 #include "fm.h"
 #include "myctype.h"
 #include "regex.h"

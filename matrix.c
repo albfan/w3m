@@ -50,9 +50,9 @@
 #define SWAPD(a,b) { double tmp = a; a = b; b = tmp; }
 #define SWAPI(a,b) { int tmp = a; a = b; b = tmp; }
 
-#ifndef NO_FLOAT_H
+#ifdef HAVE_FLOAT_H
 #include <float.h>
-#endif				/* not NO_FLOAT_H */
+#endif				/* not HAVE_FLOAT_H */
 #if defined(DBL_MAX)
 static double Tiny = 10.0 / DBL_MAX;
 #elif defined(FLT_MAX)

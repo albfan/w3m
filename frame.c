@@ -4,9 +4,6 @@
 #include "myctype.h"
 #include <signal.h>
 #include <setjmp.h>
-#ifdef __EMX__
-#include <strings.h>        /* for bzero() and bcopy() */
-#endif                /* __EMX__ */
 
 #ifdef KANJI_SYMBOLS
 #define RULE_WIDTH 2
