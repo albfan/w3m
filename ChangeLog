@@ -6,6 +6,11 @@
 	* doc-jp/README: ditto
 	* NEWS: update
 
+2002-01-31  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 02960] inflate without memmove()
+	* inflate.c: rewrite without memmove()
+
 2002-01-31  Kiyokazu SUTO <suto@ks-and-ks.ne.jp>
 
 	* inflate.c: support raw deflate without zlib header
