@@ -1,3 +1,8 @@
+2003-01-16  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* file.c (loadGopherDir): convertLine RAW_MODE
+	* ftp.c (loadFTPDir): ditto
+
 2003-01-16  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03642] Re: cleanup (don't close connection of news server)

@@ -4414,7 +4414,7 @@ vwSrc(void)
     }
     else if (Currentbuf->real_scheme == SCM_LOCAL &&
 	     !(Currentbuf->real_type &&
-	      !strcasecmp(Currentbuf->real_type, "local:directory"))) {
+	       !strcasecmp(Currentbuf->real_type, "local:directory"))) {
 	fn = Currentbuf->filename;
     }
     else {
