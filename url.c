@@ -1204,7 +1204,12 @@ otherinfo(ParsedURL *target, ParsedURL *current, char *referer)
 
     if (target->host) {
 	Strcat_charp(s, "Host: ");
-	Strcat_charp(s, target->host);
+#ifdef INET6
+	if (strchr(target->host, ':') != NULL)
+	    Strcat(s, Sprintf("[%s]", target->host));
+	else
+#endif
+	    Strcat_charp(s, target->host);
 	if (target->port != DefaultPort[target->scheme])
 	    Strcat(s, Sprintf(":%d", target->port));
 	Strcat_charp(s, "\r\n");
