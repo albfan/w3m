@@ -68,6 +68,7 @@ MOVE_RIGHT1    movR1
 MOVE_UP		movU
 MOVE_UP1       movU1
 MSGS		msgs
+MULTIMAP	multimap
 NEW_TAB		newT
 NEXT		nextBf
 NEXT_DOWN      nextD

@@ -1,5 +1,22 @@
 2002-12-04  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03515] 2 stroke keybinding
+	* func.c (setKeymap): add map
+				K_MULTI support
+		(getKey2): added
+		(getKey): rewrite to use getKey2()
+	* func.h (K_MULTI): added
+		(MULTI_KEY): added
+	* funcname.tab (MULTIMAP): added
+	* main.c (escKeyProc): added
+		(escmap): rewrite to use escKeyProc()
+		(escbmap): rewrite to use escKeyProc()
+		(escdmap): rewrite to use escKeyProc()
+		(multimap): added
+	* proto.h (multimap): added
+
+2002-12-04  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03514] Effect of tab title
 	* display.c (redrawNLine): rewrite, do without clrtoeolx()
 
