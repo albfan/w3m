@@ -1,5 +1,21 @@
 2003-02-27  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03784] ftp directory support
+	* ftp.c (AbortLoading): added
+		(KeyAbort): added
+		(openFTPStream): remove '~' in realpathname?
+		(loadFTPDir): remove '~' in realpathname?
+			keyabort
+			new ex_ftpdir_name_size_date()
+			add symlink information to flist
+		(XD_CTOD): deleted
+		(EX_COUNT_DIGIT): added
+		(ex_ftpdir_name_size_date): add **link
+			accept device file
+			loose date check for localized server
+
+2003-02-27  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03783] pipe to "command1 | command2"
 	* etc.c (myExtCommand): redirect to subshell
 	* main.c (pipeBuf): conv_to_system(cmd)
