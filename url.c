@@ -1474,12 +1474,6 @@ init_stream(URLFile *uf, int scheme, InputStream stream)
     uf->modtime = -1;
 }
 
-static InputStream
-openFTPStream(ParsedURL *pu, URLFile *uf)
-{
-    return newFileStream(openFTP(pu, uf), closeFTP);
-}
-
 URLFile
 openURL(char *url, ParsedURL *pu, ParsedURL *current,
 	URLOption *option, FormList *request, TextList *extra_header,

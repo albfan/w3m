@@ -233,10 +233,10 @@ extern Line *getNextPage(Buffer *buf, int plen);
 extern int save2tmp(URLFile uf, char *tmpf);
 extern int doExternal(URLFile uf, char *path, char *type, Buffer **bufp,
 		      Buffer *defaultbuf);
-extern void _doFileCopy(char *tmpf, char *defstr, int download);
+extern int _doFileCopy(char *tmpf, char *defstr, int download);
 #define doFileCopy(tmpf, defstr) _doFileCopy(tmpf, defstr, FALSE);
-extern void doFileMove(char *tmpf, char *defstr);
-extern void doFileSave(URLFile uf, char *defstr);
+extern int doFileMove(char *tmpf, char *defstr);
+extern int doFileSave(URLFile uf, char *defstr);
 extern int checkCopyFile(char *path1, char *path2);
 extern int checkSaveFile(InputStream stream, char *path);
 extern int checkOverWrite(char *path);
@@ -505,10 +505,10 @@ extern Str unquote_mailcap(char *qstr, char *type, char *name, char *attr,
 extern char *guessContentType(char *filename);
 extern TextList *make_domain_list(char *domain_list);
 extern int check_no_proxy(char *domain);
-extern FILE *openFTP(ParsedURL *pu, URLFile *uf);
+extern InputStream openFTPStream(ParsedURL *pu, URLFile *uf);
 extern Str readFTPDir(ParsedURL *pu);
-extern void closeFTP(FILE * f);
-extern int Ftpfclose(FILE * f);
+extern void closeFTP(void);
+extern void disconnectFTP(void);
 #ifdef USE_NNTP
 extern InputStream openNewsStream(ParsedURL *pu);
 extern Str readNewsgroup(ParsedURL *pu);

@@ -5473,6 +5473,7 @@ w3m_exit(int i)
 #ifdef USE_SSL
     free_ssl_ctx();
 #endif
+    disconnectFTP();
 #ifdef USE_NNTP
     disconnectNews();
 #endif
