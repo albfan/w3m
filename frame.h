@@ -15,9 +15,7 @@ struct frame_element {
 struct frame_body {
     char attr;
     char flags;
-#define	FB_NOCACHE	0x01
-#define	FB_TODELETE	0x02
-#define	FB_NO_BUFFER	0x04
+#define	FB_NO_BUFFER	0x01
     char *name;
     char *url;
     ParsedURL *baseURL;
