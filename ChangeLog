@@ -1,3 +1,8 @@
+2003-10-20  ABE Yuji <cbo46560@pop12.odn.ne.jp>
+
+	* [w3m-dev 04002] Re: function and w3m-control
+	* url.c (getURLScheme): accept numeric in scheme
+
 2003-10-18  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* [w3m-dev 03996] HELP_DIR and funcname.tab

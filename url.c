@@ -1238,7 +1238,7 @@ getURLScheme(char **url)
     int i;
     int scheme = SCM_MISSING;
 
-    while (*p && (IS_ALPHA(*p) || *p == '.' || *p == '+' || *p == '-'))
+    while (*p && (IS_ALNUM(*p) || *p == '.' || *p == '+' || *p == '-'))
 	p++;
     if (*p == ':') {		/* scheme found */
 	scheme = SCM_UNKNOWN;
