@@ -217,11 +217,13 @@ decodeWord(char **ow)
 	goto convert_fail;
     w++;
     p = w;
-    switch (toupper(method)) {
+    switch (method) {
     case 'B':
+    case 'b':
 	a = decodeB(&w);
 	break;
     case 'Q':
+    case 'q':
 	a = decodeQ(&w);
 	break;
     default:

@@ -1,3 +1,7 @@
+2002-12-22  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* mimehead.c (decodeWord): don't use toupper() (requires ctype.h)
+
 2002-12-22  ABE Yuji <cbo46560@pop12.odn.ne.jp>
 
 	* [w3m-dev 03594] mime decode with encoding named 'b' & 'q'
