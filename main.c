@@ -383,6 +383,7 @@ main(int argc, char **argv, char **envp)
     wc_ces CodePage;
 #endif
 #endif
+    GC_init();
     setlocale(LC_ALL, "");
     bindtextdomain(PACKAGE, LOCALEDIR);
     textdomain(PACKAGE);
