@@ -207,7 +207,8 @@ fusage(FILE * f, int err)
 #ifdef USE_COLOR
     fprintf(f, "    -M               monochrome display\n");
 #endif				/* USE_COLOR */
-    fprintf(f, "    -N               open URL of command line on each new tab\n");
+    fprintf(f,
+	    "    -N               open URL of command line on each new tab\n");
     fprintf(f, "    -F               automatically render frame\n");
     fprintf(f,
 	    "    -cols width      specify column width (used with -dump)\n");
