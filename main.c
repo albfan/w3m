@@ -4153,10 +4153,8 @@ adBmark(void)
 #ifdef USE_M17N
 #if LANG == JA
 		  /* FIXME: why WC_CES_EUC_JP hardcoded? 
-		   *   It should be SystemCharset, that is, we don't
-		   *   need if LANG==JA here.
-		   *   For example, Cygwin environment, it should be
-		   *   WC_CES_SHIFT_JIS, shouldn't it? - ukai
+		   *  backward compatibility.
+		   *  w3mbookmark takes arguments as EUC-JP only?
 		   */
 		  (Str_form_quote(wc_conv_strict(Currentbuf->buffername,
 						 InnerCharset,
