@@ -229,7 +229,6 @@ extern void cursorHome(Buffer *buf);
 extern void arrangeCursor(Buffer *buf);
 extern void arrangeLine(Buffer *buf);
 extern void cursorXY(Buffer *buf, int x, int y);
-extern int arg_is(char *str, char *tag);
 extern int columnSkip(Buffer *buf, int offset);
 extern int columnPos(Line *line, int column);
 extern Line *lineSkip(Buffer *buf, Line *line, int offset, int last);
