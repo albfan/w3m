@@ -386,10 +386,8 @@ struct param_ptr params1[] = {
      NULL},
     {"ignore_null_img_alt", P_INT, PI_ONOFF, (void *)&ignore_null_img_alt,
      CMT_IGNORE_NULL_IMG_ALT, NULL},
-#ifdef VIEW_UNSEENOBJECTS
     {"view_unseenobject", P_INT, PI_ONOFF, (void *)&view_unseenobject,
      CMT_VIEW_UNSEENOBJECTS, NULL},
-#endif				/* VIEW_UNSEENOBJECTS */
     {"show_lnum", P_INT, PI_ONOFF, (void *)&showLineNum, CMT_SHOW_NUM, NULL},
     {NULL, 0, 0, NULL, NULL, NULL},
 };
