@@ -140,7 +140,7 @@ for $otherlang (@docdirs) {
 &show_keymap("Hyperlink operation",
 	     split(" ", "followA tabA svA followI svI submitForm
 		curURL peekURL peekIMG pginfo curlno chkURL chkWORD chkNMID
-		rFrame extbrz linkbrz"));
+		rFrame extbrz linkbrz linkMn accessKey"));
 
 &show_keymap("File/Stream operation",
 	     split(" ", "goURL gorURL tabURL tabrURL ldfile readsh pipesh

@@ -3,6 +3,7 @@
 #----------------------------
 @@@		nulcmd
 ABORT		quitfm
+ACCESSKEY	accessKey
 ADD_BOOKMARK	adBmark
 ALARM        setAlarm
 BACK		backBf
@@ -48,6 +49,7 @@ LINE_END	linend
 LINE_INFO	curlno
 LINK_BEGIN	topA
 LINK_END	lastA
+LINK_MENU	linkMn
 LOAD		ldfile
 MAIN_MENU	mainMn
 MARK		_mark

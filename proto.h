@@ -131,6 +131,15 @@ extern void tabrURL(void);
 extern void tabR(void);
 extern void tabL(void);
 extern void ldDL(void);
+#ifdef USE_MENU
+extern void linkMn(void);
+extern LinkList *link_menu(Buffer *buf);
+extern void accessKey(void);
+extern Anchor *accesskey_menu(Buffer *buf);
+#else
+#define linkMn nulcmd
+#define accessKey nulcmd
+#endif
 
 extern int currentLn(Buffer *buf);
 extern void tmpClearBuffer(Buffer *buf);
@@ -500,12 +509,15 @@ extern Str readFTPDir(ParsedURL *pu);
 extern void closeFTP(FILE * f);
 extern int Ftpfclose(FILE * f);
 extern AnchorList *putAnchor(AnchorList *al, char *url, char *target,
-			     Anchor **anchor_return, char *referer, int line,
+			     Anchor **anchor_return, char *referer,
+			     char *title, unsigned char key, int line,
 			     int pos);
 extern Anchor *registerHref(Buffer *buf, char *url, char *target,
-			    char *referer, int line, int pos);
+			    char *referer, char *title, unsigned char key,
+			    int line, int pos);
 extern Anchor *registerName(Buffer *buf, char *url, int line, int pos);
-extern Anchor *registerImg(Buffer *buf, char *url, int line, int pos);
+extern Anchor *registerImg(Buffer *buf, char *url, char *title, int line,
+			   int pos);
 extern Anchor *registerForm(Buffer *buf, FormList *flist,
 			    struct parsed_tag *tag, int line, int pos);
 extern int onAnchor(Anchor *a, int line, int pos);
@@ -527,6 +539,7 @@ extern Anchor *closest_prev_anchor(AnchorList *a, Anchor *an, int x, int y);
 void addMultirowsImg(Buffer *buf, AnchorList *al);
 #endif
 extern HmarkerList *putHmarker(HmarkerList *ml, int line, int pos, int seq);
+extern char *getAnchorText(Buffer *buf, Anchor *a);
 extern Str decodeB(char **ww);
 extern Str decodeQ(char **ww);
 extern Str decodeQP(char **ww);

@@ -348,10 +348,19 @@ displayBuffer(Buffer *buf, int mode)
 #endif
 	{
 	    Anchor *a = retrieveCurrentAnchor(buf);
+	    if (a && a->title && *a->title)
+		s = Sprintf("[%s] ", a->title);
+	    else {
+		Anchor *a_img = retrieveCurrentImg(buf);
+		if (a_img && a_img->title && *a_img->title)
+		    s = Sprintf("[%s]%s", a_img->title, a ? " " : "");
+	    }
 	    if (a) {
 		ParsedURL pu;
 		parseURL2(a->url, &pu, baseURL(buf));
-		s = parsedURL2Str(&pu);
+		if (!s)
+		    s = Strnew();
+		Strcat(s, parsedURL2Str(&pu));
 	    }
 	}
     }
