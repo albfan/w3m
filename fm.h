@@ -460,7 +460,17 @@ typedef struct _Buffer {
     char image_flag;
     char need_reshape;
     Anchor *submit;
+    struct _BufferPos *undo;
 } Buffer;
+
+typedef struct _BufferPos {
+    long top_linenumber;
+    long cur_linenumber;
+    short currentColumn;
+    short pos;
+    struct _BufferPos *next;
+    struct _BufferPos *prev;
+} BufferPos;
 
 typedef struct _TabBuffer {
     struct _TabBuffer *nextTab;

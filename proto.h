@@ -146,6 +146,8 @@ extern Anchor *list_menu(Buffer *buf);
 #define listMn nulcmd
 #define movlistMn nulcmd
 #endif
+extern void undoPos(void);
+extern void redoPos(void);
 
 extern int currentLn(Buffer *buf);
 extern void tmpClearBuffer(Buffer *buf);

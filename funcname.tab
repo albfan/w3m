@@ -105,6 +105,7 @@ PREV_WORD	movLW
 PRINT		svBuf
 QUIT		qquitfm
 READ_SHELL	readsh
+REDO		redoPos
 REDRAW		rdrwSc
 REG_MARK	reMark
 REINIT		reinit
@@ -137,6 +138,7 @@ TAB_LINK	tabA
 TAB_MENU	tabMn
 TAB_MOUSE	tabMs
 TAB_RIGHT	tabR
+UNDO		undoPos
 UP		lup1
 VERSION dispVer
 VIEW		vwSrc
