@@ -407,10 +407,6 @@ extern URLFile openURL(char *url, ParsedURL *pu, ParsedURL *current,
 		       URLOption *option, FormList *request,
 		       TextList *extra_header, URLFile *ouf,
 		       unsigned char *status);
-extern char *guessContentType(char *filename);
-extern TextList *make_domain_list(char *domain_list);
-extern int check_no_proxy(char *domain);
-extern char *filename_extension(char *path, int is_url);
 extern int mailcapMatch(struct mailcap *mcap, char *type);
 extern struct mailcap *searchMailcap(struct mailcap *table, char *type);
 extern void initMailcap();
