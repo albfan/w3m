@@ -1,5 +1,18 @@
 2003-02-01  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03721] PATH_INFO support of local CGI
+	* local.c (CGIFN_DROOT): deleted
+		(CGIFN_LIBDIR): added
+		(CGIFN_MODE): deleted
+		(CGIFN_CONTAIN_SLASH): deleted
+		(check_local_cgi): rewrite
+		(cgi_filename): rewrite
+		(localcgi_post): support PATH_INFO
+	* url.c (openURL): rewrite
+	* Bonus/smb.cgi: use PATH_INFO
+
+2003-02-01  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03720] mark remains
 	* main.c (srchcore): PREC_NUM
 
