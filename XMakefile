@@ -139,7 +139,7 @@ install-core: $(TARGETS)
 	done
 	for file in $(LIB_TARGETS); \
 	do \
-		$(INSTALL_PROGRAM) $$file $(DESTDIR)$(LIB_DIR)/$$file;; \
+		$(INSTALL_PROGRAM) $$file $(DESTDIR)$(LIB_DIR)/$$file; \
 	done
 
 
