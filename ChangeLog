@@ -1,3 +1,9 @@
+2003-04-10  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* [w3m-dev 03870] Re: configure --help
+	* acinclude.m4 (AC_W3M_IMAGE): fix help message
+			(AC_W3M_SSL): fix typo
+
 2003-04-09  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* [w3m-dev 03865] Re: configure --help
