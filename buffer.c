@@ -638,8 +638,7 @@ writeBufferCache(Buffer *buf)
 	    fwrite1(l->width, cache) ||
 	    fwrite1(l->len, cache) ||
 	    fwrite1(l->size, cache) ||
-	    fwrite1(l->bpos, cache) ||
-	    fwrite1(l->bwidth, cache))
+	    fwrite1(l->bpos, cache) || fwrite1(l->bwidth, cache))
 	    goto _error;
 	if (l->bpos == 0) {
 	    if (fwrite(l->lineBuf, 1, l->size, cache) < l->size ||
@@ -708,8 +707,7 @@ readBufferCache(Buffer *buf)
 	    fread1(l->width, cache) ||
 	    fread1(l->len, cache) ||
 	    fread1(l->size, cache) ||
-	    fread1(l->bpos, cache) ||
-	    fread1(l->bwidth, cache))
+	    fread1(l->bpos, cache) || fread1(l->bwidth, cache))
 	    break;
 	if (l->bpos == 0) {
 	    basel = l;
