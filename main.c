@@ -733,6 +733,10 @@ MAIN(int argc, char **argv, char **envp)
 	setupscreen();
 #endif				/* not SIGWINCH */
     }
+#ifdef USE_IMAGE
+    else if (w3m_halfdump && displayImage)
+	activeImage = TRUE;
+#endif
 #ifdef SIGCHLD
     signal(SIGCHLD, sig_chld);
 #endif
