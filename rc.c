@@ -362,6 +362,13 @@ static struct sel_c colorstr[] = {
 };
 #endif				/* USE_COLOR */
 
+static char n_s[][2] = {
+    {'0', 0},
+    {'1', 0},
+    {'2', 0},
+};
+#define N_S(x) (x), n_s[(x)]
+
 #ifdef INET6
 static struct sel_c dnsorders[] = {
     {0, "0", "unspec"},
@@ -373,11 +380,11 @@ static struct sel_c dnsorders[] = {
 
 #ifdef USE_COOKIE
 static struct sel_c badcookiestr[] = {
-    {0, "0", "discard"},
+    {N_S(ACCEPT_BAD_COOKIE_DISCARD), "discard"},
 #if 0
-    {1, "1", "accept"},
+    {N_S(ACCEPT_BAD_COOKIE_ACCEPT), "accept"},
 #endif
-    {2, "2", "ask"},
+    {N_S(ACCEPT_BAD_COOKIE_ASK), "ask"},
     {0, NULL, NULL}
 };
 #endif				/* USE_COOKIE */

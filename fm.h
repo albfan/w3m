@@ -88,10 +88,6 @@ void bzero(void *, int);
 #define FALSE 0
 #define TRUE   1
 
-#ifdef USE_COOKIE
-#define PERHAPS 2
-#endif
-
 #define SHELLBUFFERNAME	"*Shellout*"
 #define PIPEBUFFERNAME	"*stream*"
 #define CPIPEBUFFERNAME	"*stream(closed)*"
@@ -843,7 +839,10 @@ global int reverse_mouse init(FALSE);
 global int default_use_cookie init(TRUE);
 global int use_cookie init(FALSE);
 global int accept_cookie init(FALSE);
-global int accept_bad_cookie init(FALSE);
+#define ACCEPT_BAD_COOKIE_DISCARD	0
+#define ACCEPT_BAD_COOKIE_ACCEPT	1
+#define ACCEPT_BAD_COOKIE_ASK		2
+global int accept_bad_cookie init(ACCEPT_BAD_COOKIE_DISCARD);
 global char *cookie_reject_domains init(NULL);
 global char *cookie_accept_domains init(NULL);
 global TextList *Cookie_reject_domains;

@@ -727,9 +727,10 @@ readHeader(URLFile *uf, Buffer *newBuf, int thru, ParsedURL *pu)
 		    add_cookie(pu, name, value, expires, domain, path, flag,
 			       comment, version, port, commentURL);
 		if (err) {
-		    char *ans = (accept_bad_cookie == TRUE) ? "y" : NULL;
+		    char *ans = (accept_bad_cookie == ACCEPT_BAD_COOKIE_ACCEPT)
+			? "y" : NULL;
 		    if (fmInitialized && (err & COO_OVERRIDE_OK) &&
-			accept_bad_cookie == PERHAPS) {
+			accept_bad_cookie == ACCEPT_BAD_COOKIE_ASK) {
 			Str msg =
 			    Sprintf
 			    ("Accept bad cookie from %s for %s? (y or n) ",
