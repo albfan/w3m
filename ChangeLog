@@ -1,5 +1,10 @@
 2003-02-07  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03733] Re: display decoded URL
+	* display.c (make_lastline_link): buf->document_code
+
+2003-02-07  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03732] Re: scroll() is slow ?
 	* configure (use_raw_scroll): added
 		(config.h) use_raw_scroll
