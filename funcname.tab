@@ -147,3 +147,5 @@ VIEW_BOOKMARK	ldBmark
 VIEW_IMAGE	followI
 WHEREIS		srchfor
 WRAP_TOGGLE	wrapToggle
+NEXT_VISITED    nextVA
+PREV_VISITED    prevVA
