@@ -1375,7 +1375,7 @@ resize_screen(void)
 {
     setlinescols();
     setupscreen();
-    if (Currentbuf)
+    if (CurrentTab)
 	displayBuffer(Currentbuf, B_FORCE_REDRAW);
 }
 #endif				/* SIGWINCH */

@@ -372,6 +372,8 @@ displayBuffer(Buffer *buf, int mode)
     Str msg;
     int ny = 0;
 
+    if (!buf)
+	return;
     if (buf->topLine == NULL && readBufferCache(buf) == 0) {	/* clear_buffer */
 	mode = B_FORCE_REDRAW;
     }
