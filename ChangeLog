@@ -1,5 +1,10 @@
 2002-11-12  AIDA Shinra <aida-s@jcom.home.ne.jp>
 
+	* [w3m-dev 03408] edit From in w3mail.cgi 
+	* scripts/w3mmail.cgi.in: edit from as well
+
+2002-11-12  AIDA Shinra <aida-s@jcom.home.ne.jp>
+
 	* [w3m-dev 03408] fix Bug#87472
 	    MOUSE_SCROLL_LINE should be a run-time option
 	* fm.h (relative_wheel_scroll): added
