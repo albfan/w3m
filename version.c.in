@@ -1,5 +1,5 @@
 /* $Id$ */
-#define CURRENT_VERSION "w3m/0.4rc1+cvs"
+#define CURRENT_VERSION "w3m/0.4rc2"
 
 #ifndef FM_H
 char *w3m_version = CURRENT_VERSION;

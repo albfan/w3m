@@ -1,3 +1,8 @@
+2003-02-17  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* 0.4 release candidate 2
+	* version.c.in: update
+
 2003-02-13  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* [w3m-dev 03742] Re: Bug##180814: w3m: Missing w3mimgdisplay message at startup
