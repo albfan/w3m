@@ -1,3 +1,8 @@
+2002-06-06  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03203] dict
+	* main.c (execdict): fix loadGeneralFile()
+
 2002-06-02  Tushar Samant <scribble@pobox.com>
 
 	* [w3m-dev-en 00748] PATCH: Reinitialize w3m while running

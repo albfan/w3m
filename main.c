@@ -4832,10 +4832,7 @@ execdict(char *word)
 	return;
     }
     dictcmd = Sprintf("%s?%s", DictCommand, w)->ptr;
-    buf = loadGeneralFile(url_quote_conv(dictcmd, Currentbuf->document_code),
-			  baseURL(Currentbuf),
-			  parsedURL2Str(&Currentbuf->currentURL)->ptr,
-			  0, NULL);
+    buf = loadGeneralFile(dictcmd, NULL, NO_REFERER, 0, NULL);
     if (buf == NULL) {
 	disp_message("Execution failed", FALSE);
     }
