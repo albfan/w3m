@@ -87,6 +87,9 @@ w3mfb_show_image(w3mimg_op * self, W3MImage * img, int sx, int sy,
     if (self == NULL)
 	return 0;
 
+    if (img->pixmap == NULL)
+       return 0;
+
     frame = (FB_IMAGE **) img->pixmap;
     i = frame[0]->id;
     fb_image_draw(frame[i],

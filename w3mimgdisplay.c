@@ -263,10 +263,12 @@ DrawImage(char *buf, int redraw)
 	imageBuf[n].pixmap = NULL;
     }
 
-    w_op->load_image(w_op, &imageBuf[n], p, w, h);
+    if (w_op->load_image(w_op, &imageBuf[n], p, w, h) == 0)
+       imageBuf[n].pixmap = NULL;
 
   draw_image:
-    w_op->show_image(w_op, &imageBuf[n], sx, sy, sw, sh, x, y);
+    if (imageBuf[n].pixmap)
+       w_op->show_image(w_op, &imageBuf[n], sx, sy, sw, sh, x, y);
 }
 
 void

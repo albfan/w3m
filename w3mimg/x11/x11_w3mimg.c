@@ -355,6 +355,10 @@ x11_show_image(w3mimg_op * self, W3MImage * img, int sx, int sy, int sw,
 #endif
     if (self == NULL)
 	return 0;
+
+    if (img->pixmap == NULL)
+	return 0;
+
     xi = (struct x11_info *)self->priv;
     if (xi == NULL)
 	return 0;
