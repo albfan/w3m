@@ -1728,7 +1728,11 @@ mouse_init()
         /*
 	 * If Gpm_Open() success, returns >= 0
 	 * Gpm_Open() returns -2 in case of xterm.
+	 * Gpm_Close() is necessary here. Otherwise,
+	 * xterm is being left in the mode where the mouse clicks are
+	 * passed through to the application.
 	 */
+	Gpm_Close();
 	is_xterm = 1;
     } else {
 	gpm_handler = gpm_process_mouse;
