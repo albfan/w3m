@@ -505,7 +505,7 @@ echo "libdir='$libdir'" >> config.param
 
 d_helpdir=$helpdir
 if [ -z "$d_helpdir" ]; then
-  d_helpdir="$topdir/lib/w3m"
+  d_helpdir="$topdir/share/w3m"
 fi
 echo "Which directory do you want to put the helpfile?"
 Echo "(default: $d_helpdir) "
