@@ -1,5 +1,10 @@
 2002-12-13  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03563] Directory Traversal Vulnerabilities in FTP Clients
+	* file.c (guess_save_name): pass guess_filename
+
+2002-12-13  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03562] #undef BUFINFO
 	* config.h.dist (BUFINFO): undef
 	* configure (use_bufinfo): n
