@@ -31,6 +31,7 @@ struct {
 #ifdef USE_COOKIE
     {"cookie", set_cookie_flag},
 #endif				/* USE_COOKIE */
+    {"none", NULL},
     {NULL, NULL},
 };
 /* *INDENT-ON* */
@@ -510,7 +511,8 @@ do_internal(char *action, char *data)
 
     for (i = 0; internal_action[i].action; i++) {
 	if (strcasecmp(internal_action[i].action, action) == 0) {
-	    internal_action[i].rout(cgistr2tagarg(data));
+	    if (internal_action[i].rout)
+		internal_action[i].rout(cgistr2tagarg(data));
 	    return;
 	}
     }

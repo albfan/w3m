@@ -2406,6 +2406,11 @@ process_input(struct parsed_tag *tag)
     char *qq = "";
     int qlen = 0;
 
+    if (cur_form_id < 0) {
+	char *s = "<form_int method=internal action=none>";
+	process_form(parse_tag(&s, TRUE));
+    }
+
     p = "text";
     parsedtag_get_value(tag, ATTR_TYPE, &p);
     q = NULL;
@@ -2578,6 +2583,11 @@ process_select(struct parsed_tag *tag)
 {
     char *p;
 
+    if (cur_form_id < 0) {
+	char *s = "<form_int method=internal action=none>";
+	process_form(parse_tag(&s, TRUE));
+    }
+
     p = "";
     parsedtag_get_value(tag, ATTR_NAME, &p);
     cur_select = Strnew_charp(p);
@@ -2741,6 +2751,11 @@ Str
 process_textarea(struct parsed_tag *tag, int width)
 {
     char *p;
+
+    if (cur_form_id < 0) {
+	char *s = "<form_int method=internal action=none>";
+	process_form(parse_tag(&s, TRUE));
+    }
 
     p = "";
     parsedtag_get_value(tag, ATTR_NAME, &p);

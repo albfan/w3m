@@ -1,5 +1,15 @@
 2001-12-28  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 02770] form element outside <form>..</form>
+	* main.c (_followForm): check whether parent action is "none"
+	* form.c (internal_action): add "none"
+	* form.c (do_internal): check internal_action[i].rout
+	* file.c (process_input): check cur_form_id
+	* file.c (process_select): ditto
+	* file.c (process_textarea): ditto
+	
+2001-12-28  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 02769] <form>..</form> as block element
 	* file.c (HTMLtagproc1): CLOSE_P for <form>...</form>
 	* table.c (feed_table_tag): add feed_table_block_tag for <form></form>
