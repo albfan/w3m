@@ -393,9 +393,9 @@ typedef struct {
 #define LINK_TYPE_REV  2
 typedef struct _LinkList {
     char *url;
-    char *title;	/* Next, Contents, ... */
-    char *ctype;	/* Content-Type */
-    char type;		/* Rel, Rev */
+    char *title;		/* Next, Contents, ... */
+    char *ctype;		/* Content-Type */
+    char type;			/* Rel, Rev */
     struct _LinkList *next;
 } LinkList;
 
@@ -846,9 +846,9 @@ global char *index_file init(NULL);
 global char *CurrentDir;
 global int CurrentPid;
 /*
-global Buffer *Currentbuf;
-global Buffer *Firstbuf;
-*/
+ * global Buffer *Currentbuf;
+ * global Buffer *Firstbuf;
+ */
 global TabBuffer *CurrentTab;
 global TabBuffer *FirstTab;
 global TabBuffer *LastTab;
@@ -921,7 +921,7 @@ global int useExtImageViewer init(TRUE);
 global int maxLoadImage init(4);
 global int image_map_list init(TRUE);
 #else
-global int displayImage init(FALSE); /* XXX: emacs-w3m use display_image=off */
+global int displayImage init(FALSE);	/* XXX: emacs-w3m use display_image=off */
 #endif
 global char *Editor init(DEF_EDITOR);
 #ifdef USE_W3MMAILER
