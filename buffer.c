@@ -540,7 +540,7 @@ reshapeBuffer(Buffer *buf)
 		readHeader(&h, buf, TRUE, NULL);
 		UFclose(&h);
 	    }
-	} 
+	}
 	else if (buf->search_header)	/* -m option */
 	    readHeader(&f, buf, TRUE, NULL);
     }
