@@ -324,7 +324,8 @@ loadImage(Buffer *buf, int flag)
 {
     ImageCache *cache;
     struct stat st;
-    int wait_st, i, draw = FALSE;
+    int i, draw = FALSE;
+    /* int wait_st; */
 
     if (maxLoadImage > MAX_LOAD_IMAGE)
 	maxLoadImage = MAX_LOAD_IMAGE;
