@@ -4886,7 +4886,7 @@ HTMLtagproc1(struct parsed_tag *tag, struct html_feed_environ *h_env)
 	}
     case HTML_N_HEAD:
 	if (obuf->flag & RB_TITLE)
-	     HTMLlineproc1("</title>", h_env);
+	    HTMLlineproc1("</title>", h_env);
     case HTML_HEAD:
     case HTML_N_BODY:
 	return 1;
@@ -5710,9 +5710,10 @@ HTMLlineproc0(char *line, struct html_feed_environ *h_env, int internal)
 		p = str;
 		if ((tag = parse_tag(&p, internal))) {
 		    if (tag->tagid == end_tag ||
-			(pre_mode & RB_INSELECT && tag->tagid == HTML_N_FORM) ||
-			(pre_mode & RB_TITLE && (tag->tagid == HTML_N_HEAD ||
-						 tag->tagid == HTML_BODY)))
+			(pre_mode & RB_INSELECT && tag->tagid == HTML_N_FORM)
+			|| (pre_mode & RB_TITLE
+			    && (tag->tagid == HTML_N_HEAD
+				|| tag->tagid == HTML_BODY)))
 			goto proc_normal;
 		}
 	    }
