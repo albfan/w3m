@@ -431,7 +431,7 @@ loadImage(int flag)
 	    if (!stat(cache->file, &st)) {
 		cache->loaded = IMG_FLAG_LOADED;
 		if (getImageSize(cache)) {
-		    if (flag == IMG_FLAG_NEXT && Currentbuf)
+		    if (flag == IMG_FLAG_NEXT && CurrentTab && Currentbuf)
 			Currentbuf->need_reshape = TRUE;
 		}
 		draw = TRUE;
@@ -443,7 +443,7 @@ loadImage(int flag)
 	}
 	if (flag == IMG_FLAG_NEXT && draw)
 	    drawImage();
-	if (Currentbuf)
+	if (CurrentTab && Currentbuf)
 	    showImageProgress(Currentbuf);
     }
 
@@ -466,7 +466,7 @@ loadImage(int flag)
 		}
 		image_list = NULL;
 		image_file = NULL;
-		if (Currentbuf)
+		if (CurrentTab && Currentbuf)
 		    displayBuffer(Currentbuf, B_NORMAL);
 		return;
 	    }
