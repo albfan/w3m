@@ -1,5 +1,13 @@
 2002-11-28  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03496] parse <!-- ... --> in <script>
+	* etc.c (read_token): check <pre>
+	* file.c (HTMLlineproc0): remove comment processing
+			check pre mode
+			comment processing move
+
+2002-11-28  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03495] local CGI can't work
 	* local.c: #include "hash.h"
 		(set_environ): env string put in hash

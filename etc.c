@@ -755,8 +755,10 @@ read_token(Str buf, char **instr, int *status, int pre, int append)
 	    }
 	    if (prev_status == R_ST_NCMNT2 || prev_status == R_ST_NCMNT3 ||
 		prev_status == R_ST_IRRTAG || prev_status == R_ST_CMNT1) {
-		if (prev_status == R_ST_CMNT1 && !append)
+		if (prev_status == R_ST_CMNT1 && !append && !pre)
 		    Strclear(buf);
+		if (pre)
+		    Strcat_char(buf, *p);
 		p++;
 		goto proc_end;
 	    }
@@ -779,7 +781,10 @@ read_token(Str buf, char **instr, int *status, int pre, int append)
 	    }
 	    if (*status == R_ST_TAG0 && !REALLY_THE_BEGINNING_OF_A_TAG(p)) {
 		/* it seems that this '<' is not a beginning of a tag */
+/*
 		Strcat_charp(buf, "&lt;");
+*/
+		Strcat_char(buf, '<');
 		*status = R_ST_NORMAL;
 	    }
 	    else
@@ -793,7 +798,9 @@ read_token(Str buf, char **instr, int *status, int pre, int append)
 	    break;
 	case R_ST_CMNT:
 	case R_ST_IRRTAG:
-	    if (!append)
+	    if (pre)
+		Strcat_char(buf, *p);
+	    else if (!append)
 		Strclear(buf);
 	    break;
 	case R_ST_CMNT1:
@@ -802,6 +809,8 @@ read_token(Str buf, char **instr, int *status, int pre, int append)
 	case R_ST_NCMNT2:
 	case R_ST_NCMNT3:
 	    /* do nothing */
+	    if (pre)
+		Strcat_char(buf, *p);
 	    break;
 	}
     }
