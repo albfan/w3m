@@ -1,5 +1,10 @@
 2002-11-19  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03445] download list for "w3m foo.tar.gz"
+	* main.c (main): display download list
+
+2002-11-19  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03443] Can't display "echo only_one_line | w3m"
 	* display.c (redrawNLine): check 1st line
 
