@@ -6,6 +6,9 @@ if ( $^O =~ /^(ms)?(dos|win(32|nt)?)/i ) {
 }
 
 $helpdir = "@HELP_DIR@";
+if ($CYGPATH) {
+  $helpdir = &cygwin_pathconv($helpdir);
+}
 unshift(@INC, $helpdir);
 @docdirs = split(" ", "@DOCDIRS@");
 
