@@ -1,3 +1,8 @@
+2004-07-14  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* Debian Bug#259053
+	* doc/FAQ.html, doc-jp/FAQ.html: ~/.mailcap -> ~/.w3m/mailcap
+
 2004-05-11  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* based on [w3m-dev 04079]
