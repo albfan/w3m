@@ -72,7 +72,10 @@ saveHistory(Hist *hist, size_t size)
 	size++;
     for (; item; item = item->next)
 	fprintf(f, "%s\n", (char *)item->ptr);
-    fclose(f);
+    if (fclose(f) == EOF) {
+	disp_err_message("Can't save history", FALSE);
+	return;
+    }
     rename(tmpf, rcFile(HISTORY_FILE));
 }
 #endif				/* USE_HISTORY */
