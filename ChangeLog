@@ -1,3 +1,8 @@
+2002-03-28  Yuuichi Teranishi <teranisi@gohome.org>
+
+	* [w3m-dev 03145] header option
+	* main.c (MAIN): hide args for security
+
 2002-03-23  Kiyokazu SUTO <suto@ks-and-ks.ne.jp>
 
 	* [w3m-dev 03140] Forward: Bug#139305: 

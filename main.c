@@ -626,6 +626,10 @@ MAIN(int argc, char **argv, char **envp)
 		    else
 			Strcat(header_string, hs);
 		}
+		while (argv[i][0]) {
+                    argv[i][0] = '\0';
+                    argv[i]++;
+                }
 	    }
 #ifdef USE_MOUSE
 	    else if (!strcmp("-no-mouse", argv[i])) {
