@@ -201,7 +201,10 @@ follow_map_menu(Buffer *buf, char *name, Anchor *a_img, int x, int y)
 {
     MapList *ml;
     ListItem *al;
-    int i, selected = -1, initial = 0;
+    int i, selected = -1;
+#if defined(USE_IMAGE) || defined(MENU_MAP)
+    int initial = 0;
+#endif
 #ifdef MENU_MAP
     MapArea *a;
     char **label;
@@ -235,7 +238,9 @@ follow_map_menu(Buffer *buf, char *name, Anchor *a_img, int x, int y)
     optionMenu(x, y, label, &selected, initial, NULL);
 #endif
 
+#ifdef USE_IMAGE
   map_end:
+#endif
     if (selected >= 0) {
 	for (i = 0, al = ml->area->first; al != NULL; i++, al = al->next) {
 	    if (al->ptr && i == selected)
