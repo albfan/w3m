@@ -1806,6 +1806,7 @@ renderTable(struct table *t, int max_width, struct html_feed_environ *h_env)
 		switch (t->border_mode) {
 		case BORDER_THIN:
 		case BORDER_THICK:
+		case BORDER_NOWIN:
 		    h += 1;
 		    break;
 		}
