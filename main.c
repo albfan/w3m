@@ -446,8 +446,10 @@ main(int argc, char **argv, char **envp)
     URLHist = newHist();
 
 #ifdef USE_M17N
-    if (FollowLocale && Locale)
+    if (FollowLocale && Locale) {
+	DisplayCharset = wc_guess_locale_charset(Locale, DisplayCharset);
 	SystemCharset = wc_guess_locale_charset(Locale, SystemCharset);
+    }
     auto_detect = WcOption.auto_detect;
 #endif
 
