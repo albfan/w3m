@@ -110,6 +110,7 @@ REDRAW		rdrwSc
 REG_MARK	reMark
 REINIT		reinit
 RELOAD		reload
+RESHAPE		reshape
 RIGHT		col1R
 SAVE		svSrc
 SAVE_IMAGE	svI

@@ -135,7 +135,7 @@ for $otherlang (@docdirs) {
 
 &show_keymap("Buffer operation",
 	     split(" ", "backBf nextBf prevBf selMn selBuf vwSrc svSrc svBuf
-		editBf editScr reload rdrwSc dispI stopI"));
+		editBf editScr reload reshape rdrwSc dispI stopI"));
 
 &show_keymap("Tab operation",
 	     split(" ", "newT closeT nextT prevT tabMn tabR tabL"));

@@ -40,7 +40,6 @@ newBuffer(int width)
     n->bufferprop = BP_NORMAL;
     n->clone = New(int);
     *n->clone = 1;
-    n->linelen = 0;
     n->trbyte = 0;
 #ifdef USE_SSL
     n->ssl_certificate = NULL;
@@ -558,8 +557,19 @@ reshapeBuffer(Buffer *buf)
 #endif
 
     buf->height = LASTLINE + 1;
-    if (buf->firstLine)
-	restorePosition(buf, &sbuf);
+    if (buf->firstLine && sbuf.firstLine) {
+	int n;
+	gotoRealLine(buf, sbuf.currentLine->real_linenumber);
+	n = (buf->currentLine->linenumber - buf->topLine->linenumber)
+	  - (sbuf.currentLine->linenumber - sbuf.topLine->linenumber);
+	if (n) {
+	    buf->topLine = lineSkip(buf, buf->topLine, n, FALSE);
+	    gotoRealLine(buf, sbuf.currentLine->real_linenumber);
+	}
+	buf->pos = sbuf.pos;
+	buf->currentColumn = sbuf.currentColumn;
+	arrangeCursor(buf);
+    }
     if (buf->check_url & CHK_URL)
 	chkURLBuffer(buf);
 #ifdef USE_NNTP
