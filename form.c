@@ -360,6 +360,9 @@ form_update_line(Line *line, char **str, int spos, int epos, int width,
 	else {
 	    if (w + c_width > width)
 		break;
+#else
+	}
+	else {
 #endif
 	    buf[pos] = *p;
 	    prop[pos] = effect | c_type;
