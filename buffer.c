@@ -497,6 +497,9 @@ reshapeBuffer(Buffer *buf)
     buf->need_reshape = FALSE;
     if (buf->sourcefile == NULL)
 	return;
+    if (buf->currentURL.scheme == SCM_LOCAL &&
+	!strcmp(buf->currentURL.file, "-"))
+	return;
     init_stream(&f, SCM_LOCAL, NULL);
     examineFile(buf->mailcap_source ? buf->mailcap_source : buf->sourcefile,
 		&f);
@@ -520,6 +523,8 @@ reshapeBuffer(Buffer *buf)
     UseContentCharset = FALSE;
     UseAutoDetect = FALSE;
 #endif
+    if (buf->search_header && buf->currentURL.scheme == SCM_LOCAL)
+	readHeader(&f, buf, TRUE, NULL);
     if (!strcasecmp(buf->type, "text/html"))
 	loadHTMLBuffer(&f, buf);
     else

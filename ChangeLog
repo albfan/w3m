@@ -1,5 +1,10 @@
 2002-03-14  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03126] reshapeBuffer() and -m option
+	* buffer.c (reshapeBuffer): fix reshapeBuffer() in case of -m option
+
+2002-03-14  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03125] w3m -m < image
 	* file.c (openGeneralPagerBuffer): use internal viewer for -m option
 
