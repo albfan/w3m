@@ -357,6 +357,12 @@ fb_clear(int x, int y, int w, int h, int r, int g, int b)
 
     if (is_open != TRUE || x > fb_width() || y > fb_height())
 	return 1;
+
+    if (x < 0)
+	x = 0;
+    if (y < 0)
+	y = 0;
+
     if (x + w > fb_width())
 	w = fb_width() - x;
     if (y + h > fb_height())
