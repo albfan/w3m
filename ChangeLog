@@ -1,5 +1,10 @@
 2003-01-31  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03719] Re: Too slow when loading big file with fold_line=1
+	* file.c (addnewline): check i <l->len
+
+2003-01-31  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03718] Too slow when loading big file with fold_line=1
 	* etc.c (nextColumn): added
 		(calcPosition): use New_N

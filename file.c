@@ -6134,7 +6134,7 @@ addnewline(Buffer *buf, char *line, Lineprop *prop,
 	if (i == 0) {
 	    i++;
 #ifdef JP_CHARSET
-	    if (CharType(p[i]) == PC_KANJI2)
+	    if (i < l->len && CharType(p[i]) == PC_KANJI2)
 		i++;
 #endif
 	}
