@@ -1,5 +1,11 @@
 2003-01-30  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev-en 00852] Re: Enhancement: content type detection of files
+	* url.c (DefaultGuess): remove upppercases
+		(guessContentTypeFromTable): rewrite, strcasecmp
+
+2003-01-30  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03708] Re: Don't stop loading image when moving to next page.
 	* config.h.dist (lstat): define ifndef HAVE_LSTAT
 	* configure (config.h) ditto
