@@ -456,6 +456,7 @@ loadImage(int flag)
 	    reset_signals();
 	    signal(SIGINT, SIG_IGN);
 	    close_tty();
+	    close_all_fds(2);
 	    QuietMessage = TRUE;
 	    fmInitialized = FALSE;
 	    image_source = cache->file;

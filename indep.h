@@ -12,9 +12,10 @@
 #define FALSE 0
 #endif				/* FALSE */
 
-#define PAGER_MODE	0
-#define HTML_MODE	1
-#define HEADER_MODE	2
+#define RAW_MODE	0
+#define PAGER_MODE	1
+#define HTML_MODE	2
+#define HEADER_MODE	3
 
 extern clen_t strtoclen(const char *s);
 extern char *conv_entity(int ch);
