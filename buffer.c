@@ -561,7 +561,7 @@ reshapeBuffer(Buffer *buf)
 	int n;
 	gotoRealLine(buf, sbuf.currentLine->real_linenumber);
 	n = (buf->currentLine->linenumber - buf->topLine->linenumber)
-	  - (sbuf.currentLine->linenumber - sbuf.topLine->linenumber);
+	    - (sbuf.currentLine->linenumber - sbuf.topLine->linenumber);
 	if (n) {
 	    buf->topLine = lineSkip(buf, buf->topLine, n, FALSE);
 	    gotoRealLine(buf, sbuf.currentLine->real_linenumber);

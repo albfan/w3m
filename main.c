@@ -2487,7 +2487,8 @@ linend(void)
 {
     if (Currentbuf->firstLine == NULL)
 	return;
-    while (Currentbuf->currentLine->next && Currentbuf->currentLine->next->bpos)
+    while (Currentbuf->currentLine->next
+	   && Currentbuf->currentLine->next->bpos)
 	cursorDown0(Currentbuf, 1);
     Currentbuf->pos = Currentbuf->currentLine->len - 1;
     arrangeCursor(Currentbuf);

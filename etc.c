@@ -240,7 +240,7 @@ checkType(Str s, Lineprop **oprop
 #ifdef USE_ANSI_COLOR
 	  , Linecolor **ocolor
 #endif
-	  )
+    )
 {
     Lineprop mode;
     Lineprop effect = PE_NORMAL;
