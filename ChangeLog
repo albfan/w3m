@@ -21,6 +21,8 @@
 			add BIN_DIR, MAN1_DIR
 			LIB_TARGETS->CGIBIN_TARGETS
 			fix INSTALL_MAN
+	* scripts/w3mman/w3mman.1.in: 
+			change @LIB_DIR@ to @libexecdir@/@PACKAGE@/cgi-bin/
 
 2003-10-01  Akira TAGOH <at@gclab.org>
 
