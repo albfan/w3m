@@ -1,3 +1,10 @@
+2004-04-27  SAKAI Kiyotaka <ksakai@kso.netwk.ntt-at.co.jp>
+
+	* [w3m-dev 04068] install-sh problem
+	 [w3m-dev 04069] install-sh problem 2
+	* Makefile.in (MAKE_ARGS): delete INSTALL
+	* install-sh: replace with X Consortium install-sh (from automake)
+
 2004-04-27  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* [w3m-dev 04073] Re: run configure in another directory
