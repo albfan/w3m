@@ -1,3 +1,7 @@
+2002-12-06  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* NEWS: func: ACCESSKEY, LINK_MENU
+
 2002-12-06  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03529] Support of title, accesskey of anchor
