@@ -1497,6 +1497,7 @@ openURL(char *url, ParsedURL *pu, ParsedURL *current,
 	}
     }
 
+    memset(&uf, 0, sizeof uf);
     uf.scheme = pu->scheme;
     uf.url = parsedURL2Str(pu)->ptr;
     pu->is_nocache = (option->flag & RG_NOCACHE);
