@@ -1,3 +1,7 @@
+2003-02-06  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* NEWS: rc: decode_url
+
 2003-02-06  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03730] display decoded URL
