@@ -185,7 +185,10 @@ typedef struct {
 #define HTML_DOCTYPE    97
 #define HTML_NOFRAMES   98
 #define HTML_N_NOFRAMES 99
-
+#define HTML_SUP	100
+#define HTML_N_SUP	101
+#define HTML_SUB	102
+#define HTML_N_SUB	103
 
    /* pseudo tag */
 #define HTML_INTERNAL       106

@@ -2896,6 +2896,10 @@ feed_table_tag(struct table *tbl, char *line, struct table_mode *mode,
     case HTML_N_DEL:
     case HTML_INS:
     case HTML_N_INS:
+    case HTML_SUP:
+    case HTML_N_SUP:
+    case HTML_SUB:
+    case HTML_N_SUB:
 	feed_table_inline_tag(tbl, line, mode, 5);
 	break;
     case HTML_TABLE_ALT:

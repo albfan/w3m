@@ -4591,6 +4591,17 @@ HTMLtagproc1(struct parsed_tag *tag, struct html_feed_environ *h_env)
     case HTML_N_INS:
 	HTMLlineproc1("<U>:INS]</U>", h_env);
 	return 1;
+    case HTML_SUP:
+	HTMLlineproc1("^", h_env);
+	return 1;
+    case HTML_N_SUP:
+	return 1;
+    case HTML_SUB:
+	HTMLlineproc1("[", h_env);
+	return 1;
+    case HTML_N_SUB:
+	HTMLlineproc1("]", h_env);
+	return 1;
     case HTML_FONT:
     case HTML_N_FONT:
     case HTML_NOP:
