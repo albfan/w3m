@@ -4531,12 +4531,22 @@ vwSrc(void)
     if (Currentbuf->sourcefile == NULL) {
 	if (Currentbuf->pagerSource &&
 	    !strcasecmp(Currentbuf->type, "text/plain")) {
+#ifdef JP_CHARSET
+	    char old_code;
+#endif
 	    FILE *f;
 	    Str tmpf = tmpfname(TMPF_SRC, NULL);
 	    f = fopen(tmpf->ptr, "w");
 	    if (f == NULL)
 		return;
+#ifdef JP_CHARSET
+	    old_code = DisplayCode;
+	    DisplayCode = Currentbuf->document_code;
+#endif
 	    saveBufferBody(Currentbuf, f, TRUE);
+#ifdef JP_CHARSET
+	    DisplayCode = old_code;
+#endif
 	    fclose(f);
 	    Currentbuf->sourcefile = tmpf->ptr;
 	}

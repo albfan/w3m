@@ -1,3 +1,8 @@
+2003-07-23  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03941] fix character encoding for 'v'
+	* main.c (vwSrc): use document_code as DisplayCode
+
 2003-07-23  Yoshinobu Sakane <sakane@d4.bsd.nes.nec.co.jp>
 
 	* [w3m-dev 03939] next/prev visited link
