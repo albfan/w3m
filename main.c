@@ -4789,7 +4789,7 @@ static TabBuffer *
 posTab(int x, int y)
 {
     TabBuffer *tab;
-  
+
     for (tab = FirstTab; tab; tab = tab->nextTab) {
 	if (tab->x1 <= x && x <= tab->x2 && tab->y == y)
 	    return tab;
