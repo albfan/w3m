@@ -768,6 +768,7 @@ global char RenderFrame init(FALSE);
 global char TargetSelf init(FALSE);
 global char PermitSaveToPipe init(FALSE);
 global char DecodeCTE init(FALSE);
+global char PreserveTimestamp init(TRUE);
 global char ArgvIsURL init(FALSE);
 global char MetaRefresh init(FALSE);
 

@@ -1,3 +1,13 @@
+2002-12-15  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03569] Re: preserve timestamp
+	* file.c (loadGeneralFile): PresetveTimestamp
+		(_doFileCopy): is_pipe, PreserveTimestamp
+		(doFileSave): PreserveTImestamp
+	* fm.h (PreserveTimestamp): added
+	* rc.c (CMT_PRESERVE_TIMESTAMP): added
+		(params3): add preserve_timestamp
+
 2002-12-15  Takahashi Youichirou <nikuq@hk.airnet.ne.jp>
 
 	* [w3m-dev 03568] Re: preserve timestamp
