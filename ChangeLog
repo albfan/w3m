@@ -1,5 +1,11 @@
 2002-12-11  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03552] Re: link list
+	* menu.c (accesskey_menu): check hseq
+		(list_menu): check hseq
+
+2002-12-11  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03551] Re: External URI loader
 	* file.c (loadGeneralFile): fix SCM_UNKNONWN
 

@@ -1935,7 +1935,7 @@ accesskey_menu(Buffer *buf)
     a = retrieveCurrentAnchor(buf);
     if (a && a->accesskey && IS_ASCII(a->accesskey)) {
 	for (i = 0; i < nitem; i++) {
-	    if (a == ap[i]) {
+	    if (a->hseq == ap[i]->hseq) {
 		menu.initial = i;
 		break;
 	    }
@@ -2049,7 +2049,7 @@ list_menu(Buffer *buf)
     a = retrieveCurrentAnchor(buf);
     if (a) {
 	for (i = 0; i < nitem; i++) {
-	    if (a == ap[i]) {
+	    if (a->hseq == ap[i]->hseq) {
 		menu.initial = i;
 		break;
 	    }
