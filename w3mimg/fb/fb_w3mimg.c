@@ -61,6 +61,15 @@ w3mfb_close(w3mimg_op * self)
 }
 
 static int
+w3mfb_clear(w3mimg_op * self, int x, int y, int w, int h)
+{
+    if (self == NULL)
+	return 0;
+    fb_image_clear(x, y, w, h);
+    return 1;
+}
+
+static int
 w3mfb_load_image(w3mimg_op * self, W3MImage * img, char *fname, int w, int h)
 {
     FB_IMAGE **im;
@@ -179,6 +188,7 @@ w3mimg_fbopen()
     wop->set_background = w3mfb_set_background;
     wop->sync = w3mfb_sync;
     wop->close = w3mfb_close;
+    wop->clear = w3mfb_clear;
 
     wop->load_image = w3mfb_load_image;
     wop->show_image = w3mfb_show_image;

@@ -365,6 +365,30 @@ fb_height(void)
     return vscinfo.yres;
 }
 
+int
+fb_clear(int x, int y, int w, int h, int r, int g, int b)
+{
+    unsigned long bg;
+    int i, offset_fb;
+
+    if (is_open != TRUE || x > fb_width() || y > fb_height())
+	return 1;
+    if (x + w > fb_width())
+	w = fb_width() - x;
+    if (y + h > fb_height())
+	h = fb_height() - y;
+
+    offset_fb = fscinfo.line_length * y + pixel_size * x;
+    bg = ((r >> (CHAR_BIT - vscinfo.red.length)) << vscinfo.red.offset) +
+	 ((g >> (CHAR_BIT - vscinfo.green.length)) << vscinfo.green.offset) +
+	 ((b >> (CHAR_BIT - vscinfo.blue.length)) << vscinfo.blue.offset);
+    for (i = 0; i < h; i++) {
+	memcpy(buf + offset_fb, bg, pixel_size * w);
+	offset_fb += fscinfo.line_length;
+    }
+    return 0;
+}
+
 /********* static functions **************/
 static
     int

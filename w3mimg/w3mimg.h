@@ -32,6 +32,7 @@ typedef struct _w3mimg_op {
     void (*free_image) (struct _w3mimg_op * self, W3MImage * img);
     int (*get_image_size) (struct _w3mimg_op * self, W3MImage * img,
 			   char *fname, int *w, int *h);
+    int (*clear) (struct _w3mimg_op * self, int x, int y, int w, int h);
 } w3mimg_op;
 
 #ifdef USE_W3MIMG_X11

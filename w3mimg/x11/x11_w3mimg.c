@@ -123,6 +123,19 @@ x11_finish(w3mimg_op * self)
 }
 
 static int
+x11_clear(w3mimg_op * self, int x, int y, int w, int h)
+{
+    struct x11_info *xi;
+    if (self == NULL)
+	return 0;
+    xi = (struct x11_info *)self->priv;
+    if (xi == NULL)
+	return 0;
+    XClearArea(xi->display, xi->window, x, y, w, h, FALSE);
+    return 1;
+}
+
+static int
 x11_active(w3mimg_op * self)
 {
     struct x11_info *xi;
@@ -688,6 +701,7 @@ w3mimg_x11open()
     wop->set_background = x11_set_background;
     wop->sync = x11_sync;
     wop->close = x11_close;
+    wop->clear = x11_clear;
 
     wop->load_image = x11_load_image;
     wop->show_image = x11_show_image;

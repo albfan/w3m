@@ -29,5 +29,6 @@ int fb_open(void);
 void fb_close(void);
 int fb_width(void);
 int fb_height(void);
+int fb_clear(int x, int y, int w, int h, int r, int g, int b);
 
 #endif
