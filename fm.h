@@ -582,6 +582,7 @@ struct readbuffer {
 #ifdef FORMAT_NICE
 #define RB_FILL		0x80000
 #endif				/* FORMAT_NICE */
+#define RB_DEL		0x100000
 
 #define RB_GET_ALIGN(obuf) ((obuf)->flag&RB_ALIGN)
 #define RB_SET_ALIGN(obuf,align) {(obuf)->flag &= ~RB_ALIGN; (obuf)->flag |= (align); }
@@ -932,6 +933,7 @@ global int UseDictCommand init(FALSE);
 global char *DictCommand init("file:///$LIB/w3mdict" CGI_EXTENSION);
 #endif				/* USE_DICT */
 global int ignore_null_img_alt init(TRUE);
+global int displayInsDel init(TRUE);
 global int FoldTextarea init(FALSE);
 #define DEFAULT_URL_EMPTY	0
 #define DEFAULT_URL_CURRENT	1
