@@ -433,11 +433,11 @@ displayBuffer(Buffer *buf, int mode)
 		scroll(n);
 	    }
 	    else if (n < 0 && n > -buf->LINES) {
-#if defined(__CYGWIN__) && LANG == JA
+#if 0 /* defined(__CYGWIN__) */
 		move(LASTLINE + n + 1, 0);
 		clrtoeolx();
 		refresh();
-#endif				/* defined(__CYGWIN__) && LANG == JA */
+#endif				/* defined(__CYGWIN__) */
 		rscroll(-n);
 	    }
 	    redrawNLine(buf, n);
