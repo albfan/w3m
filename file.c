@@ -2784,6 +2784,7 @@ process_img(struct parsed_tag *tag, int width)
 
     if (!parsedtag_get_value(tag, ATTR_SRC, &p))
 	return tmp;
+    p = remove_space(p);
     q = NULL;
     parsedtag_get_value(tag, ATTR_ALT, &q);
     w = -1;
