@@ -2081,7 +2081,7 @@ searchURIMethods(ParsedURL *pu)
  * escaped       = "%" hex hex
  */
 
-#define URI_PATTERN	"[\\-;/?:@&=+$,a-zA-Z0-9_.!~*'()%]*"
+#define URI_PATTERN	"[-;/?:@&=+$,a-zA-Z0-9_.!~*'()%]*"
 void
 chkExternalURIBuffer(Buffer *buf)
 {
