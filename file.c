@@ -965,7 +965,7 @@ extract_auth_val(char **q)
 		qq++;
 		goto end_token;
 	    default:
-		if (*qq <= 037 || *qq == 177) {
+		if (*qq <= 037 || *qq == 0177) {
 		    qq++;
 		    goto end_token;
 		}

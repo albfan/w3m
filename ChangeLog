@@ -1,3 +1,8 @@
+2002-05-15  Kiyokazu SUTO <suto@ks-and-ks.ne.jp>
+
+	* [w3m-dev 03191] typo in file.c:extract_auth_val()?
+	* file.c (extract_auth_val): s/177/0177/
+
 2002-05-15  Tsutomu OKADA <okada@furuno.co.jp>
 
 	* [w3m-dev 03190] a tiny patch for configure
