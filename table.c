@@ -3525,10 +3525,18 @@ check_relative_width(struct table *t, int maxwidth)
 		else
 		    n_leftcell++;
 	    }
-	    if (w < r || (w == r && n_leftcell > 0)) {
-		cell->fixed_width[i] = -100 * r;
+	    if (n_leftcell == 0) {
+		/* w must be identical to r */
+		if (w != r)
+		    cell->fixed_width[i] = -100*r;
 	    }
 	    else {
+		if (w <= r) {
+		    /* make room for the left(width-unspecified) cell */
+		    /* the next formula is an estimation of required width */
+		    w = r*cell->colspan[i]/(cell->colspan[i]-n_leftcell);
+		    cell->fixed_width[i] = -100*w;
+		}
 		for (j = 0; j < cell->colspan[i]; j++) {
 		    if (rcolwidth[j + k] == 0)
 			rcolwidth[j + k] = (w - r) / n_leftcell;
