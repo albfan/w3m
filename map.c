@@ -5,7 +5,7 @@
 #include "fm.h"
 #include <math.h>
 
-static MapList *
+MapList *
 searchMapList(Buffer *buf, char *name)
 {
     MapList *ml;

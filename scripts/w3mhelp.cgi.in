@@ -134,13 +134,13 @@ for $otherlang (@docdirs) {
 		movR1 movL1 movD1 movU1 ldown1 lup1
 		shiftl shiftr col1L col1R linbeg linend ctrCsrH ctrCsrV
 		goLine goLineF goLineL movRW movLW
-		topA lastA nextA prevA
+		topA lastA nextA prevA movlistMn
 		nextR nextL nextD nextU nextRD nextLU"));
 
 &show_keymap("Hyperlink operation",
 	     split(" ", "followA tabA svA followI svI submitForm
 		curURL peekURL peekIMG pginfo curlno chkURL chkWORD chkNMID
-		rFrame extbrz linkbrz linkMn accessKey"));
+		rFrame extbrz linkbrz linkLst listMn linkMn accessKey"));
 
 &show_keymap("File/Stream operation",
 	     split(" ", "goURL gorURL tabURL tabrURL ldfile readsh pipesh
