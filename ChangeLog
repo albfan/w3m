@@ -1,3 +1,9 @@
+2003-05-14  Akinori Ito <aito@fw.ipsj.or.jp>
+
+	* [w3m-dev 03898] Re: table rendering
+	* table.c (check_relative_width): added
+		(set_table_matrix): use check_relative_width
+
 2003-05-13  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03896] html_quote in textarea in frame
