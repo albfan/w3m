@@ -1470,7 +1470,8 @@ getAuthCookie(struct http_auth *hauth, char *auth_header,
     else
 	ss = find_auth_cookie(pu->host, pu->port, pu->file, realm);
     if (realm && ss == NULL) {
-	if (find_auth_user_passwd(pu->host, pu->port, pu->file, realm,
+	if (!a_found &&
+	    find_auth_user_passwd(pu->host, pu->port, pu->file, realm,
 				  &uname, &pwd)) {
 	    /* found username & password in passwd file */ ;
 	}
