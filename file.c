@@ -6029,7 +6029,7 @@ gunzip_stream(URLFile *uf)
 	signal(SIGINT, SIG_DFL);
 	close(fd1[0]);
 	if (tmpf) {
-#ifdef __CYGWIN__
+#ifdef USE_BINMODE_STREAM
 	    int tmpfd = open(tmpf, O_RDONLY | O_BINARY);
 #else
 	    int tmpfd = open(tmpf, O_RDONLY);
