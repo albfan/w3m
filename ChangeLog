@@ -1,5 +1,9 @@
 2004-03-22  Fumitoshi UKAI  <ukai@debian.or.jp>
 
+	* Makefile.in (po): need update-po
+
+2004-03-22  Fumitoshi UKAI  <ukai@debian.or.jp>
+
 	* w3m 0.5
 	* version.c.in: update
 	* doc/README: version 0.5, release date, maintainer
