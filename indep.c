@@ -188,12 +188,12 @@ expandPath(char *name)
 	p++;
 	if (IS_ALPHA(*p)) {
 	    char *q = strchr(p, '/');
-	    if (q) {				/* ~user/dir... */
-	        passent = getpwnam(allocStr(p, q - p));
+	    if (q) {		/* ~user/dir... */
+		passent = getpwnam(allocStr(p, q - p));
 		p = q;
 	    }
-	    else {				/* ~user */
-	        passent = getpwnam(p);
+	    else {		/* ~user */
+		passent = getpwnam(p);
 		p = "";
 	    }
 	    if (!passent)

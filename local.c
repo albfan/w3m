@@ -300,7 +300,7 @@ checkPath(char *fn, char *path)
     Str tmp;
     struct stat st;
     while (*path) {
-    	p = strchr(path, ':');
+	p = strchr(path, ':');
 	tmp = Strnew_charp(expandPath(p ? allocStr(path, p - path) : path));
 	if (Strlastchar(tmp) != '/')
 	    Strcat_char(tmp, '/');

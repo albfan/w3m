@@ -1580,7 +1580,7 @@ rcFile(char *base)
 	 (base[0] == '.'
 	  && (base[1] == '/' || (base[1] == '.' && base[2] == '/')))
 	 || (base[0] == '~' && base[1] == '/')))
-		/* /file, ./file, ../file, ~/file */
+	/* /file, ./file, ../file, ~/file */
 	return expandPath(base);
     return expandPath(Strnew_m_charp(rc_dir, "/", base, NULL)->ptr);
 }

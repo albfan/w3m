@@ -1444,11 +1444,11 @@ expandName(char *name)
 	    char *q;
 	    p += 2;
 	    q = strchr(p, '/');
-            if (q) {			/* /~user/dir... */
+	    if (q) {		/* /~user/dir... */
 		passent = getpwnam(allocStr(p, q - p));
 		p = q;
 	    }
-	    else {			/* /~user */
+	    else {		/* /~user */
 		passent = getpwnam(p);
 		p = "";
 	    }
