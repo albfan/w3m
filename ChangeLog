@@ -1,3 +1,7 @@
+2002-11-15  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* NEWS: env,rc: https_proxy
+
 2002-11-15  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03429] https proxy
