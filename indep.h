@@ -45,9 +45,9 @@ extern char *html_unquote(char *str);
 extern char *file_quote(char *str);
 extern char *file_unquote(char *str);
 extern char *url_quote(char *str);
-extern char *url_unquote(char *str);
+extern Str Str_url_unquote(Str x, int is_form);
 extern Str Str_form_quote(Str x);
-extern Str Str_form_unquote(Str x);
+#define Str_form_unquote(x) Str_url_unquote((x), TRUE)
 extern char *shell_quote(char *str);
 
 extern char *w3m_auxbin_dir();

@@ -535,34 +535,6 @@ url_quote(char *str)
 }
 
 char *
-url_unquote(char *str)
-{
-    Str tmp = NULL;
-    char *p, *q;
-    int c;
-
-    for (p = str; *p;) {
-	if (*p == '%') {
-	    q = p;
-	    c = url_unquote_char(&q);
-	    if (c >= 0 && c != '\0' && c != '\n' && c != '\r') {
-		if (tmp == NULL)
-		    tmp = Strnew_charp_n(str, (int)(p - str));
-		Strcat_char(tmp, (char)c);
-		p = q;
-		continue;
-	    }
-	}
-	if (tmp)
-	    Strcat_char(tmp, *p);
-	p++;
-    }
-    if (tmp)
-	return tmp->ptr;
-    return str;
-}
-
-char *
 file_quote(char *str)
 {
     Str tmp = NULL;
@@ -661,15 +633,16 @@ Str_form_quote(Str x)
     return x;
 }
 
+
 Str
-Str_form_unquote(Str x)
+Str_url_unquote(Str x, int is_form)
 {
     Str tmp = NULL;
     char *p = x->ptr, *ep = x->ptr + x->length, *q;
     int c;
 
     for (; p < ep;) {
-	if (*p == '+') {
+	if (is_form && *p == '+') {
 	    if (tmp == NULL)
 		tmp = Strnew_charp_n(x->ptr, (int)(p - x->ptr));
 	    Strcat_char(tmp, ' ');

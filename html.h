@@ -364,9 +364,10 @@ struct environment {
 #define SCM_NNTP_GROUP	8
 #define SCM_NEWS	9
 #define SCM_NEWS_GROUP	10
-#define SCM_MAILTO      11
+#define SCM_DATA	11
+#define SCM_MAILTO      12
 #ifdef USE_SSL
-#define SCM_HTTPS       12
+#define SCM_HTTPS       13
 #endif				/* USE_SSL */
 
 #endif				/* _HTML_H */

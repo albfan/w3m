@@ -1870,6 +1870,9 @@ loadGeneralFile(char *path, ParsedURL *volatile current, char *referer,
 	}
 #endif
     }
+    else if (pu.scheme == SCM_DATA) {
+	t = f.guess_type;
+    }
     else if (searchHeader) {
 	t_buf = newBuffer(INIT_BUFFER_WIDTH);
 	readHeader(&f, t_buf, searchHeader_through, &pu);
@@ -6867,13 +6870,13 @@ loadImageBuffer(URLFile *uf, Buffer *newBuf)
     cache->index = 0;
 
   image_buffer:
+    if (newBuf == NULL)
+	newBuf = newBuffer(INIT_BUFFER_WIDTH);
     cache->loaded |= IMG_FLAG_DONT_REMOVE;
     if (uf->scheme != SCM_LOCAL)
 	newBuf->sourcefile = cache->file;
 
     tmp = Sprintf("<img src=\"%s\"><br><br>", html_quote(image->url));
-    if (newBuf == NULL)
-	newBuf = newBuffer(INIT_BUFFER_WIDTH);
     tmpf = tmpfname(TMPF_SRC, ".html");
     src = fopen(tmpf->ptr, "w");
     newBuf->mailcap_source = tmpf->ptr;
