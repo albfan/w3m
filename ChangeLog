@@ -1,3 +1,9 @@
+2003-10-21  SAKAI Kiyotaka <ksakai@kso.netwk.ntt-at.co.jp>
+
+	* [w3m-dev 03996] HELP_DIR and funcname.tab
+	* configure.in (HELP_DIR): don't eval 
+	* scripts/w3mhelp.cgi: subst @prefix@ for $helpdir
+
 2003-10-21  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* #include <openssl/...>

@@ -5,6 +5,7 @@ if ( $^O =~ /^(ms)?(dos|win(32|nt)?)/i ) {
   $CYGPATH = 1;
 }
 
+$prefix = "@prefix@";
 $helpdir = "@HELP_DIR@";
 if ($CYGPATH) {
   $helpdir = &cygwin_pathconv($helpdir);
