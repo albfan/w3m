@@ -6453,6 +6453,7 @@ loadImageBuffer(URLFile *uf, Buffer *newBuf)
     signal(SIGINT, prevtrap);
 
     cache->loaded = IMG_FLAG_LOADED;
+    cache->index = 0;
     getImageSize(cache);
 
   image_buffer:

@@ -1,3 +1,8 @@
+2002-03-09  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03092] Reload image
+	* file.c (loadImageBuffer): cache->index = 0
+
 2002-03-09  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* [w3m-dev 03093] Re: gopher broken 
