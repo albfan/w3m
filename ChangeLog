@@ -1,3 +1,8 @@
+2002-12-25  Hiroaki Shimotsu <shim@d5.bs1.fc.nec.co.jp>
+
+	* [w3m-dev 03596] LIST
+	* anchor.c (link_list_panel): check internal
+
 2002-12-25  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03595] tolower, toupper
