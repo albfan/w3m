@@ -1,5 +1,10 @@
 2003-01-24  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03680] showProgress() on fast system
+	* file.c (showProgress): check line len, time
+
+2003-01-24  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03679] Re: cleanup for pipe
 	* etc.c (open_pipe_rw): check stdin, stdout
 	* file.c (uncompress_stream): rewrite
