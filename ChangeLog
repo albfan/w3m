@@ -1,3 +1,8 @@
+2003-02-26  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03781] Debian Bug report logs - #181897: w3m submits query urls with "extra"
+	* main.c (_followForm): remove tailling '?'
+
 2003-02-25  Hironori SAKAMOTO <h-saka@lsi.nec.co.jp>
 
 	* [w3m-dev-en 00891] Re: w3m 0.4 has been released!

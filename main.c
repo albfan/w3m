@@ -3295,6 +3295,8 @@ _followForm(int submit)
 	}
 
 	if (fi->parent->method == FORM_METHOD_GET) {
+	    if ((p = strchr(tmp2->ptr, '?')) != NULL)
+		Strshrink(tmp2, (tmp2->ptr + tmp2->length) - p);
 	    Strcat_charp(tmp2, "?");
 	    Strcat(tmp2, tmp);
 	    loadLink(tmp2->ptr, a->target, NULL, NULL);
