@@ -559,11 +559,6 @@ extern void reMark(void);
 #define prevMk nulcmd
 #define reMark nulcmd
 #endif				/* not USE_MARK */
-#ifdef JP_CHARSET
-extern char *cURLcode(char *url, char code);
-#else
-#define cURLcode(url,buf) (url)
-#endif
 
 #ifdef USE_MOUSE
 extern void mouse(void);
