@@ -53,7 +53,7 @@ static int RC_table_size;
 
 /* FIXME: gettextize here */
 #ifdef USE_M17N
-static wc_ces OptionCharset = WC_CES_US_ASCII; /* FIXME: charset of source code */
+static wc_ces OptionCharset = WC_CES_US_ASCII;	/* FIXME: charset of source code */
 static int OptionEncode = FALSE;
 #endif
 
