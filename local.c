@@ -396,13 +396,13 @@ localcgi_post(char *uri, char *qstr, FormList *request, char *referer)
     if (check_local_cgi(file, status) < 0)
 	return NULL;
     tmp1 = tmpfname(TMPF_DFL, NULL);
+    if ((pid = localcgi_popen_r(&f)) < 0)
+	return NULL;
+    else if (pid)
+	return f;
     f1 = fopen(tmp1->ptr, "w");
     if (f1 == NULL)
-	return NULL;
-    if ((pid = localcgi_popen_r(&f))) {
-	fclose(f1);
-	return pid > 0 ? f : NULL;
-    }
+	exit(1);
     if (qstr == NULL) {
 	set_cgi_environ(uri, file, uri);
     }

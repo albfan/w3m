@@ -1,5 +1,10 @@
 2003-01-16  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03642] Re: cleanup (don't close connection of news server)
+	* local.c (localcgi_post): localcgi_popen_r first
+
+2003-01-16  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03641] Re: cleanup (don't close connection of news server)
 	* ftp.c (ftp_command): fix fwrite arg
 	* news.c (news_command): fix fwrite arg
