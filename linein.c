@@ -848,9 +848,8 @@ next_dcompl(int next)
 	if (emacs_like_lineedit)
 	    addstr("----- Press TAB to continue -----");
 	else
-#else
-	addstr("----- Press CTRL-D to continue -----");
 #endif
+	    addstr("----- Press CTRL-D to continue -----");
 	boldend();
     }
 }
