@@ -6,7 +6,9 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <fcntl.h>
+#if defined(HAVE_WAITPID) || defined(HAVE_WAIT3)
 #include <sys/wait.h>
+#endif
 #include <time.h>
 #include "terms.h"
 #include "myctype.h"

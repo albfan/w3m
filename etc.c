@@ -14,7 +14,9 @@
 
 #include <sys/types.h>
 #include <time.h>
+#if defined(HAVE_WAITPID) || defined(HAVE_WAIT3)
 #include <sys/wait.h>
+#endif
 #include <signal.h>
 
 #ifdef	__WATT32__
