@@ -1,3 +1,11 @@
+2001-12-07  Tsutomu Okada <okada@furuno.co.jp>
+
+	* [w3m-dev 02638] completion for ! and/or @
+	* linein.c (next_compl): check "\\ ", "\\\t"
+	* linein.c (escape_spaces): added
+	* linein.c (unescape_spaces): added
+	* linein.c (doComplete): use unescape_spaces, escape_spaces
+
 2001-12-07  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* [w3m-dev 02637]
