@@ -776,6 +776,11 @@ global char *DirBufferCommand init("file:///$LIB/dirlist" CGI_EXTENSION);
 global int ignore_null_img_alt init(TRUE);
 global int FoldTextarea init(FALSE);
 
+#ifdef USE_MIGEMO
+global int use_migemo init(FALSE);
+global char *migemo_command init("migemoc");
+#endif				/* USE_MIGEMO */
+
 global struct auth_cookie *Auth_cookie init(NULL);
 global char *Local_cookie init(NULL);
 #ifdef USE_COOKIE
