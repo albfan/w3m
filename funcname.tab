@@ -20,6 +20,7 @@ DICT_WORD_AT	dictwordat
 DISPLAY_IMAGE	dispI
 DOWN		ldown1
 DOWNLOAD	svSrc
+DOWNLOAD_LIST	ldDL
 EDIT		editBf
 EDIT_SCREEN	editScr
 END		goLineL

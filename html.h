@@ -72,6 +72,7 @@ typedef struct {
 #ifdef USE_SSL
     char *ssl_certificate;
 #endif
+    char *url;
 } URLFile;
 
 #define CMP_NOCOMPRESS   0

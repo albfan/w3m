@@ -453,6 +453,18 @@ typedef struct _TabBuffer {
     Buffer *firstBuffer;
 } TabBuffer;
 
+typedef struct _DownloadList {
+    pid_t pid;
+    char *url;
+    char *save;
+    char *lock;
+    clen_t size;
+    time_t time;
+    int ok;
+    struct _DownloadList *next;
+    struct _DownloadList *prev;
+} DownloadList;
+
 #define COPY_BUFPOSITION(dstbuf, srcbuf) {\
  (dstbuf)->topLine = (srcbuf)->topLine; \
  (dstbuf)->currentLine = (srcbuf)->currentLine; \
@@ -795,6 +807,8 @@ global int TabCols init(10);
 	: (nTab - 1) / ((nTab * TabCols - 1) / (COLS - 2) + 1) + 1)
 #define Currentbuf (CurrentTab->currentBuffer)
 #define Firstbuf (CurrentTab->firstBuffer)
+global DownloadList *FirstDL init(NULL);
+global DownloadList *LastDL init(NULL);
 global int CurrentKey;
 global char *CurrentKeyData;
 global char *CurrentCmdData;
