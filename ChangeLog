@@ -42,6 +42,7 @@
 
 2002-12-19  Fumitoshi UKAI  <ukai@debian.or.jp>
 
+	* [w3m-dev 03584] Re: meta refresh
 	* main.c (DefaultAlarm): fix initialize value
 
 2002-12-19  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
