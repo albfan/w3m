@@ -7200,7 +7200,7 @@ getNextPage(Buffer *buf, int plen)
     Str lineBuf2;
     char volatile pre_lbuf = '\0';
     URLFile uf;
-    char volatile code;
+    char code;
     int volatile squeeze_flag = FALSE;
     Lineprop *propBuffer = NULL;
 #ifdef USE_ANSI_COLOR
