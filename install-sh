@@ -54,7 +54,7 @@ fi
 if [ -n "$owner" ]; then
   chown $owner $dest
 fi
-if [ -n '$group" ]; then
+if [ -n "$group" ]; then
   chgrp $group $dest
 fi
 if [ -n "$mode" ]; then
