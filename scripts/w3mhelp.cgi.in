@@ -16,6 +16,7 @@ unshift(@INC, $helpdir);
 require "w3mhelp-funcname.pl";
 require "w3mhelp-funcdesc.en.pl";
 $lang = 'en';
+$charset = 'US-ASCII';
 
 %htmlesc = (
     '<', '&lt;',
@@ -44,7 +45,7 @@ if (defined($ENV{'QUERY_STRING'})) {
 	if ($tlang !~ /^[a-z][a-z]$/) {
 	    $tlang = 'en';
 	}
-	print "tlang=$tlang\n";
+	# print "tlang=$tlang\n";
 	eval {require "w3mhelp-funcdesc.$tlang.pl";};
 	if (defined(%funcdesc)) {
 	    $lang = $tlang;
@@ -89,7 +90,7 @@ while (($key, $fname) = each %menu_keyfunc) {
 }
 
 print <<HEADING;
-Content-Type: text/html
+Content-Type: text/html; charset=$charset
 
 <HTML>
 <HEAD>
