@@ -1518,6 +1518,8 @@ check_table_height(struct table *t)
 		    if (cell.row[idx] == j && cell.rowspan[idx] == rowspan)
 			c = idx;
 		}
+		if (c >= MAXROWCELL)
+		    continue;
 		if (c >= cell.size) {
 		    if (cell.size == 0) {
 			cell.size = max(MAXCELL, c + 1);

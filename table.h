@@ -34,6 +34,7 @@ typedef unsigned short table_attr;
 #define TBL_IN_COL     4
 
 #define MAXCELL 20
+#define MAXROWCELL 1000
 struct table_cell {
     short col[MAXCELL];
     short colspan[MAXCELL];
