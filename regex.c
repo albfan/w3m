@@ -554,6 +554,9 @@ regmatch_iter(struct MatchingContext1 *c,
 	    c->re++;
 	    c->firstp = 0;
 	}
+	if (c->str >= c->end_p) {
+	    return 0;
+	}
     }
     c->lastpos = c->str;
 #ifdef REGEX_DEBUG
