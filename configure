@@ -685,9 +685,12 @@ if [ "$use_ssl" = y ]; then
 fi
 if [ "$use_ssl" = y ]; then
   ask_param "SSL verification support (SSL library >= version 0.8)" use_ssl_verify n
+  ask_param "Digest Auth support" use_digest_auth y
 else
   use_ssl_verify=n
   def_param "use_ssl_verify" n
+  use_digest_auth=n
+  def_param "use_digest_auth" n
 fi
 
 if [ "$use_color" = y ]; then
@@ -2045,6 +2048,7 @@ $def_use_gpm
 $def_use_sysmouse
 $def_use_menu
 $def_use_cookie
+$def_use_digest_auth
 $def_use_ssl
 $def_use_ssl_verify
 $def_ftppass_hostnamegen
