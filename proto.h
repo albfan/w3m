@@ -646,6 +646,7 @@ extern void initMenu(void);
 #else				/* not USE_MENU */
 #define mainMn nulcmd
 #define selMn selBuf
+#define tabMn nulcmd
 #endif				/* not USE_MENU */
 
 #ifdef USE_DICT

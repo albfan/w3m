@@ -1,3 +1,16 @@
+2002-11-10  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03401] w3mhelp.cgi
+	* proto.h (tabMn): nulcmd ifndef USE_MENU
+	* scripts/w3mhelp-funcdesc.en.pl.in: add LINEEDIT:EDITOR
+	* scripts/w3mhelp-funcdesc.ja.pl.in: add LINEEDIT:EDITOR
+					Tab operation
+	* scripts/w3mhelp-funcname.pl.in: add LINEEDIT:EDITOR C-o
+	* scripts/w3mhelp.cgi.in: add tabA in Hyperlink operation
+				add tabURL, tabrURL in File/Stream operation
+				add Tab operation
+				add lineedit_editor in Line edit mode
+	
 2002-11-10  NOMIYA Masaru <nomiya@ttmy.ne.jp>
 
 	* [w3m-dev 03399]
