@@ -456,7 +456,6 @@ displayBuffer(Buffer *buf, int mode)
     msg = make_lastline_message(buf);
     if (buf->firstLine == NULL) {
 	Strcat_charp(msg, "\tNo Line");
-	clear();
     }
     if (delayed_msg != NULL) {
 	disp_message(delayed_msg, FALSE);
