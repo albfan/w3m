@@ -1,3 +1,8 @@
+2002-04-21  Kiyokazu SUTO <suto@ks-and-ks.ne.jp>
+
+	* [w3m-dev 03181] KEYBIND_SRC was not passed to scripts/Makefile
+	* Makefile (all-scripts): pass KEYBIND_SRC
+
 2002-04-17  Kiyokazu SUTO <suto@ks-and-ks.ne.jp>
 
 	* [w3m-dev 03178] Parser of ``cols'' and ``rows''

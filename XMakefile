@@ -137,7 +137,7 @@ install-helpfile:
 all-scripts:
 	for dir in $(SCRIPTSUBDIRS);	\
 	do	\
-		(cd $$dir; $(MAKE) PERL='$(PERL)' BIN_DIR='$(BIN_DIR)' LIB_DIR='$(LIB_DIR)' HELP_DIR='$(HELP_DIR)' RC_DIR='$(RC_DIR)');	\
+		(cd $$dir; $(MAKE) PERL='$(PERL)' BIN_DIR='$(BIN_DIR)' LIB_DIR='$(LIB_DIR)' HELP_DIR='$(HELP_DIR)' RC_DIR='$(RC_DIR)' KEYBIND_SRC='$(KEYBIND_SRC)');	\
 	done
 
 install-scripts: all-scripts
