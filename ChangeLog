@@ -1,3 +1,8 @@
+2002-02-28  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* [w3m-dev 03070] Re: https through proxy
+	* url.c (openURL): pass extra_header (Proxy-Authorization:)
+
 2002-02-26  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* [w3m-dev 03067] Re: https through proxy

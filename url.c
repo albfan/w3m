@@ -1577,7 +1577,7 @@ openURL(char *url, ParsedURL *pu, ParsedURL *current,
 	    if (pu->scheme == SCM_HTTPS) {
 		if (*status == HTST_NORMAL) {
 		    hr->command = HR_COMMAND_CONNECT;
-		    tmp = HTTPrequest(pu, current, hr, NULL);
+		    tmp = HTTPrequest(pu, current, hr, extra_header);
 		    *status = HTST_CONNECT;
 		}
 		else {
