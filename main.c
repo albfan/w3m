@@ -132,6 +132,12 @@ fversion(FILE * f)
 	    ",ssl-verify"
 #endif
 #endif
+#ifdef USE_EXTERNAL_URI_LOADER
+	    ",external-uri-loader"
+#endif
+#ifdef USE_W3MMAILER
+	    ",w3mmailer"
+#endif
 #ifdef USE_NNTP
 	    ",nntp"
 #endif
