@@ -1,3 +1,8 @@
+2003-01-21  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03657] fputs -> Strfputs
+	* form.c (form_fputs_decode): use Strfputs()
+
 2003-01-19  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* [w3m-dev 03655] Re: file.c:image_source when undef USE_IMAGE

@@ -447,7 +447,8 @@ form_fputs_decode(Str s, FILE * f)
 	    break;
 	}
     }
-    fputs(conv_str(z, InnerCode, DisplayCode)->ptr, f);
+    z = conv_str(z, InnerCode, DisplayCode);
+    Strfputs(z, f);
 }
 
 
