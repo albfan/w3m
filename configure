@@ -2046,7 +2046,7 @@ imgx11cflags=''
 imgfbcflags=''
 imgx11ldflags=''
 imgfbldflags=''
-imbobjs=''
+imgobjs='w3mimg/w3mimg.o'
 
 if [ "$use_image" = y ]; then
   if [ "$use_w3mimg_x11" = y ]; then
