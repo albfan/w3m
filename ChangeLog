@@ -1,3 +1,7 @@
+2003-09-27  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* conv.c ucs_eucjp.h ucs_latin1.h: deleted
+
 2003-09-26  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* add posubst,  compile-time message l10n
