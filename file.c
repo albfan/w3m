@@ -1082,7 +1082,7 @@ loadGeneralFile(char *path, ParsedURL *volatile current, char *referer,
 	case SCM_UNKNOWN:
 	    tmp = searchURIMethods(&pu);
 	    if (tmp != NULL) {
-		b = loadGeneralFile(tmp->ptr, NULL, NO_REFERER, 0, NULL);
+		b = loadGeneralFile(tmp->ptr, NULL, NO_REFERER, 0, request);
 		if (b != NO_BUFFER)
 		    return b;
 	    }
