@@ -351,7 +351,7 @@ reAnchorAny(Buffer *buf, char *re,
 	 (MarkAllPages || l->linenumber < buf->topLine->linenumber + LASTLINE);
 	 l = l->next) {
 	if (p && l->bpos)
-	    continue;
+	    goto next_line;
 	p = l->lineBuf;
 	for (;;) {
 	    if (regexMatch(p, &l->lineBuf[l->size] - p, p == l->lineBuf) == 1) {
@@ -361,6 +361,10 @@ reAnchorAny(Buffer *buf, char *re,
 	    else
 		break;
 	}
+  next_line:
+	if (MarkAllPages && l->next == NULL && buf->pagerSource &&
+	    !(buf->bufferprop & BP_CLOSE))
+	    getNextPage(buf, PagerMax);
     }
     return NULL;
 }
