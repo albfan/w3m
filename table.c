@@ -412,7 +412,7 @@ suspend_or_pushdata(struct table *tbl, char *line)
     }
 }
 
-#ifndef USE_M17N
+#ifdef USE_M17N
 #define PUSH_TAG(str,n) Strcat_charp_n(tagbuf, str, n)
 #else
 #define PUSH_TAG(str,n) Strcat_char(tagbuf, *str)
