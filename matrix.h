@@ -41,11 +41,7 @@ typedef struct vector *Vector;
 
 #define m_entry(m,i,j) (M_VAL(m,i,j))
 #define v_entry(v,i) (V_VAL(v,i))
-#ifdef __CYGWIN__
-#define m_copy(m1,m2) (bcopy((const char *)(m1)->me,(char *)(m2)->me,(m1)->dim*(m1)->dim*sizeof(double)))
-#else				/* not __CYGWIN__ */
 #define m_copy(m1,m2) (bcopy((m1)->me,(m2)->me,(m1)->dim*(m1)->dim*sizeof(double)))
-#endif				/* not __CYGWIN__ */
 #define v_free(v) ((v)=NULL)
 #define m_free(m) ((m)=NULL)
 #define px_free(px) ((px)=NULL)

@@ -3109,11 +3109,7 @@ pushTable(struct table *tbl, struct table *tbl1)
 	tbl->tables_size += MAX_TABLE_N;
 	tmp = New_N(struct table_in, tbl->tables_size);
 	if (tbl->tables)
-#ifdef __CYGWIN__
-	    bcopy((const char *) tbl->tables, (char *) tmp, (size_t) tbl->ntable * sizeof(struct table_in));
-#else				/* not __CYGWIN__ */
 	    bcopy(tbl->tables, tmp, tbl->ntable * sizeof(struct table_in));
-#endif				/* not __CYGWIN__ */
 	tbl->tables = tmp;
     }
 

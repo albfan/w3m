@@ -354,11 +354,7 @@ putHmarker(HmarkerList * ml, int line, int pos, int seq)
     if (ml->markmax == 0) {
 	ml->markmax = FIRST_MARKER_SIZE;
 	ml->marks = NewAtom_N(BufferPoint, ml->markmax);
-#ifdef __CYGWIN__
-	bzero((char *) ml->marks, sizeof(BufferPoint) * ml->markmax);
-#else				/* not __CYGWIN__ */
 	bzero(ml->marks, sizeof(BufferPoint) * ml->markmax);
-#endif				/* not __CYGWIN__ */
     }
     if (seq + 1 > ml->nmark)
 	ml->nmark = seq + 1;
