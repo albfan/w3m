@@ -1,3 +1,7 @@
+2002-03-15  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* proto.h (readHeader): added
+
 2002-03-14  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03127] X-Face

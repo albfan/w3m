@@ -205,6 +205,7 @@ extern int checkSaveFile(InputStream stream, char *path);
 extern int checkOverWrite(char *path);
 extern char *inputAnswer(char *prompt);
 extern int matchattr(char *p, char *attr, int len, Str *value);
+extern void readHeader(URLFile *uf, Buffer *newBuf, int thru, ParsedURL *pu);
 extern char *checkHeader(Buffer *buf, char *field);
 extern Buffer *newBuffer(int width);
 extern Buffer *nullBuffer(void);
