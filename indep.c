@@ -280,7 +280,7 @@ cleanup_line(Str s, int mode)
 int
 getescapechar(char **str)
 {
-    int i, dummy = -1;
+    int dummy = -1;
     char *p = *str, *q;
 
     if (*p == '&')

@@ -303,7 +303,7 @@ static Str
 unquote_mailcap_loop(char *qstr, char *type, char *name, char *attr, int *stat, int flag0)
 {
     Str str, tmp, test, then;
-    char *p, *q;
+    char *p;
     int status = MC_NORMAL, prev_status = MC_NORMAL, sp = 0, flag;
 
     if (stat)

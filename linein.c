@@ -43,8 +43,11 @@ static void insertself(char c),
   _mvR(void), _mvL(void), _mvRw(void), _mvLw(void), delC(void), insC(void),
   _mvB(void), _mvE(void), _enter(void), _quo(void), _bs(void), _bsw(void),
   killn(void), killb(void), _inbrk(void), _esc(void),
-  _prev(void), _next(void), _compl(void), _rcompl(void), _tcompl(void),
+  _prev(void), _next(void), _compl(void), _tcompl(void),
   _dcompl(void), _rdcompl(void);
+#ifndef EMACS_LIKE_LINEEDIT
+static void _rcompl(void);
+#endif
 #ifdef __EMX__
 static int getcntrl(void);
 #endif
@@ -722,11 +725,13 @@ _compl(void)
     next_compl(1);
 }
 
+#ifndef EMACS_LIKE_LINEEDIT
 static void
 _rcompl(void)
 {
     next_compl(-1);
 }
+#endif
 
 static void
 _tcompl(void)
