@@ -56,6 +56,7 @@ extern int	CodePage;
 #include <windows.h>
 static HANDLE hConIn;
 static int isWin95;
+static int isWinConsole;
 static INPUT_RECORD *ConInV;
 static int iConIn, nConIn, nConInMax;
 #ifdef USE_MOUSE
