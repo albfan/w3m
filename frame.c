@@ -38,7 +38,7 @@ parseFrameSetLength(char *s, char ***ret)
 
     for (i = 0, p = s;; ++p) {
 	SKIP_BLANKS(p);
-	len = strtoul(p, &q, 10);
+	len = strtol(p, &q, 10);
 
 	switch (*q) {
 	case '%':
