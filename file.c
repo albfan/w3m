@@ -173,7 +173,7 @@ static struct compression_decoder {
     { CMP_BZIP2, ".bz2", "application/x-bzip",
       0, BUNZIP2_CMDNAME, BUNZIP2_NAME, "bzip, bzip2",
       {"x-bzip", "bzip", "bzip2", NULL} }, 
-    { CMP_DEFLATE, NULL, "application/x-deflate",
+    { CMP_DEFLATE, ".deflate", "application/x-deflate",
       1, INFLATE_CMDNAME, INFLATE_NAME, "deflate",
       {"deflate", "x-deflate", NULL} }, 
     { CMP_NOCOMPRESS, NULL, NULL, 0, NULL, NULL, NULL, {NULL}},

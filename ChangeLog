@@ -1,3 +1,9 @@
+2003-07-08  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03927] deflate
+	* file.c (compression_decoder): .deflate for application/x-deflate's
+				extension
+
 2003-06-19  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* [w3m-dev 03916] Re: charset attribute of anchor tag
