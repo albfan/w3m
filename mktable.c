@@ -18,7 +18,7 @@ defhash(HashItem_ss *, int, hss_i)
 #define keycomp(x,y) ((x)==(y))
      static uintptr_t hashfunc(HashItem_ss * x)
 {
-    return (uintptr_t)x;
+    return (uintptr_t) x;
 }
 
 defhashfunc(HashItem_ss *, int, hss_i)
