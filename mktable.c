@@ -50,7 +50,7 @@ main(int argc, char *argv[], char **envp)
     }
     p = argv[2];
     if (strrchr(p, '/') != NULL)
-	p = strrchr(p, '/')+1;
+	p = strrchr(p, '/') + 1;
     fbase = Strnew_charp(p);
     if (strchr(fbase->ptr, '.'))
 	while (Strlastchar(fbase) != '.')
