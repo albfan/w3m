@@ -495,7 +495,7 @@ loadImage(int flag)
 	    symlink(cache->file, cache->touch);
 	    if (lstat(image_lock, &st)) {
 		if (symlink(cache->file, image_lock))
-			exit(0);
+		    exit(0);
 #else
 	    f = fopen(cache->touch, "w");
 	    if (f)
@@ -503,7 +503,7 @@ loadImage(int flag)
 	    if (stat(image_lock, &st)) {
 		f = fopen(image_lock, "w");
 		if (!f)
-			exit(0);
+		    exit(0);
 		fclose(f);
 #endif
 		kill(getppid(), SIGUSR1);
