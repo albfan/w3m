@@ -1717,7 +1717,7 @@ initMenu(void)
 #endif
 	for (item = MainMenuItem; item->type != MENU_END; item++)
 	    item->label =
-		wc_conv(gettext(item->label), MainMenuCharset,
+		wc_conv(_(item->label), MainMenuCharset,
 			InnerCharset)->ptr;
 	MainMenuEncode = TRUE;
     }

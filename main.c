@@ -384,9 +384,11 @@ main(int argc, char **argv, char **envp)
 #endif
 #endif
     GC_init();
+#if ENABLE_NLS
     setlocale(LC_ALL, "");
     bindtextdomain(PACKAGE, LOCALEDIR);
     textdomain(PACKAGE);
+#endif
 
 #ifndef HAVE_SYS_ERRLIST
     prepare_sys_errlist();
