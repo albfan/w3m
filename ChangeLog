@@ -1,3 +1,9 @@
+2002-12-04  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03516] Re: 2 stroke keybinding
+	* func.c (keymap_initialized): initialized to FALSE
+		(setKeymap): push KeyData
+
 2002-12-04  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* NEWS: 2 stroke keybinding

@@ -14,7 +14,7 @@
 
 #define KEYDATA_HASH_SIZE 16
 static Hash_iv *keyData = NULL;
-static char keymap_initialized;
+static char keymap_initialized = FALSE;
 static struct stat current_keymap_file;
 
 void
@@ -104,6 +104,8 @@ setKeymap(char *p, int lineno, int verbose)
 	    keyData = newHash_iv(KEYDATA_HASH_SIZE);
 	putHash_iv(keyData, c, (void *)s);
     }
+    else if (getKeyData(c))
+	putHash_iv(keyData, c, NULL);
 }
 
 void
