@@ -1,3 +1,8 @@
+2003-01-11  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* fix compiler warnings
+	* html.h (UFclose): value computed but not used
+
 2003-01-11  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03632] cleanup (don't close connection of news server)

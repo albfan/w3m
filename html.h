@@ -14,7 +14,7 @@
 #define UFgetc(f) ISgetc((f)->stream)
 #define UFundogetc(f) ISundogetc((f)->stream)
 #define UFread(f,buf,len) ISread((f)->stream,buf,len)
-#define UFclose(f) (ISclose((f)->stream) == 0 && ((f)->stream = NULL))
+#define UFclose(f) (void)(ISclose((f)->stream) == 0 && ((f)->stream = NULL))
 
 struct cmdtable {
     char *cmdname;
