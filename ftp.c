@@ -47,7 +47,7 @@ ftp_command(FTP ftp, char *cmd, char *arg, int *status)
 	    tmp = Sprintf("%s %s\r\n", cmd, arg);
 	else
 	    tmp = Sprintf("%s\r\n", cmd);
-	fwrite(tmp->ptr, tmp->length, sizeof(char), ftp->wf);
+	fwrite(tmp->ptr, sizeof(char), tmp->length, ftp->wf);
 	fflush(ftp->wf);
     }
     if (!status)
