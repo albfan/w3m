@@ -220,7 +220,9 @@ check_cygwin_console(void)
     char *term = getenv("TERM");
     HANDLE hWnd;
 
-    if (strncmp(term, "cygwin", 6) == 0) {
+    if (term == NULL)
+	term = DEFAULT_TERM;
+    if (term && strncmp(term, "cygwin", 6) == 0) {
 	isWinConsole = 1;
     }
     if (isWinConsole) {
@@ -485,12 +487,14 @@ set_tty(void)
 #ifdef USE_MOUSE
     {
 	char *term = getenv("TERM");
-	struct w3m_term_info *p;
-	for (p = w3m_term_info_list; p->term != NULL; p++) {
-	    if (!strncmp(term, p->term, strlen(p->term))) {
-		is_xterm = p->mouse_flag;
-		break;
-	    }
+	if (term != NULL) {
+	    struct w3m_term_info *p;
+	    for (p = w3m_term_info_list; p->term != NULL; p++) {
+		if (!strncmp(term, p->term, strlen(p->term))) {
+			is_xterm = p->mouse_flag;
+			break;
+		    }
+		}
 	}
     }
 #endif
