@@ -4314,6 +4314,7 @@ chkURLBuffer(Buffer *buf)
 {
     static char *url_like_pat[] = {
 	"https?://[a-zA-Z0-9][a-zA-Z0-9:%\\-\\./?=~_\\&+@#,\\$;]*[a-zA-Z0-9_/=]",
+	"file:/[a-zA-Z0-9:%\\-\\./=_\\+@#,\\$;]*",
 #ifdef USE_GOPHER
 	"gopher://[a-zA-Z0-9][a-zA-Z0-9:%\\-\\./_]*",
 #endif				/* USE_GOPHER */
