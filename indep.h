@@ -3,6 +3,7 @@
 #define INDEP_H
 #include "gc.h"
 #include "Str.h"
+#include "config.h"
 
 #ifndef TRUE
 #define TRUE 1
@@ -23,7 +24,9 @@ extern int strCmp(const void *s1, const void *s2);
 extern char *currentdir(void);
 extern char *cleanupName(char *name);
 extern char *expandPath(char *name);
-extern char *strcasestr(char *s1, char *s2);
+#ifndef HAVE_STRCASESTR
+extern char *strcasestr(const char *s1, const char *s2);
+#endif
 extern int strcasemstr(char *str, char *srch[], char **ret_ptr);
 extern char *remove_space(char *str);
 extern int non_null(char *s);

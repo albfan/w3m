@@ -10,6 +10,8 @@
 #ifndef FM_H
 #define FM_H
 
+#define _GNU_SOURCE	/* strcasestr() */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
