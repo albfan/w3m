@@ -782,6 +782,7 @@ global int DefaultURLString init(DEFAULT_URL_EMPTY);
 
 #ifdef USE_MIGEMO
 global int use_migemo init(FALSE);
+global int migemo_active init(0);
 global char *migemo_command init(DEF_MIGEMO_COMMAND);
 #endif				/* USE_MIGEMO */
 

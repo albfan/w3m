@@ -268,7 +268,8 @@ extern void escmap(void);
 extern void escbmap(void);
 extern void escdmap(char c);
 extern char *inputLineHistSearch(char *prompt, char *def_str, int flag,
-				 Hist *hist, int (*incfunc) (int ch, Str buf));
+				 Hist *hist, int (*incfunc) (int ch, Str buf,
+							     Lineprop *prop));
 #ifdef USE_HISTORY
 extern Buffer *historyBuffer(Hist *hist);
 extern void loadHistory(Hist *hist);
