@@ -1,5 +1,10 @@
 2003-01-24  Fumitoshi UKAI  <ukai@debian.or.jp>
 
+	* NEWS: func: RESHAPE
+		rc: fold_line
+
+2003-01-24  Fumitoshi UKAI  <ukai@debian.or.jp>
+
 	* fix compiler warnings
 	* display.c (displayBuffer): fix suggest parentheses around && within ||
 2003-01-24  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
