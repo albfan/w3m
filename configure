@@ -1950,6 +1950,7 @@ BIN_DIR = $bindir
 HELP_DIR = $helpdir
 LIB_DIR = $libdir
 ETC_DIR = $sysconfdir
+RC_DIR = ~/.w3m
 HELP_FILE = $helpfile
 SYS_LIBRARIES = $gpmlib $extlib $termlib $ssllib $v6lib
 LOCAL_LIBRARIES = $bsdlib $ldflags
