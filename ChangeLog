@@ -1,3 +1,8 @@
+2003-05-14  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03900] Re: table rendering
+	* table.c (check_relative_width): j loop starts from 0
+
 2003-05-14  SAKAI Kiyotaka <ksakai@kso.netwk.ntt-at.co.jp>
 
 	* [w3m-dev 03899] minor fixes
