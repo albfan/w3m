@@ -1733,9 +1733,8 @@ loadGeneralFile(char *path, ParsedURL *volatile current, char *referer,
 				   auth_pu, &hr, request);
 		if (ss == NULL) {
 		    /* abort */
-		    UFclose(&f);
 		    TRAP_OFF;
-		    return NULL;
+		    goto page_loaded;
 		}
 		UFclose(&f);
 		add_auth_cookie_flag = 1;
@@ -1755,9 +1754,8 @@ loadGeneralFile(char *path, ParsedURL *volatile current, char *referer,
 				   extra_header, auth_pu, &hr, request);
 		if (ss == NULL) {
 		    /* abort */
-		    UFclose(&f);
 		    TRAP_OFF;
-		    return NULL;
+		    goto page_loaded;
 		}
 		UFclose(&f);
 		add_auth_cookie_flag = 1;

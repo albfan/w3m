@@ -1,3 +1,8 @@
+2003-05-14  ABE Yuji <cbo46560@pop12.odn.ne.jp>
+
+	* [w3m-dev 03901] body with status-code 401
+	* file.c (loadGeneralFile): show page when 401, 407
+
 2003-05-14  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03900] Re: table rendering
