@@ -6149,7 +6149,7 @@ uncompress_stream(URLFile *uf)
     flush_tty();
     /* fd1[0]: read, fd1[1]: write */
     if ((pid1 = fork()) == 0) {
-	signal(SIGINT, SIG_DFL);
+	reset_signals();
 	close(fd1[0]);
 	if (tmpf) {
 #ifdef USE_BINMODE_STREAM

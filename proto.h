@@ -485,6 +485,7 @@ extern void add_auth_cookie(char *host, int port, char *realm, Str cookie);
 extern char *last_modified(Buffer *buf);
 extern Str romanNumeral(int n);
 extern Str romanAlphabet(int n);
+extern void reset_signals(void);
 extern void mySystem(char *command, int background);
 extern Str myExtCommand(char *cmd, char *arg, int redirect);
 extern Str myEditor(char *cmd, char *file, int line);
