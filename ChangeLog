@@ -1,3 +1,8 @@
+2002-07-18  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03263] fix lastA segfault
+	* main.c (lastA): fix lastA segfault when no anchor found
+
 2002-07-18  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* version.c.in: cvs version
