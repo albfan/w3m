@@ -1,5 +1,10 @@
 2003-03-14  Fumitoshi UKAI  <ukai@debian.or.jp>
 
+	* [w3m-dev 03822] Re: etc.c: treatment for "%7E" is added to  expandName()
+	* etc.c (expandName): rewrite with strncasecmp
+
+2003-03-14  Fumitoshi UKAI  <ukai@debian.or.jp>
+
 	* [w3m-dev 03821] fix for pmake
 	* Makefile.in: use $(srcdir)/... instead of $<
 
