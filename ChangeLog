@@ -1,5 +1,10 @@
 2002-09-09  Hironori SAKAMOTO <h-saka@lsi.nec.co.jp>
 
+	* [w3m-dev 03299] remove file before copying (install-sh)
+	* install-sh: remove file before copying
+
+2002-09-09  Hironori SAKAMOTO <h-saka@lsi.nec.co.jp>
+
 	* [w3m-dev 03298] [ -f instead of [ -e (configure)
 	* configure: use test -f instead of test -e
 

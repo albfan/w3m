@@ -38,6 +38,9 @@ else
   dest=$2
 fi
 
+if [ -f $dest ]; then
+  rm -f $dest
+fi
 cp $file $dest
 if [ -n "$strip" ]; then
   $strip $dest
