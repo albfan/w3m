@@ -2022,6 +2022,7 @@ loadGeneralFile(char *path, ParsedURL *volatile current, char *referer,
     if (fmInitialized)
 	term_raw();
     signal(SIGINT, prevtrap);
+    preFormUpdateBuffer(b);
     return b;
 }
 

@@ -790,6 +790,7 @@ renderFrame(Buffer *Cbuf, int force_reload)
     buf->document_code = Cbuf->document_code;
 #endif
     copyParsedURL(&buf->currentURL, &Cbuf->currentURL);
+    preFormUpdateBuffer(buf);
     return buf;
 }
 

@@ -438,6 +438,7 @@ typedef struct _Buffer {
 #endif
     char image_flag;
     char need_reshape;
+    Anchor *submit;
 } Buffer;
 
 
@@ -842,6 +843,7 @@ global char *ExtBrowser2 init(NULL);
 global char *ExtBrowser3 init(NULL);
 global int BackgroundExtViewer init(TRUE);
 global char *passwd_file init(PASSWD_FILE);
+global char *pre_form_file init(PRE_FORM_FILE);
 global char *ftppasswd init(NULL);
 #ifdef FTPPASS_HOSTNAMEGEN
 global int ftppass_hostnamegen init(TRUE);

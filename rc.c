@@ -1240,6 +1240,7 @@ sync_with_option(void)
     displayImage = FALSE;	/* XXX */
 #endif
     loadPasswd();
+    loadPreForm();
 
     if (AcceptLang == NULL || *AcceptLang == '\0') {
 #if LANG == JA

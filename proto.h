@@ -331,6 +331,7 @@ extern int formtype(char *typestr);
 extern void formRecheckRadio(Anchor *a, Buffer *buf, FormItemList *form);
 extern void formResetBuffer(Buffer *buf, AnchorList *formitem);
 extern void formUpdateBuffer(Anchor *a, Buffer *buf, FormItemList *form);
+extern void preFormUpdateBuffer(Buffer *buf);
 extern Str textfieldrep(Str s, int width);
 extern void input_textarea(FormItemList *fi);
 extern void do_internal(char *action, char *data);
@@ -520,7 +521,9 @@ extern Buffer *dirBuffer(char *dirname);
 extern void set_environ(char *var, char *value);
 extern FILE *localcgi_post(char *, char *, FormList *, char *);
 extern FILE *localcgi_get(char *, char *, char *);
+extern FILE *openSecretFile(char *fname, char *error_msg);
 extern void loadPasswd(void);
+extern void loadPreForm(void);
 extern int find_auth_user_passwd(ParsedURL *pu, char *realm,
 				 Str *uname, Str *pwd, int is_proxy);
 extern Str find_auth_cookie(char *host, int port, char *file, char *realm);

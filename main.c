@@ -949,6 +949,13 @@ MAIN(int argc, char **argv, char **envp)
     }
     onA();
     for (;;) {
+	if (Currentbuf->submit) {
+	    Anchor *a = Currentbuf->submit;
+	    Currentbuf->submit = NULL;
+	    gotoLine(Currentbuf, a->start.line);
+	    Currentbuf->pos = a->start.pos;
+	    _followForm(TRUE);
+	}
 	/* event processing */
 	if (n_event_queue > 0) {
 	    for (i = 0; i < n_event_queue; i++) {
