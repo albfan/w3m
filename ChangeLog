@@ -1,3 +1,11 @@
+2003-02-27  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03783] pipe to "command1 | command2"
+	* etc.c (myExtCommand): redirect to subshell
+	* main.c (pipeBuf): conv_to_system(cmd)
+			shell_quote()
+			set buf->filename, buf->buffername
+
 2003-02-26  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03782] real linenumber for EDIT and EDIT_SCREEN

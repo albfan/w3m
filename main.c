@@ -1895,10 +1895,12 @@ pipeBuf(void)
     cmd = searchKeyData();
     if (cmd == NULL || *cmd == '\0') {
 	cmd = inputLineHist("Pipe buffer to: ", "", IN_COMMAND, ShellHist);
-	if (cmd == NULL || *cmd == '\0') {
-	    displayBuffer(Currentbuf, B_NORMAL);
-	    return;
-	}
+    }
+    if (cmd != NULL)
+	cmd = conv_to_system(cmd);
+    if (cmd == NULL || *cmd == '\0') {
+	displayBuffer(Currentbuf, B_NORMAL);
+	return;
     }
     tmpf = tmpfname(TMPF_DFL, NULL)->ptr;
     f = fopen(tmpf, "w");
@@ -1908,12 +1910,15 @@ pipeBuf(void)
     }
     saveBuffer(Currentbuf, f, TRUE);
     fclose(f);
-    buf = getpipe(myExtCommand(cmd, tmpf, TRUE)->ptr);
+    buf = getpipe(myExtCommand(cmd, shell_quote(tmpf), TRUE)->ptr);
     if (buf == NULL) {
 	disp_message("Execution failed", TRUE);
 	return;
     }
     else {
+	buf->filename = cmd;
+	buf->buffername = Sprintf("%s %s", PIPEBUFFERNAME,
+				  conv_from_system(cmd))->ptr;
 	buf->bufferprop |= (BP_INTERNAL | BP_NO_URL);
 	if (buf->type == NULL)
 	    buf->type = "text/plain";
