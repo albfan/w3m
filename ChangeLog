@@ -1,5 +1,11 @@
 2002-11-12  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 03414] Re: show parameter
+	* main.c (fusage): add -show-option
+		(MAIN): check -show-option
+
+2002-11-12  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 03413] Re: setting form on loading
 	* form.c (loadPreForm): add textarea
 		(preFormUpdateBuffer): submit if value is matched as well
