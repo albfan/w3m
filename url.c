@@ -1433,7 +1433,7 @@ openURL(char *url, ParsedURL *pu, ParsedURL *current,
 	else if ((i = strlen(pu->file)) > extlen &&
 		 !strncmp(pu->file + i - extlen, CGI_EXTENSION, extlen)) {
 	    /* lodal CGI: GET */
-	    uf.stream = newFileStream(localcgi_get(pu->real_file, "",
+	    uf.stream = newFileStream(localcgi_get(pu->real_file, NULL,
 						   option->referer),
 				      (void (*)())pclose);
 	    if (uf.stream == NULL)
