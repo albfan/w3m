@@ -1,3 +1,9 @@
+2002-10-28  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* [w3m-dev-en 00795]
+	* configure: IMLIB_CONFIG, IMLIB2_CONFIG, GDKPIXBUF_CONFIG
+	* rc.c (CMT_DISP_IMAGE): need if not defined USE_IMAGE
+
 2002-10-27  Fumitoshi UKAI  <ukai@debian.or.jp>
 
 	* 0.3.2 release candidate 2
