@@ -116,6 +116,7 @@ extern void setAlarmEvent(int sec, short status, int cmd, void *data);
 #else
 #define setAlarm nulcmd
 #endif
+extern void reinit(void);
 extern void defKey(void);
 extern int currentLn(Buffer *buf);
 extern void tmpClearBuffer(Buffer *buf);

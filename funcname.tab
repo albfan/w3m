@@ -36,7 +36,6 @@ GOTO_RELATIVE	gorURL
 HELP		ldhelp
 HISTORY		ldHist
 INFO		pginfo
-INIT_MAILCAP	initMailcap
 INTERRUPT	susp
 ISEARCH		isrchfor
 ISEARCH_BACK	isrchbak
@@ -91,6 +90,7 @@ QUIT		qquitfm
 READ_SHELL	readsh
 REDRAW		rdrwSc
 REG_MARK	reMark
+REINIT		reinit
 RELOAD		reload
 RIGHT		col1R
 SAVE		svSrc

@@ -153,7 +153,7 @@ editMailcap(char *mailcap, struct parsed_tagarg *args)
     fclose(f);
     printf("Content-Type: text/plain\n");
     printf("w3m-control: BACK\nw3m-control: BACK\n");
-    printf("w3m-control: INIT_MAILCAP\n");
+    printf("w3m-control: REINIT MAILCAP\n");
 }
 
 int
