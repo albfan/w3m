@@ -1626,11 +1626,11 @@ dispincsrch(int ch, Str buf, Lineprop *prop)
 	    if (searchRoutine == forwardSearch)
 		Currentbuf->pos += 1;
 	    SAVE_BUFPOSITION(&sbuf);
-            if (srchcore(str, searchRoutine) == SR_NOTFOUND 
+	    if (srchcore(str, searchRoutine) == SR_NOTFOUND
 		&& searchRoutine == forwardSearch) {
-                Currentbuf->pos -= 1;
-                SAVE_BUFPOSITION(&sbuf);
-            }
+		Currentbuf->pos -= 1;
+		SAVE_BUFPOSITION(&sbuf);
+	    }
 	    arrangeCursor(Currentbuf);
 	    displayBuffer(Currentbuf, B_FORCE_REDRAW);
 	    clear_mark(Currentbuf->currentLine);
