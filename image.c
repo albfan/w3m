@@ -121,7 +121,7 @@ openImgdisplay()
 	dup2(fdr[1], 1);
 	dup2(open("/dev/null", O_WRONLY), 2);
 #ifndef FOPEN_MAX
-#define FOPEN_MAX 1024	/* XXX */
+#define FOPEN_MAX 1024		/* XXX */
 #endif
 	/* close all other file descriptors (socket, ...) */
 	for (i = 3; i < FOPEN_MAX; i++)
