@@ -138,11 +138,12 @@ lineSkip(Buffer * buf, Line * line, int offset, int last)
     Line *l;
 
     l = currentLineSkip(buf, line, offset, last);
-#ifndef NEXTPAGE_TOPLINE
-    for (i = (LASTLINE - 1) - (buf->lastLine->linenumber - l->linenumber);
-	i > 0 && l->prev != NULL;
-	i--, l = l->prev);
+#ifdef NEXTPAGE_TOPLINE
+    if (! nextpage_topline)
 #endif
+	for (i = (LASTLINE - 1) - (buf->lastLine->linenumber - l->linenumber);
+	     i > 0 && l->prev != NULL;
+	     i--, l = l->prev);
     return l;
 }
 
