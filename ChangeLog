@@ -1,5 +1,9 @@
 2002-11-26  Fumitoshi UKAI  <ukai@debian.or.jp>
 
+	* NEWS: func: CLOSE_TAB_MOUSE, MENU_MOUSE, MOVE_MOUSE, TAB_MOUSE
+
+2002-11-26  Fumitoshi UKAI  <ukai@debian.or.jp>
+
 	* doc/README.mouse_menu: deleted
 	* doc/README.mouse: added
 	* doc-jp/README.mouse_menu: deleted
