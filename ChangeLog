@@ -1,3 +1,12 @@
+2002-11-09  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03386] Re: Interrupt in no_proxy_check()
+	* file.c (getAuthCookie): term_cbreak()
+		(loadGeneralFile): term_cbreak()
+				term_raw()
+				preFormUpdateBuffer() before term_raw()
+		(loadHTMLstream): term_raw()
+
 2002-11-07  Katsumi@yamaoka.cc
 
 	* [w3m-dev 03385] install-sh typo
