@@ -2043,7 +2043,8 @@ loadGeneralFile(char *path, ParsedURL *volatile current, char *referer,
 	t_buf->bufferprop |= BP_FRAME;
     }
 #ifdef USE_SSL
-    t_buf->ssl_certificate = f.ssl_certificate;
+    if (t_buf)
+	t_buf->ssl_certificate = f.ssl_certificate;
 #endif
     frame_source = flag & RG_FRAME_SRC;
     b = loadSomething(&f, pu.real_file ? pu.real_file : pu.file, proc, t_buf);

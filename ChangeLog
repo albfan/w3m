@@ -1,5 +1,12 @@
 2003-04-14  Fumitoshi UKAI  <ukai@debian.or.jp>
 
+	* [w3m-dev 03875] Re: SSL & compressed stream
+	* file.c (loadGeneralFile): check t_buf != NULL
+	* url.c (openURL): don't initialize URLFile here
+		(init_stream): 0 clear URLFile
+
+2003-04-14  Fumitoshi UKAI  <ukai@debian.or.jp>
+
 	* [w3m-dev 03873] SSL & compressed stream
 	* file.c (loadGeneralFile): always update ssl_certificate 
 	* url.c (openURL): initialize URLFile
