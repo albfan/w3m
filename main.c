@@ -1566,9 +1566,13 @@ srchcore(char *str, int (*func) (Buffer *, char *))
 
     prevtrap = signal(SIGINT, intTrap);
     crmode();
-    if (SETJMP(IntReturn) == 0)
-	for (i = 0; i < PREC_NUM; i++)
+    if (SETJMP(IntReturn) == 0) {
+	for (i = 0; i < PREC_NUM; i++) {
 	    result = func(Currentbuf, SearchString);
+	    if (i < PREC_NUM - 1 && result & SR_FOUND)
+		clear_mark(Currentbuf->currentLine);
+	}
+    }
     signal(SIGINT, prevtrap);
     term_raw();
     return result;
