@@ -4637,7 +4637,6 @@ HTMLtagproc1(struct parsed_tag *tag, struct html_feed_environ *h_env)
 	    }
 	}
     case HTML_N_BODY:
-	obuf->flag |= RB_IGNORE_P;
 	return 1;
     default:
 	/* obuf->prevchar = '\0'; */
