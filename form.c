@@ -359,7 +359,7 @@ formUpdateBuffer(Anchor *a, Buffer *buf, FormItemList *form)
 		}
 	    }
 	    if (rows > 1) {
-		if (! FoldTextarea) {
+		if (!FoldTextarea) {
 		    while (p[j] && p[j] != '\r' && p[j] != '\n')
 			j++;
 		}

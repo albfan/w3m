@@ -146,7 +146,7 @@ internal_get(char *url, int flag, FormList *request)
 	    Str first, last;
 	    int len = 0;
 	    for (p = backend_halfdump_buf->first; p; p = p->next)
-		 len += p->ptr->line->length + 1;
+		len += p->ptr->line->length + 1;
 	    first = Strnew_charp("<pre>\n");
 	    last = Strnew_m_charp("</pre><title>", html_quote(buf->buffername),
 				  "</title>\n", NULL);
@@ -162,7 +162,7 @@ internal_get(char *url, int flag, FormList *request)
 	    printf("\n");
 	    printf("%s", first->ptr);
 	    for (p = backend_halfdump_buf->first; p; p = p->next)
-		 printf("%s\n", p->ptr->line->ptr);
+		printf("%s\n", p->ptr->line->ptr);
 	    printf("%s", last->ptr);
 	}
 	else {
