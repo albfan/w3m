@@ -2374,9 +2374,10 @@ loadLink(char *url, char *target, char *referer, FormList * request)
 	if (al) {
 	    gotoLine(Currentbuf, al->start.line);
 #ifdef LABEL_TOPLINE
-    Currentbuf->topLine = lineSkip(Currentbuf, Currentbuf->topLine,
-       Currentbuf->currentLine->linenumber - Currentbuf->topLine->linenumber,
-       FALSE);
+	    if (label_topline)
+		Currentbuf->topLine = lineSkip(Currentbuf, Currentbuf->topLine,
+					       Currentbuf->currentLine->linenumber - Currentbuf->topLine->linenumber,
+					       FALSE);
 #endif
 	    Currentbuf->pos = al->start.pos;
 	    arrangeCursor(Currentbuf);
@@ -2408,9 +2409,11 @@ gotoLabel(char *label)
     pushBuffer(buf);
     gotoLine(Currentbuf, al->start.line);
 #ifdef LABEL_TOPLINE
-    Currentbuf->topLine = lineSkip(Currentbuf, Currentbuf->topLine,
-       Currentbuf->currentLine->linenumber - Currentbuf->topLine->linenumber,
-       FALSE);
+    if (label_topline)
+	Currentbuf->topLine = lineSkip(Currentbuf, Currentbuf->topLine,
+				       Currentbuf->currentLine->linenumber 
+				       - Currentbuf->topLine->linenumber,
+				       FALSE);
 #endif
     Currentbuf->pos = al->start.pos;
     arrangeCursor(Currentbuf);

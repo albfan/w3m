@@ -709,6 +709,9 @@ global int emacs_like_lineedit init(TRUE);
 #ifdef VI_PREC_NUM
 global int vi_prec_num init(TRUE);
 #endif
+#ifdef LABEL_TOPLINE
+global int label_topline init(FALSE);
+#endif
 global int displayLink init(FALSE);
 global int retryAsHttp init(TRUE);
 global int showLineNum init(FALSE);

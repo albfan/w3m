@@ -95,6 +95,9 @@ static int rc_initialized = 0;
 #ifdef VI_PREC_NUM
 #define CMT_VI_PREC_NUM "vi風の数値プレフィクス"
 #endif
+#ifdef LABEL_TOPLINE
+#define CMT_LABEL_TOPLINE	"ラベルに移動する時に行頭になるようにする"
+#endif
 #define CMT_SHOW_NUM     "行番号を表示する"
 #define CMT_MIMETYPES    "利用するmime.types"
 #define CMT_MAILCAP      "利用するmailcap"
@@ -198,6 +201,9 @@ static int rc_initialized = 0;
 #endif
 #ifdef VI_PREC_NUM
 #define CMT_VI_PREC_NUM	 "vi-like numeric prefix"
+#endif
+#ifdef LABEL_TOPLINE
+#define CMT_LABEL_TOPLINE	"move cursor to top line when going to label"
 #endif
 #define CMT_SHOW_NUM     "Show line number"
 #define CMT_MIMETYPES    "mime.types files"
@@ -403,7 +409,10 @@ struct param_ptr params3[] =
     {"emacs_like_lineedit", P_INT, PI_ONOFF, (void *) &emacs_like_lineedit, CMT_EMACS_LIKE_LINEEDIT, NULL },
 #endif
 #ifdef VI_PREC_NUM
-    {"vi_prec_num", P_INT, PI_ONOFF, (void *) &vi_prec_num, CMT_VI_PREC_NUM },
+    {"vi_prec_num", P_INT, PI_ONOFF, (void *) &vi_prec_num, CMT_VI_PREC_NUM, NULL },
+#endif
+#ifdef LABEL_TOPLINE
+    {"label_topline", P_INT, PI_ONOFF, (void *) &label_topline, CMT_LABEL_TOPLINE, NULL },
 #endif
     {"wrap_search", P_INT, PI_ONOFF, (void *) &WrapDefault, CMT_WRAP, NULL},
     {"ignorecase_search", P_INT, PI_ONOFF, (void *) &IgnoreCase, CMT_IGNORE_CASE, NULL},
