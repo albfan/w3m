@@ -21,7 +21,7 @@ mailcapMatch(struct mailcap *mcap, char *type)
     char *cap = mcap->type, *p;
     int level;
     for (p = cap; *p != '/'; p++) {
-	if (tolower(*p) != tolower(*type))
+	if (TOLOWER(*p) != TOLOWER(*type))
 	    return 0;
 	type++;
     }
@@ -36,7 +36,7 @@ mailcapMatch(struct mailcap *mcap, char *type)
     if (*p == '*')
 	return 10 + level;
     while (*p) {
-	if (tolower(*p) != tolower(*type))
+	if (TOLOWER(*p) != TOLOWER(*type))
 	    return 0;
 	p++;
 	type++;

@@ -1,7 +1,7 @@
 /* $Id$ */
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
+#include "myctype.h"
 #include "config.h"
 #include "hash.h"
 #include "Str.h"
@@ -74,11 +74,11 @@ main(int argc, char *argv[], char **envp)
 	Strremovetrailingspaces(s);
 	name = Strnew();
 	for (p = s->ptr; *p; p++) {
-	    if (isspace(*p))
+	    if (IS_SPACE(*p))
 		break;
 	    Strcat_char(name, *p);
 	}
-	while (*p && isspace(*p))
+	while (*p && IS_SPACE(*p))
 	    p++;
 	putHash_ss(hash, name->ptr, p);
 	n++;

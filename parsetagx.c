@@ -128,7 +128,8 @@ parse_tag(char **s, int internal)
     }
     while (*q && !IS_SPACE(*q) && !(tagname[0] != '/' && *q == '/') &&
 	   *q != '>' && p - tagname < MAX_TAG_LEN - 1) {
-	*(p++) = tolower(*(q++));
+	*(p++) = TOLOWER(*q);
+	q++;
     }
     *p = '\0';
 
@@ -161,7 +162,8 @@ parse_tag(char **s, int internal)
 	p = attrname;
 	while (*q && *q != '=' && !IS_SPACE(*q) &&
 	       *q != '>' && p - attrname < MAX_TAG_LEN - 1) {
-	    *(p++) = tolower(*(q++));
+	    *(p++) = TOLOWER(*q);
+	    q++;
 	}
 	if (q == p) {
 	    q++;

@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <pwd.h>
 #include <Str.h>
-#include <ctype.h>
 #include <signal.h>
 #include <setjmp.h>
 #include <time.h>

@@ -44,8 +44,9 @@ extern unsigned char MYCTYPE_DIGITMAP[];
 #define IS_KANJI(x)     (GET_INTCTYPE(x) & INTCTYPE_KANJI)
 #define IS_LATIN1(x)    (GET_INTCTYPE(x) & INTCTYPE_LATIN1)
 
-extern unsigned char INTCTYPE_MAP[];
+#define	TOLOWER(x)	(IS_ALPHA(x) ? ((x)|0x20) : (x))
+#define	TOUPPER(x)	(IS_ALPHA(x) ? ((x)&~0x20) : (x))
 
-#include <ctype.h>
+extern unsigned char INTCTYPE_MAP[];
 
 #endif

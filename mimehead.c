@@ -4,6 +4,7 @@
  */
 
 #include <sys/types.h>
+#include "myctype.h"
 #include "Str.h"
 
 #define LINELEN 4096
@@ -217,13 +218,11 @@ decodeWord(char **ow)
 	goto convert_fail;
     w++;
     p = w;
-    switch (method) {
+    switch (TOUPPER(method)) {
     case 'B':
-    case 'b':
 	a = decodeB(&w);
 	break;
     case 'Q':
-    case 'q':
 	a = decodeQ(&w);
 	break;
     default:

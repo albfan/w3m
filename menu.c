@@ -1924,10 +1924,10 @@ accesskey_menu(Buffer *buf)
 	c = ap[i]->accesskey;
 	if (!IS_ALPHA(c) || menu.keyselect[n] >= 0)
 	    continue;
-	c = tolower(c);
+	c = TOLOWER(c);
 	menu.keymap[(int)c] = mSelect;
 	menu.keyselect[(int)c] = i;
-	c = toupper(c);
+	c = TOUPPER(c);
 	menu.keymap[(int)c] = mSelect;
 	menu.keyselect[(int)c] = i;
     }

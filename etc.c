@@ -134,14 +134,17 @@ gethtmlcmd(char **s)
 
     (*s)++;
     /* first character */
-    if (IS_ALNUM(**s) || **s == '_' || **s == '/')
-	*(p++) = tolower(*((*s)++));
+    if (IS_ALNUM(**s) || **s == '_' || **s == '/') {
+	*(p++) = TOLOWER(**s);
+	(*s)++;
+    }
     else
 	return HTML_UNKNOWN;
     if (p[-1] == '/')
 	SKIP_BLANKS(*s);
     while ((IS_ALNUM(**s) || **s == '_') && p - cmdstr < MAX_CMD_LEN) {
-	*(p++) = tolower(*((*s)++));
+	*(p++) = TOLOWER(**s);
+	(*s)++;
     }
     if (p - cmdstr == MAX_CMD_LEN) {
 	/* buffer overflow: perhaps caused by bad HTML source */

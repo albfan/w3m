@@ -262,7 +262,7 @@ Strlower(Str s)
     int i;
     STR_LENGTH_CHECK(s);
     for (i = 0; i < s->length; i++)
-	s->ptr[i] = tolower(s->ptr[i]);
+	s->ptr[i] = TOLOWER(s->ptr[i]);
 }
 
 void
@@ -271,7 +271,7 @@ Strupper(Str s)
     int i;
     STR_LENGTH_CHECK(s);
     for (i = 0; i < s->length; i++)
-	s->ptr[i] = toupper(s->ptr[i]);
+	s->ptr[i] = TOUPPER(s->ptr[i]);
 }
 
 void

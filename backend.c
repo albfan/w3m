@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <sys/types.h>
-#include <ctype.h>
 #include "fm.h"
 #include "gc.h"
 #include "terms.h"

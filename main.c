@@ -2259,7 +2259,7 @@ _quitfm(int confirm)
 			"Do you want to exit w3m? (y/n)");
     else if (confirm)
 	ans = inputChar("Do you want to exit w3m? (y/n)");
-    if (!(ans && tolower(*ans) == 'y')) {
+    if (!(ans && TOLOWER(*ans) == 'y')) {
 	displayBuffer(Currentbuf, B_NORMAL);
 	return;
     }
