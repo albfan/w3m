@@ -521,7 +521,7 @@ extern Buffer *dirBuffer(char *dirname);
 extern void set_environ(char *var, char *value);
 extern FILE *localcgi_post(char *, char *, FormList *, char *);
 extern FILE *localcgi_get(char *, char *, char *);
-extern FILE *openSecretFile(char *fname, char *error_msg);
+extern FILE *openSecretFile(char *fname);
 extern void loadPasswd(void);
 extern void loadPreForm(void);
 extern int find_auth_user_passwd(ParsedURL *pu, char *realm,
