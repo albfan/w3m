@@ -1,3 +1,8 @@
+2002-11-07  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03382] Interrupt in no_proxy_check()
+	* url.c (check_no_proxy): SIGINT trap by KeyAbort
+
 2002-11-06  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03380] fix configure
