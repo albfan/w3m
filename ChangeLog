@@ -1,3 +1,7 @@
+2003-01-24  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* fix compiler warnings
+	* display.c (displayBuffer): fix suggest parentheses around && within ||
 2003-01-24  Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03667] fold patch
