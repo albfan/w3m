@@ -6982,7 +6982,7 @@ char *
 inputAnswer(char *prompt)
 {
     char *ans;
-    char buf[2];
+    char buf[80];
 
     if (fmInitialized) {
 	term_raw();
@@ -6991,7 +6991,7 @@ inputAnswer(char *prompt)
     else {
 	printf(prompt);
 	fflush(stdout);
-	fgets(buf, 2, stdin);
+	fgets(buf, 80, stdin);
 	ans = allocStr(buf, 1);
     }
     return ans;

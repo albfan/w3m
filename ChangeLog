@@ -1,3 +1,10 @@
+2002-02-04  Fumitoshi UKAI  <ukai@debian.or.jp>
+
+	* [w3m-dev 02985] inputAnswer() and no "ssl_forbid_method"
+	* file.c (inputAnswer): buf size is 80
+	* url.c (openSSLHandle): if old_ssl_forbid_method == ssl_forbid_method
+			ssl path is not modified
+
 2002-02-04  Fumitoshi UKAI <ukai@debian.or.jp>
 
 	* [w3m-dev 02980] Re: code_to_str not found ifndef JP_CHARSET
