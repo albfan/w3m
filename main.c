@@ -417,6 +417,14 @@ main(int argc, char **argv, char **envp)
 	((p = getenv("HTTP_PROXY")) ||
 	 (p = getenv("http_proxy")) || (p = getenv("HTTP_proxy"))))
 	HTTP_proxy = p;
+#ifdef USE_SSL
+    if (!non_null(HTTPS_proxy) &&
+	((p = getenv("HTTPS_PROXY")) ||
+	 (p = getenv("https_proxy")) || (p = getenv("HTTPS_proxy"))))
+	HTTPS_proxy = p;
+    if (HTTPS_proxy == NULL && non_null(HTTP_proxy))
+	HTTPS_proxy = HTTP_proxy;
+#endif				/* USE_SSL */
 #ifdef USE_GOPHER
     if (!non_null(GOPHER_proxy) &&
 	((p = getenv("GOPHER_PROXY")) ||
