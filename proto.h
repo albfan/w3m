@@ -128,6 +128,9 @@ extern char *acceptableEncoding();
 extern int dir_exist(char *path);
 extern Str convertLine(URLFile *uf, Str line, char *code, int mode);
 extern Buffer *loadFile(char *path);
+extern void get_auth_cookie(char *auth_header,
+			    TextList *extra_header, ParsedURL *pu,
+			    HRequest *hr, FormList *request);
 extern Buffer *loadGeneralFile(char *path, ParsedURL *current, char *referer,
 			       int flag, FormList *request);
 extern int is_boundary(int, int);
@@ -512,8 +515,9 @@ extern Buffer *dirBuffer(char *dirname);
 extern void set_environ(char *var, char *value);
 extern FILE *localcgi_post(char *, char *, FormList *, char *);
 extern FILE *localcgi_get(char *, char *, char *);
-extern Str find_auth_cookie(char *host, int port, char *realm);
-extern void add_auth_cookie(char *host, int port, char *realm, Str cookie);
+extern Str find_auth_cookie(char *host, int port, char *file, char *realm);
+extern void add_auth_cookie(char *host, int port, char *file, char *realm,
+			    Str cookie);
 extern char *last_modified(Buffer *buf);
 extern Str romanNumeral(int n);
 extern Str romanAlphabet(int n);

@@ -1535,6 +1535,7 @@ openURL(char *url, ParsedURL *pu, ParsedURL *current,
 #ifdef USE_SSL
     case SCM_HTTPS:
 #endif				/* USE_SSL */
+	get_auth_cookie("Authorization:", extra_header, pu, hr, request);
 	if (pu->file == NULL)
 	    pu->file = allocStr("/", -1);
 	if (request && request->method == FORM_METHOD_POST && request->body)

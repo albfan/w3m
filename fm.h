@@ -600,6 +600,7 @@ struct html_feed_environ {
 struct auth_cookie {
     Str host;
     int port;
+    Str file;
     Str realm;
     Str cookie;
     struct auth_cookie *next;
