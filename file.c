@@ -5834,7 +5834,8 @@ openPagerBuffer(InputStream stream, Buffer *buf)
 	buf->buffername = conv_from_system(buf->buffername);
     buf->bufferprop |= BP_PIPE;
 #ifdef JP_CHARSET
-    buf->document_code = DocumentCode;
+    if (content_charset != '\0' && UseContentCharset)
+	buf->document_code = content_charset;
 #endif
     buf->currentLine = buf->firstLine;
 
@@ -5927,7 +5928,10 @@ getNextPage(Buffer *buf, int plen)
     }
 
 #ifdef JP_CHARSET
-    code = buf->document_code;
+    if (buf->document_code)
+	code = buf->document_code;
+    else
+	code = DocumentCode;
 #endif
     init_stream(&uf, SCM_UNKNOWN, NULL);
     for (i = 0; i < plen; i++) {
