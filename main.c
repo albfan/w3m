@@ -5113,7 +5113,7 @@ SigAlarm(SIGNAL_ARG)
 	    alarm_status = AL_IMPLICIT_DONE;
 	}
 	else if ((alarm_status == AL_IMPLICIT_DONE
-		 && alarm_buffer != Currentbuf)
+		  && alarm_buffer != Currentbuf)
 		 || alarm_status == AL_IMPLICIT_ONCE) {
 	    setAlarmEvent(0, AL_UNSET, FUNCNAME_nulcmd, NULL);
 	}

@@ -1389,8 +1389,7 @@ getAuthCookie(struct http_auth *hauth, char *auth_header,
 	int proxy = !strncasecmp("Proxy-Authorization:", auth_header,
 				 auth_header_len);
 
-	if (!a_found &&
-	    find_auth_user_passwd(pu, realm, &uname, &pwd, proxy)) {
+	if (!a_found && find_auth_user_passwd(pu, realm, &uname, &pwd, proxy)) {
 	    /* found username & password in passwd file */ ;
 	}
 	else {
