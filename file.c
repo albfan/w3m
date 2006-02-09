@@ -8027,7 +8027,7 @@ uncompress_stream(URLFile *uf, char **src)
 	    uf->scheme = SCM_LOCAL;
     }
     UFhalfclose(uf);
-    uf->stream = newFileStream(f1, (void (*)())pclose);
+    uf->stream = newFileStream(f1, (void (*)())fclose);
 }
 
 static FILE *
