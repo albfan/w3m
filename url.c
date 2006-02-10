@@ -1526,12 +1526,12 @@ openURL(char *url, ParsedURL *pu, ParsedURL *current,
 	    /* local CGI: POST */
 	    uf.stream = newFileStream(localcgi_post(pu->real_file, pu->query,
 						    request, option->referer),
-				      (void (*)())pclose);
+				      (void (*)())fclose);
 	else
 	    /* lodal CGI: GET */
 	    uf.stream = newFileStream(localcgi_get(pu->real_file, pu->query,
 						   option->referer),
-				      (void (*)())pclose);
+				      (void (*)())fclose);
 	if (uf.stream) {
 	    uf.is_cgi = TRUE;
 	    uf.scheme = pu->scheme = SCM_LOCAL_CGI;
