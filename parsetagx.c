@@ -182,6 +182,8 @@ parse_tag(char **s, int internal)
 		while (*q && *q != '"') {
 		    if (*q != '\n')
 			Strcat_char(value, *q);
+		    else
+		        Strcat_char(value, ' ');
 		    if (!tag->need_reconstruct && is_html_quote(*q))
 			tag->need_reconstruct = TRUE;
 		    q++;
@@ -194,6 +196,8 @@ parse_tag(char **s, int internal)
 		while (*q && *q != '\'') {
 		    if (*q != '\n')
 			Strcat_char(value, *q);
+		    else
+		        Strcat_char(value, ' ');
 		    if (!tag->need_reconstruct && is_html_quote(*q))
 			tag->need_reconstruct = TRUE;
 		    q++;

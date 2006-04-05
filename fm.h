@@ -336,6 +336,7 @@ typedef struct _Line {
 typedef struct {
     int line;
     int pos;
+    int invalid;
 } BufferPoint;
 
 #ifdef USE_IMAGE
@@ -867,7 +868,6 @@ global int TabCols init(10);
 global DownloadList *FirstDL init(NULL);
 global DownloadList *LastDL init(NULL);
 global int CurrentKey;
-global char *CurrentKeyData;
 global char *CurrentCmdData;
 
 extern char *w3m_version;
@@ -1076,6 +1076,7 @@ global MouseAction mouse_action;
 #ifdef USE_COOKIE
 global int default_use_cookie init(TRUE);
 global int use_cookie init(FALSE);
+global int show_cookie init(TRUE);
 global int accept_cookie init(FALSE);
 #define ACCEPT_BAD_COOKIE_DISCARD	0
 #define ACCEPT_BAD_COOKIE_ACCEPT	1
