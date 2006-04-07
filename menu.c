@@ -590,6 +590,7 @@ action_menu(Menu *menu)
 	    *item.variable = item.value;
 	if (item.type & MENU_FUNC) {
 	    CurrentKey = -1;
+	    CurrentKeyData = NULL;
 	    CurrentCmdData = item.data;
 	    (*item.func) ();
 	    CurrentCmdData = NULL;
@@ -1734,23 +1735,6 @@ initMenu(void)
 	if (list->item == NULL)
 	    continue;
 	new_menu(list->menu, list->item);
-    }
-}
-
-DEFUN(interpretAsMenu, INTERPRET_AS_MENU, "Interpret current document as menu-definition")
-{
-    FILE *mf;
-    MenuList *list;
-
-    if ((mf = fopen(Currentbuf->sourcefile, "r")) != NULL) {
-        interpret_menu(mf);
-        fclose(mf);
-    
-        for (list = w3mMenuList; list->id != NULL; list++) {
-	    if (list->item == NULL)
-	        continue;
-	    new_menu(list->menu, list->item);
-        }
     }
 }
 
