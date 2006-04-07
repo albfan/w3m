@@ -1,6 +1,12 @@
 2006-04-07  Dai Sato  <satodai@w3m.jp>
 
 	* [w3m-dev-en 01060] Some patches
+	* file.c, fm.h, rc.c: Introduce option show_cookie and set it TRUE by default. If set to FALSE received cookies will not be shown.
+	* This fixes Debian bug #253547: w3m: Too slow receiving cookies.
+
+2006-04-07  Dai Sato  <satodai@w3m.jp>
+
+	* [w3m-dev-en 01060] Some patches
 	* parsetagx.c: Replace '\n' (newline) with ' ' (space) in attributes of html tags instead of ignoring them.
 	* Fixes Debian bug #326167: w3m: new lines in hidden form fields are stripped
 
