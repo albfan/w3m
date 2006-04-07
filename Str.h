@@ -28,7 +28,7 @@ typedef struct _Str {
     int area_size;
 } *Str;
 
-Str Strnew();
+Str Strnew(void);
 Str Strnew_size(int);
 Str Strnew_charp(char *);
 Str Strnew_charp_n(char *, int);

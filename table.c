@@ -1984,7 +1984,7 @@ renderTable(struct table *t, int max_width, struct html_feed_environ *h_env)
 	break;
     }
     if (t->total_height == 0) {
-	renderbuf = Strnew(" ");
+       renderbuf = Strnew_charp(" ");
 	t->total_height++;
 	t->total_width = 1;
 	push_render_image(renderbuf, 1, t->total_width, h_env);

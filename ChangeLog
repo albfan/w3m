@@ -1,3 +1,9 @@
+2006-04-07  Dai Sato  <satodai@w3m.jp>
+
+	* [w3m-dev-en 01060] Some patches
+	* Str.h, table.c: Use Strnew_charp() instead of the wrong Strnew().
+	* Fixes SF bug #895351 Strnew called with argument in table.c.
+
 2006-02-10  Dai Sato  <satodai@w3m.jp>
 
 	* http://dog.w3m.jp/bbs/spool/until200602.html#20060210153135@keijiwan
