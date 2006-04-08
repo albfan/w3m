@@ -1,5 +1,10 @@
 2006-04-08  Dai Sato  <satodai@w3m.jp>
 
+	* [w3m-dev 04152] [PATCH] Add more explanation for the usage of the option setting panel.
+	* doc(-jp)/FAQ.html, doc-jp/MANUAL.html: add explanations for .w3m/config and -o option.
+
+2006-04-08  Dai Sato  <satodai@w3m.jp>
+
 	* [w3m-dev 04150] vi-prec_num
 	* main.c: fix vi_prec_num switching.
 
