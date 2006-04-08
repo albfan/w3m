@@ -1112,10 +1112,18 @@ main(int argc, char **argv, char **envp)
 	    mouse_inactive();
 #endif				/* USE_MOUSE */
 	if (IS_ASCII(c)) {	/* Ascii */
-	    if (((prec_num && c == '0') || '1' <= c) && (c <= '9')) {
-		prec_num = prec_num * 10 + (int)(c - '0');
-		if (prec_num > PREC_LIMIT)
-		    prec_num = PREC_LIMIT;
+	    if( vi_prec_num ){
+		if(((prec_num && c == '0') || '1' <= c) && (c <= '9')) {
+		    prec_num = prec_num * 10 + (int)(c - '0');
+		    if (prec_num > PREC_LIMIT)
+			prec_num = PREC_LIMIT;
+		}
+		else {
+		    set_buffer_environ(Currentbuf);
+		    save_buffer_position(Currentbuf);
+		    keyPressEventProc((int)c);
+		    prec_num = 0;
+		}
 	    }
 	    else {
 		set_buffer_environ(Currentbuf);
