@@ -1,5 +1,10 @@
 2006-04-08  Dai Sato  <satodai@w3m.jp>
 
+	* [w3m-dev 04153] NEXT_LINK error
+	* anchor.c, filc.c, fm.h: check A tag in HTMLlineproc2body().
+
+2006-04-08  Dai Sato  <satodai@w3m.jp>
+
 	* [w3m-dev 04152] [PATCH] Add more explanation for the usage of the option setting panel.
 	* doc(-jp)/FAQ.html, doc-jp/MANUAL.html: add explanations for .w3m/config and -o option.
 
