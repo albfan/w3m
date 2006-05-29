@@ -1,4 +1,9 @@
-2006-04-08  Dai Sato  <satodai@w3m.jp>
+2006-05-29  Dai Sato  <satodai@w3m.jp>
+
+	* [w3m-dev-en 01067] Some more patches
+	* main.c: fix unsafe usages of SIGWINCH handler.
+
+2006-05-29  Dai Sato  <satodai@w3m.jp>
 
 	* [w3m-dev-en 01067] Some more patches
 	* keybind(_lynx).c, doc(-jp)/keymap.default: add SHIFT-TAB as a default binding for PREV_LINK.
