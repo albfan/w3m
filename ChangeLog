@@ -1,5 +1,10 @@
 2006-04-08  Dai Sato  <satodai@w3m.jp>
 
+	* [w3m-dev-en 01067] Some more patches
+	* keybind(_lynx).c, doc(-jp)/keymap.default: add SHIFT-TAB as a default binding for PREV_LINK.
+
+2006-04-08  Dai Sato  <satodai@w3m.jp>
+
 	* [w3m-dev 04154] Unclosed textarea in table
 	* table.c: close textarea when table related tags found.
 
