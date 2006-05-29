@@ -293,10 +293,9 @@ wrap_GC_warn_proc(char *msg, GC_word arg)
 
 	    for (; n > 0; --n, ++i) {
 		i %= sizeof(msg_ring) / sizeof(msg_ring[0]);
-		disp_message_nsec(Sprintf
-				  (msg_ring[i].msg,
-				   (unsigned long)msg_ring[i].arg)->ptr, FALSE,
-				  1, TRUE, FALSE);
+
+		printf(msg_ring[i].msg,	(unsigned long)msg_ring[i].arg);
+		sleep_till_anykey(1, 1);
 	    }
 
 	    lock = 0;
