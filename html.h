@@ -69,6 +69,7 @@ typedef struct {
     InputStream stream;
     char *ext;
     int compression;
+    int content_encoding;
     char *guess_type;
 #ifdef USE_SSL
     char *ssl_certificate;

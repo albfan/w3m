@@ -1,6 +1,11 @@
 2006-05-29  Dai Sato  <satodai@w3m.jp>
 
 	* [w3m-dev-en 01067] Some more patches
+	* file.c, html.h, url.c: decode content-encoding in all situations.
+
+2006-05-29  Dai Sato  <satodai@w3m.jp>
+
+	* [w3m-dev-en 01067] Some more patches
 	* main.c: delete calls to GC from wrap_GC_warn_proc to avoid deadlocks.
 
 2006-05-29  Dai Sato  <satodai@w3m.jp>

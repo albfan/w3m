@@ -1453,7 +1453,8 @@ init_stream(URLFile *uf, int scheme, InputStream stream)
     uf->scheme = scheme;
     uf->encoding = ENC_7BIT;
     uf->is_cgi = FALSE;
-    uf->compression = 0;
+    uf->compression = CMP_NOCOMPRESS;
+    uf->content_encoding = CMP_NOCOMPRESS;
     uf->guess_type = NULL;
     uf->ext = NULL;
     uf->modtime = -1;
