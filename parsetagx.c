@@ -159,7 +159,7 @@ parse_tag(char **s, int internal)
     /* Parse tag arguments */
     SKIP_BLANKS(q);
     while (1) {
-	Str value = NULL;
+       Str value = NULL, value_tmp = NULL;
 	if (*q == '>' || *q == '\0')
 	    goto done_parse_tag;
 	p = attrname;
@@ -174,16 +174,13 @@ parse_tag(char **s, int internal)
 	SKIP_BLANKS(q);
 	if (*q == '=') {
 	    /* get value */
-	    value = Strnew();
+	    value_tmp = Strnew();
 	    q++;
 	    SKIP_BLANKS(q);
 	    if (*q == '"') {
 		q++;
 		while (*q && *q != '"') {
-		    if (*q != '\n')
-			Strcat_char(value, *q);
-		    else
-		        Strcat_char(value, ' ');
+		    Strcat_char(value_tmp, *q);
 		    if (!tag->need_reconstruct && is_html_quote(*q))
 			tag->need_reconstruct = TRUE;
 		    q++;
@@ -194,10 +191,7 @@ parse_tag(char **s, int internal)
 	    else if (*q == '\'') {
 		q++;
 		while (*q && *q != '\'') {
-		    if (*q != '\n')
-			Strcat_char(value, *q);
-		    else
-		        Strcat_char(value, ' ');
+		    Strcat_char(value_tmp, *q);
 		    if (!tag->need_reconstruct && is_html_quote(*q))
 			tag->need_reconstruct = TRUE;
 		    q++;
@@ -207,7 +201,7 @@ parse_tag(char **s, int internal)
 	    }
 	    else if (*q) {
 		while (*q && !IS_SPACE(*q) && *q != '>') {
-		    Strcat_char(value, *q);
+                   Strcat_char(value_tmp, *q);
 		    if (!tag->need_reconstruct && is_html_quote(*q))
 			tag->need_reconstruct = TRUE;
 		    q++;
@@ -222,6 +216,29 @@ parse_tag(char **s, int internal)
 		break;
 	    }
 	}
+
+       if (value_tmp) {
+         int j, hidden=FALSE;
+         for (j=0; j<i; j++) {
+           if (tag->attrid[j] == ATTR_TYPE &&
+               strcmp("hidden",tag->value[j]) == 0) {
+             hidden=TRUE;
+             break;
+           }
+         }
+         if ((tag_id == HTML_INPUT || tag_id == HTML_INPUT_ALT) &&
+             attr_id == ATTR_VALUE && hidden) {
+           value = value_tmp;
+         } else {
+           char *x;
+           value = Strnew();
+           for (x = value_tmp->ptr; *x; x++) {
+             if (*x != '\n')
+               Strcat_char(value, *x);
+           }
+         }
+       }
+
 	if (i != nattr) {
 	    if (!internal &&
 		((AttrMAP[attr_id].flag & AFLG_INT) ||
