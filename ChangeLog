@@ -1,5 +1,10 @@
 2006-06-07  Dai Sato  <satodai@w3m.jp>
 
+	* [w3m-dev 03992] Change to display progress status when dump_extra option is specified
+	* file.c (loadHTMLstream): Show progress status when dump_extra option is specified.
+
+2006-06-07  Dai Sato  <satodai@w3m.jp>
+
 	* [w3m-dev 04129] handling newlines in form values 
 	* parsetagx.c: don't delete newlines in hidden values.
 
