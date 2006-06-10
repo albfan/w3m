@@ -1,4 +1,9 @@
-2006-06-07  Dai Sato  <satodai@w3m.jp>
+2006-06-10  Dai Sato  <satodai@w3m.jp>
+
+	* fix for [w3m-dev-en 01067] Some more patches
+	* file.c (loadGeneralFile): avoid decoding when dump_extra option is specified.
+
+2006-06-10  Dai Sato  <satodai@w3m.jp>
 
 	* [w3m-dev 03992] Change to display progress status when dump_extra option is specified
 	* file.c (loadHTMLstream): Show progress status when dump_extra option is specified.

@@ -2126,7 +2126,7 @@ loadGeneralFile(char *path, ParsedURL *volatile current, char *referer,
 	return NO_BUFFER;
     }
 
-    if (f.content_encoding != CMP_NOCOMPRESS) {
+    if ((f.content_encoding != CMP_NOCOMPRESS) && !(w3m_dump & DUMP_EXTRA)) {
 	uncompress_stream(&f, &pu.real_file);
     }
     else if (f.compression != CMP_NOCOMPRESS) {
