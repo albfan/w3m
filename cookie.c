@@ -65,6 +65,13 @@ domain_match(char *host, char *domain)
 	    if (domain[1] == '\0' || contain_no_dots(host, domain_p))
 		return domain_p;
 	}
+	/*
+	 * special case for domainName = .hostName
+	 * see nsCookieService.cpp in Firefox.
+	 */
+	else if (domain[0] == '.' && strcasecmp(host, &domain[1]) == 0) {
+	    return host;
+	}
 	/* [RFC 2109] s. 2, cases 2, 3 */
 	else {
 	    offset = (domain[0] != '.') ? 0 : strlen(host) - strlen(domain);
