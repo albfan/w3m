@@ -249,6 +249,7 @@ fusage(FILE * f, int err)
     fprintf(f, "    -config file     specify config file\n");
     fprintf(f, "    -help            print this usage message\n");
     fprintf(f, "    -version         print w3m version\n");
+    fprintf(f, "    -reqlog          write request logfile\n");
     fprintf(f, "    -debug           DO NOT USE\n");
     if (show_params_p)
 	show_params(f);
@@ -725,8 +726,12 @@ main(int argc, char **argv, char **envp)
 	    else if (!strcmp("-dummy", argv[i])) {
 		/* do nothing */
 	    }
-	    else if (!strcmp("-debug", argv[i]))
+	    else if (!strcmp("-debug", argv[i])) {
 		w3m_debug = TRUE;
+	    }
+	    else if (!strcmp("-reqlog",argv[i])) {
+		w3m_reqlog=rcFile("request.log");
+	    }
 	    else {
 		usage();
 	    }
