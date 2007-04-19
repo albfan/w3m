@@ -301,8 +301,9 @@ typedef struct {
 #define ATTR_REFERER		71
 #define ATTR_SELECTNUMBER	72
 #define ATTR_TEXTAREANUMBER	73
+#define ATTR_PRE_INT		74
 
-#define MAX_TAGATTR		74
+#define MAX_TAGATTR		75
 
 /* HTML Tag Information Table */
 
