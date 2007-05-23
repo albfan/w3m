@@ -1,5 +1,11 @@
 2007-05-23  Hiroyuki Ito <ZXB01226@nifty.com>
 
+	* [w3m-dev 04233], [w3m-dev 04236] Re: <del>, <s>, <ins>, and so on
+	* file.c, fm.h, po/ja.po, po/w3m.pot, rc.c, table.c:
+	    expand display_ins_del to select a type of fontify.
+
+2007-05-23  Hiroyuki Ito <ZXB01226@nifty.com>
+
 	* [w3m-dev 04242] Re: Compile error when --without-ssl
 	* aclocal.m4, configure.ac: add checking ssl before digest_auth.
 	* configure: regenerated.

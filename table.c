@@ -2925,33 +2925,69 @@ feed_table_tag(struct table *tbl, char *line, struct table_mode *mode,
 	    suspend_or_pushdata(tbl, line);
 	break;
     case HTML_DEL:
-	if (displayInsDel)
-	    feed_table_inline_tag(tbl, line, mode, 5);	/* [DEL: */
-	else
+	switch (displayInsDel) {
+	case DISPLAY_INS_DEL_SIMPLE:
 	    mode->pre_mode |= TBLM_DEL;
+	    break;
+	case DISPLAY_INS_DEL_NORMAL:
+	    feed_table_inline_tag(tbl, line, mode, 5);	/* [DEL: */
+	    break;
+	case DISPLAY_INS_DEL_FONTIFY:
+	    feed_table_inline_tag(tbl, line, mode, -1);
+	    break;
+	}
 	break;
     case HTML_N_DEL:
-	if (displayInsDel)
-	    feed_table_inline_tag(tbl, line, mode, 5);	/* :DEL] */
-	else
+	switch (displayInsDel) {
+	case DISPLAY_INS_DEL_SIMPLE:
 	    mode->pre_mode &= ~TBLM_DEL;
+	    break;
+	case DISPLAY_INS_DEL_NORMAL:
+	    feed_table_inline_tag(tbl, line, mode, 5);	/* :DEL] */
+	    break;
+	case DISPLAY_INS_DEL_FONTIFY:
+	    feed_table_inline_tag(tbl, line, mode, -1);
+	    break;
+	}
 	break;
     case HTML_S:
-	if (displayInsDel)
-	    feed_table_inline_tag(tbl, line, mode, 3);	/* [S: */
-	else
+	switch (displayInsDel) {
+	case DISPLAY_INS_DEL_SIMPLE:
 	    mode->pre_mode |= TBLM_S;
+	    break;
+	case DISPLAY_INS_DEL_NORMAL:
+	    feed_table_inline_tag(tbl, line, mode, 3);	/* [S: */
+	    break;
+	case DISPLAY_INS_DEL_FONTIFY:
+	    feed_table_inline_tag(tbl, line, mode, -1);
+	    break;
+	}
 	break;
     case HTML_N_S:
-	if (displayInsDel)
-	    feed_table_inline_tag(tbl, line, mode, 3);	/* :S] */
-	else
+	switch (displayInsDel) {
+	case DISPLAY_INS_DEL_SIMPLE:
 	    mode->pre_mode &= ~TBLM_S;
+	    break;
+	case DISPLAY_INS_DEL_NORMAL:
+	    feed_table_inline_tag(tbl, line, mode, 3);	/* :S] */
+	    break;
+	case DISPLAY_INS_DEL_FONTIFY:
+	    feed_table_inline_tag(tbl, line, mode, -1);
+	    break;
+	}
 	break;
     case HTML_INS:
     case HTML_N_INS:
-	if (displayInsDel)
+	switch (displayInsDel) {
+	case DISPLAY_INS_DEL_SIMPLE:
+	    break;
+	case DISPLAY_INS_DEL_NORMAL:
 	    feed_table_inline_tag(tbl, line, mode, 5);	/* [INS:, :INS] */
+	    break;
+	case DISPLAY_INS_DEL_FONTIFY:
+	    feed_table_inline_tag(tbl, line, mode, -1);
+	    break;
+	}
 	break;
     case HTML_SUP:
     case HTML_SUB:
