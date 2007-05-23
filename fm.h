@@ -53,7 +53,7 @@ typedef int wc_ces;	/* XXX: not used */
 #define setlocale(category, locale)	/* empty */
 #endif
 
-#if ENABLE_NLS
+#ifdef ENABLE_NLS
 #include <libintl.h>
 #define _(String) gettext (String)
 #define N_(String) (String)

@@ -790,8 +790,10 @@ show_params(FILE * fp)
     char *t = NULL;
     char *cmt;
 
-#if ENABLE_NLS
+#ifdef USE_M17N
+#ifdef ENABLE_NLS
     OptionCharset = SystemCharset;	/* FIXME */
+#endif
 #endif
 
     fputs("\nconfiguration parameters\n", fp);
@@ -1310,10 +1312,10 @@ load_option_panel(void)
     if (optionpanel_str == NULL)
 	optionpanel_str = Sprintf(optionpanel_src1, w3m_version,
 			      html_quote(localCookie()->ptr), _(CMT_HELPER));
-#if ENABLE_NLS
+#ifdef USE_M17N
+#ifdef ENABLE_NLS
     OptionCharset = SystemCharset;	/* FIXME */
 #endif
-#ifdef USE_M17N
     if (!OptionEncode) {
 	optionpanel_str =
 	    wc_Str_conv(optionpanel_str, OptionCharset, InnerCharset);

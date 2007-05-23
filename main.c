@@ -383,8 +383,10 @@ main(int argc, char **argv, char **envp)
 #endif
 #endif
     GC_init();
-#if ENABLE_NLS
+#if defined(ENABLE_NLS) || (defined(USE_M17N) && defined(HAVE_LANGINFO_CODESET))
     setlocale(LC_ALL, "");
+#endif
+#ifdef ENABLE_NLS
     bindtextdomain(PACKAGE, LOCALEDIR);
     textdomain(PACKAGE);
 #endif

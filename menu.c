@@ -1711,7 +1711,7 @@ initMenu(void)
 #ifdef USE_M17N
     if (!MainMenuEncode) {
 	MenuItem *item;
-#if ENABLE_NLS
+#ifdef ENABLE_NLS
 	/* FIXME: charset that gettext(3) returns */
 	MainMenuCharset = SystemCharset;
 #endif

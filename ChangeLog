@@ -1,4 +1,10 @@
-2007-04-19  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
+2007-05-23  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 04240] nl_langinfo() requires setlocale()
+	* fm.h, main.c, menu.c, rc.c: add "#ifdef"s.
+	* libwc/charset.c: add setlocale() for nl_langinfo().
+
+2007-05-23  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 03923] <pre> in <table>
 	* file.c, table.c: avoid extra blanks in pre in table.
