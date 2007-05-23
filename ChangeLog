@@ -1,3 +1,8 @@
+2007-04-19  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 03923] <pre> in <table>
+	* file.c, table.c: avoid extra blanks in pre in table.
+
 2007-05-23  tamo
 
 	* [20070121110209@w3mbbs] unnecessary decoding in linein.c

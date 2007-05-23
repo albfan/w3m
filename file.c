@@ -4606,6 +4606,7 @@ HTMLtagproc1(struct parsed_tag *tag, struct html_feed_environ *h_env)
 	    do_blankline(h_env, obuf, envs[h_env->envc].indent, 0,
 			 h_env->limit);
 	    obuf->flag |= RB_IGNORE_P;
+	    h_env->blank_lines++;
 	}
 	obuf->flag &= ~RB_PRE;
 	close_anchor(h_env, obuf);
