@@ -349,7 +349,7 @@ extern TagInfo TagMAP[];
 extern TagAttrInfo AttrMAP[];
 
 struct environment {
-    char env;
+    unsigned char env;
     int type;
     int count;
     char indent;
