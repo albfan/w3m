@@ -1025,7 +1025,7 @@ _prev(void)
 	    return;
 	strCurrentBuf = strBuf;
     }
-    if (DecodeURL)
+    if (DecodeURL && (cm_mode & CPL_URL) )
 	p = url_unquote_conv(p, 0);
     strBuf = Strnew_charp(p);
     CLen = CPos = setStrType(strBuf, strProp);
@@ -1044,7 +1044,7 @@ _next(void)
 	return;
     p = nextHist(hist);
     if (p) {
-	if (DecodeURL)
+	if (DecodeURL && (cm_mode & CPL_URL) )
 	    p = url_unquote_conv(p, 0);
 	strBuf = Strnew_charp(p);
     }
