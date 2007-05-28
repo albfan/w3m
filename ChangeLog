@@ -1,3 +1,7 @@
+2007-05-28  Hideyuki SHIRAI <shirai@meadowy.org>
+	* [w3m-dev 04251] Re: road to 0.5.2
+	* po/w3m.pot: pot-update.
+
 2007-05-27  Hiroyuki Ito <ZXB01226@nifty.com>
 	* [w3m-dev 04252] Re: road to 0.5.2
 	* Makefile.in: add datarootdir for Autoconf 2.60 and later.
