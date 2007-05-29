@@ -2,9 +2,6 @@
 #include <signal.h>
 #include "fm.h"
 
-#define MAX(a, b)  ((a) > (b) ? (a) : (b))
-#define MIN(a, b)  ((a) < (b) ? (a) : (b))
-
 /* *INDENT-OFF* */
 #ifdef USE_COLOR
 
