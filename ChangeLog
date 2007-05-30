@@ -1,5 +1,10 @@
 2007-05-30  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
 
+	* [w3m-dev 04266] Bug fix when tab browsing
+	* fm.h, main.c: fix for tab browsing.
+
+2007-05-30  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
+
 	* [w3m-dev 04265] compile error when #undef USE_BG_COLOR
 	* terms.c: add #ifdef __CYGWIN__.
 

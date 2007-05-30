@@ -523,6 +523,13 @@ typedef struct _DownloadList {
 } DownloadList;
 #define DOWNLOAD_LIST_TITLE "Download List Panel"
 
+#define COPY_BUFROOT(dstbuf, srcbuf) {\
+ (dstbuf)->rootX = (srcbuf)->rootX; \
+ (dstbuf)->rootY = (srcbuf)->rootY; \
+ (dstbuf)->COLS = (srcbuf)->COLS; \
+ (dstbuf)->LINES = (srcbuf)->LINES; \
+}
+
 #define COPY_BUFPOSITION(dstbuf, srcbuf) {\
  (dstbuf)->topLine = (srcbuf)->topLine; \
  (dstbuf)->currentLine = (srcbuf)->currentLine; \
