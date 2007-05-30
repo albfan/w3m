@@ -1,3 +1,8 @@
+2007-05-30  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 04264] Re: road to 0.5.2
+	* po/makefile.in.in, scripts/*/Makefile.in: add datarootdir.
+
 2007-05-29  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 04262] FreeBSD sysmouse (Re: road to 0.5.2)
