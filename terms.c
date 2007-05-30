@@ -1336,7 +1336,9 @@ refresh(void)
 		 * (COLS-1,LINES-1).
 		 */
 #if !defined(USE_BG_COLOR) || defined(__CYGWIN__)
+#ifdef __CYGWIN__
 		if (isWinConsole)
+#endif
 		    if (line == LINES - 1 && col == COLS - 1)
 			break;
 #endif				/* !defined(USE_BG_COLOR) || defined(__CYGWIN__) */
