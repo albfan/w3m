@@ -36,6 +36,7 @@ main(int argc, char *argv[], char **envp)
     char *p;
     Hash_hss_i *rhash;
 
+    GC_INIT();
     if (argc != 3) {
 	fprintf(stderr, "usage: %s hashsize file.tab > file.c\n", argv[0]);
 	exit(1);

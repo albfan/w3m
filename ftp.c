@@ -398,7 +398,7 @@ openFTPStream(ParsedURL *pu, URLFile *uf)
 	tmp = Strnew_charp(mypw ? mypw->pw_name : "anonymous");
 #else
 	tmp = Strnew_charp("anonymous");
-#endif __MINGW32_VERSION
+#endif /* __MINGW32_VERSION */
 	Strcat_char(tmp, '@');
 	pass = tmp->ptr;
     }

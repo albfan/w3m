@@ -174,6 +174,7 @@ main(int argc, char *argv[], char **envp)
     char *mode;
     char *sent_cookie;
 
+    GC_INIT();
     p = getenv("REQUEST_METHOD");
     if (p == NULL || strcasecmp(p, "post"))
 	goto request_err;

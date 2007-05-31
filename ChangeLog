@@ -1,3 +1,9 @@
+2007-05-31  Tsutomu OKADA
+
+	* [20070530101431@w3mbbs] Re: road to 0.5.2
+	* ftp.c: fix typo.
+	* main.c, mktable.c, w3mbookmark.c, w3mhelperpanel.c: add GC_INIT().
+
 2007-05-30  Hironori Sakamoto <hsaka@mth.biglobe.ne.jp>
 
 	* [w3m-dev 04266] Bug fix when tab browsing

@@ -392,7 +392,7 @@ main(int argc, char **argv, char **envp)
     wc_ces CodePage;
 #endif
 #endif
-    GC_init();
+    GC_INIT();
 #if defined(ENABLE_NLS) || (defined(USE_M17N) && defined(HAVE_LANGINFO_CODESET))
     setlocale(LC_ALL, "");
 #endif
