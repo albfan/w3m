@@ -1897,7 +1897,7 @@ wgetch(void *p)
 int
 do_getch()
 {
-    if (is_xterm)
+    if (is_xterm || !gpm_handler)
 	return getch();
     else
 	return Gpm_Getch();
@@ -2037,6 +2037,7 @@ mouse_init()
     conn.maxMod = 0;
     conn.minMod = 0;
 
+    gpm_handler = NULL;
     r = Gpm_Open(&conn, 0);
     if (r == -2) {
 	/*
