@@ -1,4 +1,10 @@
+2010-07-18 Hironori SAKAMOTO <hsaka@mth.biglobe.ne.jp>
+
+	* [w3m-dev 04286] Re: break textform when buffer back
+	* form.c (form_update_line): set line->size
+
 2010-07-18 d+w3m@vdr.jp
+
 	* [w3m-dev 04319] Re: w3m's bugs from bugs.debian.org
 	* doc/w3m.1: fix typo.
 	* doc-jp/w3m.1: update

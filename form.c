@@ -403,6 +403,7 @@ form_update_line(Line *line, char **str, int spos, int epos, int width,
     line->lineBuf = buf;
     line->propBuf = prop;
     line->len = len;
+    line->size = len;
 
     return pos;
 }
