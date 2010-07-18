@@ -101,6 +101,7 @@ static struct table2 DefaultGuess[] = {
     {"html", "text/html"},
     {"htm", "text/html"},
     {"shtml", "text/html"},
+    {"xhtml", "application/xhtml+xml"},
     {"gif", "image/gif"},
     {"jpeg", "image/jpeg"},
     {"jpg", "image/jpeg"},

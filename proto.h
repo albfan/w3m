@@ -165,6 +165,7 @@ extern ParsedURL *schemeToProxy(int scheme);
 extern void examineFile(char *path, URLFile *uf);
 extern char *acceptableEncoding();
 extern int dir_exist(char *path);
+extern int is_html_type(char *type);
 #ifdef USE_M17N
 extern char **get_symbol(wc_ces charset, int *width);
 extern char **set_symbol(int width);

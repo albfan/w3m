@@ -558,7 +558,7 @@ reshapeBuffer(Buffer *buf)
     WcOption.auto_detect = WC_OPT_DETECT_OFF;
     UseContentCharset = FALSE;
 #endif
-    if (!strcasecmp(buf->type, "text/html"))
+    if (is_html_type(buf->type))
 	loadHTMLBuffer(&f, buf);
     else
 	loadBuffer(&f, buf);
@@ -590,7 +590,7 @@ reshapeBuffer(Buffer *buf)
 		gotoLine(buf, cur->linenumber);
 	}
 	buf->pos -= buf->currentLine->bpos;
-	if (FoldLine && strcasecmp(buf->type, "text/html"))
+	if (FoldLine && !is_html_type(buf->type))
 	    buf->currentColumn = 0;
 	else
 	    buf->currentColumn = sbuf.currentColumn;
