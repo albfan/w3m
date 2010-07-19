@@ -1071,9 +1071,11 @@ interpret_rc(FILE * f)
 
     for (;;) {
 	line = Strfgets(f);
-	Strchop(line);
-	if (line->length == 0)
+	if (line->length == 0)		/* end of file */
 	    break;
+	Strchop(line);
+	if (line->length == 0)		/* blank line */
+	    continue;
 	Strremovefirstspaces(line);
 	if (line->ptr[0] == '#')	/* comment */
 	    continue;
