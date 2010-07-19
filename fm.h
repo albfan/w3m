@@ -932,6 +932,7 @@ global int label_topline init(FALSE);
 global int nextpage_topline init(FALSE);
 global char *displayTitleTerm init(NULL);
 global int displayLink init(FALSE);
+global int displayLinkNumber init(FALSE);
 global int displayLineInfo init(FALSE);
 global int DecodeURL init(FALSE);
 global int retryAsHttp init(TRUE);

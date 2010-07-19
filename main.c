@@ -1282,8 +1282,25 @@ do_dump(Buffer *buf)
 	dump_head(buf);
     if (w3m_dump & DUMP_SOURCE)
 	dump_source(buf);
-    if (w3m_dump == DUMP_BUFFER)
+    if (w3m_dump == DUMP_BUFFER) {
+	int i;
 	saveBuffer(buf, stdout, FALSE);
+	if (displayLinkNumber && buf->href) {
+	    printf("\nReferences:\n\n");
+	    for (i = 0; i < buf->href->nanchor; i++) {
+	        ParsedURL pu;
+	        static Str s = NULL;
+		if (buf->href->anchors[i].slave)
+		    continue;
+	        parseURL2(buf->href->anchors[i].url, &pu, baseURL(buf));
+	        s = parsedURL2Str(&pu);
+    	        if (DecodeURL)
+		    s = Strnew_charp(url_unquote_conv
+				     (s->ptr, Currentbuf->document_charset));
+	        printf("[%d] %s\n", buf->href->anchors[i].hseq + 1, s->ptr);
+	    }
+	}
+    }
     mySignal(SIGINT, prevtrap);
 }
 

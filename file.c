@@ -1686,6 +1686,12 @@ checkRedirection(ParsedURL *pu)
     return TRUE;
 }
 
+Str
+getLinkNumberStr(int correction)
+{
+    return Sprintf("[%d]", cur_hseq + correction);
+}
+
 /* 
  * loadGeneralFile: load file to buffer
  */
@@ -3610,9 +3616,13 @@ process_input(struct parsed_tag *tag)
     case FORM_INPUT_TEXT:
     case FORM_INPUT_FILE:
     case FORM_INPUT_CHECKBOX:
+	if (displayLinkNumber)
+	    Strcat(tmp, getLinkNumberStr(0));
 	Strcat_char(tmp, '[');
 	break;
     case FORM_INPUT_RADIO:
+	if (displayLinkNumber)
+	    Strcat(tmp, getLinkNumberStr(0));
 	Strcat_char(tmp, '(');
     }
     Strcat(tmp, Sprintf("<input_alt hseq=\"%d\" fid=\"%d\" type=%s "
@@ -3653,6 +3663,8 @@ process_input(struct parsed_tag *tag)
 	case FORM_INPUT_SUBMIT:
 	case FORM_INPUT_BUTTON:
 	case FORM_INPUT_RESET:
+	    if (displayLinkNumber)
+		Strcat(tmp, getLinkNumberStr(-1));
 	    Strcat_charp(tmp, "[");
 	    break;
 	}
@@ -3739,9 +3751,12 @@ process_select(struct parsed_tag *tag)
 
 #ifdef MENU_SELECT
     if (!select_is_multiple) {
-	select_str = Sprintf("<pre_int>[<input_alt hseq=\"%d\" "
+	select_str = Strnew_charp("<pre_int>");
+	if (displayLinkNumber)
+	    Strcat(select_str, getLinkNumberStr(0));
+	Strcat(select_str, Sprintf("[<input_alt hseq=\"%d\" "
 			     "fid=\"%d\" type=select name=\"%s\" selectnumber=%d",
-			     cur_hseq++, cur_form_id, html_quote(p), n_select);
+			     cur_hseq++, cur_form_id, html_quote(p), n_select));
 	Strcat_charp(select_str, ">");
 	if (n_select == max_select) {
 	    max_select *= 2;
@@ -4789,6 +4804,8 @@ HTMLtagproc1(struct parsed_tag *tag, struct html_feed_environ *h_env)
 	    obuf->anchor.hseq = cur_hseq;
 	    tmp = process_anchor(tag, h_env->tagbuf->ptr);
 	    push_tag(obuf, tmp->ptr, HTML_A);
+	    if (displayLinkNumber)
+		HTMLlineproc1(getLinkNumberStr(-1)->ptr, h_env);
 	    return 1;
 	}
 	return 0;
