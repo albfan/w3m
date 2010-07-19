@@ -1,6 +1,14 @@
 2010-07-19  d+w3m@vdr.jp
 
 	* [w3m-dev 04321] Re: w3m's bugs from bugs.debian.org
+	* http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=329863#8
+	* rc.c: Introduce option pseudo_inlines.
+	* fm.h: add global variable pseudoInlines.
+	* file.c (process_img): check q.
+
+2010-07-19  d+w3m@vdr.jp
+
+	* [w3m-dev 04321] Re: w3m's bugs from bugs.debian.org
 	* http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=537706#10
 	* rc.c (interpret_rc): check line->length before call Strchop().
 

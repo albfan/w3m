@@ -3224,6 +3224,13 @@ process_img(struct parsed_tag *tag, int width)
     parsedtag_get_value(tag, ATTR_ALT, &q);
     t = q;
     parsedtag_get_value(tag, ATTR_TITLE, &t);
+    if (q == NULL || (*q == '\0' && ignore_null_img_alt)) {
+	if (!pseudoInlines && (t == NULL ||
+			       (*t == '\0' && ignore_null_img_alt)))
+	    return tmp;
+	q = t;
+    }
+  
     w = -1;
     if (parsedtag_get_value(tag, ATTR_WIDTH, &w)) {
 	if (w < 0) {

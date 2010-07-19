@@ -75,6 +75,7 @@ static int OptionEncode = FALSE;
 #define CMT_DECODE_URL   N_("Display decoded URL")
 #define CMT_DISPLINEINFO N_("Display current line number")
 #define CMT_DISP_IMAGE   N_("Display inline images")
+#define CMT_PSEUDO_INLINES N_("Display pseudo-ALTs for inline images with no ALT or TITLE string")
 #ifdef USE_IMAGE
 #define CMT_AUTO_IMAGE   N_("Load inline images automatically")
 #define CMT_MAX_LOAD_IMAGE N_("Maximum processes for parallel image loading")
@@ -385,6 +386,8 @@ struct param_ptr params1[] = {
     /* XXX: emacs-w3m force to off display_image even if image options off */
     {"display_image", P_INT, PI_ONOFF, (void *)&displayImage, CMT_DISP_IMAGE,
      NULL},
+    {"pseudo_inlines", P_INT, PI_ONOFF, (void *)&pseudoInlines,
+     CMT_PSEUDO_INLINES, NULL},
 #ifdef USE_IMAGE
     {"auto_image", P_INT, PI_ONOFF, (void *)&autoImage, CMT_AUTO_IMAGE, NULL},
     {"max_load_image", P_INT, PI_TEXT, (void *)&maxLoadImage,

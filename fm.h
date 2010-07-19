@@ -948,6 +948,7 @@ global int image_map_list init(TRUE);
 #else
 global int displayImage init(FALSE);	/* XXX: emacs-w3m use display_image=off */
 #endif
+global int pseudoInlines init(TRUE);
 global char *Editor init(DEF_EDITOR);
 #ifdef USE_W3MMAILER
 global char *Mailer init(NULL);
