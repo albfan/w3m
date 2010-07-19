@@ -562,9 +562,9 @@ main(int argc, char **argv, char **envp)
 	    }
 #endif
 	    else if (!strcmp("-graph", argv[i]))
-		UseGraphicChar = TRUE;
+		UseGraphicChar = GRAPHIC_CHAR_ALL;
 	    else if (!strcmp("-no-graph", argv[i]))
-		UseGraphicChar = FALSE;
+		UseGraphicChar = GRAPHIC_CHAR_ASCII;
 	    else if (!strcmp("-T", argv[i])) {
 		if (++i >= argc)
 		    usage();
