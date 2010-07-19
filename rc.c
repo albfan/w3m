@@ -229,6 +229,7 @@ static int OptionEncode = FALSE;
 #define CMT_USE_JISX0213     N_("Use JIS X 0213:2000 (2000JIS)")
 #define CMT_STRICT_ISO2022   N_("Strict ISO-2022-JP/KR/CN")
 #define CMT_GB18030_AS_UCS   N_("Treat 4 bytes char. of GB18030 as Unicode")
+#define CMT_SIMPLE_PRESERVE_SPACE N_("Simple Preserve space")
 #endif
 
 #define CMT_KEYMAP_FILE N_("keymap file")
@@ -671,6 +672,8 @@ struct param_ptr params10[] = {
     {"gb18030_as_ucs", P_CHARINT, PI_ONOFF, (void *)&WcOption.gb18030_as_ucs,
      CMT_GB18030_AS_UCS, NULL},
 #endif
+    {"simple_preserve_space", P_CHARINT, PI_ONOFF, (void *)&SimplePreserveSpace,
+     CMT_SIMPLE_PRESERVE_SPACE, NULL},
     {NULL, 0, 0, NULL, NULL, NULL},
 };
 #endif

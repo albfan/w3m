@@ -6347,7 +6347,7 @@ HTMLlineproc0(char *line, struct html_feed_environ *h_env, int internal)
 			is_hangul = wtf_is_hangul((wc_uchar *) str);
 		    else
 			is_hangul = 0;
-		    if (mode == PC_KANJI1 &&
+		    if (!SimplePreserveSpace && mode == PC_KANJI1 &&
 			!is_hangul && !prev_is_hangul &&
 			obuf->pos > h_env->envs[h_env->envc].indent &&
 			Strlastchar(obuf->line) == ' ') {
