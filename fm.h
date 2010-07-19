@@ -517,7 +517,8 @@ typedef struct _DownloadList {
     char *lock;
     clen_t size;
     time_t time;
-    int ok;
+    int running;
+    int err;
     struct _DownloadList *next;
     struct _DownloadList *prev;
 } DownloadList;
