@@ -1,6 +1,6 @@
 2010-07-20  Sascha Silbe <sascha-debian-bugs-w3m-1@silbe.org>
 
-	* http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=329862#20
+	* http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=523159#5
 	* url.c (openSSLHandle): add support for TLS SNI (Server Name Indication)
 
 2010-07-19  Karsten Schoelzel <kuser@gmx.de>
