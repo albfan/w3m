@@ -1,3 +1,10 @@
+2010-07-24  Ito Hiroyuki  <ZXB01226 at nifty.com>
+
+	* [w3m-dev 04326] suppress compile warnings
+	* file.c (digest_hex): type of the parameter s is "unsigned char *".
+	(AuthDigestCred): use unsigned char.
+	(ex_efct): type of the function is "static int".
+
 2010-07-20  Sascha Silbe <sascha-debian-bugs-w3m-1@silbe.org>
 
 	* http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=523159#5
