@@ -1,3 +1,8 @@
+2010-07-31  Tatsuya Kinoshita  <tats@vega.ocn.ne.jp>
+
+	* [w3m-dev 04350] Re: w3m's bugs from bugs.debian.org
+	* file.c (process_img): Revert the change of using ATTR_TITLE if ATTR_ALT is empty.
+
 2010-07-30  Ito Hiroyuki  <ZXB01226@nifty.com>
 
 	* [w3m-dev 04348] Re: "important" bugs from bugs.debian.org
