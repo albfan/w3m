@@ -1924,6 +1924,7 @@ loadGeneralFile(char *path, ParsedURL *volatile current, char *referer,
 		UFclose(&f);
 		add_auth_cookie_flag = 1;
 		status = HTST_NORMAL;
+		add_auth_user_passwd(auth_pu, qstr_unquote(realm)->ptr, uname, pwd, 1);
 		goto load_doc;
 	    }
 	}

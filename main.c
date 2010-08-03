@@ -242,7 +242,6 @@ fusage(FILE * f, int err)
     fprintf(f,
 	    "    -cookie          use cookie (-no-cookie: don't use cookie)\n");
 #endif				/* USE_COOKIE */
-    fprintf(f, "    -pauth user:pass proxy authentication\n");
     fprintf(f, "    -graph           use graphic character\n");
     fprintf(f, "    -no-graph        don't use graphic character\n");
 #ifdef DEBIAN			/* replaced by ukai: pager requires -s */
@@ -326,12 +325,13 @@ sig_chld(int signo)
     pid_t pid;
 
 #ifdef HAVE_WAITPID
-    while ((pid = waitpid(-1, &p_stat, WNOHANG)) > 0) {
+    while ((pid = waitpid(-1, &p_stat, WNOHANG)) > 0)
 #elif HAVE_WAIT3
-    while ((pid = wait3(&p_stat, WNOHANG, NULL)) > 0) {
+    while ((pid = wait3(&p_stat, WNOHANG, NULL)) > 0)
 #else
-    if ((pid = wait(&p_stat)) > 0) {
+    if ((pid = wait(&p_stat)) > 0)
 #endif
+    {
 	DownloadList *d;
 
 	if (WIFEXITED(p_stat)) {
@@ -702,17 +702,6 @@ main(int argc, char **argv, char **envp)
 		accept_cookie = TRUE;
 	    }
 #endif				/* USE_COOKIE */
-	    else if (!strcmp("-pauth", argv[i])) {
-		if (++i >= argc)
-		    usage();
-		proxy_auth_cookie = Strnew_m_charp("Basic ",
-						   encodeB(argv[i])->ptr,
-						   NULL);
-		while (argv[i][0]) {
-		    argv[i][0] = '\0';
-		    argv[i]++;
-		}
-	    }
 #ifdef DEBIAN
 	    else if (!strcmp("-s", argv[i]))
 #else

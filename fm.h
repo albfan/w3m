@@ -979,8 +979,6 @@ global int IgnoreCase init(TRUE);
 global int WrapSearch init(FALSE);
 global int squeezeBlankLine init(FALSE);
 global char *BookmarkFile init(NULL);
-global char *pauth init(NULL);
-global Str proxy_auth_cookie init(NULL);
 global int UseExternalDirBuffer init(TRUE);
 global char *DirBufferCommand init("file:///$LIB/dirlist" CGI_EXTENSION);
 #ifdef USE_DICT
