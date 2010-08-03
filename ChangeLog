@@ -1,3 +1,10 @@
+2010-08-03  d+w3m@vdr.jp
+
+	* [w3m-dev 04363] Re: w3m's bugs from bugs.debian.org
+	* doc/w3m.1: revert option -S
+	* doc-jp/w3m.1: revert option -S, -e, -j and -s
+	* main.c: remove codes for Debian
+
 2010-08-03  Ito Hiroyuki  <ZXB01226@nifty.com>
 
 	* [w3m-dev 04343]
