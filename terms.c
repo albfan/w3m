@@ -1201,7 +1201,7 @@ graphend(void)
 int
 graph_ok(void)
 {
-    if (! UseGraphicChar)
+    if (UseGraphicChar != GRAPHIC_CHAR_DEC)
 	return 0;
     return T_as[0] != 0 && T_ae[0] != 0 && T_ac[0] != 0;
 }

@@ -1057,7 +1057,10 @@ global char SimplePreserveSpace init(FALSE);
 #define wc_Str_conv_strict(x,charset0,charset1) (x)
 #endif
 global char UseAltEntity init(TRUE);
-global char UseGraphicChar init(FALSE);
+#define GRAPHIC_CHAR_ASCII 2
+#define GRAPHIC_CHAR_DEC 1
+#define GRAPHIC_CHAR_CHARSET 0
+global char UseGraphicChar init(GRAPHIC_CHAR_CHARSET);
 extern char *graph_symbol[];
 extern char *graph2_symbol[];
 extern int symbol_width;
