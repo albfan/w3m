@@ -1,3 +1,10 @@
+2010-08-08  Steven Harms <ZXB01226 at nifty.com>
+
+	* [w3m-dev 04371] Re: "important" bugs from bugs.debian.org
+	* https://bugs.launchpad.net/ubuntu/+source/w3m/+bug/131993
+	* table.c (ATTR_ROWSPAN_MAX): added
+	(feed_table_tag): maximum value of rowspan is ATTR_ROWSPAN_MAX
+
 2010-08-08  d+w3m@vdr.jp
 
 	* [w3m-dev 04360] Re: "important" bugs from bugs.debian.org
