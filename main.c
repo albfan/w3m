@@ -626,6 +626,9 @@ main(int argc, char **argv, char **envp)
 		if (++i >= argc)
 		    usage();
 		COLS = atoi(argv[i]);
+		if (COLS > MAXIMUM_COLS) {
+		    COLS = MAXIMUM_COLS;
+		}
 	    }
 	    else if (!strcmp("-ppc", argv[i])) {
 		double ppc;
@@ -776,7 +779,7 @@ main(int argc, char **argv, char **envp)
     }
     if (w3m_dump) {
 	if (COLS == 0)
-	    COLS = 80;
+	    COLS = DEFAULT_COLS;
     }
 
 #ifdef USE_BINMODE_STREAM
