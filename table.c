@@ -2594,11 +2594,9 @@ feed_table_tag(struct table *tbl, char *line, struct table_mode *mode,
 	else
 	    valign = HTT_MIDDLE;
 	if (parsedtag_get_value(tag, ATTR_ROWSPAN, &rowspan)) {
-        if(rowspan > ATTR_ROWSPAN_MAX)
-        {
-            fprintf(stderr, "  Table Rowspan too large. Limiting to %d.\n", ATTR_ROWSPAN_MAX);
-            rowspan = ATTR_ROWSPAN_MAX;
-        }
+	    if(rowspan > ATTR_ROWSPAN_MAX) {
+		rowspan = ATTR_ROWSPAN_MAX;
+	    }
 	    if ((tbl->row + rowspan) >= tbl->max_rowsize)
 		check_row(tbl, tbl->row + rowspan);
 	}
