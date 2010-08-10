@@ -25,6 +25,10 @@
 #include <winsock.h>
 #endif /* __MINGW32_VERSION */
 
+#ifdef HAVE_SOCKLEN_T
+typedef int socklen_t;
+#endif
+
 typedef struct _FTP {
     char *host;
     int port;
@@ -128,7 +132,7 @@ ftp_login(FTP ftp)
 
 	if (n > 0 && ftp->pass[n - 1] == '@') {
 	    struct sockaddr_in sockname;
-	    int socknamelen = sizeof(sockname);
+	    socklen_t socknamelen = sizeof(sockname);
 
 	    if (!getsockname(sock, (struct sockaddr *)&sockname, &socknamelen)) {
 		struct hostent *sockent;
@@ -192,7 +196,8 @@ ftp_pasv(FTP ftp)
     int family;
 #ifdef INET6
     struct sockaddr_storage sockaddr;
-    int sockaddrlen, port;
+    int port;
+    socklen_t sockaddrlen;
     unsigned char d1, d2, d3, d4;
     char abuf[INET6_ADDRSTRLEN];
 #endif
