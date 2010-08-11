@@ -25,7 +25,7 @@
 #include <winsock.h>
 #endif /* __MINGW32_VERSION */
 
-#ifdef HAVE_SOCKLEN_T
+#ifndef HAVE_SOCKLEN_T
 typedef int socklen_t;
 #endif
 
