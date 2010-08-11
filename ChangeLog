@@ -1,3 +1,8 @@
+2010-08-11  SAKAI Kiyotaka <kiyotaka.sakai@ntt-at.co.jp>
+
+	* [w3m-dev 04381] Re: check socklen_t
+	* ftp.c: fix condition (#ifndef HAVE_SOCKLEN_T)
+
 2010-08-10  Ito Hiroyuki  <ZXB01226@nifty.com>
 
 	* [w3m-dev 04379] check socklen_t
