@@ -1,3 +1,9 @@
+2010-08-14  "Adam C. Emerson" <azure@azureprime.com>
+
+	* [w3m-dev 04390]
+	* http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=573789
+	* html.c: All elements have the id attribute.
+
 2010-08-12  Peter J. R. Moulder
 
 	* [w3m-dev 04384]
