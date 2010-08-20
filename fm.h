@@ -959,6 +959,12 @@ global char *Mailer init(NULL);
 #else
 global char *Mailer init(DEF_MAILER);
 #endif
+#ifdef USE_W3MMAILER
+#define MAILTO_OPTIONS_USE_W3MMAILER 0
+#endif
+#define MAILTO_OPTIONS_IGNORE 1
+#define MAILTO_OPTIONS_USE_MAILTO_URL 2
+global int MailtoOptions init(MAILTO_OPTIONS_IGNORE);
 global char *ExtBrowser init(DEF_EXT_BROWSER);
 global char *ExtBrowser2 init(NULL);
 global char *ExtBrowser3 init(NULL);
