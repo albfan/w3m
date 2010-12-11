@@ -1307,6 +1307,12 @@ otherinfo(ParsedURL *target, ParsedURL *current, char *referer)
 	Strcat_charp(s, "Cache-control: no-cache\r\n");
     }
     if (!NoSendReferer) {
+#ifdef USE_SSL
+        if (current && current->scheme == SCM_HTTPS && target->scheme != SCM_HTTPS) {
+	  /* Don't send Referer: if https:// -> http:// */
+	}
+	else
+#endif
 	if (referer == NULL && current && current->scheme != SCM_LOCAL &&
 	    (current->scheme != SCM_FTP ||
 	     (current->user == NULL && current->pass == NULL))) {
