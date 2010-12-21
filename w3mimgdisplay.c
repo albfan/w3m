@@ -65,6 +65,7 @@ main(int argc, char **argv)
     if (defined_test) {
 	printf("%d %d\n", w_op->width - w_op->offset_x,
 	       w_op->height - w_op->offset_y);
+	w_op->close(w_op);
 	exit(0);
     }
 
@@ -75,6 +76,7 @@ main(int argc, char **argv)
 	    if (w_op->get_image_size(w_op, &img, defined_size, &w, &h))
 		printf("%d %d\n", w, h);
 	}
+	w_op->close(w_op);
 	exit(0);
     }
 

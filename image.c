@@ -115,10 +115,13 @@ openImgdisplay()
 static void
 closeImgdisplay()
 {
-    if (Imgdisplay_rf)
-	fclose(Imgdisplay_rf);
     if (Imgdisplay_wf)
 	fclose(Imgdisplay_wf);
+    if (Imgdisplay_rf) {
+	/* sync with the child */
+	getc(Imgdisplay_rf); /* EOF expected */
+	fclose(Imgdisplay_rf);
+    }
     if (Imgdisplay_pid)
 	kill(Imgdisplay_pid, SIGKILL);
     Imgdisplay_rf = NULL;

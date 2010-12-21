@@ -14,6 +14,10 @@ w3mimg_open()
     uid_t runner_uid = getuid();
     uid_t owner_uid = geteuid();
 #endif
+#ifdef USE_W3MIMG_WIN
+    if (w_op == NULL)
+	w_op = w3mimg_winopen();
+#endif
 #ifdef USE_W3MIMG_X11
 #ifdef W3MIMGDISPLAY_SETUID
     /* run in user privileges */
