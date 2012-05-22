@@ -1,3 +1,7 @@
+2012-05-22  Tatsuya Kinoshita <tats@vega.ocn.ne.jp>
+
+	* Makefile.in: add entity.h to "make clean"
+
 2012-05-22  Enu <theme.of.n@gmail.com>
 
 	* file.c, HTML.c: parse META CHARSET.
