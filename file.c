@@ -5020,10 +5020,17 @@ HTMLtagproc1(struct parsed_tag *tag, struct html_feed_environ *h_env)
 	HTMLlineproc1(tmp->ptr, h_env);
 	return 1;
     case HTML_META:
-	p = q = NULL;
+	p = q = r = NULL;
 	parsedtag_get_value(tag, ATTR_HTTP_EQUIV, &p);
 	parsedtag_get_value(tag, ATTR_CONTENT, &q);
 #ifdef USE_M17N
+	parsedtag_get_value(tag, ATTR_CHARSET, &r);
+	if (r) {
+	    /* <meta charset=""> */
+	    SKIP_BLANKS(r);
+	    meta_charset = wc_guess_charset(r, 0);
+	}
+	else
 	if (p && q && !strcasecmp(p, "Content-Type") &&
 	    (q = strcasestr(q, "charset")) != NULL) {
 	    q += 7;
