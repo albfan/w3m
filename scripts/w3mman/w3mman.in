@@ -6,12 +6,13 @@ $SCRIPT = 'file:///$LIB/w3mman2html.cgi';
 
 sub usage {
   ($_ = $0) =~ s@.*/@@;
-  print STDERR "$_ [-M <path>] [[<section>] <command>]\n";
-  print STDERR "$_ [-M <path>] [-k <keyword>]\n";
-  print STDERR "$_ [-l <file>]\n";
+  print STDERR "$_ [-M <path>] [-s <colsize>] [[<section>] <command>]\n";
+  print STDERR "$_ [-M <path>] [-s <colsize>] [-k <keyword>]\n";
+  print STDERR "$_ [-s <colsize>] [-l <file>]\n";
   exit 1;
 }
 
+$colsize = "";
 $query = "";
 while (@ARGV) {
   $_ = shift @ARGV;
@@ -25,6 +26,9 @@ while (@ARGV) {
     @ARGV || &usage(); 
     $query = "?quit=ok&local=" . &form_encode(shift @ARGV);
     $query .= "&pwd=" . &form_encode($ENV{'PWD'});
+  } elsif (/^-s$/) {
+    @ARGV || &usage(); 
+    $colsize = "&cols=" . &form_encode(shift @ARGV);
   } elsif (/^-/) {
     &usage();
   } elsif (/^\d/ || $_ eq 'n') {
@@ -36,7 +40,7 @@ while (@ARGV) {
   }
 }
 
-exec @W3M, "$SCRIPT$query";
+exec @W3M, "$SCRIPT$query$colsize";
 
 sub form_encode {
   local($_) = @_;

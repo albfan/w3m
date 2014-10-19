@@ -19,6 +19,8 @@ if ($QUERY =~ /\=/) {
   $query{"man"} = &form_decode($QUERY);
 }
 
+$ENV{'COLUMNS'} = $query{'cols'}; #TODO: Default to 80
+
 if ((! $query{"man"}) && (! $query{"local"})) {
   if ($query{"keyword"}) {
     $keyword = $query{"keyword"};
