@@ -27,7 +27,21 @@ Images and videos are not terminal things, rigth? Well It depends. How owns a re
 Original code comes from sourceforge, and it's on CVS. After made a rsync of all source, cvs2git was used to transform it to git. Then a filter-branch was made to remve CVSROOT and the like. There could be errors, so feel free to contact me to improve this.
 
 If anytime this repo gets obsolete. I will try to make a graft with new changes, so expect this history to be persistent in time (I will not drop it and reimport all changes) But that's only theory, I have never try for real.
- 
+
+## Added features
+
+- autosize manpages:
+
+w3m asumes a 24x80 terminal size. That's cool for a commodore, but is at least aged, these days. With irruption of widescreens, is difficult to set an standard. Luckily, you can interrogate terminal about it's size
+
+    $ echo cols | tput -S
+
+here is an useful alias you can set if compile and install this code
+
+    $ alias man=' w3mman -s $(echo cols | tput -S) '
+
+Try it, and enjoy *goto* `<Enter>` *back* `B`, *search* `/` as you always expect it to be on man pages. 
+
 ## Author comments
 - If you can read English, see doc/*.
 - If you can read Japanese, see doc-jp/*.
