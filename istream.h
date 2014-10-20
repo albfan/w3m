@@ -20,7 +20,7 @@ struct stream_buffer {
 
 typedef struct stream_buffer *StreamBuffer;
 
-struct file_handle {
+struct file_handle_rofl {
     FILE *f;
     void (*close) ();
 };
@@ -53,7 +53,7 @@ struct base_stream {
 
 struct file_stream {
     struct stream_buffer stream;
-    struct file_handle *handle;
+    struct file_handle_rofl *handle;
     char type;
     char iseos;
     int (*read) ();
