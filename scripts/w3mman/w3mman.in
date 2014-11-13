@@ -27,6 +27,7 @@ while (@ARGV) {
     $query = "?quit=ok&local=" . &form_encode(shift @ARGV);
     $query .= "&pwd=" . &form_encode($ENV{'PWD'});
   } elsif (/^-s$/) {
+    #Add and auto using output from $(echo cols | tput -S)
     @ARGV || &usage(); 
     $colsize = "&cols=" . &form_encode(shift @ARGV);
   } elsif (/^-/) {
@@ -36,7 +37,11 @@ while (@ARGV) {
     $query = "?quit=ok&man=" . &form_encode(shift @ARGV);
     $query .= "&section=" . &form_encode($_);
   } else {
-    $query = "?quit=ok&man=" . &form_encode($_);
+    unshift(@ARGV, $_);
+    $query = "?quit=ok&man=" . &form_encode(join("-", @ARGV));
+    while (@ARGV) {
+      shift @ARGV
+    }
   }
 }
 
