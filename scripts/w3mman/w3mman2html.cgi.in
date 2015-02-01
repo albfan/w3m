@@ -4,8 +4,6 @@ $MAN = $ENV{'W3MMAN_MAN'} || '@MAN@';
 $QUERY = $ENV{'QUERY_STRING'} || $ARGV[0];
 $SCRIPT_NAME = $ENV{'SCRIPT_NAME'} || $0;
 $CGI = "file://$SCRIPT_NAME";
-$CGI2 = "file:";
-# $CGI2 = "file:///\$LIB/hlink.cgi?";
 $SQUEEZE = 1;
 $ENV{'PAGER'} = 'cat';
 
